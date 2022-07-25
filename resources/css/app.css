@@ -1,0 +1,96 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    @font-face {
+        font-family: 'gilroy';
+        font-weight: 700;
+        src: url(../assets/fonts/gilroy_bold.otf) format('opentype');
+    }
+
+    @font-face {
+        font-family: 'gilroy';
+        font-weight: 800;
+        src: url(../assets/fonts/gilroy_extrabold.otf) format('opentype');
+    }
+
+    @font-face {
+        font-family: 'grotesk';
+        font-weight: 300;
+        src: url('../assets/fonts/grotesk_light.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'grotesk';
+        font-weight: 300;
+        font-style: italic;
+        src: url('../assets/fonts/grotesk_light_italic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'grotesk';
+        font-weight: 400;
+        src: url('../assets/fonts/grotesk_regular.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'grotesk';
+        font-weight: 400;
+        src: url('../assets/fonts/grotesk_regular_italic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'grotesk';
+        font-weight: 500;
+        src: url('../assets/fonts/grotesk_medium.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'grotesk';
+        font-weight: 500;
+        font-style: italic;
+        src: url('../assets/fonts/grotesk_medium_italic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'grotesk';
+        font-weight: 600;
+        src: url('../assets/fonts/grotesk_semibold.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'grotesk';
+        font-weight: 600;
+        font-style: italic;
+        src: url('../assets/fonts/grotesk_semibold_italic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'grotesk';
+        font-weight: 700;
+        src: url('../assets/fonts/grotesk_bold.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'grotesk';
+        font-weight: 700;
+        font-style: italic;
+        src: url('../assets/fonts/grotesk_bold_italic.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'grotesk';
+        font-weight: 800;
+        src: url('../assets/fonts/grotesk_extrabold.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'grotesk';
+        font-weight: 900;
+        src: url('../assets/fonts/grotesk_black.ttf') format('truetype');
+    }
+
+}
