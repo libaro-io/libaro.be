@@ -61,10 +61,21 @@ class Vacancy extends Model implements HasMedia
         foreach ($this->tags as $tag) {
             $arr = $tag->toArray();
             $obj = new stdClass();
-            $obj->name = $arr['name']['en'];
-            $obj->slug = $arr['slug']['en'];
 
-            $coll->add($obj);
+            $name = $arr['name'];
+            $slug = $arr['slug'];
+
+            if(array_key_exists('en', $name)) {
+                $obj->name = $name['en'];
+                $obj->slug = $slug['en'];
+
+                $coll->add($obj);
+            } elseif (array_key_exists('nl', $name)) {
+                $obj->name = $name['nl'];
+                $obj->slug = $slug['nl'];
+
+                $coll->add($obj);
+            }
         }
 
         return $coll;
