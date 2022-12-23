@@ -1,0 +1,25 @@
+version: "3.9"  # optional since v1.27.0
+
+services:
+    php:
+        build:
+            context: .
+            dockerfile: .docker/php/Dockerfile
+        container_name: l_php
+        user: dev
+        volumes:
+            - .:/var/www:delegated
+            - ~/.ssh:/home/dev/.ssh:delegated
+        ports:
+            - "8020:80"
+    mysql:
+        image: mysql:8
+        container_name: l_mysql
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            MYSQL_ROOT_PASSWORD: dev
+            MYSQL_DATABASE: dev
+            MYSQL_USER: dev
+            MYSQL_PASSWORD: dev
+        ports:
+            - "3320:3306"
