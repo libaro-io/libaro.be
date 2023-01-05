@@ -52,7 +52,7 @@ return [
     ],
     'apps' => [
         'title' => 'Apps',
-        'body' => 'A useful app is usually an extension of a web application. This ensures quick access to functionality and brings the company closer to the end user. Our reference speak for themselves.',
+        'body' => 'A useful app is usually an extension of a web application. This ensures quick access to functionality and brings the company closer to the end user. Our references speak for themselves.',
         'page' => [
             'intro' => 'When it comes to web and mobile apps, if you bring us a concept, we bring it to life. We use our expertise and professional insight to create distinctive, digital products that people love. The combination of technological prowess, constant innovation and a relentless focus on user experience all make for custom applications that work for you.',
             'scoping' => [
