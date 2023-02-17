@@ -13,11 +13,20 @@ class LandingPageParams
     {
         $category = 'skill';
         return collect([
-            self::trans($category, 'mobile-apps'),
-            self::trans($category, 'web-applicaties'),
-            self::trans($category, 'websites'),
-            self::trans($category, 'IOT'),
-            self::trans($category, 'automatisatie'),
+            'Ibanity integraties',
+            'energie facturatie',
+            'gebouw automatisatie',
+            'ticketing platformen',
+            'planningsoftware op maat',
+            'kiosk apps',
+            'iOT software',
+            'digital signage',
+            'reservatie systemen',
+            'scherm aansturing',
+            'facturatie tools',
+            '3D configurators',
+            'bestelplatformen',
+            'bpost integraties',
         ]);
     }
 
@@ -25,9 +34,9 @@ class LandingPageParams
     {
         $category = 'target';
         return collect([
-            self::trans($category, 'schrijnwerkers'),
-            self::trans($category, 'kastenbouwers'),
-            self::trans($category, 'gebouwbeheerders'),
+            self::trans($category, 'bedrijven'),
+//            self::trans($category, 'kastenbouwers'),
+//            self::trans($category, 'gebouwbeheerders'),
         ]);
     }
 
@@ -49,6 +58,13 @@ class LandingPageParams
         $category = 'title';
 
         return self::trans($category, 'title');
+    }
+
+    public static function AITitle(): string
+    {
+        $category = 'title';
+
+        return self::trans($category, 'ai_title');
     }
 
     public static function subTitle(): string

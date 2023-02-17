@@ -69,6 +69,11 @@ Route::prefix(RoutePrefix::setLocale())
             ->name('docs.show')
             ->where('path', '(.*)');
 
+        Route::get('script', function () {
+            $lc = new \App\Services\LandingPageGenerator();
+            $lc->handle();
+        });
+
         Route::get('/l/{slug}', [LandingPageController::class, 'index'])->name('landing.show');
 
 

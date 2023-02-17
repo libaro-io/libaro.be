@@ -21,10 +21,12 @@ return [
         'schrijnwerkers' => 'Schrijnwerkers',
         'kastenbouwers' => 'Kastenbouwers',
         'gebouwbeheerders' => 'Gebouwbeheerders',
+        'bedrijven' => 'bedrijven',
     ],
 
     'title' => [
         'title' => 'Wij bouwen {skill} op maat voor {target} in {location}',
+        'ai_title' => '{skill} op maat voor {target} in {location}',
         'subtitle' => '{skill} voor {target}',
     ],
 ];

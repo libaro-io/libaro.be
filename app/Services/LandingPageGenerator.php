@@ -60,7 +60,7 @@ class LandingPageGenerator
         $landingPage->image_index = rand(1, 13);
 
         $landingPage->text1 = $this->generateSubTitle($target, $skill);
-        $landingPage->text2 = $this->generateText($landingPage->title);
+        $landingPage->text2 = $this->generateText($target, $skill, $location);
 
         $landingPage->save();
 
@@ -86,10 +86,20 @@ class LandingPageGenerator
         return $subTitle;
     }
 
-    private function generateText(string $title)
+    private function generateText(string $target, string $skill, string $location)
     {
+        $AITitle =  LandingPageParams::AITitle();
+        $AITitle = str_replace('{target}', $target, $AITitle);
+        $AITitle = str_replace('{skill}', $skill, $AITitle);
+        $AITitle = str_replace('{location}', $location, $AITitle);
         $openAiGenerator = new OpenAIService();
-        return $openAiGenerator->generateText($title);
+        $text= $openAiGenerator->generateText($AITitle);
+
+        $lastPeriodPosition = strrpos($text, ".");
+        if ($lastPeriodPosition !== false && $lastPeriodPosition < strlen($text) - 1) {
+            $text = substr($text, 0, $lastPeriodPosition + 1);
+        }
+        return $text;
     }
 
     private function syncShowcases(LandingPage $landingPage, $skill)

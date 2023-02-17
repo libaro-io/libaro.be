@@ -52,18 +52,19 @@
             </div>
         </div>
     </div>
+    @if($landingPage->showcases->count())
+        <div class="bg-projects-bg border-b-30 border-project-border py-10.5 xl:py-0 xl:h-768">
+            <div class="relative max-w-9xl mx-auto">
+                <div
+                    class="xl:absolute xl:top-0 xl:left-0 xl:bg-white xl:rounded-outer-sm xl:shadow-2xl grid xl:grid-cols-3 gap-10.5 xl:-mt-14 p-7.5">
+                    @foreach($landingPage->showcases as $showcase)
+                        <x-recent-showcase-card :showcase="$showcase"/>
+                    @endforeach
 
-    <div class="bg-projects-bg border-b-30 border-project-border py-10.5 xl:py-0 xl:h-768">
-        <div class="relative max-w-9xl mx-auto">
-            <div class="xl:absolute xl:top-0 xl:left-0 xl:bg-white xl:rounded-outer-sm xl:shadow-2xl grid xl:grid-cols-3 gap-10.5 xl:-mt-14 p-7.5">
-                @foreach($landingPage->showcases as $showcase)
-                    <x-recent-showcase-card :showcase="$showcase" />
-                @endforeach
-
+                </div>
             </div>
         </div>
-    </div>
-
+    @endif
     <section class="px-4 max:px-0 lg:max-w-8xl mx-auto bg-white pt-20 pb-28 grid grid-cols-24">
         <div class="col-span-24 lg:col-span-11 mb-10.5 lg:mb-0">
             <x-elements.h3>{{ __('home.expertise.title') }}</x-elements.h3>
