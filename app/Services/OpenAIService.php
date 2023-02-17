@@ -17,7 +17,7 @@ class OpenAIService
     {
         $result = json_decode($this->open_ai->completion([
             'model' => 'text-davinci-003',
-            'prompt' => "Schrijf een introtekst over " . mb_strtolower($text),
+            'prompt' => "Schrijf een tekst over " . mb_strtolower($text),
             'temperature' => 0.9,
             'max_tokens' => 300,
             'frequency_penalty' => 0,
