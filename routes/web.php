@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LandingPageController;
 use App\ValueObjects\WebRoutes;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DocumentationController;
@@ -57,7 +58,7 @@ Route::prefix(RoutePrefix::setLocale())
         Route::get('/blog', [ArticleController::class, 'index'])->name('articles');
         Route::get('/blog/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
-        Route::get('/clients/{client}/random', ClientRandomShowcase::class)->name('client.showcase');
+        Route::get('/clients/{client}', ClientRandomShowcase::class)->name('client.showcase');
 
         Route::get('/privacy', PrivacyPage::class)->name('privacy');
         Route::get('/cookie', CookiesPage::class)->name('cookie');
@@ -67,6 +68,14 @@ Route::prefix(RoutePrefix::setLocale())
         Route::get('/docs/{repository}/{path?}', [DocumentationController::class, 'show'])
             ->name('docs.show')
             ->where('path', '(.*)');
+
+        Route::get('script', function () {
+            $lc = new \App\Services\LandingPageGenerator();
+            $lc->handle();
+        });
+
+        Route::get('/l/{slug}', [LandingPageController::class, 'index'])->name('landing.show');
+
 
         Route::get('{any}', function () {
             abort(404);
