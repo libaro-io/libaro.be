@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use stdClass;
-use Spatie\Tags\Tag;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;

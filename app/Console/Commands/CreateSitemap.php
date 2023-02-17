@@ -2,8 +2,10 @@
 
 namespace App\Console\Commands;
 
+use App\Models\LandingPage;
 use Illuminate\Console\Command;
 use Spatie\Sitemap\SitemapGenerator;
+use Spatie\Sitemap\Tags\Url;
 
 class CreateSitemap extends Command
 {
@@ -40,7 +42,17 @@ class CreateSitemap extends Command
     {
         $url = $this->argument('url');
 
-        SitemapGenerator::create($url ?? config('app.url'))->writeToFile(public_path('sitemap.xml'));
+        SitemapGenerator::create($url ?? config('app.url'))
+            ->hasCrawled(function (Url $url) {
+                if ($url->segment(2) === 'docs') {
+                    return;
+                }
+                return $url;
+            })
+            ->getSitemap()
+            ->add(LandingPage::all())
+            ->writeToFile(public_path('sitemap.xml'));
+
         return 0;
     }
 }

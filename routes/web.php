@@ -58,7 +58,7 @@ Route::prefix(RoutePrefix::setLocale())
         Route::get('/blog', [ArticleController::class, 'index'])->name('articles');
         Route::get('/blog/{article}', [ArticleController::class, 'show'])->name('articles.show');
 
-        Route::get('/clients/{client}/random', ClientRandomShowcase::class)->name('client.showcase');
+        Route::get('/clients/{client}', ClientRandomShowcase::class)->name('client.showcase');
 
         Route::get('/privacy', PrivacyPage::class)->name('privacy');
         Route::get('/cookie', CookiesPage::class)->name('cookie');
@@ -74,7 +74,7 @@ Route::prefix(RoutePrefix::setLocale())
             $lc->handle();
         });
 
-        Route::get('/l/{slug}', [LandingPageController::class, 'index'])->name('landing');
+        Route::get('/l/{slug}', [LandingPageController::class, 'index'])->name('landing.show');
 
 
         Route::get('{any}', function () {

@@ -1,867 +1,1179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
-        <loc>https://libaro.test/</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/</loc>
+        <lastmod>2023-02-17T10:19:05+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en</loc>
+        <lastmod>2023-02-17T10:19:05+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/jobs</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/Libaro-In-Ondernemers</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/contact</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/big-data-auctions-in-europe</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/calcupal-webapplicatie</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/services</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/earnieland-tegen-google</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/about-us</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/email-personalisatie-en-segmentatie</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/hoe-getalenteerde-programmeurs-aantrekken</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties/Zoute_Grand_Prix</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/libaro-breid-uit</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/clients/2/random</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/libaro-in-de-tijd-werken-tijdens-covid</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/clients/1/random</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/maak-uw-bedrijf-data-driven-in-5-stappen</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/blog</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/master-vs-professionele-bachelor-in-de-informatica-sector</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties/royal_antwerp_fc_fan_app</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/nominatie-best-belgian-tool</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/clients/3/random</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/seo-boosten-met-ssl</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/clients/4/random</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog/waarom-bloggen-van-belang-is</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/privacy</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=5%20stappen</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/cookie</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=Campaign%20Monitor</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties/Royal_Antwerp_ticketing</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=Standaard</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/terms</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=Voka</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/jobs/full-stack-developer</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=aanpassen</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/jobs/app-developer</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=bachelor</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/services/web</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=big%20data</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/services/digital-architecture</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=bloggen</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/services/apps</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=bloovi</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/services/internet-of-things</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=bubbels</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/jobs/laravel-developer</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=cash%20is%20king</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/diensten</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=corona</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=covid</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/over-ons</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=data</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/jobs</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=data%20analyse</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/contact</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=data%20driven</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties/display-controller</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=database</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties/parking-beheer-systeem</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=databridge</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/clients/1/random</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=earnieland</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/clients/2/random</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=email%20marketing</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=extra%20korting</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/clients/4/random</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=feweb</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties/maatkasten-online</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=google</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/clients/3/random</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=informatica</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/privacy</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=jobs</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/terms</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=libaro</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/cookie</loc>
+        <lastmod>2023-02-17T10:19:06+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=master</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=zgp</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=media</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=ticketing</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=migratie</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=partners</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=monetization</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=toegangscontrole</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=netwerk%20van%20websites</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=events</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=nieuwe%20inkomstenbron</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=uitnodigingen</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=nominatie</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties/e-zie</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=ondernemers</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties/meetdistrict-webapplicatie-mobiele-applicatie</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=opleiding</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog/libaro-in-de-tijd-werken-tijdens-covid</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=overstap%20naar%20het%20web</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog/libaro-breid-uit</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=personalisatie</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog/hoe-getalenteerde-programmeurs-aantrekken</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=recruiting</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=rafc</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=segmentatie</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog/Libaro-In-Ondernemers</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=seo</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog/earnieland-tegen-google</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=social%20media</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=android</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=ssl</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog/maak-uw-bedrijf-data-driven-in-5-stappen</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=stappenplan</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=fan-engagement</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=thuiswerk</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=ios</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=trends</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=de-lijn</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=uitbreiding%20doelpubliek</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=match-live-feed</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=veiligheid</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=mobiliteit</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=voka</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=cashless</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?filter=webapplicatie</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/blog?page=2</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?page=1</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=online-verkoop</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?page=2</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=abonnementen</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/blog?page=3</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=ticket-corner</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/clients/1/random</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties/moving_lives</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/clients/2/random</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=full-integration</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/clients/3/random</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties/Royal_Antwerp_ticketing</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/clients/4/random</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/diensten/web-ontwikkeling</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/contact</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/diensten/digitale-architectuur</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/cookie</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/diensten/apps</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/diensten</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/diensten/internet-of-things</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/diensten/apps</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=digital-signage</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/diensten/digitale-architectuur</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=smart-devices</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/diensten/internet-of-things</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=webapp</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/diensten/web-ontwikkeling</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=iot</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/jobs</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=scheduling</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/jobs/app-developer</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=hardware</loc>
+        <lastmod>2023-02-17T10:19:07+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/jobs/full-stack-developer</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=slagboom</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/jobs/laravel-developer</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=parking</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/over-ons</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=applicatie</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/privacy</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=app</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=brein</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties/Royal_Antwerp_ticketing</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=facturatie</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties/display-controller</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=webapplicatie</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties/earnieland</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=content</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties/maatkasten-online</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties/e-zie</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties/meetdistrict-webapplicatie-mobiele-applicatie</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties/meetdistrict_android_tv_app</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties/moving_lives</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=cms</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties/royal_antwerp_fc_fan_app</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=seo</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties/smart_retail</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=crm</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=CMS</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=social-media</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=CRM</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=front-end</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=IoT</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=web-design</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=SEO</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=website</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=abonnementen</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties?filter=logo-ontwerp</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=android</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?page=2</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=antwerpen</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties?filter=meetdistrict</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=api</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties?filter=proximus</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=backend</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/realisaties/moving_lives</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=bewegen</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties?filter=covid-19</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=cashless</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties?filter=reserveren</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=content</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/security/policy</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=customer%20experience</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/contributors</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=de%20lijn</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties?filter=laravel</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=digital%20signage</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties?filter=backend</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=displays</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties?filter=api</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=fan%20engagement</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties?filter=meeting</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=fondsenwerving</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties?filter=office</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=front-end</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties?filter=service-center</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=full%20integration</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=covid</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=gamification</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=thuiswerk</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=goede%20doel</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=corona</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=handelaars</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=bubbels</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=hardware</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=aanpassen</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=ios</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=jobs</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=laravel</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=standaard</loc>
+        <lastmod>2023-02-17T10:19:08+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=logo-ontwerp</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=recruiting</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=match%20live%20feed</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=media</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=meetdistrict</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=cash-is-king</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=meeting</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=voka</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=mobiliteit</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=extra-korting</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=office</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=libaro</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=online%20verkoop</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=ondernemers</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=platform</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=earnieland</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=rafc</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=trends</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=responsive</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=5-stappen</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=scheduling</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=data</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=service%20center</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=google</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=smart%20devices</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=nieuwe-inkomstenbron</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=smart%20retail</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=monetization</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=smart%20tec</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=data-driven</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=smart%20tv</loc>
-        <lastmod>2022-07-13T05:06:00+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=stappenplan</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=social%20media</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog?filter=databridge</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=ticket%20corner</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog/seo-boosten-met-ssl</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=ticketing</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog/waarom-bloggen-van-belang-is</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=web%20design</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog/email-personalisatie-en-segmentatie</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=webapp</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog/master-vs-professionele-bachelor-in-de-informatica-sector</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=webapplicatie</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/nl/blog/calcupal-webapplicatie</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/realisaties?filter=website</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties?filter=platform</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
     <url>
-        <loc>https://libaro.test/nl/terms</loc>
-        <lastmod>2022-07-13T05:05:59+00:00</lastmod>
+        <loc>https://libaro.be/en/realisaties?filter=fondsenwerving</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
-    </url>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog/big-data-auctions-in-europe</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/en/realisaties?filter=goede-doel</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/en/blog?page=3</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/en/realisaties?filter=bewegen</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/en/blog?page=1</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/en/realisaties?filter=abonnementen</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/en/realisaties?filter=ticketing</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/en/realisaties?filter=ticket-corner</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/en/realisaties?filter=full-integration</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/en/realisaties?filter=online-verkoop</loc>
+        <lastmod>2023-02-17T10:19:09+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/realisaties?filter=proximus</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/realisaties?filter=meetdistrict</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/realisaties?filter=reserveren</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/realisaties?filter=covid-19</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/realisaties?filter=tv</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/realisaties?filter=hospitality</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/realisaties?filter=smart-tv</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/realisaties?filter=fondsenwerving</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/realisaties?filter=platform</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?page=3</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/realisaties?filter=goede-doel</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/realisaties?filter=bewegen</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog/nominatie-best-belgian-tool</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?page=1</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=seo</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=email-marketing</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=ssl</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=veiligheid</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=bloggen</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=social-media</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=campaign-monitor</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=master</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=segmentatie</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=bachelor</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=personalisatie</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=overstap-naar-het-web</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=opleiding</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=webapplicatie</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=uitbreiding-doelpubliek</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=informatica</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=big-data</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=netwerk-van-websites</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=data-analyse</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=migratie</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=database</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=bloovi</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=nominatie</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/nl/blog?filter=feweb</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/l/wij-bouwen-mobile-apps-op-maat-voor-schrijnwerkers-in-brugge</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/l/wij-bouwen-apps-op-maat-voor-schrijnwerkers-in-brugge</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/l/wij-bouwen-apps-op-maat-voor-schrijnwerkers-in-gent</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
+    <url>
+        <loc>https://libaro.be/l/wij-bouwen-apps-op-maat-voor-schrijnwerkers-in-kortrijk</loc>
+        <lastmod>2023-02-17T10:19:10+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+        </url>
 </urlset>
