@@ -13,7 +13,7 @@ class LandingPage extends Model implements Sitemapable
 
     public function toSitemapTag(): Url | string | array
     {
-        return route('landing.show', $this->slug);
+        return '/nl/l/'. $this->slug;
     }
 
     public function showcases()
