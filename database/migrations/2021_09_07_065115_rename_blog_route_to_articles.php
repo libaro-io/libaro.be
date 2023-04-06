@@ -14,10 +14,9 @@ class RenameBlogRouteToArticles extends Migration
      */
     public function up()
     {
-        Schema::table('articles', function (Blueprint $table) {
-            NavigationItem::where('route', 'blog')
-                ->update(['route' => 'articles']);
-        });
+        NavigationItem::withoutGlobalScopes()
+            ->where('route', 'blog')
+            ->update(['route' => 'articles']);
     }
 
     /**
@@ -27,8 +26,6 @@ class RenameBlogRouteToArticles extends Migration
      */
     public function down()
     {
-        Schema::table('articles', function (Blueprint $table) {
-            //
-        });
+        // No way down
     }
 }
