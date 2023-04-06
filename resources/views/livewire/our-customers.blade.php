@@ -7,6 +7,7 @@
         <div class="flex space-x-7.5 lg:mt-0 md:pb-20">
             <div wire:click="goToPreviousPage({{ $customers->onFirstPage() }})"
                  wire:loading.attr="disabled"
+                 id="prev"
                  class="h-10 w-10 md:h-20 md:w-20 rounded-full border-2 border-primary-light bg-white flex items-center justify-center bg-white {{ $customers->onFirstPage() ? '' : 'cursor-pointer' }}">
                 <x-svg.arrow class="text-primary-darkest transform rotate-180"/>
             </div>
@@ -37,12 +38,27 @@
 </section>
 
 <script>
-    let el = document.getElementById('next');
+    let elNext = document.getElementById('next');
+    let elPrev = document.getElementById('prev');
+    let autoscrollDisabled = false;
+
+    function disableAutoScrollCustomers(event) {
+        if(event.isTrusted) {
+            autoscrollDisabled = true;
+        }
+    }
 
     function repeatingFunc() {
-        el.click();
+        if (autoscrollDisabled) {
+            return;
+        }
+
+        elNext.click();
         setTimeout(repeatingFunc, 10000);
     }
+
+    elNext.onclick= disableAutoScrollCustomers;
+    elPrev.onclick= disableAutoScrollCustomers;
 
     document.onload = setTimeout(repeatingFunc, 10000);
 </script>
