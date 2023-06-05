@@ -5,6 +5,8 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use App\ValueObjects\WebRoutes;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Str;
 
 class LanguageMiddleware
 {
@@ -17,23 +19,30 @@ class LanguageMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        $supportedLanguages = ['nl', 'en'];
         $path = $request->path();
+        $expirationInMinutes = now()->addYear()->diffInMinutes();
+        $locale = preferredLocale();
+        $pathLocale = Str::of($path)->substr(0, 2);
 
-        if (!(str_starts_with($path, 'en') || str_starts_with($path, 'nl'))) {
-            $preferredLanguageArray = explode('_', $request->getPreferredLanguage());
-            $preferredLanguage = array_shift($preferredLanguageArray);
-            $locale = $preferredLanguage === 'nl' ? 'nl' : 'en';
+        // If URL doens't start with supported language, we need to redirect to proper language.
+        if (! in_array($pathLocale, $supportedLanguages)) {
+            Cookie::queue('locale', $locale, $expirationInMinutes);
 
             if($locale === 'nl') {
                 return redirect("$locale/$path");
             } else {
                 return redirect("$locale");
             }
-
         }
 
         if ($match = WebRoutes::getTranslatedRoute($path)) {
+            Cookie::queue('locale', $locale, $expirationInMinutes);
             return redirect($match);
+        }
+
+        if ($pathLocale !== $request->cookie('locale')) {
+            Cookie::queue('locale', $pathLocale, $expirationInMinutes);
         }
 
         return $next($request);

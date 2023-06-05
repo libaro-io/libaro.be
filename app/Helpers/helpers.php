@@ -67,3 +67,12 @@ if (!function_exists('lang_switcher')) {
         return route($currentRouteName, $parameters);
     }
 }
+
+if (!function_exists('preferredLocale')) {
+    function preferredLocale(): string {
+        $languageFromCookie = request()->cookie('locale');
+        $preferredLanguageArray = explode('_', request()->getPreferredLanguage());
+        $preferredLanguage = array_shift($preferredLanguageArray);
+        return $languageFromCookie ?? ($preferredLanguage === 'nl' ? 'nl' : 'en');
+    }
+}
