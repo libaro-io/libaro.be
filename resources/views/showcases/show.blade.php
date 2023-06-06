@@ -34,7 +34,7 @@
     <main>
         <section class="max-w-8xl mx-auto">
             <div class="grid grid-cols-24 px-8 max:px-0 pt-20x max:pt-0 max:pb-20">
-                <div class="col-span-24 max:col-span-10 flex items-center justify-center pb-12x max:pb-0">
+                <div class="col-span-24 max:col-span-10 flex items-center justify-center pb-12x max:pb-0 pt-12 max:pt-29">
                     @if($showcase->getFirstMedia('showcase_logo'))
                         {{ $showcase->getFirstMedia('showcase_logo')->img()->attributes(['class' => 'object-contain h-32 xl:h-96 w-full']) }}
                     @else
