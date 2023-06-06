@@ -22,6 +22,8 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 
 require_once 'admin.php';
 
+Route::get('/nl/l/{slug}', [LandingPageController::class, 'index'])->name('landing.show');
+
 Route::prefix(RoutePrefix::setLocale())
     ->middleware('language')
     ->group(function () {
@@ -72,9 +74,6 @@ Route::prefix(RoutePrefix::setLocale())
             $lc = new \App\Services\LandingPageGenerator();
             $lc->handle();
         });
-
-        Route::get('/l/{slug}', [LandingPageController::class, 'index'])->name('landing.show');
-
 
         Route::get('{any}', function () {
             abort(404);
