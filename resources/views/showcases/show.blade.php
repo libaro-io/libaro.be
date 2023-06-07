@@ -1,10 +1,14 @@
 <x-layout>
     @section('title', page_title($showcase->name))
 
+    <?php
+        $headerImageSet = $showcase->getFirstMedia('showcase_header')
+            ? $showcase->getFirstMedia('showcase_header')->img()->attributes(['class' => 'absolute w-full h-full object-cover inset-0'])
+            : $showcase->getFirstMedia('showcase_card')->img()->attributes(['class' => 'absolute w-full h-full object-cover inset-0']);
+    ?>
+
     <div class="relative hidden max:block">
-        <img class="absolute w-full h-full object-cover inset-0"
-             src="{{ $showcase->image_header ? asset("/storage/$showcase->image_header") : asset("/storage/$showcase->image_card") }}"
-             alt="{{ $showcase->name }}"/>
+        {{ $headerImageSet }}
         <div class="absolute w-full h-full inset-0 bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm"></div>
         <div class="relative lg:max-w-8xl mx-auto">
             <x-nav-bottom :nav="true"/>
@@ -14,9 +18,7 @@
 
     <div x-data="{ show: false }"
          class="relative max:hidden">
-        <img class="absolute w-full h-full object-cover inset-0"
-             src="{{ $showcase->image_header ? asset("/storage/$showcase->image_header") : asset("/storage/$showcase->image_card") }}"
-             alt="{{ $showcase->name }}"/>
+        {{ $headerImageSet }}
         <div class="absolute w-full h-full inset-0 bg-white bg-opacity-60 backdrop-filter backdrop-blur-sm"></div>
         <x-header-hamburger :dark=true/>
             <div x-show="show"
@@ -34,7 +36,7 @@
     <main>
         <section class="max-w-8xl mx-auto">
             <div class="grid grid-cols-24 px-8 max:px-0 pt-20x max:pt-0 max:pb-20">
-                <div class="col-span-24 max:col-span-10 flex items-center justify-center pb-12x max:pb-0">
+                <div class="col-span-24 max:col-span-10 flex items-center justify-center pb-12x max:pb-0 pt-12 max:pt-29">
                     @if($showcase->getFirstMedia('showcase_logo'))
                         {{ $showcase->getFirstMedia('showcase_logo')->img()->attributes(['class' => 'object-contain h-32 xl:h-96 w-full']) }}
                     @else

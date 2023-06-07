@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\RedirectController;
 use App\ValueObjects\WebRoutes;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DocumentationController;
@@ -21,7 +22,7 @@ use Spatie\Honeypot\ProtectAgainstSpam;
 
 require_once 'admin.php';
 
-
+Route::get('/nl/l/{slug}', [LandingPageController::class, 'index'])->name('landing.show');
 
 Route::prefix(RoutePrefix::setLocale())
     ->middleware('language')
@@ -74,10 +75,9 @@ Route::prefix(RoutePrefix::setLocale())
             $lc->handle();
         });
 
-        Route::get('/l/{slug}', [LandingPageController::class, 'index'])->name('landing.show');
-
-
         Route::get('{any}', function () {
             abort(404);
         })->where('any', '.*');
     });
+
+Route::get('/', RedirectController::class);

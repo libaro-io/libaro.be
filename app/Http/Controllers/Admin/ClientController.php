@@ -44,6 +44,8 @@ class ClientController extends Controller
     {
         $validated = $request->validated();
 
+        unset($validated['logo']);
+
         $client = Client::create($validated);
 
         $client
@@ -90,6 +92,8 @@ class ClientController extends Controller
                 info($e->getMessage());
             }
         }
+
+        unset($validated['logo']);
 
         $client->update($validated);
 

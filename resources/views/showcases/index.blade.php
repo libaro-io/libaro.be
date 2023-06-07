@@ -1,5 +1,5 @@
 <x-layout>
-    @section('title', page_title('Onze Realisaties'))
+    @section('title', page_title(__('showcases.title')))
 
     <x-nav-bottom-container :dark=true/>
 
@@ -11,17 +11,15 @@
             <div id="data-wrapper" class="grid grid-cols-24 auto-rows-minx">
                 <div
                     class="row-span-1 row-start-1 col-span-24 max:col-span-12 mx-4 md:mx-14 max:mx-0 mt-32 md:mt-16 max:mt-0 pb-8 max:pb-0 max:min-h-500">
-                    <h2 class="font-gilroy font-extrabold text-lg uppercase text-secondary mb-4">{{ __('Met Trots') }}</h2>
-                    <h1 class="font-gilroy font-bold text-4xl md:text-7xl text-primary-darkest mb-10 md:mb-15">{{ __('Onze realisaties') }}</h1>
-                    <p class="font-grotesk font-semibold text-xl md:text-2xl text-primary-darkest">{{ __('Bekijk hier de beste oplossingen die wij hebben gerealiseerd.') }}</p>
-                    <p class="font-grotesk font-semibold text-xl md:text-2xl text-primary-darkest">{{ __('Onze open source packages vind je op ') }} <a href="https://github.com/libaro-io" target="_blank">{{ __('GitHub.') }}</a></p>
+                    <h2 class="font-gilroy font-extrabold text-lg uppercase text-secondary mb-4">{{ __('showcases.subtitle') }}</h2>
+                    <h1 class="font-gilroy font-bold text-4xl md:text-7xl text-primary-darkest mb-10 md:mb-15">{{ __('showcases.title') }}</h1>
+                    <p class="font-grotesk font-semibold text-xl md:text-2xl text-primary-darkest">{{ __('showcases.intro.first_paragraph') }}</p>
+                    <p class="font-grotesk font-semibold text-xl md:text-2xl text-primary-darkest">{!! __('showcases.intro.second_paragraph') !!}</p>
 
                     @if($filters)
-                        <p class="mt-4 font-grotesk font-semibold text-xl text-primary-darkest">{{ 'Realisaties met tag: ' . implode(', ', $filters) }}</p>
+                        <p class="mt-4 font-grotesk font-semibold text-xl text-primary-darkest">{{ __('showcases.with_tags') }} {{ implode(', ', $filters) }}</p>
                         <a href="{{ route('our-realizations') }}"
-                           class="flex items-center font-grotesk text-lg text-primary-dark mt-2.5 hover:underline">toon
-                            alle realisaties
-                            <x-svg.arrow/>
+                           class="flex items-center font-grotesk text-lg text-primary-dark mt-2.5 hover:underline">{{ __('showcases.clear_tags') }} <x-svg.arrow/>
                         </a>
                     @endif
                 </div>

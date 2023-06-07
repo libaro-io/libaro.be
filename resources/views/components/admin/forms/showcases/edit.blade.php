@@ -149,7 +149,7 @@
                             <div class="text-red-800 text-xs mt-2">{{ $message }}</div>
                             @enderror
 
-                            @if($showcase->image_header)
+                            @if($showcase->getFirstMedia('showcase_header'))
                                 <div class="mt-4">
                                     {{ $showcase->getFirstMedia('showcase_header') }}
                                 </div>
@@ -164,7 +164,7 @@
                             <div class="text-red-800 text-xs mt-2">{{ $message }}</div>
                             @enderror
 
-                            @if($showcase->image_extra)
+                            @if($showcase->getFirstMedia('showcase_extra'))
                                 <div class="mt-4">
                                     {{ $showcase->getFirstMedia('showcase_extra') }}
                                 </div>
@@ -179,7 +179,7 @@
                             <div class="text-red-800 text-xs mt-2">{{ $message }}</div>
                             @enderror
 
-                            @if($showcase->image_logo)
+                            @if($showcase->getFirstMedia('showcase_logo'))
                                 <div class="mt-4">
                                     {{ $showcase->getFirstMedia('showcase_logo') }}
                                 </div>

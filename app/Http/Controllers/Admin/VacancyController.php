@@ -48,7 +48,11 @@ class VacancyController extends Controller
         $validated = $request->validated();
 
         $tags = $this->sanitizeTags($validated['tags']);
-        unset($validated['tags']);
+
+        unset(
+            $validated['image'],
+            $validated['tags'],
+        );
 
         $vacancy = Vacancy::create($validated);
 
@@ -86,7 +90,10 @@ class VacancyController extends Controller
 
         $vacancy->syncTagsWithType($this->sanitizeTags($validated['tags']), 'vacancy');
 
-        unset($validated['tags']);
+        unset(
+            $validated['image'],
+            $validated['tags'],
+        );
 
         if(request()->has('image')) {
             $vacancy->clearMediaCollection('vacancy');

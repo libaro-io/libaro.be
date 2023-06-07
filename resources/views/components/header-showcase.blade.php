@@ -3,7 +3,7 @@
     'tags'
 ])
 
-<div class="relative pt-32 max:pt-10 px-4 md:pl-12 max:px-0 pb-4 mb-28 lg:mb-28">
+<div class="relative pt-32 max:pt-10 px-4 md:pl-12 max:px-0 pb-4">
     <h3 class="font-gilroy font-extrabold text-lg text-secondary uppercase mb-4">{{ __($showcase->type) }}</h3>
     <h2 class="font-gilroy font-bold text-5xl md:text-h2 text-primary-darkest break-words">{{ __($showcase->name) }}</h2>
 

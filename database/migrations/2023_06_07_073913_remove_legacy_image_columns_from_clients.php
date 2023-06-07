@@ -1,11 +1,10 @@
 <?php
 
-use App\Models\NavigationItem;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class RenameBlogRouteToArticles extends Migration
+class RemoveLegacyImageColumnsFromClients extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +13,9 @@ class RenameBlogRouteToArticles extends Migration
      */
     public function up()
     {
-        NavigationItem::withoutGlobalScopes()
-            ->where('route', 'blog')
-            ->update(['route' => 'articles']);
+        Schema::table('clients', function (Blueprint $table) {
+            $table->dropColumn('logo');
+        });
     }
 
     /**
@@ -26,6 +25,8 @@ class RenameBlogRouteToArticles extends Migration
      */
     public function down()
     {
-        // No way down
+        Schema::table('clients', function (Blueprint $table) {
+            $table->string('logo')->after('visible');
+        });
     }
 }

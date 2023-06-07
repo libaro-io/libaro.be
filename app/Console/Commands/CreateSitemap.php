@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\LandingPage;
 use Illuminate\Console\Command;
+use Illuminate\Support\Str;
 use Spatie\Sitemap\SitemapGenerator;
 use Spatie\Sitemap\Tags\Url;
 
@@ -44,8 +45,15 @@ class CreateSitemap extends Command
 
         SitemapGenerator::create($url ?? config('app.url'))
             ->hasCrawled(function (Url $url) {
-                if ($url->segment(2) === 'docs') {
+                $segment2 = $url->segment(2);
+                $fullUrl = Str::of($url->url);
+                $urlWithFilter = $fullUrl->contains('?filter=');
+                if ($segment2 === 'docs') {
                     return;
+                } elseif ($segment2 === 'blog' && $urlWithFilter) {
+                    $url->setPriority(0.1);
+                } elseif ($segment2 === 'realisaties' && $urlWithFilter) {
+                    $url->setPriority(0.1);
                 }
                 return $url;
             })
