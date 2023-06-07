@@ -126,7 +126,7 @@
                             <div class="text-red-800 text-xs mt-2">{{ $message }}</div>
                             @enderror
 
-                            @if($article->image_1)
+                            @if($article->getFirstMedia('article_one'))
                                 <div class="mt-4">
                                     {{ $article->getFirstMedia('article_one') }}
                                 </div>
@@ -143,7 +143,7 @@
                             <div class="text-red-800 text-xs mt-2">{{ $message }}</div>
                             @enderror
 
-                            @if($article->image_2)
+                            @if($article->getFirstMedia('article_two'))
                                 <div class="mt-4">
                                     {{ $article->getFirstMedia('article_two') }}
                                 </div>

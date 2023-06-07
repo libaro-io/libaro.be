@@ -41,7 +41,11 @@ class ArticleController extends Controller
 
         $tags = $this->sanitizeTags($validated['tags']);
 
-        unset($validated['tags']);
+        unset(
+            $validated['tags'],
+            $validated['image_1'],
+            $validated['image_2'],
+        );
 
         $article = Article::create($validated);
 
@@ -101,7 +105,11 @@ class ArticleController extends Controller
 
         $article->syncTagsWithType($this->sanitizeTags($validated['tags']), 'article');
 
-        unset($validated['tags']);
+        unset(
+            $validated['tags'],
+            $validated['image_1'],
+            $validated['image_2'],
+        );
 
         $article->update($validated);
 
