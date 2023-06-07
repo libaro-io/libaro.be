@@ -41,6 +41,8 @@ class QuoteController extends Controller
             'image_person' => 'required|image'
         ]);
 
+        unset($validated['image_person']);
+
         $quote = Quote::make($validated);
         $quote->showcase_id = $showcase->id;
 
@@ -86,6 +88,8 @@ class QuoteController extends Controller
             'job_title' => 'required|string|max:255',
             'image_person' => 'image'
         ]);
+
+        unset($validated['image_person']);
 
         $quote->update($validated);
 
