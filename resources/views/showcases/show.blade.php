@@ -1,10 +1,14 @@
 <x-layout>
     @section('title', page_title($showcase->name))
 
+    <?php
+        $headerImageSet = $showcase->getFirstMedia('showcase_header')
+            ? $showcase->getFirstMedia('showcase_header')->img()->attributes(['class' => 'absolute w-full h-full object-cover inset-0'])
+            : $showcase->getFirstMedia('showcase_card')->img()->attributes(['class' => 'absolute w-full h-full object-cover inset-0']);
+    ?>
+
     <div class="relative hidden max:block">
-        <img class="absolute w-full h-full object-cover inset-0"
-             src="{{ $showcase->image_header ? asset("/storage/$showcase->image_header") : asset("/storage/$showcase->image_card") }}"
-             alt="{{ $showcase->name }}"/>
+        {{ $headerImageSet }}
         <div class="absolute w-full h-full inset-0 bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm"></div>
         <div class="relative lg:max-w-8xl mx-auto">
             <x-nav-bottom :nav="true"/>
@@ -14,9 +18,7 @@
 
     <div x-data="{ show: false }"
          class="relative max:hidden">
-        <img class="absolute w-full h-full object-cover inset-0"
-             src="{{ $showcase->image_header ? asset("/storage/$showcase->image_header") : asset("/storage/$showcase->image_card") }}"
-             alt="{{ $showcase->name }}"/>
+        {{ $headerImageSet }}
         <div class="absolute w-full h-full inset-0 bg-white bg-opacity-60 backdrop-filter backdrop-blur-sm"></div>
         <x-header-hamburger :dark=true/>
             <div x-show="show"

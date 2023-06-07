@@ -48,7 +48,14 @@ class ShowcaseController extends Controller
         $validated = $request->validated();
         $tags = $this->sanitizeTags($validated['tags']);
 
-        unset($validated['tags']);
+        unset(
+            $validated['tags'],
+            $validated['image_card'],
+            $validated['image_header'],
+            $validated['image_extra'],
+            $validated['image_logo'],
+        );
+
         $showcase = Showcase::create($validated);
         $showcase->syncTags($tags);
 
@@ -103,7 +110,13 @@ class ShowcaseController extends Controller
 
         $showcase->syncTags($this->sanitizeTags($validated['tags']));
 
-        unset($validated['tags']);
+        unset(
+            $validated['tags'],
+            $validated['image_card'],
+            $validated['image_header'],
+            $validated['image_extra'],
+            $validated['image_logo'],
+        );
 
         try {
             if ($request->has('image_card')) {
