@@ -12,11 +12,12 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .js('resources/js/service-worker.js', 'public/service-worker.js')
-    .postCss('resources/css/app.css', 'public/css', [
-        require('tailwindcss')
-    ])
-    .copyDirectory('resources/assets/fonts/', 'public/fonts');
+  .js('resources/js/service-worker.js', 'public/service-worker.js')
+  .js('resources/js/playground/logo-3d.js', 'public/js/playground')
+  .postCss('resources/css/app.css', 'public/css', [
+    require('tailwindcss')
+  ])
+  .copyDirectory('resources/assets/fonts/', 'public/fonts');
 
 if (mix.inProduction()) {
     mix.version();

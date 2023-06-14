@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\Playground\Logo3dController;
 use App\Http\Controllers\RedirectController;
 use App\ValueObjects\WebRoutes;
 use App\Http\Controllers\HomeController;
@@ -31,6 +32,8 @@ Route::prefix(RoutePrefix::setLocale())
 
         Route::get('/realisaties', [ShowcaseController::class, 'index'])->name('our-realizations');
         Route::get('/realisaties/{showcase}', [ShowcaseController::class, 'show'])->name('showcase');
+
+        Route::get('/playground/logo-3d', Logo3dController::class)->name('playground.logo-3d');
 
         Route::localized(WebRoutes::SERVICES, [ExpertiseController::class, 'show'])
             ->name('our-expertise');

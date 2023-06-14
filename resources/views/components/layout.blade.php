@@ -87,6 +87,8 @@
         ])
     !!}
 
+    @stack('head')
+
     @livewireStyles
 </head>
 <body class="antialiased">
