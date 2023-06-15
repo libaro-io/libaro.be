@@ -24,6 +24,8 @@
     "dependencies": {
         "@alpinejs/intersect": "^3.2.4",
         "@fortawesome/fontawesome-free": "^5.15.4",
-        "alpinejs": "^3.2.4"
+        "alpinejs": "^3.2.4",
+        "lil-gui": "^0.18.2",
+        "three": "^0.153.0"
     }
 }

@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use App\Models\Showcase;
+use Illuminate\Support\Collection;
 use Illuminate\View\Component;
 
 class RecentShowcases extends Component
@@ -14,7 +15,7 @@ class RecentShowcases extends Component
             ->where('pin_on_homepage', '=', 1)
             ->select('id')
             ->pluck('id')
-            ->random(3);
+            ->whenNotEmpty(fn (Collection $c) => $c->random(3));
 
         $showcases = Showcase::query()
             ->with('client')
