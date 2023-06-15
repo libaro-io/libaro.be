@@ -80,4 +80,4 @@ Route::prefix(RoutePrefix::setLocale())
         })->where('any', '.*');
     });
 
-Route::get('/', RedirectController::class);
+Route::get('/', RedirectController::class)->name('home');
