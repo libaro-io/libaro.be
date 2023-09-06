@@ -5,7 +5,7 @@ return [
     'subtitle' => 'Wat je mag verwachten',
     'web' => [
         'title' => 'Webontwikkeling',
-        'body' => 'De kern van alle ontwikkelingen. Een attractieve, functionele website die toegankelijk is via de browser. Deze kan dienen als basis voor een uitgebreid platform dat op maat gemaakt wordt of als interface voor de eindgebruiker. Project afhankelijk wordt deze uitgebreid met API\'s, algoritmes, integraties, ...',
+        'body' => 'Webontwikkeling vormt de kern van al onze projecten. We streven ernaar aantrekkelijke en functionele websites te bouwen die via alle browsers en devices toegankelijk zijn. Deze websites kunnen dienen als basis voor op maat gemaakte platforms of als interfaces voor eindgebruikers. Afhankelijk van het project kunnen we ze uitbreiden met API\'s, algoritmes, integraties en andere functionaliteiten om aan specifieke behoeften te voldoen',
         'page' => [
             'intro_1' => 'Met een onderscheidende expertise en trackrecord zijn we toegewijd om de sterkste, state-of-the-art webapplicaties te ontwikkelen. We brengen de beste digitale ideeën tot werkelijkheid.',
             'intro_2' => 'Een webapplicatie dient zeer nauwkeurig en volgens de specifieke noden van de klant opgebouwd te worden. Om aan deze specifieke vereisten te voldoen voorzien wij altijd maatwerk. Maatwerk betekent voor ons dat alle nodige functies, filters en statistieken één geheel vormen waarmee de klant vlot aan de slag kan. We analyseren wat de klant nodig heeft om een efficiënte workflow te garanderen.',
@@ -33,7 +33,7 @@ return [
     ],
     'architecture' => [
         'title' => 'Digitale architectuur',
-        'body' => 'Elke ontwikkeling kadert in een (digitale) bedrijfsstrategie. Wij zetten onze expertise in om deze strategie en architectuur uit te tekenen. Teneinde dat alle systemen hun doel en plaats krijgen, afgestemd op het totaalplaatje. Grote hoeveelheden data moeten ook netjes gestructureerd worden. Wij zorgen dat de data architectuur volgens de regels van de kunst is.',
+        'body' => 'Bij Libaro begrijpen we dat elke ontwikkeling voortkomt uit een bredere bedrijfsstrategie, zowel op digitaal als op algemeen niveau. We zetten onze expertise in om deze strategie en architectuur zorgvuldig vorm te geven. Ons doel is ervoor te zorgen dat alle systemen binnen het geheel passen en hun doel effectief vervullen. Hierbij houden we rekening met de totale context en zorgen we voor een optimale afstemming. Daarnaast hebben we expertise in het structureren van grote hoeveelheden data, waarbij we streven naar een data architectuur die voldoet aan de hoogste standaarden en best practices in de branche.',
         'page' => [
             'intro' => 'Een digitale strategie is een fundamenteel onderdeel van elke bedrijfsstrategie. Aangezien veel organisaties marketingbudgetten verschuiven naar digitaal, is het van vitaal belang dat er een duidelijke strategie is om een geweldig rendement op de investering te genereren. We hebben talloze klanten geholpen om het meeste uit digitaal te halen.',
             'offer' => [
@@ -52,7 +52,7 @@ return [
     ],
     'apps' => [
         'title' => 'Apps',
-        'body' => 'Een handige app is meestal een uitbreiding van een web applicatie. Dit zorgt voor een snelle toegankelijkheid van functionaliteit en brengt het bedrijf dichter bij de eindgebruiker. Onze referentie spreken voor zich.',
+        'body' => 'We geloven dat apps een waardevolle aanvulling kunnen zijn op webapplicaties. Ze bieden een handige en snelle toegang tot functionaliteiten, waardoor bedrijven dichter bij hun eindgebruikers kunnen komen. Vaak fungeren apps als een uitbreiding van een bestaande webapplicatie, waardoor de gebruikerservaring wordt verbeterd en meer gebruiksgemak wordt geboden. Onze eerdere projecten en referenties getuigen van onze expertise op dit gebied en laten zien hoe apps hebben bijgedragen aan het succes van onze klanten.',
         'page' => [
             'intro' => 'Als het gaat om web- en mobiele apps, als u ons een concept brengt, brengen wij het tot leven. We gebruiken onze expertise en professioneel inzicht om onderscheidende, digitale producten te creëren waar mensen van houden. De combinatie van technologische bekwaamheid, constante innovatie en een niet-aflatende focus op gebruikerservaring zorgen allemaal voor op maat gemaakte applicaties die voor u werken.',
             'scoping' => [
@@ -83,7 +83,7 @@ return [
     ],
     'iot' => [
         'title' => 'IOT',
-        'body' => 'Wij weten hoe we technologie kunnen gebruiken om waarde toe te voegen aan het leven van mensen.',
+        'body' => 'Met onze expertise in Internet of Things (IoT) kunnen we connectiviteit, sensoren en slimme apparaten gebruiken om gegevens te verzamelen, te analyseren en te benutten. Dit stelt ons in staat om intelligente oplossingen te creëren die helpen bij het automatiseren van processen, het optimaliseren van efficiëntie en het verbeteren van de gebruikerservaring.',
         'page' => [
             'consultation' => [
                 'title' => 'Overleg plegen',

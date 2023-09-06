@@ -60,11 +60,11 @@
             <x-elements.h3>{{ __('home.expertise.title') }}</x-elements.h3>
             <x-elements.h2>{{ __('home.expertise.subtitle') }}</x-elements.h2>
             <p class="leading-normal font-semibold font-grotesk text-base md:text-paragraph text-primary-darkest">
-                {{ __('home.expertise.body_1') }}
+                {{ __('home.expertise.body_2') }}
             </p>
 
             <p class="leading-normal font-semibold font-grotesk text-base md:text-paragraph text-primary-darkest mt-4">
-                {{ __("home.expertise.body_2") }}
+                {{ __("home.expertise.body_1") }}
             </p>
         </div>
 

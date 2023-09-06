@@ -43,7 +43,7 @@
         title="{{ __('about.kick-off.title') }}"
         image="{{ asset('storage/images/team_4.jpg') }}">
         <div>
-            {{ __('about.kick-off.body') }}
+            {!!  __('about.kick-off.body')  !!}
         </div>
     </x-2column-text-image>
 
@@ -62,18 +62,22 @@
         title=" {{ __('about.open-source.title') }}"
         image="{{ asset('storage/images/team_10.jpg') }}">
         <div>
-            {{ __('about.open-source.body_1') }}<br />
-            {{ __('about.open-source.body_2') }}<br />
-            {{ __('about.open-source.body_3') }}<br />
+            {{ __('about.open-source.body') }}<br />
             <a href="https://github.com/libaro-io" target="_blank">{{ __('general.our') }} GitHub <i class="fab fa-github"></i>  account.</a>
         </div>
     </x-2column-text-image>
 
-    <div class="flex flex-col space-y-4 pb-12 xl:max-w-8xl mx-auto">
-        <div class="rounded-outer overflow-hidden p-5 bg-grey-light border-2 border-grey-dark">
-            <img class="object-cover h-full w-full overflow-hidden rounded-inner"
-                 src="{{ asset('storage/images/team_3.jpg') }}" alt="Ons Team">
+    <x-2column-text-image
+        :reverse=true
+        subtitle=" {{ __('about.ai.subtitle') }}"
+        title=" {{ __('about.ai.title') }}"
+        image="{{ asset('storage/images/team_3.jpg') }}">
+        <div>
+            {!!  __('about.ai.body')  !!}
         </div>
+    </x-2column-text-image>
+
+    <div class="flex flex-col space-y-4 pb-12 xl:max-w-8xl mx-auto">
         <div class="rounded-outer overflow-hidden p-5 bg-grey-light border-2 border-grey-dark">
             <img class="object-cover h-full w-full overflow-hidden rounded-inner"
                  src="{{ asset('storage/images/team_5.jpg') }}" alt="Ons Team">

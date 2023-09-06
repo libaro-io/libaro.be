@@ -16,8 +16,11 @@ return [
     'open-source' => [
         'title' => 'Open source community',
         'subtitle' => 'Open Source',
-        'body_1' => 'We have already published several open-source packages that we place publicly for all programmers who want to use them.',
-        'body_2' => 'These form a toolset for our own projects.',
-        'body_3' => 'In addition, writing open source is a way to work on the quality of our code. The entire open-source community can watch, which makes us strive for qualitative code according to the rules of the art.',
+        'body' => 'We are active participants in the open-source community, with multiple publications of tools and packages that any developer can use. These open-source initiatives not only serve as a toolset for our own projects, but also keep us on our toes. The open source community is watching, and that encourages us to write the highest quality code.',
+    ],
+    'ai' => [
+        'title' => 'In collaboration with AI',
+        'subtitle' => 'Half man, half machine ',
+        'body' => 'At Libaro, we embrace the power of artificial intelligence as a valuable tool in our development arsenal. Our talented developers are encouraged to take full advantage of AI, enabling them to tackle complex challenges with greater ease and write high-quality code faster. <br><br>We cherish the possibilities AI offers, but always maintain our critical eye to ensure that every application meets our high standards for quality, security and performance. ',
     ],
 ];
