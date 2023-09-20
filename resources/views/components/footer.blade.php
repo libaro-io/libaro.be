@@ -26,7 +26,7 @@
         <div class="col-span-4 md:col-span-2 xl:col-span-1 flex flex-col">
             <h2 class="font-gilroy font-extrabold uppercase text-primary-medium mb-4 lg:pb-10">{{ __('footer.financial') }}</h2>
             <div class="text-footer">
-                BTW BE 0541.352.248
+                BTW BE0541352248
             </div>
             <div class="text-footer">
                 REK BE03 7360 0710 2484
