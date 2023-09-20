@@ -23,8 +23,8 @@
     <div class="relative h-80">
         <img src="/images/vacancies/food-p.jpg" alt="Image 1" class="absolute w-full rounded-inner h-full">
         <div class="absolute bg-black bottom-0 h-full left-0 opacity-40 rounded-inner w-full"></div>
-        <div class="absolute flex h-full items-center text-center w-full">
-            <p class="bold text-2xl md:text-3xl text-white">Maandelijkse Maaltijdcheques</p>
+        <div class="absolute flex h-full items-center text-center px-4">
+            <p class="bold text-2xl md:text-3xl text-white">Maandelijks Maaltijdcheques</p>
         </div>
     </div>
     <div class="relative h-80">
