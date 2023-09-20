@@ -4,7 +4,7 @@
 
 <div class="grid grid-cols-24 px-8 max:px-0">
 
-    <div class="col-span-24 max:col-span-7 flex flex-col md:flex-row md:items-center max:justify-between pt-29 max:pt-0">
+    <div class="col-span-24 max:col-span-7 flex flex-col md:flex-row md:items-center max:justify-between pt-29 max:pt-0 bg-blue">
 
         <span class="self-start md:self-center text-secondary font-gilroy font-extrabold text-xl border-b-4 border-secondary pb-2 mb-8 md:mb-0 mr-8 max:mr-0">
             {{ ($key->number > 9 ? '': '0') . $key->number }}.
