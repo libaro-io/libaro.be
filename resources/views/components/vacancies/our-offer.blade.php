@@ -98,10 +98,10 @@
         </div>
     </div>
     <div class="relative h-80">
-        <img src="/images/vacancies/headphones-p.jpg" alt="Image 1" class="absolute w-full rounded-inner h-full">
+        <img src="/images/vacancies/fitness-p.jpg" alt="Image 1" class="absolute w-full rounded-inner h-full">
         <div class="absolute bg-black bottom-0 h-full left-0 opacity-40 rounded-inner w-full"></div>
         <div class="absolute flex h-full items-center text-center px-4">
-            <p class="bold text-2xl md:text-3xl text-white">Bose-hoofdtelefoon met noice cancellation</p>
+            <p class="bold text-2xl md:text-3xl text-white">Gratis toegang tot een fitnessruimte in het bedrijfsgebouw</p>
         </div>
     </div>
 </div>
