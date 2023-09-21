@@ -25,43 +25,13 @@
                 @endforeach
             </section>
 
-            <section class=" mt-32 md:mt-64 lg:mt-470">
+            <section class="mt-32 md:mt-32 lg:mt-470">
                 <div class="max-w-8xl mx-auto p-4 lg:p-0">
-
-                    <div class="flex flex-col lg:flex-row space-y-8 lg:space-y-0 items-center justify-center lg:-mt-40 mb-20">
-                        <div class="group flex justify-center ">
-                            <a href="mailto:{{ config('mail.info.address') }}" class=" text-white pl-7.5 py-2 border-2 border-primary-medium bg-primary-medium rounded-full flex items-center
-                          group-hover:bg-secondary-light group-hover:border-secondary-light
-                          transition duration-500 ease-in-out">
-                                <span class="mr-6 font-bold text-xl">{{ __('Solliciteer Nu') }}</span>
-                                <span class="flex items-center justify-center mr-4 h-12 w-12 rounded-full
-                                            bg-secondary text-white
-                                            group-hover:bg-white group-hover:text-secondary-light
-                                            transition duration-500 ease-in-out">
-                                    <x-svg.arrow/>
-                                </span>
-                            </a>
-                        </div>
-
-                        @if($alternative)
-                            <div class="ml-4 text-primary-dark text-center">
-                                <a
-                                    class="hover:underline"
-                                    href="{{ route('vacancies.show', ['vacancy' => $alternative ]) }}">
-                                    Niet je ding? Bekijk eens deze vacature: {{ $alternative->title }}
-                                </a>
-                            </div>
-                        @endif
-                    </div>
-
                     <x-vacancies.our-offer />
-
-
                 </div>
             </section>
             <section class="max-w-8xl mx-auto divide-y-2 mt-20">
-            <div class="group flex justify-center  mb-10">
-                <a href="mailto:{{ config('mail.info.address') }}" class=" text-white pl-7.5 py-2 border-2 border-primary-medium bg-primary-medium rounded-full flex items-center
+                <a href="mailto:{{ config('mail.info.address') }}" class="fixed z-40 bottom-5 right-5 text-white pl-7.5 py-2 border-2 border-primary-medium bg-primary-medium rounded-full flex items-center
                           group-hover:bg-secondary-light group-hover:border-secondary-light
                           transition duration-500 ease-in-out">
                     <span class="mr-6 font-bold text-xl">{{ __('Solliciteer Nu') }}</span>
@@ -72,7 +42,6 @@
                                     <x-svg.arrow/>
                                 </span>
                 </a>
-            </div>
 
             @if($vacancy->getFirstMedia('vacancy'))
                 <div
