@@ -30,7 +30,8 @@
                     <x-vacancies.our-offer />
                 </div>
             </section>
-            <section class="max-w-8xl mx-auto divide-y-2 mt-20">
+            <section class="max-w-8xl mx-auto mt-20">
+
                 <a href="mailto:{{ config('mail.info.address') }}" class="fixed z-40 bottom-5 right-5 text-white pl-7.5 py-2 border-2 border-primary-medium bg-primary-medium rounded-full flex items-center
                           group-hover:bg-secondary-light group-hover:border-secondary-light
                           transition duration-500 ease-in-out">
@@ -42,7 +43,19 @@
                                     <x-svg.arrow/>
                                 </span>
                 </a>
-
+                <div class="group flex justify-center  mb-10">
+                    <a href="mailto:{{ config('mail.info.address') }}" class=" text-white pl-7.5 py-2 border-2 border-primary-medium bg-primary-medium rounded-full flex items-center
+                          group-hover:bg-secondary-light group-hover:border-secondary-light
+                          transition duration-500 ease-in-out">
+                        <span class="mr-6 font-bold text-xl">{{ __('Solliciteer Nu') }}</span>
+                        <span class="flex items-center justify-center mr-4 h-12 w-12 rounded-full
+                                            bg-secondary text-white
+                                            group-hover:bg-white group-hover:text-secondary-light
+                                            transition duration-500 ease-in-out">
+                                    <x-svg.arrow/>
+                                </span>
+                    </a>
+                </div>
             @if($vacancy->getFirstMedia('vacancy'))
                 <div
                     class="md:border-2 border-grey-dark rounded-outer overflow-hidden md:p-5 bg-grey-light transform ">
