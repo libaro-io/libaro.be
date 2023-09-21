@@ -1,3 +1,9 @@
+<div class="flex flex-col sm:pl-4 md:pl-0 md:flex-row md:items-center justify-between">
+    <div>
+        <h3 class="font-gilroy font-extrabold text-sm md:text-lg text-secondary uppercase">Happy work, happy life</h3>
+        <h2 class="font-gilroy font-bold text-2xl md:text-h2 text-primary-darkest md:mt-8 mb-2 md:mb-20">Bij Libaro werken betekent</h2>
+    </div>
+</div>
 <div class="xl:bg-white xl:rounded-outer xl:shadow-2xl grid xl:grid-cols-3 gap-10.5 xl:-mt-14 p-7.5">
     <div class="relative h-80">
         <img src="/images/vacancies/work-p.jpg" alt="Image 1" class="absolute w-full rounded-inner h-full">
