@@ -59,17 +59,17 @@
 
         </section>
 
-        <section class="bg-primary-light border-b-20 border-project-border mt-32 md:mt-64 lg:mt-470">
-            <div class="max-w-8xl mx-auto p-4 lg:p-0">
+        <section class="half-background-color border-b-20 border-project-border">
+            <div class="max-w-8xl mx-auto p-4 lg:p-0 flex justify-center flex-col">
                 <div
-                    class="md:border-2 border-grey-dark rounded-outer overflow-hidden md:p-5 bg-grey-light transform -translate-y-1/2">
+                    class="md:border-2 border-grey-dark rounded-outer overflow-hidden md:p-5 bg-grey-light mb-20 max-w-8xl  mx-auto d-flex justify-center gap-4 display inline-block">
                     @if($showcase->getFirstMedia('showcase_extra'))
-                        {{ $showcase->getFirstMedia('showcase_extra')->img()->attributes(['class' => 'rounded-inner overflow-hidden w-full lg:h-620 object-cover']) }}
+                        {{ $showcase->getFirstMedia('showcase_extra')->img()->attributes(['class' => 'rounded-inner overflow-hidden w-auto object-cover h-full  max-h-[800px]']) }}
                     @else
-                        {{ $showcase->getFirstMedia('showcase_card')->img()->attributes(['class' => 'rounded-inner overflow-hidden w-full lg:h-620 object-cover']) }}
+                        {{ $showcase->getFirstMedia('showcase_card')->img()->attributes(['class' => 'rounded-inner overflow-hidden w-auto object-cover h-full  max-h-[800px]']) }}
                     @endif
                 </div>
-                <div class="-mt-32 md:-mt-64 lg:-mt470">
+                <div class="">
                     @if($showcase->quotes()->where('visible', 1)->count() > 0)
                         @php $quote = $showcase->quotes()->where('visible', 1)->get()->random() @endphp
                         <section class="max-w-8xl mx-auto mb-7.5 py-8 md:py-4 grid grid-cols-24 px-4 max:px-0">

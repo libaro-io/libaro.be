@@ -1,7 +1,7 @@
 @props(['nav' => false])
 
 <nav
-    class="max-w-8xl mx-auto max:pb-24 flex flex-col max:flex-row justify-between {{ $nav ? 'pt-14 items-end' : 'py-29 items-center' }}">
+    class="max-w-8xl mx-auto max:pb-16 flex flex-col max:flex-row justify-between {{ $nav ? 'pt-8 items-end' : 'py-29 items-center' }}">
     <a href="/" class="mb-10 max:mb-0 max:pb-5">
         <img class="w-205" src="{{ asset('/storage/images/libaro_logo_full_blue_without_tagline.svg') }}"
              alt="Libaro Logo">

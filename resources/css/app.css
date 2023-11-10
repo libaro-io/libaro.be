@@ -93,4 +93,23 @@
         src: url('../assets/fonts/grotesk_black.ttf') format('truetype');
     }
 
+    .inline-body ul, .inline-body ol{
+        list-style-type: unset;
+        @apply my-4;
+    }
+
+    .inline-body:first-child{
+        @apply mt-0;
+    }
+
+    .half-background-color{
+        @apply relative;
+    }
+
+    .half-background-color:after{
+        @apply bg-primary-light bottom-0 left-0 w-full absolute block -z-10;
+        content: '';
+        height: calc(200px + 50%);
+    }
+
 }

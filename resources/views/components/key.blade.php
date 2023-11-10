@@ -19,7 +19,7 @@
     </div>
 
     <div class="col-span-24 max:col-start-13 max:col-span-10 font-grotesk font-semibold text-lg lg:text-xl text-primary-darkest pt-4 pb-12 lg:pt-0 lg:pb-0">
-        <div class="font-grotesk font-semibold text-primary-darkest {{ $prose ? 'prose' : '' }}">
+        <div class="font-grotesk font-semibold text-primary-darkest {{ $prose ? 'prose' : '' }} inline-body">
             {!! $body !!}
         </div>
     </div>
