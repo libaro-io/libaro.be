@@ -95,7 +95,7 @@
 
     .inline-body ul, .inline-body ol{
         list-style-type: unset;
-        @apply my-4;
+        @apply my-1 pl-6;
     }
 
     .inline-body:first-child{
@@ -112,4 +112,8 @@
         height: calc(200px + 50%);
     }
 
+    strong{
+        font-weight: 900 !important;
+        color: unset !important;
+    }
 }
