@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Spatie\Sitemap\Contracts\Sitemapable;
 use Spatie\Sitemap\Tags\Url;
 use stdClass;
 use Spatie\MediaLibrary\HasMedia;
@@ -12,7 +13,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\Tags\HasTags;
 
-class Showcase extends Model implements HasMedia
+class Showcase extends Model implements HasMedia, Sitemapable
 {
     use HasFactory;
     use HasTags;
@@ -36,7 +37,7 @@ class Showcase extends Model implements HasMedia
 
     public function toSitemapTag(): Url | string | array
     {
-        return '/nl/'. $this->slug;
+        return '/nl/realisaties/'. $this->slug;
     }
 
 
