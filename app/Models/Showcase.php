@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Spatie\Sitemap\Tags\Url;
 use stdClass;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
@@ -32,6 +33,12 @@ class Showcase extends Model implements HasMedia
         $this->addMediaCollection('showcase_extra')->withResponsiveImages();
         $this->addMediaCollection('showcase_logo')->withResponsiveImages();
     }
+
+    public function toSitemapTag(): Url | string | array
+    {
+        return '/nl/'. $this->slug;
+    }
+
 
     /**
      * A Showcase belongs to a Client

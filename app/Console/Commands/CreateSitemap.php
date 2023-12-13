@@ -59,6 +59,7 @@ class CreateSitemap extends Command
                 return $url;
             })
             ->getSitemap()
+            ->add(Showcase::all())
             ->add(LandingPage::all())
             ->writeToFile(public_path('sitemap.xml'));
 
