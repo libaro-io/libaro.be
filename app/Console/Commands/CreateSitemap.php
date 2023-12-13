@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\LandingPage;
+use App\Models\Showcase;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 use Spatie\Sitemap\SitemapGenerator;
