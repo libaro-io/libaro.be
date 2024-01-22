@@ -12,7 +12,7 @@ class OurCustomers extends Component
 
     public function render()
     {
-        return view('livewire.our-customers', ['customers' => Client::query()->with('media')->where('visible', 1)->has('showcases')->orderBy('weight', 'desc')->orderBy('id')->paginate(4)]);
+        return view('livewire.our-customers', ['customers' => Client::query()->with('media')->where('visible', 1)->has('showcases')->orderBy('weight', 'desc')->orderBy('id')->paginate(8)]);
     }
 
     public function getCustomers()
@@ -21,7 +21,7 @@ class OurCustomers extends Component
             ->where('visible', 1)
             ->has('showcases')
             ->orderBy('weight', 'desc')
-            ->paginate(4);
+            ->paginate(8);
     }
 
     public function goToPreviousPage(Bool $onFirstPage = false)

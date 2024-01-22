@@ -60,5 +60,5 @@
     elNext.onclick= disableAutoScrollCustomers;
     elPrev.onclick= disableAutoScrollCustomers;
 
-    document.onload = setTimeout(repeatingFunc, 10000);
+    //document.onload = setTimeout(repeatingFunc, 10000);
 </script>
