@@ -1,6 +1,6 @@
 <x-layout>
 
-    @section('title', page_title('Data-driven web applications'))
+    @section('title', page_title('Digital Innovation Partner'))
 
     <div class="hidden max:block border-b-10 border-secondary"
          style="background-image: url('{{ asset('/storage/images/header_striped.jpg') }}'); background-repeat: no-repeat; background-size: cover">

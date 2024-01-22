@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Models\LandingPage;
+use App\Models\Showcase;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 use Spatie\Sitemap\SitemapGenerator;
@@ -42,7 +43,7 @@ class CreateSitemap extends Command
     public function handle()
     {
         $url = $this->argument('url');
-
+        $showcases = Showcase::query()->where('visible','=',1)->get();
         SitemapGenerator::create($url ?? config('app.url'))
             ->hasCrawled(function (Url $url) {
                 $segment2 = $url->segment(2);
@@ -58,6 +59,7 @@ class CreateSitemap extends Command
                 return $url;
             })
             ->getSitemap()
+            ->add($showcases)
             ->add(LandingPage::all())
             ->writeToFile(public_path('sitemap.xml'));
 

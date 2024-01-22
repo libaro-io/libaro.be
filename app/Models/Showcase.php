@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Spatie\Sitemap\Contracts\Sitemapable;
+use Spatie\Sitemap\Tags\Url;
 use stdClass;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
@@ -11,7 +13,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\Tags\HasTags;
 
-class Showcase extends Model implements HasMedia
+class Showcase extends Model implements HasMedia, Sitemapable
 {
     use HasFactory;
     use HasTags;
@@ -32,6 +34,12 @@ class Showcase extends Model implements HasMedia
         $this->addMediaCollection('showcase_extra')->withResponsiveImages();
         $this->addMediaCollection('showcase_logo')->withResponsiveImages();
     }
+
+    public function toSitemapTag(): Url | string | array
+    {
+        return '/nl/realisaties/'. $this->slug;
+    }
+
 
     /**
      * A Showcase belongs to a Client
