@@ -35,6 +35,13 @@ class ExpertiseController extends Controller
         return view('pages.expertise.architectuur');
     }
 
+    public function ai(Request $request)
+    {
+        $request->session()->put('domain', Domains::EXPERTISE);
+
+        return view('pages.expertise.ai');
+    }
+
     public function iot(Request $request)
     {
         $request->session()->put('domain', Domains::EXPERTISE);

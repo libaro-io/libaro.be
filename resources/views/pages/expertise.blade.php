@@ -48,12 +48,12 @@
                        body="{{ __('expertise.web.body') }}"/>
             </a>
 
-            <a href="{{ route('our-expertise.architectuur') }}"
+            <a href="{{ route('our-expertise.artificial-intelligence') }}"
                class="block cursor-pointer p-4 hover:bg-primary-light">
 
                 <x-key number="2"
-                       title="{{ __('expertise.architecture.title') }}"
-                       body="{{ __('expertise.architecture.body') }}"/>
+                       title="{{ __('expertise.ai.title') }}"
+                       body="{{ __('expertise.ai.body') }}"/>
 
             </a>
 

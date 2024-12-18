@@ -31,22 +31,26 @@ return [
             ],
         ],
     ],
-    'architecture' => [
-        'title' => 'Digitale architectuur',
-        'body' => 'Bij Libaro begrijpen we dat elke ontwikkeling voortkomt uit een bredere bedrijfsstrategie, zowel op digitaal als op algemeen niveau. We zetten onze expertise in om deze strategie en architectuur zorgvuldig vorm te geven. Ons doel is ervoor te zorgen dat alle systemen binnen het geheel passen en hun doel effectief vervullen. Hierbij houden we rekening met de totale context en zorgen we voor een optimale afstemming. Daarnaast hebben we expertise in het structureren van grote hoeveelheden data, waarbij we streven naar een data architectuur die voldoet aan de hoogste standaarden en best practices in de branche.',
+    'ai' => [
+        'title' => 'AI Integraties',
+        'body' => 'Artificiële intelligentie groeit razendsnel en biedt volop mogelijkheden om allerlei bedrijfsprocessen slimmer te maken, problemen op te lossen en nieuwe inzichten te creëren. Bij Libaro ontwikkelen we AI-integraties die naadloos aansluiten op jouw systemen en processen, zodat je bedrijf efficiënter en datagedreven kan werken.',
         'page' => [
-            'intro' => 'Een digitale strategie is een fundamenteel onderdeel van elke bedrijfsstrategie. Aangezien veel organisaties marketingbudgetten verschuiven naar digitaal, is het van vitaal belang dat er een duidelijke strategie is om een geweldig rendement op de investering te genereren. We hebben talloze klanten geholpen om het meeste uit digitaal te halen.',
-            'offer' => [
-                'title' => 'Wat we aanbieden',
-                'body' => 'Voor er geïnvesteerd wordt, kijken we samen naar de doelen en de technische vereisten om deze te bereiken. Welke systemen gebruiken we, wat is er maatwerk en hoe wordt de data gestructureerd.',
+            'intro' => 'Wij integreren de meest effectieve AI-technologieën die je helpen om je bedrijfsdoelen te bereiken. Enkele voorbeelden van onze use cases: ',
+            'chatbots' => [
+                'title' => 'Customer Support / Chatbots',
+                'body' => 'Het automatiseren van klantinteracties om de tevredenheid te verhogen met behulp van AI-gestuurde chatbots die snel en efficiënt antwoorden geven op vragen, 24/7 ondersteuning bieden en de algehele klantbeleving verbeteren.',
             ],
-            'analysis' => [
-                'title' => 'Analyse & Aanbevelingen',
-                'body' => 'Elk nieuw project begint met het analyseren van de bestaande werking, sytemen en data. Dit legt de basis en helpt ons om aanbevelingen te doen en onze waardevolle expertise toe te passen.',
+            'data-mining' => [
+                'title' => 'Data verwerking',
+                'body' => 'Het verwerken en analyseren van grote hoeveelheden data met AI. Zo worden belangrijke inzichten vlot beschikbaar en kunnen sneller beslissingen genomen worden die jouw bedrijfsprocessen en -strategieën verbeteren. ',
             ],
-            'competitive-analysis' => [
-                'title' => 'Concurrentieanalyse',
-                'body' => 'Kijken naar wat uw concurrenten doen, is essentieel voor het succes van elk nieuw project. In tegenstelling tot veel andere bureaus, proberen we niet uw naaste rivalen te repliceren - we identificeren eenvoudig wat we missen om eventuele hiaten op te vullen.',
+            'approach' => [
+                'title' => 'Onze aanpak',
+                'body' => 'Samen met jou bekijken we wat jouw bedrijf nodig heeft. We analyseren je uitdagingen en ontwikkelen een strategische AI-integratie die perfect aansluit bij je doelen. Ons agile proces, strakke bedrijfsstructuur en duidelijke communicatie zorgen voor een flexibele en snelle implementatie, zodat je snel resultaat ziet.',
+            ],
+            'lets-talk' => [
+                'title' => 'Let’s talk!',
+                'body' => 'Klaar om AI te integreren in je bedrijf? Neem contact met ons op voor een vrijblijvend gesprek en ontdek hoe wij jouw processen slimmer kunnen maken met op maat gemaakte AI-oplossingen.',
             ],
         ],
     ],
