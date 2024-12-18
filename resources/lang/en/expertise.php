@@ -31,22 +31,26 @@ return [
             ],
         ],
     ],
-    'architecture' => [
-        'title' => 'Digital architecture',
-        'body' => 'Each development is part of a (digital) business strategy. We use our expertise to outline this strategy and architecture. In order for all systems to have their purpose and place, aligned with the total picture. Large amounts of data also need to be neatly structured. We ensure that the data architecture is in accordance with the rules of the art.',
+    'ai' => [
+        'title' => 'AI Integrations',
+        'body' => 'Artificial intelligence is growing rapidly and offers numerous opportunities to make various business processes smarter, solve problems, and create new insights. At Libaro, we develop AI integrations that seamlessly connect with your systems and processes, enabling your company to work more efficiently and data-driven.',
         'page' => [
-            'intro' => 'A digital strategy is a fundamental part of any business strategy. As many organizations shift marketing budgets to digital, it is vital that there is a clear strategy in place to generate a great return on investment. We\'ve helped countless clients get the most out of digital.',
-            'offer' => [
-                'title' => 'What we offer',
-                'body' => 'Before investing, we look together at the goals and the technical requirements to achieve them. Which systems do we use, what is customization and how is the data structured.',
+            'intro' => 'We integrate the most effective AI technologies to help you achieve your business goals. Some examples of our use cases:',
+            'chatbots' => [
+                'title' => 'Customer Support / Chatbots',
+                'body' => 'Automating customer interactions to increase satisfaction using AI-driven chatbots that quickly and efficiently answer questions, provide 24/7 support, and improve the overall customer experience.',
             ],
-            'analysis' => [
-                'title' => 'Analysis & Recommendations',
-                'body' => 'Every new project starts by analyzing the existing operation, systems and data. This lays the groundwork and helps us make recommendations and apply our valuable expertise.',
+            'data-mining' => [
+                'title' => 'Data Processing',
+                'body' => 'Processing and analyzing large amounts of data with AI. This makes important insights readily available and allows faster decision-making to improve your business processes and strategies.',
             ],
-            'competitive-analysis' => [
-                'title' => 'Competitive Analysis',
-                'body' => 'Watching what your competitors are doing is essential to the success of any new project. Unlike many other agencies, we don\'t try to replicate your closest rivals - we simply identify what we\'re missing to fill any gaps.',
+            'approach' => [
+                'title' => 'Our Approach',
+                'body' => 'Together with you, we assess what your company needs. We analyze your challenges and develop a strategic AI integration that perfectly aligns with your goals. Our agile process, tight business structure, and clear communication ensure a flexible and fast implementation, so you see results quickly.',
+            ],
+            'lets-talk' => [
+                'title' => 'Let’s talk!',
+                'body' => 'Ready to integrate AI into your business? Contact us for a non-binding conversation and discover how we can make your processes smarter with custom AI solutions.',
             ],
         ],
     ],
