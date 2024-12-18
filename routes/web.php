@@ -47,7 +47,7 @@ Route::prefix(RoutePrefix::setLocale())
         Route::localized(WebRoutes::SERVICES_ARCHITECTURE, [ExpertiseController::class, 'architectuur'])
             ->name('our-expertise.architectuur');
 
-        Route::localized(WebRoutes::SERVICES_ARCHITECTURE, [ExpertiseController::class, 'ai'])
+        Route::localized(WebRoutes::SERVICES_AI, [ExpertiseController::class, 'ai'])
             ->name('our-expertise.artificial-intelligence');
 
         Route::localized(WebRoutes::SERVICES_IOT, [ExpertiseController::class, 'iot'])
