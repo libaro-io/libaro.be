@@ -81,9 +81,17 @@ Route::prefix(RoutePrefix::setLocale())
             $lc->handle();
         });
 
+
+        Route::get('/timecard/integration', function () {
+            return view('pages.timecard.integration');
+        })->name('timecard-integration');
+
+        Route::get('/timecard/support', \App\Http\Controllers\Timecard\SupportController::class)->name('timecard-support');
+
         Route::get('{any}', function () {
             abort(404);
         })->where('any', '.*');
+
     });
 
 Route::get('/', RedirectController::class)->name('home');

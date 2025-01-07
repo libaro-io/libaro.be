@@ -9,10 +9,10 @@ use App\Http\Controllers\Admin\QuoteController;
 use App\Http\Controllers\Admin\ShowcaseController;
 use App\Http\Controllers\Admin\SessionController;
 use App\Http\Controllers\Admin\VacancyController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/login', [SessionController::class, 'create'])->middleware('guest')->name('login');
 Route::post('/login', [SessionController::class, 'store'])->middleware('guest')->name('login');
-
 
 Route::prefix('admin')->middleware('auth')->name('admin.')->group(function() {
 
