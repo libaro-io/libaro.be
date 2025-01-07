@@ -1,5 +1,5 @@
 <x-layout>
-    @section('title', 'Supportpagina Robaws')
+    @section('title', 'Supportpagina Timecard App')
     <div class="hidden max:block border-b-10 border-secondary"
          style="background-image: url('{{ asset('/storage/images/header_striped.jpg') }}'); background-repeat: no-repeat; background-size: cover">
 
@@ -9,7 +9,7 @@
 
             </div>
             <div class="pt-24">
-                <x-header-single-column title="Supportpagina Robaws"
+                <x-header-single-column title="Supportpagina Timecard App"
                                         subtitle="Hoe kunnen wij u helpen?"/>
             </div>
         </div>
@@ -19,7 +19,7 @@
         <div
             style="background-image: url('{{ asset('/storage/images/header_bg.png') }}'); background-repeat: no-repeat; background-size: cover">
             <div class="relative max:max-w-8xl mx-auto">
-                <x-header-single-column title="Supportpagina Robaws"
+                <x-header-single-column title="Supportpagina Timecard App"
                                         subtitle="Hoe kunnen wij u helpen?"/>
             </div>
         </div>
