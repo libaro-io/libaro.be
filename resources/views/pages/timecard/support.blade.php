@@ -113,7 +113,7 @@
                             </ol>
                         </div>
                         <div>
-                            <img src="{{ asset('images/timecart/ios.png') }}" alt="iOS installatie"
+                            <img src="{{ asset('images/timecard/ios.png') }}" alt="iOS installatie"
                                  class="w-full h-auto">
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                             </ol>
                         </div>
                         <div>
-                            <img src="{{ asset('images/timecart/android.jpg') }}" alt="Android installatie"
+                            <img src="{{ asset('images/timecard/android.jpg') }}" alt="Android installatie"
                                  class="w-full h-auto">
                         </div>
                     </div>
