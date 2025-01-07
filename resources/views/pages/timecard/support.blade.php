@@ -58,7 +58,7 @@
                             class="faq-item p-2 md:p-4 bg-primary-light text-primary-darkest">
                             <div
                                 @click="open = !open"
-                                class="flex justify-between items-center gap-4 text-primary-dark font-gilroy font-bold text-2xl cursor-pointer mb-2">
+                                class="flex justify-between items-center gap-4 text-primary-dark font-gilroy font-bold text-2xl cursor-pointer">
                                 <h3>
                                     {{ $faq['question'] }}
                                 </h3>
@@ -73,7 +73,7 @@
                                 x-transition:leave-start="h-auto opacity-100"
                                 x-transition:leave-end="h-0 opacity-0"
                                 x-show="open"
-                                class="text-primary-darkest">
+                                class="text-primary-darkest mt-2">
                                 {{ $faq["answer"] }}
                             </p>
                         </div>
