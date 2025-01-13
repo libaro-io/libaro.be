@@ -1,6 +1,6 @@
 <x-layout>
 
-    @section('title', page_title('Digital Innovation Partner'))
+    @section('title', page_title($landingPage->title))
 
     <div class="hidden max:block border-b-10 border-secondary h-920"
          style="background-image: url('{{ asset('/storage/images/header_striped.jpg') }}'); background-repeat: no-repeat; background-size: cover">
