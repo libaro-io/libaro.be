@@ -6094,9 +6094,6 @@ select{
 .ml-2{
   margin-left: 0.5rem;
 }
-.ml-5{
-  margin-left: 1.25rem;
-}
 .block{
   display: block;
 }
@@ -6253,12 +6250,6 @@ select{
 .w-20{
   width: 5rem;
 }
-.w-36{
-  width: 9rem;
-}
-.w-52{
-  width: 13rem;
-}
 .min-w-full{
   min-width: 100%;
 }
@@ -6281,6 +6272,9 @@ select{
 .max-w-7xl{
   max-width: 80rem;
 }
+.max-w-full{
+  max-width: 100%;
+}
 .max-w-2xl{
   max-width: 42rem;
 }
@@ -6290,9 +6284,6 @@ select{
 }
 .max-w-sm{
   max-width: 24rem;
-}
-.max-w-full{
-  max-width: 100%;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -6331,9 +6322,6 @@ select{
 }
 .list-inside{
   list-style-position: inside;
-}
-.list-outside{
-  list-style-position: outside;
 }
 .list-disc{
   list-style-type: disc;
@@ -6406,11 +6394,11 @@ select{
 .gap-8{
   gap: 2rem;
 }
-.gap-2{
-  gap: 0.5rem;
-}
 .gap-3{
   gap: 0.75rem;
+}
+.gap-2{
+  gap: 0.5rem;
 }
 .gap-y-10{
   row-gap: 2.5rem;
@@ -6830,9 +6818,6 @@ select{
 }
 .p-1{
   padding: 0.25rem;
-}
-.p-10{
-  padding: 2.5rem;
 }
 .px-6{
   padding-left: 1.5rem;
@@ -7466,6 +7451,11 @@ strong{
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-primary-medium:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(137 187 225 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-red-700:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
@@ -7813,12 +7803,12 @@ strong{
     grid-column: span 2 / span 2;
   }
 
-  .md\:col-span-1{
-    grid-column: span 1 / span 1;
-  }
-
   .md\:col-span-3{
     grid-column: span 3 / span 3;
+  }
+
+  .md\:col-span-1{
+    grid-column: span 1 / span 1;
   }
 
   .md\:col-start-15{
@@ -7966,10 +7956,6 @@ strong{
     width: 18.75rem;
   }
 
-  .md\:w-2\/3{
-    width: 66.666667%;
-  }
-
   .md\:max-w-8xl{
     max-width: 90rem;
   }
@@ -7983,20 +7969,12 @@ strong{
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
-  .md\:grid-cols-6{
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-  }
-
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+  .md\:grid-cols-6{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .md\:flex-row{
@@ -8310,10 +8288,6 @@ strong{
     width: 3rem;
   }
 
-  .lg\:w-2\/3{
-    width: 66.666667%;
-  }
-
   .lg\:max-w-8xl{
     max-width: 90rem;
   }
@@ -8513,6 +8487,10 @@ strong{
   .xl\:py-0{
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .xl\:pt-0{
+    padding-top: 0px;
   }
 
   .xl\:text-7xl{

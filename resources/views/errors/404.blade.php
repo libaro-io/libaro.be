@@ -4,7 +4,7 @@
     <x-nav-bottom-container :dark=true/>
 
         <main>
-            <div class="max-w-8xl px-12 max:px-0 mx-auto pt-32 pb-12 sm:pb-32 max:pb-64 lg:pt-0">
+            <div class="max-w-8xl px-12 max:px-0 mx-auto pt-32 pb-12 sm:pb-32 max:pb-64 xl:pt-0">
                 <h2 class="font-gilroy font-extrabold text-lg uppercase text-secondary mb-4 md:mb-15">
                     Er is niets te vinden op deze url...
                 </h2>
