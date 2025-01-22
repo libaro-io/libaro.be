@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\Playground\Logo3dController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RedirectController;
 use App\ValueObjects\WebRoutes;
 use App\Http\Controllers\HomeController;
@@ -32,6 +33,9 @@ Route::prefix(RoutePrefix::setLocale())
 
         Route::get('/realisaties', [ShowcaseController::class, 'index'])->name('our-realizations');
         Route::get('/realisaties/{showcase}', [ShowcaseController::class, 'show'])->name('showcase');
+
+        Route::get('/producten', [ProductController::class, 'index'])->name('our-products');
+        Route::get('/producten/{showcase}', [ProductController::class, 'show'])->name('showcase');
 
         Route::get('/playground/logo-3d', Logo3dController::class)->name('playground.logo-3d');
 

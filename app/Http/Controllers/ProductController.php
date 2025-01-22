@@ -9,16 +9,16 @@ use App\ValueObjects\Domains;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Str;
 
-class ShowcaseController extends Controller
+class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        $request->session()->put('domain', Domains::REALISATIONS);
+        $request->session()->put('domain', Domains::PRODUCTS);
 
         if (request()->has('filter')) {
             $filters = explode(',', request()->filter);
             $showcases = Showcase::query()
-                ->where('is_product', 0)
+                ->where('is_product', 1)
                 ->where('visible', 1)
                 ->withAnyTags($filters)
                 ->orderBy('date', 'desc')
@@ -27,7 +27,7 @@ class ShowcaseController extends Controller
         } else {
             $filters = null;
             $showcases = Showcase::query()
-                ->where('is_product', 0)
+                ->where('is_product', 1)
                 ->where('visible', 1)
                 ->orderBy('date', 'desc')
                 ->orderBy('id', 'asc')
@@ -43,7 +43,7 @@ class ShowcaseController extends Controller
                 $results .= <<<END
                                 <div class="h-420 md:h-620 lg:h-840 bg-white col-span-24 max:col-span-12 max:row-span-2 border-2 border-primary-medium border-opacity-20 overflow-hidden lg:rounded-outer lg:mx-10 lg:mb-90
                                         transition duration-300 transform hover:scale-105">
-                                    <a href="$showcase->route" class="relative block h-full md:p-5">
+                                    <a href="$showcase->routeProduct" class="relative block h-full md:p-5">
                                         <div class="absolute z-30 md:m-5 inset-0 bg-gradient-to-t from-primary-darkest via-transparent to-transparent opacity-80 overflow-hidden lg:rounded-inner"></div>
                                             $img
                                         <div class="absolute z-40 bottom-6 md:bottom-12 lg:bottom-20 left-0 px-4 sm:px-20">
@@ -58,7 +58,11 @@ class ShowcaseController extends Controller
             return $results;
         }
 
-        return view('showcases.index', ['showcases' => $showcases, 'filters' => $filters]);
+        return view('products.index', [
+            'showcases' => $showcases,
+            'filters' => $filters,
+            'title' => 'our_products',
+        ]);
     }
 
     /**

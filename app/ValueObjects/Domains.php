@@ -15,4 +15,5 @@ class Domains
     public const PRIVACY = 9;
     public const COOKIES = 10;
     public const TERMS = 11;
+    public const PRODUCTS = 12;
 }

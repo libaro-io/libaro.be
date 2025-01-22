@@ -91,6 +91,11 @@ class Showcase extends Model implements HasMedia, Sitemapable
         return '/nl/realisaties/' . $this->slug;
     }
 
+    public function getRouteProductAttribute(): string
+    {
+        return '/nl/producten/' . $this->slug;
+    }
+
     /**
      * Get the route key for the model.
      *
