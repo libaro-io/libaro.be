@@ -20,7 +20,7 @@ class RecentShowcases extends Component
         $showcases = Showcase::query()
             ->with('client')
             ->with('media')
-            ->select('id', 'client_id', 'slug', 'name', 'type')
+            ->select('id', 'client_id', 'slug', 'name', 'type', 'is_product')
             ->whereIn('id', $randomShowcaseIds)
             ->get();
 

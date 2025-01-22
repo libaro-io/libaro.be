@@ -74,7 +74,7 @@ class ProductController extends Controller
      */
     public function show(Showcase $showcase, Request $request): View
     {
-        $request->session()->put('domain', Domains::REALISATIONS);
+        $request->session()->put('domain', Domains::PRODUCTS);
 
         $showcase = Showcase::find($showcase->id);
 

@@ -1,6 +1,5 @@
 @props(['showcase'])
-
-<a href="{{ $showcase->route }}"
+<a href="{{ $showcase->is_product ? $showcase->routeProduct : $showcase->route }}"
    class="relative sm:border-30 shadow-xl xl:shadow-none border-white bg-white xl:border-0 col-span-3 md:col-span-2 xl:col-span-1 rounded-inner-sm overflow-hidden cursor-pointer
         flex flex-col justify-end
         h-630 px-7.5x pb-12x
