@@ -47,14 +47,14 @@
                                     <img class="rounded-full w-16 h-16" src="{{ asset('storage/images/bert.jpg') }}" alt="Image of Bert" />
                                     <div class="absolute bottom-0 right-0 mr-1 w-3 h-3 rounded-full bg-green-500 border-2 border-white"></div>
                                 </div>
-                                <div class="mt-2 mb-4 md:mb-0 text-primary-dark font-grotesk text-lg mb-2 flex flex-col justify-between">
+                                <div class="mt-2 mb-4 md:mb-0 text-primary-dark text-lg font-light mb-2 flex flex-col justify-between">
                                     <div class="font-bold">Bert Clybouw</div>
-                                    <a href="mailto:bert@libaro.be">bert@libaro.be</a>
-                                    <div class="text-primary-dark font-grotesk text-lg">+32 (0)494 207025</div>
+                                    <a class="" href="mailto:bert@libaro.be">bert@libaro.be</a>
+                                    <div class="text-primary-dark text-lg">+32 (0)494 207025</div>
                                 </div>
                             </div>
 
-                            <div class="text-primary-dark font-grotesk text-lg mb-2 mt-2">Vaartdijkstraat 19, 8200 {{ __('general.brugge') }}<br />
+                            <div class="text-primary-dark text-lg mb-2 mt-2">Vaartdijkstraat 19, 8200 {{ __('general.brugge') }}<br />
                                 {{ __('general.belgium') }}</div>
                         </div>
                     </div>
