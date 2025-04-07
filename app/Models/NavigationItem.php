@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\ValueObjects\Domains;
 use App\ValueObjects\MenuType;
 use App\Scopes\OnlyVisibleScope;
 use Illuminate\Support\Facades\Cache;
@@ -47,7 +48,19 @@ class NavigationItem extends Model
     public static function secondary(): Collection
     {
         return Cache::rememberForever('menu_secondary', function () {
-            return self::where('menu', MenuType::SECONDARY)->get();
+            $items =  self::query()
+                ->where('menu', '=', MenuType::SECONDARY)
+                ->get()
+                ->filter(function ($item) {
+                    if ($item->domain !== Domains::VACANCIES) {
+                        return $item;
+                    }
+                    if (Vacancy::query()->where('visible', '=', '1')->count()) {
+                        return $item;
+                    }
+                    return false;
+                });
+            return $items;
         });
     }
 }
