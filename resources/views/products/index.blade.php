@@ -14,6 +14,7 @@
                     <h2 class="font-gilroy font-extrabold text-lg uppercase text-secondary mb-4">{{ __('products.subtitle') }}</h2>
                     <h1 class="font-gilroy font-bold text-4xl md:text-7xl text-primary-darkest mb-10 md:mb-15">{{ __('products.title') }}</h1>
                     <p class="font-grotesk font-semibold text-xl md:text-2xl text-primary-darkest">{{ __('products.intro.first_paragraph') }}</p>
+                    <p>&nbsp;</p>
                     <p class="font-grotesk font-semibold text-xl md:text-2xl text-primary-darkest">{!! __('products.intro.second_paragraph') !!}</p>
 
                     @if($filters)
