@@ -149,6 +149,38 @@
             </section>
         @endif
 
+        <section class="bg-white py-12 md:py-32">
+          <div class="mx-auto max-w-8xl px-6 md:px-0">
+            <div class="mx-auto">
+              <h2 class="font-gilroy text-balance text-2xl font-semibold tracking-tight text-primary-darkest md:text-5xl">{{ __('showcases.related_pages') }}</h2>
+            </div>
+            <div class="mx-auto mt-16 flex flex-col md:flex-row gap-8">
+              @forelse($landingPages as $landingPage)
+              <a href="{{ route('landing.show', ['locale' => app()->getLocale(), 'slug' => $landingPage->slug]) }}">
+                <article class="relative isolate flex flex-col justify-end h-full overflow-hidden rounded-2x pt-80 md:pt-48 lg:pt-80 group">
+                    @if($landingPage->image_index)
+                        <img class="object-cover w-full h-full rounded-inner overflow-hidden"
+                        src="{{ asset('/storage/images//landing/team_'.$landingPage->image_index.'.jpg') }}" alt="{{ $landingPage->title }}">
+                        
+                    @else
+                        <div class="absolute inset-0 -z-10 bg-primary-darkest"></div>
+                    @endif
+
+                    <div class="absolute inset-0 rounded-inner overflow-hidden -z-10 bg-gradient-to-t from-primary-darkest via-primary-darkest/40"></div>
+
+                    <h3 class=" absolute mb-4 md:mb-8 ml-4 md:ml-10 mr-4 md:mr-8 text-lg font-semibold leading-6 text-white">
+                            <span class="absolute inset-0"></span>
+                            {{ $landingPage->title }}
+                    </h3>
+                </article>
+            </a>
+            @empty
+                <p class="col-span-full text-center text-gray-500">{{ __('showcases.no_related_pages') }}</p>
+            @endforelse
+            </div>
+          </div>
+        </section>
+
     </main>
 
     <x-nav-bottom/>

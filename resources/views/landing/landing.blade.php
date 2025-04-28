@@ -65,7 +65,7 @@
             </div>
         </div>
     @endif
-    <section class="px-4 max:px-0 lg:max-w-8xl mx-auto bg-white pt-20 pb-28 grid grid-cols-24">
+    <section class="px-4 max:px-0 lg:max-w-8xl mx-auto bg-white pt-20 pb-12 grid grid-cols-24">
         <div class="col-span-24 lg:col-span-11 mb-10.5 lg:mb-0">
             <x-elements.h3>{{ __('home.expertise.title') }}</x-elements.h3>
             <x-elements.h2>{{$landingPage->text1}}</x-elements.h2>

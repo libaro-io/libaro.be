@@ -13,7 +13,6 @@
                     class="row-span-1 row-start-1 col-span-24 max:col-span-12 mx-4 md:mx-14 max:mx-0 mt-32 md:mt-16 max:mt-0 pb-8 max:pb-0 max:min-h-500">
                     <h2 class="font-gilroy font-extrabold text-lg uppercase text-secondary mb-4">{{ __('products.subtitle') }}</h2>
                     <h1 class="font-gilroy font-bold text-4xl md:text-7xl text-primary-darkest mb-10 md:mb-15">{{ __('products.title') }}</h1>
-                    <p class="font-grotesk font-semibold text-xl md:text-2xl text-primary-darkest">{{ __('products.intro.first_paragraph') }}</p>
                     <p class="font-grotesk font-semibold text-xl md:text-2xl text-primary-darkest">{!! __('products.intro.second_paragraph') !!}</p>
 
                     @if($filters)

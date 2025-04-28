@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Showcase;
 use App\Models\LandingPage;
-use App\ValueObjects\Domains;
 use Illuminate\Http\Request;
+use App\ValueObjects\Domains;
 
 class LandingPageController extends Controller
 {
@@ -12,10 +13,15 @@ class LandingPageController extends Controller
     {
         $request->session()->put('domain', Domains::HOME);
 
+        $showcase = Showcase::query()
+        ->inRandomOrder()
+        ->limit(1)
+        ->first();
+
         $landingPage = LandingPage::query()
             ->where('slug', $slug)
             ->firstOrFail();
 
-        return view('landing.landing', compact('landingPage'));
+        return view('landing.landing', compact('landingPage', 'showcase'));
     }
 }

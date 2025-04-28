@@ -1,26 +1,27 @@
 <?php
 
-use App\Http\Controllers\LandingPageController;
-use App\Http\Controllers\Playground\Logo3dController;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\RedirectController;
-use App\ValueObjects\WebRoutes;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\DocumentationController;
-use App\Http\Controllers\AboutUsController;
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\ClientRandomShowcase;
-use App\Http\Controllers\ContactForm;
-use App\Http\Controllers\ContactUsController;
-use App\Http\Controllers\CookiesPage;
-use App\Http\Controllers\ExpertiseController;
-use App\Http\Controllers\PrivacyPage;
-use App\Http\Controllers\ShowcaseController;
-use App\Http\Controllers\TermsPage;
-use App\Http\Controllers\VacanciesController;
 use App\Services\RoutePrefix;
+use App\ValueObjects\WebRoutes;
+use App\Http\Controllers\TermsPage;
+use App\Http\Controllers\ContactForm;
+use App\Http\Controllers\CookiesPage;
+use App\Http\Controllers\PrivacyPage;
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AssetsController;
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RedirectController;
+use App\Http\Controllers\ShowcaseController;
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\ExpertiseController;
+use App\Http\Controllers\VacanciesController;
+use App\Http\Controllers\ClientRandomShowcase;
+use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\DocumentationController;
+use App\Http\Controllers\Playground\Logo3dController;
 
 require_once 'admin.php';
 
@@ -79,6 +80,8 @@ Route::prefix(RoutePrefix::setLocale())
         Route::get('/docs/{repository}/{path?}', [DocumentationController::class, 'show'])
             ->name('docs.show')
             ->where('path', '(.*)');
+
+        Route::get('/assets', AssetsController::class)->name('assets');
 
         Route::get('script', function () {
             $lc = new \App\Services\LandingPageGenerator();

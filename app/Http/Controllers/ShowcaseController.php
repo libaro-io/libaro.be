@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Spatie\Tags\Tag;
 use App\Models\Showcase;
+use App\Models\LandingPage;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\ValueObjects\Domains;
 use Illuminate\Contracts\View\View;
-use Illuminate\Support\Str;
 
 class ShowcaseController extends Controller
 {
@@ -72,11 +73,17 @@ class ShowcaseController extends Controller
     {
         $request->session()->put('domain', Domains::REALISATIONS);
 
+        $LandingPages = LandingPage::query()
+            ->inRandomOrder()
+            ->limit(3)
+            ->get();
+
         $showcase = Showcase::find($showcase->id);
 
         return view('showcases.show', [
             'showcase' => $showcase->load('keys', 'quotes'),
             'tags' => $showcase->getMappedTags(),
+            'landingPages' => $LandingPages,
         ]);
     }
 }
