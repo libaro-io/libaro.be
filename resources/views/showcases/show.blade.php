@@ -152,7 +152,7 @@
         <section class="bg-white py-12 md:py-32">
           <div class="mx-auto max-w-8xl px-6 md:px-0">
             <div class="mx-auto">
-              <h2 class="font-gilroy text-balance text-2xl font-semibold tracking-tight text-primary-darkest md:text-5xl">Ook interessant voor jou:</h2>
+              <h2 class="font-gilroy text-balance text-2xl font-semibold tracking-tight text-primary-darkest md:text-5xl">{{ __('showcases.related_pages') }}</h2>
             </div>
             <div class="mx-auto mt-16 flex flex-col md:flex-row gap-8">
               @forelse($landingPages as $landingPage)
@@ -175,7 +175,7 @@
                 </article>
             </a>
             @empty
-                <p class="col-span-full text-center text-gray-500">Geen gerelateerde pagina's gevonden.</p>
+                <p class="col-span-full text-center text-gray-500">{{ __('showcases.no_related_pages') }}</p>
             @endforelse
             </div>
           </div>

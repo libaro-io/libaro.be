@@ -9,4 +9,6 @@ return [
     ],
     'with_tags' => 'Realisaties met tag:',
     'clear_tags' => 'toon alle realisaties',
+    'related_pages' => 'Ook interessant voor jou:',
+    'no_related_pages' => 'Geen gerelateerde pagina\'s gevonden.',
 ];
