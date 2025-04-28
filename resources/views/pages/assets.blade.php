@@ -42,34 +42,28 @@
         <div class="bg-white pb-24 sm:py-32">
             <div class="mx-auto max-w-8xl px-6 lg:px-8">
               <div class="-mx-6 grid grid-cols-2 gap-0.5 overflow-hidden sm:mx-0 sm:rounded-inner md:grid-cols-3 gap-2">
-                <div class="bg-primary-light p-8 sm:p-10 flex text-center items-center justify-center">
-                    <a href="https://drive.google.com/file/d/1q0o5icwiK5Z_lwdZchx1II_8LTkU5MOv/view?usp=drive_link" target="_blank">
-                        <img class="max-h-12 object-contain" src="{{ asset('storage/images/libaro_icon.png') }}" alt="Transistor" width="125" height="38">
+                <div class="bg-primary-light p-8 sm:p-10 flex flex-col text-center items-center justify-center space-y-8">
+                    <img class="max-h-12 object-contain" src="{{ asset('storage/images/libaro_icon.png') }}" alt="Icons" width="125" height="38">
+                    <a class="text-white bg-primary-dark px-6 py-2 rounded-xl shadow-lg hover:shadow-sm uppercase font-bold cursor-pointer transform transition-all" 
+                        href="https://drive.google.com/drive/folders/10jTaSiD9pi7aIr2Ax5JDmS8e5EYo3KQZ?usp=drive_link" 
+                        target="_blank" type="button">
+                        Download
                     </a>
                 </div>
-                <div class="bg-primary-light p-6 sm:p-10">
-                    <a href="https://drive.google.com/file/d/18c-Y-pHDRHKRn29LPo3pQYY30uMjKxHL/view?usp=drive_link" target="_blank">
-                        <img class="max-h-12 w-full object-contain" src="{{ asset('storage/images/libaro_logo_full_blue_without_tagline.svg') }}" alt="Reform" width="158" height="48">
+                <div class="bg-primary-light p-6 sm:p-10 flex flex-col text-center items-center justify-center space-y-8">
+                    <img class="max-h-12 w-full object-contain" src="{{ asset('storage/images/libaro_logo_full_blue_without_tagline.svg') }}" alt="Logo without tagline" width="158" height="48">
+                    <a class="text-white bg-primary-dark px-6 py-2 rounded-xl shadow-lg hover:shadow-sm uppercase font-bold cursor-pointer transform transition-all"  
+                        href="https://drive.google.com/drive/folders/1M69eO-UTlz70OkKHHqxlHmGcid336Bho?usp=drive_link" 
+                        target="_blank" type="button">
+                        Download
                     </a>
                 </div>
-                <div class="bg-primary-light p-6 sm:p-10">
-                    <a href="https://drive.google.com/file/d/18a2HQB02EYdmOUF-YABj1ucCvBXNXvmS/view?usp=drive_link" target="_blank">
-                        <img class="max-h-12 w-full object-contain" src="{{ asset('storage/images/libaro_logo_full_blue.svg') }}" alt="Tuple" width="158" height="48">
-                    </a>
-                </div>
-                <div class="bg-primary-dark p-6 sm:p-10 flex text-center items-center justify-center">
-                    <a href="https://drive.google.com/file/d/1XM09o0Dr405TenqEEQQZef94GoJT2_lt/view?usp=drive_link" target="_blank">
-                        <img class="max-h-12 object-contain" src="{{ asset('storage/images/libaro_icon_white.png') }}" alt="" width="125" height="38">
-                    </a>
-                </div>
-                <div class="bg-primary-dark p-6 sm:p-10">
-                    <a href="https://drive.google.com/file/d/1zFLtwH6ixRkn4nP9dKoIkLZ2h0YwCBUd/view?usp=drive_link" target="_blank">
-                        <img class="max-h-12 w-full object-contain" src="{{ asset('storage/images/libaro_logo_full_white_without_tagline.svg') }}" alt="SavvyCal" width="158" height="48">
-                    </a>
-                </div>
-                <div class="bg-primary-dark p-6 sm:p-10">
-                    <a href="https://drive.google.com/file/d/1JeIY_lQ6S_wbbRGsdXmh6yN6Oqi20wJo/view?usp=drive_link" target="_blank">
-                        <img class="max-h-12 w-full object-contain" src="{{ asset('storage/images/libaro_logo_full_white.svg') }}" alt="Statamic" width="158" height="48">
+                <div class="bg-primary-light p-6 sm:p-10 flex flex-col text-center items-center justify-center space-y-8">
+                    <img class="max-h-12 w-full object-contain" src="{{ asset('storage/images/libaro_logo_full_blue.svg') }}" alt="Full logo" width="158" height="48">
+                    <a class="text-white bg-primary-dark px-6 py-2 rounded-xl shadow-lg hover:shadow-sm uppercase font-bold cursor-pointer transform transition-all" 
+                        href="https://drive.google.com/drive/folders/1HeVwqq0_leXVphWHuRbVxRaAQ6rRBUvT?usp=drive_link" 
+                        target="_blank" type="button">
+                        Download
                     </a>
                 </div>
               </div>
