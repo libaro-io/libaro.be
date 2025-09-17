@@ -29,7 +29,7 @@
                     <a href="{{ route('client.showcase', ['client' => $customer]) }}"
                        class="bg-white hover:z-50 col-span-4 flex-shrink-0 border border-primary-medium rounded-inner-sm w-32 h-32 xs:w-48 xs:h-48 md:w-74 md:h-74 flex items-center justify-center cursor-pointer
                               transform transition duration-300 hover:border-6px hover:border-secondary hover:scale-110">
-                        {{ $customer->getFirstMedia('client_logo')->img()->attributes(['class' => 'w-full h-full object-contain p-4']) }}
+                        {{ $customer->getFirstMedia('client_logo')->img()->attributes(['class' => 'w-full h-full object-contain p-4', 'alt' => $customer->name]) }}
                     </a>
                 </div>
             @endforeach

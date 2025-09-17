@@ -40,7 +40,7 @@
 
     <title>@yield('title', config('app.name'))</title>
 
-    <meta http-equiv="refresh" content="{{ app()->getLocale() }}">
+    <meta http-equiv="refresh" content="300">
     <meta name="description"
           content="Wij zetten ideeën om in sterke en stijlvolle webapplicaties. Met onze state-of-the-art webapplicaties en onze persoonlijke aanpak veroveren samen het web.">
 
@@ -58,10 +58,10 @@
     <meta property="og:image" content="{{ asset('storage/images/og_image.jpg') }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:site_name" content="Libaro"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://libaro.be/nl"/>
-    <meta property="fb:app_id" content="337068846453413"/>
+    <meta property="og:site_name" content="Libaro">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://libaro.be/nl">
+    <meta property="fb:app_id" content="337068846453413">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

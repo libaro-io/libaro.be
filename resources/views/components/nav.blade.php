@@ -5,7 +5,9 @@
     </a>
 
     <div>
-        <ul class="flex justify-end items-center space-x-2 menu text-white mr-4">
+        <div class="flex justify-end items-center space-x-2 text-white mr-4">
+
+        <ul class="flex justify-end items-center space-x-2 menu">
             @foreach(\App\Models\NavigationItem::secondary() as $item)
                 <li>
                     <a class=" cursor-pointer bg-white hover:bg-opacity-25 px-4 py-1 rounded-md transition-all duration-200
@@ -16,20 +18,22 @@
                     </a>
                 </li>
             @endforeach
-
-            <ul class="flex divide-x divide-primary-light">
-                <li class="px-2 {{ app()->getLocale() === 'en' ? 'opacity-90 font-bold' : 'opacity-60 hover:underline' }}">
-                    <a href="/en">
-                        EN
-                    </a>
-                </li>
-                <li class="px-2 {{ app()->getLocale() === 'nl' ? 'opacity-90 font-bold' : 'opacity-60 hover:underline' }}">
-                    <a href="/nl">
-                        NL
-                    </a>
-                </li>
-            </ul>
         </ul>
+        <ul class="flex divide-x divide-primary-light">
+            <li class="px-2 {{ app()->getLocale() === 'en' ? 'opacity-90 font-bold' : 'opacity-60 hover:underline' }}">
+                <a href="/en">
+                    EN
+                </a>
+            </li>
+            <li class="px-2 {{ app()->getLocale() === 'nl' ? 'opacity-90 font-bold' : 'opacity-60 hover:underline' }}">
+                <a href="/nl">
+                    NL
+                </a>
+            </li>
+        </ul>
+
+
+        </div>
         <ul class="flex items-center uppercase space-x-2 menu text-white">
             @foreach(\App\Models\NavigationItem::main() as $item)
                 <x-nav-li :item="$item"/>
