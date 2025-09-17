@@ -40,24 +40,24 @@
 
     <title>@yield('title', config('app.name'))</title>
 
-    <meta http-equiv="language" content="{{ app()->getLocale() }}">
+    <meta http-equiv="refresh" content="{{ app()->getLocale() }}">
     <meta name="description"
           content="Wij zetten ideeën om in sterke en stijlvolle webapplicaties. Met onze state-of-the-art webapplicaties en onze persoonlijke aanpak veroveren samen het web.">
 
-    <meta property="twitter:title" content="Innovatieve webapplicaties & stijlvolle websites | Libaro"/>
+    <meta property="twitter:title" content="Innovatieve webapplicaties & stijlvolle websites | Libaro">
     <meta property="twitter:description"
-          content="Wij zetten ideeën om in sterke en stijlvolle webapplicaties. Met onze state-of-the-art webapplicaties en onze persoonlijke aanpak veroveren samen het web."/>
-    <meta property="twitter:image" content="{{ asset('storage/images/libaro_icon.png') }}"/>
-    <meta property="twitter:card" content="summary"/>
-    <meta property="twitter:site" content="@libarosoftware"/>
-    <meta property="twitter:url" content="https://libaro.be/nl"/>
+          content="Wij zetten ideeën om in sterke en stijlvolle webapplicaties. Met onze state-of-the-art webapplicaties en onze persoonlijke aanpak veroveren samen het web.">
+    <meta property="twitter:image" content="{{ asset('storage/images/libaro_icon.png') }}">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="@libarosoftware">
+    <meta property="twitter:url" content="https://libaro.be/nl">
 
-    <meta property="og:title" content="Innovatieve webapplicaties & stijlvolle websites | Libaro"/>
+    <meta property="og:title" content="Innovatieve webapplicaties & stijlvolle websites | Libaro">
     <meta property="og:description"
-          content="Wij zetten ideeën om in sterke en stijlvolle webapplicaties. Met onze state-of-the-art webapplicaties en onze persoonlijke aanpak veroveren samen het web."/>
-    <meta property="og:image" content="{{ asset('storage/images/og_image.jpg') }}"/>
-    <meta property="og:image:width" content="1200"/>
-    <meta property="og:image:height" content="630"/>
+          content="Wij zetten ideeën om in sterke en stijlvolle webapplicaties. Met onze state-of-the-art webapplicaties en onze persoonlijke aanpak veroveren samen het web.">
+    <meta property="og:image" content="{{ asset('storage/images/og_image.jpg') }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Libaro"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://libaro.be/nl"/>

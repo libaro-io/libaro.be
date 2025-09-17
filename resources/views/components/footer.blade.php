@@ -9,7 +9,7 @@
             <div class="flex flex-col space-y-2">
                 <div class="flex items-center">
                     <div class="relative w-16 h-16 mr-4">
-                        <img class="rounded-full w-16 h-16" src="{{ asset('storage/images/bert.jpg') }}" alt="Image of Bert" />
+                        <img class="rounded-full w-16 h-16" src="{{ asset('storage/images/bert.jpg') }}" alt="Image of Bert">
                         <div class="absolute bottom-0 right-0 mr-1 w-3 h-3 rounded-full bg-green-500 border-2 border-white"></div>
                     </div>
                     <div class="mb-4 md:mb-0 text-footer font-grotesk text-lg mb-2 flex flex-col justify-between">
