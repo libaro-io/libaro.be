@@ -1,6 +1,6 @@
 <nav class="overflow-y-scroll flex flex-col pt-14 items-center justify-between space-y-4 menu text-white">
     <div @click="show = ! show" class="flex items-center justify-between z-40 fixed w-full top-0 p-6 cursor-pointer">
-        <img class="h-16" src="{{ asset('storage/images/libaro_logo_full_white_without_tagline.svg') }}" alt="Logo Libaro" />
+        <img class="h-16" src="{{ asset('storage/images/libaro_logo_full_white_without_tagline.svg') }}" alt="Logo Libaro">
         <x-svg.menu class="text-white" />
     </div>
 

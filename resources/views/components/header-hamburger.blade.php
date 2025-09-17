@@ -4,9 +4,9 @@
 
     <a href="/">
         @if($dark)
-            <img class="h-12 md:h-16" src="{{ asset('storage/images/libaro_logo_full_blue_without_tagline.svg') }}" alt="Logo Libaro" />
+            <img class="h-12 md:h-16" src="{{ asset('storage/images/libaro_logo_full_blue_without_tagline.svg') }}" alt="Logo Libaro">
         @else
-            <img class="h-12 md:h-16" src="{{ asset('storage/images/libaro_logo_full_white_without_tagline.svg') }}" alt="Logo Libaro" />
+            <img class="h-12 md:h-16" src="{{ asset('storage/images/libaro_logo_full_white_without_tagline.svg') }}" alt="Logo Libaro">
         @endif
     </a>
 

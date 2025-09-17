@@ -80,7 +80,7 @@
                 <img
                     src="{{ asset('storage/images/github_dark.png') }}"
                     class="h-6 w-6 mr-8 opacity-80"
-                />
+                >
                 <a href="{{ $repository->url }}" class="text-sm mt-0.5 text-gray-700 font-semibold">View on Github</a>
             </div>
             <div class="min-w-64 bg-gray-100 rounded-md pl-4 pr-8 py-2">
