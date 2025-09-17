@@ -30,13 +30,13 @@ module.exports = {
         grotesk: ["grotesk", "sans-serif"],
       },
       fontSize: {
-        h1: ["5.625rem", { lineHeight: "1" }], // 90px
-        h2: ["4.875rem", { lineHeight: "1" }], // 78px
-        h3: ["2.25rem", { lineHeight: "1" }], // 36px
-        h4: ["1.0rem", { lineHeight: "1" }], // 16px
-        menu: ["1.125rem", { lineHeight: "1" }], // 18px
-        paragraph: "1.5rem", // ['1.5rem', { lineHeight: '1' }], // 24px
-        "7.5xl": "90px",
+        h1: ["4.5rem", { lineHeight: "1" }], // ~72px (reduced from 90px)
+        h2: ["3.9rem", { lineHeight: "1" }], // ~62px (reduced from 78px)
+        h3: ["1.8rem", { lineHeight: "1" }], // ~29px (reduced from 36px)
+        h4: ["0.8rem", { lineHeight: "1" }], // ~13px (reduced from 16px)
+        menu: ["1.125rem", { lineHeight: "1" }], // ~14px (reduced from 18px)
+        paragraph: "1.2rem", // reduced from 1rem
+        "7.5xl": "72px", // reduced from 90px
       },
       maxWidth: {
         "8xl": "90rem", // 1440px

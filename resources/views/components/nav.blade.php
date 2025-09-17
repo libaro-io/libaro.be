@@ -5,10 +5,10 @@
     </a>
 
     <div>
-        <ul class="flex justify-end items-center uppercase space-x-2 menu text-white mr-4">
+        <ul class="flex justify-end items-center space-x-2 menu text-white mr-4">
             @foreach(\App\Models\NavigationItem::secondary() as $item)
                 <li>
-                    <a class="cursor-pointer bg-white hover:bg-opacity-25 px-4 py-1 rounded-md transition-all duration-200
+                    <a class=" cursor-pointer bg-white hover:bg-opacity-25 px-4 py-1 rounded-md transition-all duration-200
                             {{ is_current_domain($item->domain) ? 'bg-opacity-25' : 'bg-opacity-0' }}"
                         href="{{ route($item->route) }}"
                     >
