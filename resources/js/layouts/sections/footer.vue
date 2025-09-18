@@ -1,15 +1,31 @@
 <script setup lang="ts">
 import {DateTime} from "luxon";
 import {computed} from "vue";
-import {usePage} from "@inertiajs/vue3";
+import {Link, usePage} from "@inertiajs/vue3";
 import PageInterface from "@interfaces/PageInterface";
 import {getTrans} from "@composables/UseTranslationHelper";
+import HomeController from "../../actions/App/Http/Controllers/HomeController";
 
 const page = usePage<PageInterface>();
 
 const getCopyrightYear = computed(():string => {
     return '© ' + DateTime.now().year.toString();
 });
+
+const footerPrivacyUrls: {title:string; url: {url: string, method: 'get'} }[] = [
+    {
+        title: getTrans('footer.privacy_policy'),
+        url: HomeController(),
+    },
+    {
+        title: getTrans('footer.cookie_policy'),
+        url: HomeController(),
+    },
+    {
+        title: getTrans('footer.terms_and_conditions'),
+        url: HomeController(),
+    }
+];
 
 </script>
 <template>
@@ -28,8 +44,8 @@ const getCopyrightYear = computed(():string => {
                        </div>
                    </div>
                    <div class="bert-info">
-                       <p> {{ page.props.pageProps.company.email }} </p>
-                       <p> {{ page.props.pageProps.company.phone }} </p>
+                       <a :href="'mailto:'+ page.props.pageProps.company.email"> {{ page.props.pageProps.company.email }} </a>
+                       <a :href="'tel:'+ page.props.pageProps.company.phone"> {{ page.props.pageProps.company.phone }} </a>
                    </div>
                </div>
                <address>
@@ -44,6 +60,11 @@ const getCopyrightYear = computed(():string => {
            </div>
            <div class="section">
                <h2 class="footer-title">{{ getTrans('footer.privacy') }}</h2>
+               <ul>
+                   <li v-for="url in footerPrivacyUrls" :key="url.title">
+                       <Link :href="url.url"> {{ url.title }} </Link>
+                   </li>
+               </ul>
            </div>
            <div class="section">
                    <h2 class="footer-title">{{getTrans('footer.follow_us')}}</h2>
@@ -72,6 +93,7 @@ const getCopyrightYear = computed(():string => {
            </div>
            <div class="section">
                <h2 class="footer-title">{{ getTrans('footer.assets') }}</h2>
+               <Link :href="HomeController()"> {{ getTrans('urls.branding') }} </Link>
            </div>
        </div>
     </footer>

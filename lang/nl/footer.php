@@ -6,5 +6,8 @@ return [
     'financial' => 'Financieel',
     'privacy' => 'Wij respecteren uw privacy',
     'follow_us' => 'Volg ons',
-    'assets' => 'Assets'
+    'assets' => 'Assets',
+    'privacy_policy' => 'Privacybeleid',
+    'cookie_policy' => 'Cookiebeleid',
+    'terms_and_conditions' => 'Algemene voorwaarden'
 ];

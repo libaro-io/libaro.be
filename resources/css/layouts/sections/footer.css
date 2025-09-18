@@ -53,5 +53,15 @@
         address{
             @apply not-italic;
         }
+
+        a{
+            @apply text-footer-text font-grotesk font-semibold transition-all duration-200;
+            &:hover{
+                @apply opacity-80;
+            }
+        }
+        ul{
+            @apply flex gap-2 flex-col;
+        }
     }
 }
