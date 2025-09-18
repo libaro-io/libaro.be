@@ -70,22 +70,22 @@ const footerPrivacyUrls: Ref<{title:TranslationKey; url: {url: string, method: '
            <div class="section">
                    <h2 class="footer-title">{{getTrans('footer.follow_us')}}</h2>
                <div class="social-media">
-                   <a target="_blank" :href="page.props.pageProps.socials.facebook">
+                   <a aria-label="facebook" target="_blank" :href="page.props.pageProps.socials.facebook">
                        <span class="icon facebook">
                            <i class="fa-brands fa-facebook-f"></i>
                        </span>
                    </a>
-                   <a target="_blank" :href="page.props.pageProps.socials.linkedin">
+                   <a aria-label="linkedin" target="_blank" :href="page.props.pageProps.socials.linkedin">
                        <span class="icon linkedin">
                            <i class="fa-brands fa-linkedin-in"></i>
                        </span>
                    </a>
-                   <a target="_blank" :href="page.props.pageProps.socials.mail">
+                   <a aria-label="email" target="_blank" :href="page.props.pageProps.socials.mail">
                        <span class="icon email">
                            <i class="fa-regular fa-paper-plane"></i>
                        </span>
                    </a>
-                   <a target="_blank" :href="page.props.pageProps.socials.github">
+                   <a aria-label="github" target="_blank" :href="page.props.pageProps.socials.github">
                        <span class="icon github">
                            <i class="fa-brands fa-github"></i>
                        </span>

@@ -2,7 +2,7 @@
 import Website from "@layouts/website.vue";
 </script>
 <template>
-    <Website>
+    <Website title="Contact">
         <div id="page-website-contact">
             page contact
         </div>

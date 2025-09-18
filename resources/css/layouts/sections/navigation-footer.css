@@ -1,9 +1,9 @@
 .section-navigation-footer {
-    @apply py-16 flex gap-16 justify-between items-center;
+    @apply py-16 flex flex-col xl:flex-row gap-16 justify-between items-center;
     .logo{
         @apply w-52;
     }
     .menu{
-        @apply flex flex-col items-end gap-4;
+        @apply flex flex-col items-center xl:items-end gap-4 gap-y-10 xl:gap-y-0;
     }
 }

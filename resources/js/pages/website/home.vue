@@ -1,14 +1,13 @@
 <script setup lang="ts">
-
 import Website from "@layouts/website.vue";
 </script>
 <template>
-    <website>
-        <div id="page-test-test" class="container">
-            page test
+    <website title="Home">
+        <div id="page-website-home">
+            page home
         </div>
     </website>
 </template>
 <style scoped>
-@import "@css/pages/test/test.css";
+@import "@css/pages/website/home.css";
 </style>
