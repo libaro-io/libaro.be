@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import Website from "@/layouts/website.vue";
+import Website from "@layouts/website.vue";
 </script>
 <template>
     <website>

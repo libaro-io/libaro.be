@@ -37,7 +37,26 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
-            //
+            'pageProps' => [
+                'company' => [
+                    'email' => 'bert@libaro.be',
+                    'phone' => '+32 (0)494 207025',
+                    'address' => [
+                        'street' => 'Vaardijkstraat',
+                        'number' => '19',
+                        'zip' => '8200',
+                        'city' => 'brugge',
+                    ],
+                    'btw' => 'BTW BE0541352248',
+                    'accountNumber' => 'REK BE03 7360 0710 2484',
+                ],
+                'socials' => [
+                    'facebook' => 'https://www.facebook.com/libaro1?fref=ts',
+                    'linkedin' => 'https://www.linkedin.com/company/libaro',
+                    'mail' => 'mailto:info@libaro.be',
+                    'github' => 'https://github.com/libaro-io',
+                ],
+            ]
         ];
     }
 }
