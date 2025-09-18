@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import NavigationFooter from "@layouts/sections/navigation-footer.vue";
 import Footer from "@layouts/sections/footer.vue";
-
+import {setUrlDefaults} from "../wayfinder";
+setUrlDefaults({
+    locale: 'nl',
+});
 </script>
 <template>
     <div id="layout-website">

@@ -22,6 +22,7 @@
     --color-primary: var(--primary);
     --color-primary-light: var(--primary-light);
     --color-primary-medium: var(--primary-medium);
+    --color-primary-dark: var(--primary-dark);
     --color-secondary: var(--secondary);
     --color-footer-text: var(--footer-text-color);
 }
@@ -51,6 +52,7 @@
     --primary: hsl(206, 100%, 50%);
     --primary-light: hsl(195, 44%, 96%);
     --primary-medium: hsl(206, 59%, 71%);
+    --primary-dark: hsl(206, 100%, 50%);
     --secondary: hsl(36, 98%, 50%);
     --footer-text-color: hsl(210, 53%, 48%);
 }

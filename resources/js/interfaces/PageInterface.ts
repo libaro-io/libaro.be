@@ -1,5 +1,6 @@
 export default interface PageInterface {
     pageProps:{
+        locale: string;
         socials: {
             facebook: string;
             linkedin: string;

@@ -4,8 +4,10 @@ import '../css/app.css';
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 import {i18nVue} from "laravel-vue-i18n";
-
-
+import {setUrlDefaults} from "./wayfinder";
+setUrlDefaults({
+    locale: 'nl',
+});
 // Language files get loaded eagerly.
 const langs: Record<
     string,

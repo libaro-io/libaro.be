@@ -38,6 +38,7 @@ class HandleInertiaRequests extends Middleware
         return [
             ...parent::share($request),
             'pageProps' => [
+                'locale' => app()->getLocale(),
                 'company' => [
                     'email' => 'bert@libaro.be',
                     'phone' => '+32 (0)494 207025',

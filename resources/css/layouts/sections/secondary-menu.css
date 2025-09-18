@@ -1,0 +1,15 @@
+.section-secondary-menu {
+    nav{
+        ul{
+            @apply flex gap-2 -mr-4;
+            li{
+                a{
+                    @apply py-1 px-4 uppercase text-primary-dark cursor-pointer rounded-md transition-all duration-200;
+                    &:hover{
+                        @apply bg-primary-light;
+                    }
+                }
+            }
+        }
+    }
+}
