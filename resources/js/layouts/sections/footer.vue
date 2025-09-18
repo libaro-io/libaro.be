@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import {DateTime} from "luxon";
-import {computed} from "vue";
+import {computed, ref, Ref} from "vue";
 import {Link, usePage} from "@inertiajs/vue3";
 import PageInterface from "@interfaces/PageInterface";
 import {getTrans} from "@composables/UseTranslationHelper";
 import HomeController from "../../actions/App/Http/Controllers/HomeController";
+import {TranslationKey} from "../../translations/lang-keys";
 
 const page = usePage<PageInterface>();
 
@@ -12,20 +13,20 @@ const getCopyrightYear = computed(():string => {
     return '© ' + DateTime.now().year.toString();
 });
 
-const footerPrivacyUrls: {title:string; url: {url: string, method: 'get'} }[] = [
+const footerPrivacyUrls: Ref<{title:TranslationKey; url: {url: string, method: 'get'} }[]> = ref([
     {
-        title: getTrans('footer.privacy_policy'),
+        title: 'footer.privacy_policy',
         url: HomeController(),
     },
     {
-        title: getTrans('footer.cookie_policy'),
+        title: 'footer.cookie_policy',
         url: HomeController(),
     },
     {
-        title: getTrans('footer.terms_and_conditions'),
+        title: 'footer.terms_and_conditions',
         url: HomeController(),
     }
-];
+]);
 
 </script>
 <template>
@@ -62,7 +63,7 @@ const footerPrivacyUrls: {title:string; url: {url: string, method: 'get'} }[] = 
                <h2 class="footer-title">{{ getTrans('footer.privacy') }}</h2>
                <ul>
                    <li v-for="url in footerPrivacyUrls" :key="url.title">
-                       <Link :href="url.url"> {{ url.title }} </Link>
+                       <Link :href="url.url"> {{ getTrans(url.title) }} </Link>
                    </li>
                </ul>
            </div>
