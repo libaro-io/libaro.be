@@ -9,11 +9,15 @@ setUrlDefaults({
 
 const props = defineProps<{
     title?: string;
+    description?: string;
 }>();
 
 </script>
 <template>
-    <Head :title="props.title ?? '' + ' | Libaro'"></Head>
+    <Head
+        :title="props.title ?? '' + ' | Libaro'"
+        :description="props.description ?? ''"
+    ></Head>
     <div id="layout-website">
         website layout
         <main class="content">

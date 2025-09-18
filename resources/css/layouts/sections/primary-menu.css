@@ -1,12 +1,12 @@
 .section-primary-menu {
     nav{
         ul{
-            @apply flex gap-2 -mr-7 flex-col xl:flex-row items-center xl:items-start;
+            @apply flex gap-4 xl:gap-2 xl:-mr-7 flex-col xl:flex-row items-center xl:items-start;
             li{
                 a{
                     @apply uppercase text-primary-dark font-grotesk block font-extrabold text-lg border-2 border-transparent rounded-full xl:px-7 xl:py-5 transition-all duration-200;
                     &:hover{
-                        @apply border-secondary;
+                        @apply lg:border-secondary;
                     }
                     &.active{
                         @apply text-secondary;
