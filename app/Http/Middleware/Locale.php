@@ -18,17 +18,27 @@ class Locale
     {
         $currentLocale = $request->route()?->parameter('locale');
 
-        if (is_null($currentLocale)) {
+        if (is_null($currentLocale) && $request->path() === '/') {
             return redirect()->action(HomeController::class, ['locale' => app()->getLocale()]);
         }
 
         $supportedLocales = config('app.supported_locales');
-        $isNotAnAdminRoute = $currentLocale !== config('filament.path');
-        
-        if (!in_array($currentLocale, $supportedLocales) && $isNotAnAdminRoute) {
-            abort(404);
+        $isSupportedLocale = in_array($currentLocale, $supportedLocales);
+        $isAnAdminRoute = str_starts_with($request->path(), config('filament.path'));
+        $isALivewireRoute = str_starts_with($request->path(), 'livewire');
+
+        if($isSupportedLocale){
+            return $next($request);
         }
 
-        return $next($request);
+        if($isAnAdminRoute){
+            return $next($request);
+        }
+
+        if($isALivewireRoute){
+            return $next($request);
+        }
+
+        abort(404);
     }
 }
