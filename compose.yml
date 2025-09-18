@@ -1,0 +1,34 @@
+services:
+  php:
+    build:
+      context: .
+      dockerfile: .docker/php/Dockerfile
+    user: dev
+    environment:
+        PHP_IDE_CONFIG: serverName=${DOCKER_APP_URL:-libaro.test}
+        XDEBUG_SESSION: PHPSTORM
+        DEBUG: 1
+    volumes:
+      - .:/var/www:delegated
+      - ~/.ssh:/home/dev/.ssh:readonly
+    ports:
+      - "${DOCKER_PHP_PORT:-8000}:80"
+      - "${DOCKER_VITE_PORT:-5173}:${VITE_PORT:-5173}"
+    networks:
+      - internal
+
+  mysql:
+    image: mysql:8.4
+    command: --mysql-native-password=ON
+    environment:
+      MYSQL_ROOT_PASSWORD: dev
+      MYSQL_DATABASE: dev
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: dev
+    ports:
+      - "${DOCKER_MYSQL_PORT:-3306}:3306"
+    networks:
+      - internal
+
+networks:
+  internal:
