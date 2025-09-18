@@ -6,7 +6,7 @@
                 a{
                     @apply uppercase text-primary-dark font-grotesk block font-extrabold text-lg border-2 border-transparent rounded-full xl:px-7 xl:py-5 transition-all duration-200;
                     &:hover{
-                        @apply lg:border-secondary;
+                        @apply xl:border-secondary;
                     }
                     &.active{
                         @apply text-secondary;
