@@ -1,0 +1,9 @@
+.section-footer {
+     @apply bg-primary-light py-20;
+    .inner-container{
+        @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-16;
+        .footer-title{
+            @apply font-gilroy font-extrabold uppercase text-primary-medium mb-4 xl:mb-8;
+        }
+    }
+}
