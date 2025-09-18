@@ -1,7 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/test', function () {
-    return \Inertia\Inertia::render('test/test');
+Route::prefix('{locale?}')->group(function () {
+    Route::get('/', HomeController::class);
 });
