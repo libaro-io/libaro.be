@@ -27,6 +27,10 @@ class Locale
             abort(404);
         }
 
+        if($currentLocale !== config('filament.path')){
+            abort(404);
+        }
+
         return $next($request);
     }
 }
