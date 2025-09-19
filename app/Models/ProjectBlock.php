@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ProjectBlock extends Model
 {
-    protected $fillable = ['sort'];
     protected $guarded = [];
 
     protected $casts = [

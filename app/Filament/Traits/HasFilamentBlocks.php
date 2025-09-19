@@ -14,17 +14,14 @@ trait HasFilamentBlocks
     {
         return Repeater::make('blocks')
             ->relationship('blocks')
+            ->orderColumn('sort')
             ->schema([
                 Select::make('type')
                     ->label('Block Type')
                     ->options(FilamentBlockType::options())
                     ->required()
                     ->live()
-                    ->columnSpan(5),
-                \Filament\Forms\Components\TextInput::make('sort')
-                    ->label('Sort')
-                    ->numeric()
-                    ->columnSpan(1),
+                    ->columnSpanFull(),
                 FileUpload::make('content.image')
                     ->label('Image')
                     ->image()
@@ -47,6 +44,7 @@ trait HasFilamentBlocks
             ->columnSpanFull()
             ->columns(6)
             ->addActionLabel('Add Block')
+            ->reorderable()
             ->collapsible()
             ->itemLabel(fn(array $state): ?string => $state['type'] ?? 'New Block');
     }
