@@ -20,4 +20,9 @@ class Project extends Model
     {
         return $this->hasMany(ProjectContent::class, 'showcase_id');
     }
+
+    public function blocks()
+    {
+        return $this->hasMany(ProjectBlock::class)->orderBy('sort');
+    }
 }
