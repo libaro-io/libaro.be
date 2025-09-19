@@ -12,9 +12,10 @@
     &.section-secondary-menu-header{
         nav{
             ul{
+                @apply items-start;
                 li{
                     a{
-                        @apply text-white;
+                        @apply text-white px-0 py-0 xl:px-4 xl:py-2;
                         &:hover{
                             @apply bg-white/20;
                         }

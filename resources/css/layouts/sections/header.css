@@ -1,13 +1,27 @@
 .section-header {
-    @apply py-14 border-b-8 border-b-secondary bg-center bg-cover;
+    @apply py-5 xl:py-14 border-b-8 border-b-secondary bg-center bg-cover;
     background-image: url("@assets/images/header_striped.webp");
     header{
         @apply flex justify-between items-center;
         .logo{
-            @apply w-60;
+            @apply w-48 xl:w-60;
         }
         .menus{
-            @apply flex flex-col items-end gap-4;
+            @apply flex-col flex flex-col justify-end flex-col-reverse
+            xl:items-end xl:content-center xl:bg-transparent xl:relative xl:right-0 xl:py-0 xl:px-0
+            absolute -right-full top-0 h-full bg-primary  gap-4  z-20 transition-all duration-200 pl-6 pr-20 py-20 bg-bottom bg-cover;
+            &.open{
+                @apply right-0;
+            }
+            .close-button{
+                @apply cursor-pointer text-white text-xl z-30 absolute top-5 right-5 xl:hidden;
+            }
+        }
+        .menu-button{
+            @apply cursor-pointer text-white text-xl xl:hidden;
+        }
+        .overlay{
+            @apply fixed top-0 left-0 w-full h-full bg-black/50 z-10 xl:hidden;
         }
     }
 }

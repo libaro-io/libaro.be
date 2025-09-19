@@ -12,6 +12,7 @@
     &.section-primary-menu-header{
         nav{
             ul{
+                @apply items-start;
                 li{
                     a{
                         @apply text-white;
