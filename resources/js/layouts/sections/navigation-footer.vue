@@ -12,8 +12,8 @@ import HomeController from "../../actions/App/Http/Controllers/HomeController";
            </Link>
        </div>
         <div class="menu">
-            <secondary-menu></secondary-menu>
-            <primary-menu></primary-menu>
+            <secondary-menu type="footer"></secondary-menu>
+            <primary-menu type="footer"></primary-menu>
         </div>
     </section>
 </template>

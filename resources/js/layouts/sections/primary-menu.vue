@@ -8,6 +8,10 @@ import {MenuInterface} from "@interfaces/MenuInterface";
 import HomeController from "../../actions/App/Http/Controllers/HomeController";
 import ContactController from "../../actions/App/Http/Controllers/ContactController";
 
+const props = defineProps<{
+    type: 'header' | 'footer'
+}>();
+
 const primaryMenu = ref<MenuInterface[]>([
     {
         weight: 1,
@@ -25,17 +29,21 @@ const primaryMenu = ref<MenuInterface[]>([
 
 </script>
 <template>
-    <section class="section-primary-menu">
-       <nav>
-           <ul>
-               <li v-for="item in getFilteredMenu(primaryMenu)" :key="item.text">
-                   <Link prefetch
-                         :class="checkIfMenuItemIsActive(item) ? 'active' : ''"
-                         :href="item.url.url"> {{ getTrans(item.text) }}
-                   </Link>
-               </li>
-           </ul>
-       </nav>
+    <section
+        :class="[
+            'section-primary-menu',
+            props.type === 'header' ? 'section-primary-menu-header' : 'section-primary-menu-footer'
+            ]">
+        <nav>
+            <ul>
+                <li v-for="item in getFilteredMenu(primaryMenu)" :key="item.text">
+                    <Link prefetch
+                          :class="checkIfMenuItemIsActive(item) ? 'active' : ''"
+                          :href="item.url.url"> {{ getTrans(item.text) }}
+                    </Link>
+                </li>
+            </ul>
+        </nav>
     </section>
 </template>
 <style scoped>

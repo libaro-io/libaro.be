@@ -4,9 +4,34 @@
             @apply flex flex-col xl:flex-row items-center xl:items-start gap-2 xl:-mr-4;
             li{
                 a{
-                    @apply py-1 px-4 uppercase text-primary-dark cursor-pointer rounded-md transition-all duration-200;
-                    &:hover{
-                        @apply bg-primary-light;
+                    @apply py-1 px-4  cursor-pointer rounded-md transition-all duration-200;
+                }
+            }
+        }
+    }
+    &.section-secondary-menu-header{
+        nav{
+            ul{
+                li{
+                    a{
+                        @apply text-white;
+                        &:hover{
+                            @apply bg-white/20;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.section-secondary-menu-footer{
+        nav{
+            ul{
+                li{
+                    a{
+                        @apply text-primary-dark uppercase;
+                        &:hover{
+                            @apply bg-primary-light;
+                        }
                     }
                 }
             }

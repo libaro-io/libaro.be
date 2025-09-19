@@ -1,5 +1,8 @@
 <script setup lang="ts">
 
+import PrimaryMenu from "@layouts/sections/primary-menu.vue";
+import SecondaryMenu from "@layouts/sections/secondary-menu.vue";
+
 const props = withDefaults(defineProps<{
     background?: string;
 }>(), {
@@ -17,7 +20,10 @@ const props = withDefaults(defineProps<{
                    <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg" alt="logo">
                </div>
                <div class="menus">
-                   menus
+                   <div class="top">
+                       <secondary-menu type="header"></secondary-menu>
+                   </div>
+                   <primary-menu type="header"></primary-menu>
                </div>
            </header>
        </div>

@@ -4,12 +4,40 @@
             @apply flex gap-4 xl:gap-2 xl:-mr-7 flex-col xl:flex-row items-center xl:items-start;
             li{
                 a{
-                    @apply uppercase text-primary-dark font-grotesk block font-extrabold text-lg border-2 border-transparent rounded-full xl:px-7 xl:py-5 transition-all duration-200;
-                    &:hover{
-                        @apply xl:border-secondary;
+                    @apply uppercase  font-grotesk block font-extrabold text-lg border-2 border-transparent rounded-full xl:px-7 xl:py-5 transition-all duration-200;
+                }
+            }
+        }
+    }
+    &.section-primary-menu-header{
+        nav{
+            ul{
+                li{
+                    a{
+                        @apply text-white;
+                        &:hover{
+                            @apply xl:border-white;
+                        }
+                        &.active{
+                            @apply xl:border-secondary;
+                        }
                     }
-                    &.active{
-                        @apply text-secondary;
+                }
+            }
+        }
+    }
+    &.section-primary-menu-footer{
+        nav{
+            ul{
+                li{
+                    a{
+                        @apply text-primary-dark;
+                        &:hover{
+                            @apply xl:border-secondary;
+                        }
+                        &.active{
+                            @apply text-secondary;
+                        }
                     }
                 }
             }

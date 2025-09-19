@@ -6,5 +6,8 @@
         .logo{
             @apply w-60;
         }
+        .menus{
+            @apply flex flex-col items-end gap-4;
+        }
     }
 }

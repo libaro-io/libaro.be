@@ -7,6 +7,10 @@ import {ref} from "vue";
 import {MenuInterface} from "@interfaces/MenuInterface";
 import HomeController from "../../actions/App/Http/Controllers/HomeController";
 
+const props = defineProps<{
+    type: 'header' | 'footer'
+}>();
+
 const secondaryMenu = ref<MenuInterface[]>([
     {
         weight: 1,
@@ -30,7 +34,11 @@ const secondaryMenu = ref<MenuInterface[]>([
 
 </script>
 <template>
-    <section class="section-secondary-menu">
+    <section
+        :class="[
+            'section-secondary-menu',
+            props.type === 'header' ? 'section-secondary-menu-header' : 'section-secondary-menu-footer'
+        ]">
         <nav>
             <ul>
                 <li v-for="item in getFilteredMenu(secondaryMenu)" :key="item.text">
