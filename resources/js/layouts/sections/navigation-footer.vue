@@ -8,7 +8,7 @@ import HomeController from "../../actions/App/Http/Controllers/HomeController";
     <section class="section-navigation-footer container">
        <div class="logo">
            <Link :href="HomeController()">
-               <img src="@assets/logos/libaro_logo_full_blue_without_tagline.png" alt="logo">
+               <img src="@assets/logos/libaro_logo_full_blue_without_tagline.svg" alt="logo">
            </Link>
        </div>
         <div class="menu">

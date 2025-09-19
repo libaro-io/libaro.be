@@ -1,0 +1,10 @@
+.section-header {
+    @apply py-14 border-b-8 border-b-secondary bg-center bg-cover;
+    background-image: url("@assets/images/header_striped.webp");
+    header{
+        @apply flex justify-between items-center;
+        .logo{
+            @apply w-60;
+        }
+    }
+}

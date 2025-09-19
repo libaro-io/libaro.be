@@ -4,6 +4,7 @@ import Footer from "@layouts/sections/footer.vue";
 import {setUrlDefaults} from "../wayfinder";
 import {Head} from "@inertiajs/vue3";
 import {computed} from "vue";
+import Header from "@layouts/sections/header.vue";
 setUrlDefaults({
     locale: 'nl',
 });
@@ -27,7 +28,7 @@ const makeTitle = computed(() => {
         :description="props.description ?? ''"
     ></Head>
     <div id="layout-website">
-        website layout
+        <Header></Header>
         <main class="content">
             <slot></slot>
         </main>
