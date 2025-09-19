@@ -2,7 +2,7 @@
 import Website from "@layouts/website.vue";
 </script>
 <template>
-    <website title="Home">
+    <website title="Digital Innovation Partner">
         <div id="page-website-home">
             page home
         </div>
