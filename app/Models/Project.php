@@ -15,4 +15,9 @@ class Project extends Model
     {
         return $this->belongsTo(Client::class);
     }
+
+    public function content()
+    {
+        return $this->hasMany(ProjectContent::class, 'showcase_id');
+    }
 }

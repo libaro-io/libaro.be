@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Projects\Schemas;
 
 use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
@@ -69,6 +70,30 @@ class ProjectForm
                     ->required()
                     ->columnSpan(2)
                     ->default(false),
+                Repeater::make('content')
+                    ->relationship('content')
+                    ->schema([
+                        TextInput::make('title')
+                            ->required()
+                            ->columnSpan(1)
+                            ->maxLength(255),
+                        TextInput::make('number')
+                            ->numeric()
+                            ->label('Number')
+                            ->columnSpan(1)
+                            ->required(),
+                        RichEditor::make('body')
+                            ->maxLength(1000)
+                            ->columnSpanFull(),
+                        Toggle::make('visible')
+                            ->label('Visible')
+                            ->required(),
+                    ])
+                    ->columnSpanFull()
+                    ->columns(2)
+                    ->addActionLabel('Add Competence')
+                    ->collapsible()
+                    ->itemLabel(fn(array $state): ?string => $state['title'] ?? null),
             ])->columns(6);
     }
 }
