@@ -1,5 +1,5 @@
 .section-header {
-    @apply py-5 xl:py-14 border-b-8 border-b-secondary bg-center bg-cover;
+    @apply py-5 xl:py-14 xl:border-b-8 border-b-secondary bg-center bg-cover;
     background-image: url("@assets/images/header_striped.webp");
     header{
         @apply flex justify-between items-center;
@@ -9,7 +9,7 @@
         .menus{
             @apply flex-col flex flex-col justify-end flex-col-reverse
             xl:items-end xl:content-center xl:bg-transparent xl:relative xl:right-0 xl:py-0 xl:px-0 xl:flex-col
-            fixed -right-full top-0 h-full bg-primary  gap-4  z-20 transition-all duration-200 pl-6 pr-20 py-20 bg-bottom bg-cover;
+            fixed -right-full top-0 h-full bg-primary  gap-4  z-20 transition-all duration-200 pl-6 pr-20 min-w-72 py-20 bg-bottom bg-cover;
             &.open{
                 @apply right-0;
             }
@@ -27,4 +27,15 @@
             @apply fixed top-0 left-0 w-full h-full bg-black/50 z-10 xl:hidden;
         }
     }
+
+    .page-title{
+        @apply mt-14 flex flex-col gap-y-2 font-gilroy;
+        h2{
+            @apply font-extrabold text-lg md:text-lg uppercase text-secondary;
+        }
+        h1{
+            @apply font-bold leading-snug text-3xl md:text-5xl lg:text-7xl text-white;
+        }
+    }
+
 }

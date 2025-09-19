@@ -16,6 +16,8 @@
     --radius-md: calc(var(--radius) - 2px);
     --radius-sm: calc(var(--radius) - 4px);
 
+    --text-7xl: 4rem;
+
     --color-background: var(--background);
     --color-foreground: var(--foreground);
 

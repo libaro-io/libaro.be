@@ -5,30 +5,36 @@ import {setUrlDefaults} from "../wayfinder";
 import {Head} from "@inertiajs/vue3";
 import {computed} from "vue";
 import Header from "@layouts/sections/header.vue";
+
 setUrlDefaults({
     locale: 'nl',
 });
 
 const props = withDefaults(defineProps<{
-    title?: string | null;
+    pageTitle?: string;
+    pageSubTitle?: string;
+    metaTitle?: string | null;
     description?: string;
 }>(), {
-    title: null,
+    metaTitle: null,
 
 });
 
-const makeTitle = computed(() => {
-  return props.title ? props.title + ' | Libaro' : 'Libaro';
+const getTitle = computed(() => {
+  return props.metaTitle ? props.metaTitle + ' | Libaro' : 'Libaro';
 })
 
 </script>
 <template>
     <Head
-        :title="makeTitle"
+        :title="getTitle"
         :description="props.description ?? ''"
     ></Head>
     <div id="layout-website">
-        <Header></Header>
+        <Header
+            :page-title="props.pageTitle"
+            :page-sub-title="props.pageSubTitle"
+        ></Header>
         <main class="content">
             <slot></slot>
         </main>

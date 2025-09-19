@@ -6,6 +6,8 @@ import {Ref, ref} from "vue";
 import LangSelector from "@layouts/sections/lang-selector.vue";
 
 const props = withDefaults(defineProps<{
+    pageTitle?: string;
+    pageSubTitle?: string;
     background?: string;
 }>(), {
     background: "/images/header_striped.webp"
@@ -65,6 +67,10 @@ const toggleMenu = () => {
                >
                </div>
            </header>
+           <div class="page-title">
+               <h2 v-if="props.pageSubTitle">{{ props.pageSubTitle }}</h2>
+               <h1 v-if="props.pageTitle">{{ props.pageTitle }}</h1>
+           </div>
        </div>
     </section>
 </template>

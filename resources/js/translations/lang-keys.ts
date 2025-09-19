@@ -1,6 +1,9 @@
 // ⚠️ This file is auto-generated.
 
 export const translations = {
+  "contact.meta_title": "",
+  "contact.page_sub_title": "",
+  "contact.page_title": "",
   "footer.assets": "",
   "footer.contact": "",
   "footer.cookie_policy": "",
