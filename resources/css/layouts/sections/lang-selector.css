@@ -1,0 +1,27 @@
+.section-lang-selector {
+    @apply flex gap-x-4;
+    button{
+        @apply relative cursor-pointer py-1 uppercase text-white font-semibold leading-tight;
+        span{
+            @apply opacity-60;
+        }
+        &.active{
+            span{
+                @apply opacity-100;
+            }
+        }
+        &:last-child{
+            &:after{
+                @apply hidden;
+            }
+        }
+        &:hover{
+            span{
+                @apply opacity-80;
+            }
+        }
+        &:after{
+            @apply content-[''] h-full -right-2 top-1/2 -translate-y-1/2 absolute rounded-full border-r border-r-white
+        }
+    }
+}

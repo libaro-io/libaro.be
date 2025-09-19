@@ -3,6 +3,7 @@
 import PrimaryMenu from "@layouts/sections/primary-menu.vue";
 import SecondaryMenu from "@layouts/sections/secondary-menu.vue";
 import {Ref, ref} from "vue";
+import LangSelector from "@layouts/sections/lang-selector.vue";
 
 const props = withDefaults(defineProps<{
     background?: string;
@@ -47,6 +48,7 @@ const toggleMenu = () => {
                    </button>
                    <div class="top">
                        <secondary-menu type="header"></secondary-menu>
+                       <lang-selector></lang-selector>
                    </div>
                    <primary-menu type="header"></primary-menu>
                </div>
