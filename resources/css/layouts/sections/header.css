@@ -9,7 +9,7 @@
         .menus{
             @apply flex-col flex flex-col justify-end flex-col-reverse
             xl:items-end xl:content-center xl:bg-transparent xl:relative xl:right-0 xl:py-0 xl:px-0 xl:flex-col
-            absolute -right-full top-0 h-full bg-primary  gap-4  z-20 transition-all duration-200 pl-6 pr-20 py-20 bg-bottom bg-cover;
+            fixed -right-full top-0 h-full bg-primary  gap-4  z-20 transition-all duration-200 pl-6 pr-20 py-20 bg-bottom bg-cover;
             &.open{
                 @apply right-0;
             }

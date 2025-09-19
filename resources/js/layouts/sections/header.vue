@@ -15,6 +15,12 @@ const menuOpen: Ref<boolean> = ref(false);
 
 const toggleMenu = () => {
     menuOpen.value = !menuOpen.value;
+    if(menuOpen.value){
+        document.body.classList.add('overflow-hidden');
+    }
+    if(!menuOpen.value){
+        document.body.classList.remove('overflow-hidden');
+    }
 }
 
 </script>
