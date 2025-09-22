@@ -2,20 +2,32 @@
 
 import PrimaryMenu from "@layouts/sections/primary-menu.vue";
 import SecondaryMenu from "@layouts/sections/secondary-menu.vue";
-import {Ref, ref} from "vue";
+import {computed, Ref, ref} from "vue";
 import LangSelector from "@layouts/sections/lang-selector.vue";
 import {router} from "@inertiajs/vue3";
+
+export interface HeaderOptions {
+    fullWidthDescription?: boolean;
+    background?: string;
+}
 
 const props = withDefaults(defineProps<{
     pageTitle?: string;
     pageSubTitle?: string;
-    pageDescription?: string;
-    background?: string;
+    pageDescription?: string | null;
     marginBottom?: boolean;
+    options: HeaderOptions;
 }>(), {
-    background: "/images/header_striped.webp",
     marginBottom: true,
 });
+
+//using this to have default values for the options
+const options = computed((): HeaderOptions => {
+    return {
+        fullWidthDescription: props.options?.fullWidthDescription ?? false,
+        background: props.options?.background ?? "/images/header_striped.webp",
+    }
+})
 
 const menuOpen: Ref<boolean> = ref(false);
 
@@ -38,7 +50,7 @@ router.on('navigate', () => {
 <template>
     <section
         :style="{
-            'background-image': 'url(' + props.background + ')',
+            'background-image': 'url(' + options.background + ')',
         }"
         :class="[
             'section-header',
@@ -84,7 +96,8 @@ router.on('navigate', () => {
                 <h2 v-if="props.pageSubTitle">{{ props.pageSubTitle }}</h2>
                 <h1 v-if="props.pageTitle">{{ props.pageTitle }}</h1>
 
-                <p v-if="props.pageDescription">{{ props.pageDescription }}</p>
+                <p v-if="props.pageDescription"
+                   :class="{'full-width': options.fullWidthDescription}">{{ props.pageDescription }}</p>
             </div>
         </div>
     </section>

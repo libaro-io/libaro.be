@@ -4,9 +4,9 @@ namespace App\Filament\Resources\Projects\Schemas;
 
 use App\Filament\Traits\HasFilamentBlocks;
 use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
@@ -49,9 +49,10 @@ class ProjectForm
                 DatePicker::make('date')
                     ->columnSpan(3)
                     ->label('Date'),
-                RichEditor::make('description')
+                Textarea::make('description')
                     ->columnSpanFull()
                     ->grow()
+                    ->rows(10)
                     ->label('Description')
                     ->required(),
                 TagsInput::make('tags')

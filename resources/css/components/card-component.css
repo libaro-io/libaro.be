@@ -27,7 +27,7 @@
         }
 
         .tags {
-            @apply flex gap-4;
+            @apply flex flex-wrap gap-2 xl:gap-4;
 
             .tag {
                 @apply bg-secondary py-2 px-3 rounded-lg;

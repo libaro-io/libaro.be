@@ -15,9 +15,12 @@ class ProjectResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'slug' => $this->slug,
             'name' => $this->name,
+            'description' => $this->description,
             'type' => $this->type,
             'client' => ClientResource::make($this->whenLoaded('client')),
+            'tags' => $this->tags
         ];
     }
 }

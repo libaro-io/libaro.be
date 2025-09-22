@@ -19,6 +19,7 @@ const props = defineProps<{
             <card-list-component>
                 <card-component
                     v-for="(blog, index) in props.blogs" :key="index"
+                    :link="'#'"
                     :title="blog.title"
                     :tags="blog.tags"
                 ></card-component>

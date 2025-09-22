@@ -3,7 +3,9 @@
 <template>
     <section class="component-card-list-component">
         <div class="container">
-            <slot></slot>
+            <div class="inner">
+                <slot></slot>
+            </div>
         </div>
     </section>
 </template>

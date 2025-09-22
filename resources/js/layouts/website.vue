@@ -4,7 +4,7 @@ import Footer from "@layouts/sections/footer.vue";
 import {setUrlDefaults} from "../wayfinder";
 import {Head} from "@inertiajs/vue3";
 import {computed} from "vue";
-import Header from "@layouts/sections/header.vue";
+import Header, {HeaderOptions} from "@layouts/sections/header.vue";
 
 setUrlDefaults({
     locale: 'nl',
@@ -13,7 +13,8 @@ setUrlDefaults({
 const props = withDefaults(defineProps<{
     pageTitle?: string;
     pageSubTitle?: string;
-    pageDescription?: string;
+    pageDescription?: string | null;
+    headerOptions?: HeaderOptions;
     metaTitle?: string | null;
     description?: string;
     marginBottom?: boolean;
@@ -38,6 +39,7 @@ const getTitle = computed(() => {
             :page-title="props.pageTitle"
             :page-sub-title="props.pageSubTitle"
             :page-description="props.pageDescription"
+            :options="props.headerOptions ?? {}"
         ></Header>
         <main class="content">
             <slot></slot>

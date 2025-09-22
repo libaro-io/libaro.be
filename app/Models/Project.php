@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Casts\AsTags;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Client;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -33,6 +34,7 @@ class Project extends Model
         return [
             'visible' => 'boolean',
             'is_product' => 'boolean',
+            'tags' => AsTags::class
         ];
     }
 }

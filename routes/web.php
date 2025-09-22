@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CookiePolicyController;
+use App\Http\Controllers\DetailProjectController;
 use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TermsController;
@@ -20,6 +21,7 @@ Route::prefix('{locale?}')->group(function () {
     Route::post('lang', UpdateLangController::class);
 
     Route::get('/realisaties', ProjectController::class);
+    Route::get('/realisaties/{project:slug}', DetailProjectController::class);
     Route::get('/blog', BlogController::class);
     Route::get('/producten', ProductController::class);
 
