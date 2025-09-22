@@ -8,6 +8,7 @@ import HomeController from "../../actions/App/Http/Controllers/HomeController";
 import {TranslationKey} from "../../translations/lang-keys";
 import ProfileIconComponent from "@components/profile-icon-component.vue";
 import bert from '@assets/images/bert.jpg';
+import PrivacyPolicyController from "@actions/App/Http/Controllers/PrivacyPolicyController";
 
 const page = usePage<PageInterface>();
 
@@ -18,7 +19,7 @@ const getCopyrightYear = computed(():string => {
 const footerPrivacyUrls: Ref<{title:TranslationKey; url: {url: string, method: 'get'} }[]> = ref([
     {
         title: 'footer.privacy_policy',
-        url: HomeController(),
+        url: PrivacyPolicyController(),
     },
     {
         title: 'footer.cookie_policy',

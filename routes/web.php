@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubmitContactFormController;
 use Illuminate\Support\Facades\Route;
@@ -19,4 +20,6 @@ Route::prefix('{locale?}')->group(function () {
     Route::get('/realisaties', ProjectController::class);
     Route::get('/blog', BlogController::class);
     Route::get('/producten', ProductController::class);
+
+    Route::get('/privacy', PrivacyPolicyController::class);
 });
