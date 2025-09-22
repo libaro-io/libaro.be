@@ -13,7 +13,8 @@ const props = defineProps<{
         :page-title="getTrans('projects.page_title')"
         :page-sub-title="getTrans('projects.page_sub_title')"
         :page-description="getTrans('projects.page_description')"
-        :meta-title="getTrans('projects.meta_title')">
+        :meta-title="getTrans('projects.meta_title')"
+        :marginBottom="false">
         <div id="page-website-projects">
             <div class="container" id="project-list">
                 <card-component
