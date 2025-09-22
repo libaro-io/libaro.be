@@ -46,7 +46,7 @@ class HandleInertiaRequests extends Middleware
                         'street' => 'Vaardijkstraat',
                         'number' => '19',
                         'zip' => '8200',
-                        'city' => 'brugge',
+                        'city' => 'Brugge',
                     ],
                     'btw' => 'BTW BE0541352248',
                     'accountNumber' => 'REK BE03 7360 0710 2484',

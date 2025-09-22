@@ -11,7 +11,9 @@ import ContactForm from "@pages/website/sections/contact-form.vue";
         :meta-title="getTrans('contact.meta_title')">
         <div id="page-website-contact">
             <div class="grid container">
-                <contact-information></contact-information>
+                <div>
+                    <contact-information></contact-information>
+                </div>
                 <contact-form></contact-form>
             </div>
         </div>

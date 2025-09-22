@@ -6,6 +6,8 @@ import PageInterface from "@interfaces/PageInterface";
 import {getTrans} from "@composables/UseTranslationHelper";
 import HomeController from "../../actions/App/Http/Controllers/HomeController";
 import {TranslationKey} from "../../translations/lang-keys";
+import ProfileIconComponent from "@components/profile-icon-component.vue";
+import bert from '@assets/images/bert.jpg';
 
 const page = usePage<PageInterface>();
 
@@ -39,11 +41,7 @@ const footerPrivacyUrls: Ref<{title:TranslationKey; url: {url: string, method: '
            <div class="section">
                <h2 class="footer-title">{{ getTrans('footer.contact') }}</h2>
                <div class="bert">
-                   <div class="outer-image-bert">
-                       <div class="image-bert">
-                           <img src="@assets/images/bert.jpg" alt="bert">
-                       </div>
-                   </div>
+                   <profile-icon-component class="image" :image-src="bert"></profile-icon-component>
                    <div class="bert-info">
                        <a :href="'mailto:'+ page.props.pageProps.company.email"> {{ page.props.pageProps.company.email }} </a>
                        <a :href="'tel:'+ page.props.pageProps.company.phone"> {{ page.props.pageProps.company.phone }} </a>

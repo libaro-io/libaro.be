@@ -1,0 +1,14 @@
+.component-profile-icon-component {
+    @apply relative;
+    &::before{
+        @apply min-w-3 min-h-3 w-[10%] h-[10%] rounded-full bg-green-600 absolute bottom-0 right-0 border-2 border-white;
+        content: '';
+    }
+    .image-container{
+        @apply rounded-full overflow-hidden ;
+
+        img{
+            @apply w-full h-full object-cover object-center;
+        }
+    }
+}

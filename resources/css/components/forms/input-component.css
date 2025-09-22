@@ -1,0 +1,11 @@
+.component-forms-input-component {
+    label{
+        @apply text-primary-dark font-grotesk font-extrabold text-lg mb-2 block;
+    }
+    .input-container{
+        @apply p-4 border-1 border-primary-dark rounded-md;
+        input{
+            @apply w-full bg-transparent;
+        }
+    }
+}

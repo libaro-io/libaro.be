@@ -29,7 +29,8 @@
     --color-footer-text: var(--footer-text-color);
     --color-gradient: var(--gradient);
 
-    --gap-page: 2rem;
+    --gap-page: 4rem;
+    --gap-form: 2rem;
 }
 
 @layer base {
@@ -82,3 +83,8 @@
     }
 }
 
+
+*:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
