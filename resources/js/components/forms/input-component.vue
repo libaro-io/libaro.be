@@ -8,6 +8,7 @@ const props = withDefaults(defineProps<{
     name?: string,
     placeholder?: string,
     required?: boolean,
+    error?: string,
 }>(), {
     required: false,
 });
@@ -19,6 +20,7 @@ const props = withDefaults(defineProps<{
         <div class="input-container">
             <input v-model="model" :type="props.type" :name="props.name" :placeholder="props.placeholder" :required="props.required">
         </div>
+        <p v-if="props.error" class="error">{{ props.error }}</p>
     </section>
 </template>
 <style scoped>

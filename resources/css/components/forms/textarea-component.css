@@ -1,3 +1,14 @@
 .component-forms-textarea-component {
-    
+    label{
+        @apply text-primary-dark font-grotesk font-extrabold text-lg mb-2 block;
+    }
+    .textarea-container{
+        @apply p-4 border-1 border-primary-dark rounded-md;
+        textarea{
+            @apply w-full bg-transparent resize-none h-24;
+        }
+    }
+    .error{
+        @apply text-red-500 text-sm mt-1;
+    }
 }

@@ -1,6 +1,6 @@
 import './bootstrap';
 import '../css/app.css';
-
+import "vue3-toastify/dist/index.css";
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 import {i18nVue} from "laravel-vue-i18n";

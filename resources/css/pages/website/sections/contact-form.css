@@ -1,3 +1,5 @@
 .section-website-contact-form {
-    @apply grid grid-cols-1 gap-form;
+    form{
+        @apply grid grid-cols-1 gap-form;
+    }
 }

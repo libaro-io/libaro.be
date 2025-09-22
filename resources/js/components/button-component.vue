@@ -1,8 +1,18 @@
 <script setup lang="ts">
+
+const props = defineProps<{
+    text: string;
+    disabled?: boolean;
+}>();
+
 </script>
 <template>
     <section class="component-button-component">
-       component button-component
+       <button
+           :disabled="props.disabled"
+           >
+           {{ props.text }}
+       </button>
     </section>
 </template>
 <style scoped>

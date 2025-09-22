@@ -33,6 +33,7 @@ export default defineConfig({
             '@pages': path.resolve(__dirname, 'resources/js/pages'),
             '@assets': path.resolve(__dirname, 'resources/assets'),
             '@actions': path.resolve(__dirname, 'resources/js/actions'),
+            '@enums': path.resolve(__dirname, 'resources/js/enums'),
         },
     },
     plugins: [

@@ -4,6 +4,8 @@ import {useForm} from "@inertiajs/vue3";
 import InputComponent from "@components/forms/input-component.vue";
 import TextareaComponent from "@components/forms/textarea-component.vue";
 import ButtonComponent from "@components/button-component.vue";
+import SubmitContactFormController from "@actions/App/Http/Controllers/SubmitContactFormController";
+import {showToast} from "@composables/UseToastComposable";
 
 const contactForm = useForm< {
     name: string;
@@ -16,38 +18,55 @@ const contactForm = useForm< {
 });
 
 const submitContactForm = () => {
-    console.log(contactForm)
+    if (contactForm.processing) {
+        return;
+    }
+    contactForm.submit(SubmitContactFormController(), {
+        preserveScroll: true,
+        preserveState: true,
+        onSuccess: () => {
+            contactForm.reset();
+            showToast('Bericht werd succesvol verzonden!')
+        }
+    });
 }
 
 </script>
 <template>
     <section class="section-website-contact-form">
-        <input-component
-            v-model="contactForm.name"
-            label="Name"
-            type="text"
-            name="name"
-            placeholder="Name"
-            :required="true"
-        ></input-component>
-        <input-component
-            v-model="contactForm.email"
-            label="Email"
-            type="email"
-            name="email"
-            placeholder="Email"
-            :required="true"
-        ></input-component>
-        <textarea-component
-            v-model="contactForm.message"
-            label="Message"
-            name="message"
-            placeholder="Message"
-            :required="true"
-        ></textarea-component>
-        <button-component
-            @click="submitContactForm"
-        ></button-component>
+        <form @submit.prevent="submitContactForm">
+            <input-component
+                v-model="contactForm.name"
+                label="Name"
+                type="text"
+                name="name"
+                placeholder="Name"
+                :required="true"
+                :error="contactForm.errors.name"
+            ></input-component>
+            <input-component
+                v-model="contactForm.email"
+                label="Email"
+                type="email"
+                name="email"
+                placeholder="Email"
+                :required="true"
+                :error="contactForm.errors.email"
+            ></input-component>
+            <textarea-component
+                v-model="contactForm.message"
+                label="Message"
+                name="message"
+                placeholder="Message"
+                :error="contactForm.errors.message"
+                :required="true"
+            ></textarea-component>
+            <button-component
+                :disabled="contactForm.processing"
+                text="Verstuur"
+                @click="submitContactForm"
+            ></button-component>
+        </form>
     </section>
 </template>
 <style scoped>
