@@ -6,8 +6,8 @@ return [
 
     'intro' => [
         'heading' => 'General',
-        'paragraph_1' => 'The Libaro website is operated by Libaro, a private limited company, registered under business number :business_number ("Libaro BV"). In this privacy statement, Libaro informs you about the use of your personal data on the Libaro website ("Privacy Statement").',
-        'paragraph_2' => 'Libaro is considered a ":data_controller_role" for certain processing activities (see article 3.2) and a ":data_processor_role" for others (see article 3.1). Libaro does not take this responsibility lightly. Libaro handles your personal data in a responsible manner. Your personal data is carefully processed and secured in accordance with applicable regulations, such as the General Data Protection Regulation of :date_gdpr (also known as "GDPR") and the law on the protection of natural persons with regard to the processing of personal data of :date_data_protection. In particular, the principles of :design_principle and data minimization are strictly observed.',
+        'paragraph_1' => 'The Libaro website is operated by Libaro, a private limited company, registered under business number BE 0541.352.248 ("Libaro BV"). In this privacy statement, Libaro informs you about the use of your personal data on the Libaro website ("Privacy Statement").',
+        'paragraph_2' => 'Libaro is considered a data controller for certain processing activities (see article 3.2) and a data processor for others (see article 3.1). Libaro does not take this responsibility lightly. Libaro handles your personal data in a responsible manner. Your personal data is carefully processed and secured in accordance with applicable regulations, such as the General Data Protection Regulation of 27 April 2016 (also known as "GDPR") and the law on the protection of natural persons with regard to the processing of personal data of 30 July 2018. In particular, the principles of privacy by design and data minimization are strictly observed.',
     ],
 
     'data_processing' => [
@@ -23,7 +23,7 @@ return [
 
     'why_process' => [
         'heading' => 'Why does Libaro process this data?',
-        'paragraph_1' => 'Depending on the capacity in which you use Libaro\'s services (as an employee of one of our customers (your employer), a visitor invited by one of our customers, or a third party), Libaro acts as a ":processor_role" or a ":controller_role".',
+        'paragraph_1' => 'Depending on the capacity in which you use Libaro\'s services (as an employee of one of our customers (your employer), a visitor invited by one of our customers, or a third party), Libaro acts as a processor or a data controller.',
     ],
 
     'as_processor' => [
@@ -46,7 +46,7 @@ return [
         'paragraph_analysis_2' => 'Based on these analyses, we can see where the needs of our users lie, and adapt our services accordingly. This processing of personal data also benefits you. In doing so, we also ensure that your fundamental rights and freedoms remain respected.',
         'heading_marketing' => 'Direct marketing and profiling',
         'paragraph_marketing_1' => 'Your personal data will only be used for direct marketing purposes if Libaro has obtained your explicit prior consent ("opt-in") for this when creating your account on our Libaro application.',
-        'paragraph_marketing_2' => 'If you have given such consent, you can withdraw this consent at any time. If you wish to withdraw your consent for direct marketing, you can email the following email address: :email_address.',
+        'paragraph_marketing_2' => 'If you have given such consent, you can withdraw this consent at any time. If you wish to withdraw your consent for direct marketing, you can email the following email address: info@libaro.be.',
     ],
 
     'data_sharing' => [
@@ -64,7 +64,7 @@ return [
     'data_retention' => [
         'heading' => 'How long does Libaro store this data?',
         'paragraph_1' => 'Libaro only stores your personal data for as long as this is necessary for the described purposes. In this way, we also prevent irrelevant information from being stored.',
-        'paragraph_2' => 'Since the contractual liability claim only expires after :years_retention years, we will archive certain data - only for this purpose - for this period. As you can see below, you can always ask us to delete certain data. Libaro will always comply with this if the legal conditions for this are met (see article :rights_article).',
+        'paragraph_2' => 'Since the contractual liability claim only expires after 10 years, we will archive certain data - only for this purpose - for this period. As you can see below, you can always ask us to delete certain data. Libaro will always comply with this if the legal conditions for this are met (see article 7).',
     ],
 
     'user_rights' => [
@@ -74,16 +74,16 @@ return [
         'bullet_2' => 'If processing takes place based on the consent you have provided, you always have the right to withdraw this consent.',
         'bullet_3' => 'You have the right, in principle, to obtain the personal data that Libaro holds about you in a structured, commonly used, and machine-readable format and to transfer it to another data controller.',
         'bullet_4' => 'In principle, you have the right to ask Libaro to delete your personal data and/or account. However, you also have the right to request that the processing of your personal data be limited (for example: making personal data inaccessible).',
-        'outro' => 'To exercise your rights, please contact Libaro by sending an email to :email_address.',
+        'outro' => 'To exercise your rights, please contact Libaro by sending an email to info@libaro.be.',
     ],
 
     'changes' => [
         'heading' => 'Changes',
-        'paragraph_1' => 'Libaro reserves the right to change this Privacy Statement. The changes will be announced via our website :website_url. Libaro advises you to view the Privacy Statement regularly.',
+        'paragraph_1' => 'Libaro reserves the right to change this Privacy Statement. The changes will be announced via our website libaro.be. Libaro advises you to view the Privacy Statement regularly.',
     ],
 
     'questions' => [
         'heading' => 'Questions and complaints',
-        'paragraph_1' => 'Privacy is a sensitive issue, and rightly so. If you have questions or complaints, do not hesitate to contact Libaro by sending an email to :email_address. You can also file a complaint with the Data Protection Authority via :authority_email_address.',
+        'paragraph_1' => 'Privacy is a sensitive issue, and rightly so. If you have questions or complaints, do not hesitate to contact Libaro by sending an email to info@libaro.be. You can also file a complaint with the Data Protection Authority via contact@apd-gba.be.',
     ],
 ];

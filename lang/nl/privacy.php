@@ -6,8 +6,8 @@ return [
 
     'intro' => [
         'heading' => 'Algemeen',
-        'paragraph_1' => 'De Libaro website wordt uitgebaat door Libaro, een besloten vennootschap, ingeschreven onder het ondernemingsnummer :business_number ("Libaro BV"). In deze privacyverklaring informeert Libaro u over het gebruik van uw persoonsgegevens op de Libaro website ("Privacyverklaring").',
-        'paragraph_2' => 'Libaro wordt voor bepaalde verwerkingsactiviteiten aanzien als ":data_controller_role" (zie artikel 3.2) en voor andere als ":data_processor_role" (zie artikel 3.1). Libaro neemt deze verantwoordelijkheid niet licht op. Libaro gaat dan ook op een verantwoorde manier met uw persoonsgegevens om. Uw persoonsgegevens worden zorgvuldig verwerkt en beveiligd in overeenstemming met de toepasselijke regelgeving, zoals o.a. de algemene verordening gegevensbescherming van :date_gdpr (ook wel "GDPR" genoemd) en de wet betreffende de bescherming van natuurlijke personen met betrekking tot de verwerking van persoonsgegevens van :date_data_protection. Zo worden in het bijzonder de principes van :design_principle en gegevensminimalisatie strikt nageleefd.'
+        'paragraph_1' => 'De Libaro website wordt uitgebaat door Libaro, een besloten vennootschap, ingeschreven onder het ondernemingsnummer BE 0541.352.248 ("Libaro BV"). In deze privacyverklaring informeert Libaro u over het gebruik van uw persoonsgegevens op de Libaro website ("Privacyverklaring").',
+        'paragraph_2' => 'Libaro wordt voor bepaalde verwerkingsactiviteiten aanzien als verwerkingsverantwoordelijke (zie artikel 3.2) en voor andere als verwerker (zie artikel 3.1). Libaro neemt deze verantwoordelijkheid niet licht op. Libaro gaat dan ook op een verantwoorde manier met uw persoonsgegevens om. Uw persoonsgegevens worden zorgvuldig verwerkt en beveiligd in overeenstemming met de toepasselijke regelgeving, zoals o.a. de algemene verordening gegevensbescherming van 27 april 2016 (ook wel "GDPR" genoemd) en de wet betreffende de bescherming van natuurlijke personen met betrekking tot de verwerking van persoonsgegevens van 30 juli 2018. Zo worden in het bijzonder de principes van privacy by design en gegevensminimalisatie strikt nageleefd.'
     ],
 
     'data_processing' => [
@@ -23,7 +23,7 @@ return [
 
     'why_process' => [
         'heading' => 'Waarom verwerkt Libaro deze gegevens?',
-        'paragraph_1' => 'Afhankelijk van de hoedanigheid waarin u beroep doet op de dienstverlening van Libaro (als werknemer van een van onze klanten (uw werkgever), bezoeker op uitnodiging van een van onze klanten, of een derde, treedt Libaro op als ":processor_role" dan wel als ":controller_role".',
+        'paragraph_1' => 'Afhankelijk van de hoedanigheid waarin u beroep doet op de dienstverlening van Libaro (als werknemer van een van onze klanten (uw werkgever), bezoeker op uitnodiging van een van onze klanten, of een derde, treedt Libaro op als verwerker dan wel als verwerkingsverantwoordelijke.',
     ],
 
     'as_processor' => [
@@ -46,7 +46,7 @@ return [
         'paragraph_analysis_2' => 'Aan de hand van deze analyses, kunnen wij zien waar de noden van onze gebruikers liggen, en hieraan onze dienstverlening aanpassen. Deze verwerking van persoonsgegevens komt dus ook aan u ten goede. Hierbij zien wij er ook op toe dat uw grondrechten en fundamentele vrijheden gerespecteerd blijven.',
         'heading_marketing' => 'Direct marketing en profilering',
         'paragraph_marketing_1' => 'Uw persoonsgegevens worden enkel gebruikt voor direct marketing doeleinden wanneer Libaro hiervoor uw expliciete voorafgaande toestemming zou hebben verkregen (“opt-in”) bij het creëren van uw account op onze Libaro applicatie.',
-        'paragraph_marketing_2' => 'Indien u een dergelijke toestemming heeft gegeven, kan u deze toestemming op elk moment intrekken. Indien u uw toestemming voor direct marketing wil intrekken, kan u mailen naar het volgende e-mailadres :email_address.',
+        'paragraph_marketing_2' => 'Indien u een dergelijke toestemming heeft gegeven, kan u deze toestemming op elk moment intrekken. Indien u uw toestemming voor direct marketing wil intrekken, kan u mailen naar het volgende e-mailadres info@libaro.be.',
     ],
 
     'data_sharing' => [
@@ -64,7 +64,7 @@ return [
     'data_retention' => [
         'heading' => 'Hoe lang bewaart Libaro deze gegevens?',
         'paragraph_1' => 'Libaro bewaart uw persoonsgegevens enkel voor zolang dit nodig is voor de beschreven doeleinden. Op die manier voorkomen wij ook dat irrelevante informatie wordt bewaard.',
-        'paragraph_2' => 'Aangezien de contractuele aansprakelijkheidsvordering pas verjaart na :years_retention jaar, zullen wij voor deze duur bepaalde gegevens - enkel voor dit doeleinde - archiveren. Zoals u hieronder ziet, kan u ons steeds verzoeken om bepaalde gegevens te verwijderen. Libaro zal hier steeds gevolg aan geven indien de wettelijke voorwaarden daartoe vervuld zijn (zie artikel :rights_article).',
+        'paragraph_2' => 'Aangezien de contractuele aansprakelijkheidsvordering pas verjaart na 10 jaar, zullen wij voor deze duur bepaalde gegevens - enkel voor dit doeleinde - archiveren. Zoals u hieronder ziet, kan u ons steeds verzoeken om bepaalde gegevens te verwijderen. Libaro zal hier steeds gevolg aan geven indien de wettelijke voorwaarden daartoe vervuld zijn (zie artikel 7).',
     ],
 
     'user_rights' => [
@@ -74,16 +74,16 @@ return [
         'bullet_2' => 'Indien een verwerking plaatsvindt op basis van de door u verschafte toestemming, heeft u steeds het recht deze toestemming opnieuw in te trekken.',
         'bullet_3' => 'U heeft in principe het recht om de persoonsgegevens die Libaro over u heeft in een gestructureerde, gangbare en machine leesbare vorm te verkrijgen en deze over te dragen aan een andere verwerkingsverantwoordelijke.',
         'bullet_4' => 'U heeft in principe het recht om Libaro te verzoeken om uw persoonsgegevens en/of account te verwijderen. U heeft echter ook het recht om te verzoeken dat de verwerking van uw persoonsgegevens enkel beperkt wordt (bijvoorbeeld: het ontoegankelijk maken van persoonsgegevens).',
-        'outro' => 'Om uw rechten uit te oefenen, neemt u contact op met Libaro door e-mail te sturen naar :email_address.',
+        'outro' => 'Om uw rechten uit te oefenen, neemt u contact op met Libaro door e-mail te sturen naar info@libaro.be.',
     ],
 
     'changes' => [
         'heading' => 'Wijzigingen',
-        'paragraph_1' => 'Libaro behoudt zich het recht voor deze Privacyverklaring te wijzigen. De wijzigingen worden via onze website :website_url bekend gemaakt. Libaro adviseert u regelmatig de Privacyverklaring te bekijken.',
+        'paragraph_1' => 'Libaro behoudt zich het recht voor deze Privacyverklaring te wijzigen. De wijzigingen worden via onze website libaro.be bekend gemaakt. Libaro adviseert u regelmatig de Privacyverklaring te bekijken.',
     ],
 
     'questions' => [
         'heading' => 'Vragen en klachten',
-        'paragraph_1' => 'Privacy is een gevoelig punt, en terecht. Als u vragen of klachten heeft, aarzel dan niet om contact met Libaro op te nemen door een e-mail te sturen naar :email_address. U kan ook een klacht indienen bij de Gegevensbeschermingsautoriteit via :authority_email_address.',
+        'paragraph_1' => 'Privacy is een gevoelig punt, en terecht. Als u vragen of klachten heeft, aarzel dan niet om contact met Libaro op te nemen door een e-mail te sturen naar info@libaro.be. U kan ook een klacht indienen bij de Gegevensbeschermingsautoriteit via contact@apd-gba.be.',
     ],
 ];

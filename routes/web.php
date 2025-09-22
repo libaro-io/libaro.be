@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CookiePolicyController;
 use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TermsController;
 use App\Http\Controllers\SubmitContactFormController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
@@ -22,4 +24,6 @@ Route::prefix('{locale?}')->group(function () {
     Route::get('/producten', ProductController::class);
 
     Route::get('/privacy', PrivacyPolicyController::class);
+    Route::get('/cookies', CookiePolicyController::class);
+    Route::get('/terms', TermsController::class);
 });
