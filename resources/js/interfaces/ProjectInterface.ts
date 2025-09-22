@@ -1,4 +1,5 @@
 import {ClientInterface} from "@interfaces/ClientInterface";
+import {ProjectBlockInterface} from "@interfaces/ProjectBlockInterface";
 
 export interface ProjectInterface {
     slug: string;
@@ -6,4 +7,5 @@ export interface ProjectInterface {
     description: string | null;
     type: string;
     client: ClientInterface;
+    blocks?: ProjectBlockInterface[]
 }

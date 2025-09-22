@@ -2,9 +2,13 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/**
+ * @mixin Project
+ */
 class ProjectResource extends JsonResource
 {
     /**
@@ -20,7 +24,8 @@ class ProjectResource extends JsonResource
             'description' => $this->description,
             'type' => $this->type,
             'client' => ClientResource::make($this->whenLoaded('client')),
-            'tags' => $this->tags
+            'tags' => $this->tags,
+            'blocks' => ProjectBlockResource::collection($this->whenLoaded('blocks')),
         ];
     }
 }

@@ -30,6 +30,7 @@
     --color-secondary: var(--secondary);
     --color-footer-text: var(--footer-text-color);
     --color-gradient: var(--gradient);
+    --color-dark: var(--dark);
 
     --gap-page: 4rem;
     --gap-form: 2rem;
@@ -64,6 +65,7 @@
     --primary-darkest: hsl(228, 47%, 46%);
     --secondary: hsl(36, 98%, 50%);
     --footer-text-color: hsl(210, 53%, 48%);
+    --dark: rgb(62 83 171);
     --gradient: #3e53ab;
     --radius: 0.5rem;
 }
@@ -78,7 +80,7 @@
     }
 
     p, li {
-        @apply font-grotesk font-semibold;
+        @apply font-grotesk font-medium;
     }
 
     a {

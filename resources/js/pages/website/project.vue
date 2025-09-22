@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Website from "@layouts/website.vue";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
+import ProjectBlock from "@pages/website/sections/project-block.vue";
 
 const props = defineProps<{
     project: ProjectInterface
@@ -11,11 +12,17 @@ const props = defineProps<{
         :page-title="props.project.name"
         :page-sub-title="props.project.type"
         :page-description="props.project.description"
-        :header-options="{ fullWidthDescription: true }"
+        :header-options="{
+            fullWidthDescription: true,
+            background: 'https://placehold.co/1500x1000'
+        }"
         :meta-title="props.project.name"
         :marginBottom="false">
         <div id="page-website-project">
-            page project
+            <project-block
+                v-for="(block, index) in project.blocks" :key="index"
+                :project="project"
+                :block="block"/>
         </div>
     </website>
 </template>

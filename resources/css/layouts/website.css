@@ -1,6 +1,7 @@
 #layout-website {
     @apply min-h-dvh flex flex-col;
-    .content{
+
+    .content {
         @apply flex-grow;
     }
 }

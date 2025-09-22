@@ -10,6 +10,8 @@ class DetailProjectController extends Controller
 {
     public function __invoke(string $locale, Project $project)
     {
+        $project->loadMissing('blocks');
+
         return Inertia::render('website/project', [
             'project' => ProjectResource::make($project)
         ]);
