@@ -1,5 +1,6 @@
 export default interface PageInterface {
     pageProps:{
+        recaptcha_site_key: string;
         locale: string;
         socials: {
             facebook: string;

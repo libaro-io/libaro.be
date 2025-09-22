@@ -38,6 +38,7 @@ class HandleInertiaRequests extends Middleware
         return [
             ...parent::share($request),
             'pageProps' => [
+                'recaptcha_site_key' => config('services.google_recaptcha.site_key'),
                 'locale' => app()->getLocale(),
                 'company' => [
                     'email' => 'bert@libaro.be',

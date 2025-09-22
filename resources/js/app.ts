@@ -5,9 +5,12 @@ import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 import {i18nVue} from "laravel-vue-i18n";
 import {setUrlDefaults} from "./wayfinder";
+import {VueReCaptcha} from "vue-recaptcha-v3";
+import PageInterface from "@interfaces/PageInterface";
 setUrlDefaults({
     locale: 'nl',
 });
+
 // Language files get loaded eagerly.
 const langs: Record<
     string,
@@ -29,10 +32,13 @@ createInertiaApp({
         return pages[`./pages/${name}.vue`]
     },
     setup({ el, App, props, plugin }) {
+        const pageProps = props.initialPage.props as unknown as PageInterface;
+        const captcheKey = pageProps.pageProps.recaptcha_site_key as string;
         const app = createApp({ render: () => h(App, props) })
             .use(i18nVue, {
                 resolve: langResolver,
             })
+            .use(VueReCaptcha, { siteKey: captcheKey } )
             .use(plugin)
             .mount(el)
     },

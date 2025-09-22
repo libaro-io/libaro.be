@@ -16,9 +16,15 @@ const props = withDefaults(defineProps<{
 </script>
 <template>
     <section class="component-forms-input-component">
-        <label v-if="props.label">{{ props.label }}</label>
+        <label v-if="props.label">{{ props.label }} <span v-if="props.required" class="required">*</span></label>
         <div class="input-container">
-            <input v-model="model" :type="props.type" :name="props.name" :placeholder="props.placeholder" :required="props.required">
+            <input
+                v-model="model"
+                :type="props.type"
+                :name="props.name"
+                :placeholder="props.placeholder"
+                :required="props.required"
+            >
         </div>
         <p v-if="props.error" class="error">{{ props.error }}</p>
     </section>

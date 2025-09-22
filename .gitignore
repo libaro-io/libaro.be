@@ -25,3 +25,5 @@ Thumbs.db
 storage/debugbar
 resources/js/actions
 resources/js/routes
+lang/php_en.json
+lang/php_nl.json

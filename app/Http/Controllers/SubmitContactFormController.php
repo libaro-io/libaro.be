@@ -10,8 +10,6 @@ class SubmitContactFormController extends Controller
 {
     public function __invoke(SubmitContactFormRequest $request)
     {
-        $validated = $request->validated();
-
         info('----------');
         info("New message on contactform from");
         info("IP: " . request()->ip());
@@ -20,7 +18,7 @@ class SubmitContactFormController extends Controller
         info("Has cookie: " . request()->hasCookie('laravel_cookie_consent'));
         info('----------');
 
-        Mail::to('libaro@libaro.be')->send(new Contact($validated['name'], $validated['email'], $validated['message']));
+        Mail::to('libaro@libaro.be')->send(new Contact($request->get('name'), $request->get('email'), $request->get('message')));
 
         return back()->with('success', 'Uw bericht werd succesvol verzonden!');
     }

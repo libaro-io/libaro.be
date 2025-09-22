@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\Recaptcha;
 use Illuminate\Foundation\Http\FormRequest;
 
 class SubmitContactFormRequest extends FormRequest
@@ -27,7 +28,7 @@ class SubmitContactFormRequest extends FormRequest
             'name' => 'string|required|max:255',
             'email' => 'email|required|indisposable',
             'message' => 'required|string',
-            //'g-recaptcha-response' => 'recaptcha',
+            'captcha_token'  => [new Recaptcha],
         ];
     }
 }
