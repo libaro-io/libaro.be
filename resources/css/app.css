@@ -87,3 +87,7 @@
     outline: none !important;
     box-shadow: none !important;
 }
+
+.grecaptcha-badge {
+    @apply invisible;
+}

@@ -10,6 +10,7 @@ export const translations = {
   "contact.form.message.placeholder": "",
   "contact.form.name.label": "",
   "contact.form.name.placeholder": "",
+  "contact.form.recaptcha": "",
   "contact.form.submit": "",
   "contact.form.success": "",
   "contact.meta_title": "",

@@ -4,6 +4,7 @@ import PrimaryMenu from "@layouts/sections/primary-menu.vue";
 import SecondaryMenu from "@layouts/sections/secondary-menu.vue";
 import {Ref, ref} from "vue";
 import LangSelector from "@layouts/sections/lang-selector.vue";
+import {router} from "@inertiajs/vue3";
 
 const props = withDefaults(defineProps<{
     pageTitle?: string;
@@ -27,6 +28,11 @@ const toggleMenu = () => {
         document.body.classList.remove('overflow-hidden');
     }
 }
+
+router.on('navigate', () => {
+    menuOpen.value = false;
+    document.body.classList.remove('overflow-hidden');
+});
 
 </script>
 <template>

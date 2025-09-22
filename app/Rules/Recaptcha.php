@@ -32,7 +32,7 @@ class Recaptcha implements Rule
             'secret' => $endpoint['secret_key'],
             'response' => $value,
         ])->json();
-        
+
         if(  $response['success'] && $response['score'] > 0.5) {
             return true;
         }

@@ -4,5 +4,8 @@
         .button{
             @apply flex justify-end xl:justify-start;
         }
+        .recaptcha{
+            @apply text-footer-text text-sm;
+        }
     }
 }

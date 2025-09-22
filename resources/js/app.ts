@@ -38,7 +38,7 @@ createInertiaApp({
             .use(i18nVue, {
                 resolve: langResolver,
             })
-            .use(VueReCaptcha, { siteKey: captcheKey } )
+            .use(VueReCaptcha, { siteKey: captcheKey} )
             .use(plugin)
             .mount(el)
     },

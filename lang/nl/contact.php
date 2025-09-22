@@ -19,5 +19,6 @@ return [
         ],
         'submit' => 'Verstuur',
         'success' => 'Bericht werd succesvol verzonden!',
+        'recaptcha' => 'Deze site wordt beschermd door reCAPTCHA en de Google <a href="https://policies.google.com/privacy" target="_blank">Privacybeleid</a> en <a href="https://policies.google.com/terms" target="_blank">Servicevoorwaarden</a> zijn van toepassing.',
     ],
 ];

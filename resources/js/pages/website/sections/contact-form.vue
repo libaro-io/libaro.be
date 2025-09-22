@@ -9,7 +9,8 @@ import { getTrans } from "@composables/UseTranslationHelper";
 import {showToast} from "@composables/UseToastComposable";
 import {useReCaptcha} from "vue-recaptcha-v3";
 
-const recaptcha = useReCaptcha()
+const recaptcha = useReCaptcha();
+
 const contactForm = useForm< {
     name: string;
     email: string;
@@ -26,14 +27,13 @@ const submitContactForm = async () => {
     if (contactForm.processing) {
         return;
     }
-    console.log('submitContactForm')
     if (!recaptcha) {
         console.error('ReCaptcha is not available');
         return;
     }
     await recaptcha.recaptchaLoaded();
     contactForm.captcha_token = await recaptcha.executeRecaptcha('submit');
-    console.log(contactForm.captcha_token)
+
     contactForm.submit(SubmitContactFormController(), {
         preserveScroll: true,
         preserveState: 'errors',
@@ -74,6 +74,7 @@ const submitContactForm = async () => {
                 :required="true"
                 :error="contactForm.errors.message"
             ></textarea-component>
+            <p class="recaptcha" v-html="getTrans('contact.form.recaptcha')"></p>
             <div class="button">
                 <button-component
                     :disabled="contactForm.processing"
