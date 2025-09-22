@@ -1,45 +1,58 @@
 .section-header {
-    @apply py-5 xl:py-14 xl:border-b-8 border-b-secondary bg-center bg-cover;
+    @apply py-5 xl:py-14 border-b-4 xl:border-b-8 border-b-secondary bg-center bg-cover;
     background-image: url("@assets/images/header_striped.webp");
 
-    &.margin-bottom{
+    &.margin-bottom {
         @apply mb-16;
     }
-    header{
+
+    header {
         @apply flex justify-between items-center;
-        .logo{
+
+        .logo {
             @apply w-48 xl:w-60;
         }
-        .menus{
+
+        .menus {
             @apply flex-col flex flex-col justify-end flex-col-reverse
             xl:items-end xl:content-center xl:bg-transparent xl:relative xl:right-0 xl:py-0 xl:px-0 xl:flex-col
             fixed -right-full top-0 h-full bg-primary  gap-4  z-20 transition-all duration-200 pl-6 pr-20 min-w-72 py-20 bg-bottom bg-cover;
-            &.open{
+
+            &.open {
                 @apply right-0;
             }
-            .close-button{
+
+            .close-button {
                 @apply cursor-pointer text-white text-xl z-30 absolute top-5 right-5 xl:hidden;
             }
-            .top{
+
+            .top {
                 @apply flex flex-col gap-x-8 gap-y-10 xl:flex-row xl:items-center;
             }
         }
-        .menu-button{
+
+        .menu-button {
             @apply cursor-pointer text-white text-xl xl:hidden;
         }
-        .overlay{
+
+        .overlay {
             @apply fixed top-0 left-0 w-full h-full bg-black/50 z-10 xl:hidden;
         }
     }
 
-    .page-title{
-
+    .page-title {
         @apply mt-6 xl:mt-14 flex flex-col gap-y-2 font-gilroy;
-        h2{
+
+        h2 {
             @apply font-extrabold text-lg md:text-lg uppercase text-secondary;
         }
-        h1{
+
+        h1 {
             @apply font-bold leading-snug text-3xl md:text-5xl lg:text-7xl text-white;
+        }
+
+        p {
+            @apply text-white text-lg md:text-2xl lg:max-w-1/2 text-balance;
         }
     }
 

@@ -1,0 +1,11 @@
+#page-website-projects {
+    @apply bg-primary-light py-14 lg:py-24;
+
+    #project-list {
+        @apply grid lg:grid-cols-2 gap-14 xl:gap-24;
+
+        .component-card-component:nth-child(even) {
+           @apply -mt-72;
+        }
+    }
+}

@@ -15,9 +15,14 @@ export const translations = {
   "footer.terms_and_conditions": "",
   "menu.primary.contact": "",
   "menu.primary.home": "",
+  "menu.primary.projects": "",
   "menu.secondary.blog": "",
   "menu.secondary.docs": "",
   "menu.secondary.products": "",
+  "projects.meta_title": "",
+  "projects.page_description": "",
+  "projects.page_sub_title": "",
+  "projects.page_title": "",
   "urls.branding": "",
 } as const;
 

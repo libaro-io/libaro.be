@@ -7,6 +7,7 @@ import {ref} from "vue";
 import {MenuInterface} from "@interfaces/MenuInterface";
 import HomeController from "../../actions/App/Http/Controllers/HomeController";
 import ContactController from "../../actions/App/Http/Controllers/ContactController";
+import ProjectController from "../../actions/App/Http/Controllers/ProjectController";
 
 const props = defineProps<{
     type: 'header' | 'footer'
@@ -21,10 +22,16 @@ const primaryMenu = ref<MenuInterface[]>([
     },
     {
         weight: 2,
+        text: 'menu.primary.projects',
+        url: ProjectController(),
+        visible: true,
+    },
+    {
+        weight: 3,
         text: 'menu.primary.contact',
         url: ContactController(),
         visible: true,
-    }
+    },
 ]);
 
 </script>

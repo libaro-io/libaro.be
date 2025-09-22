@@ -8,6 +8,7 @@ import LangSelector from "@layouts/sections/lang-selector.vue";
 const props = withDefaults(defineProps<{
     pageTitle?: string;
     pageSubTitle?: string;
+    pageDescription?: string;
     background?: string;
     marginBottom?: boolean;
 }>(), {
@@ -19,10 +20,10 @@ const menuOpen: Ref<boolean> = ref(false);
 
 const toggleMenu = () => {
     menuOpen.value = !menuOpen.value;
-    if(menuOpen.value){
+    if (menuOpen.value) {
         document.body.classList.add('overflow-hidden');
     }
-    if(!menuOpen.value){
+    if (!menuOpen.value) {
         document.body.classList.remove('overflow-hidden');
     }
 }
@@ -37,46 +38,49 @@ const toggleMenu = () => {
             'section-header',
             props.marginBottom ? 'margin-bottom' : ''
         ]">
-       <div class="container">
-           <header>
-               <div class="logo">
-                   <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg" alt="logo">
-               </div>
-               <button class="menu-button" @click="toggleMenu()">
-                   <i
-                       :class="[
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg" alt="logo">
+                </div>
+                <button class="menu-button" @click="toggleMenu()">
+                    <i
+                        :class="[
+
                            'fa-solid',
                            menuOpen ? 'fa-xmark' : 'fa-bars'
                         ]"
-                   ></i>
-               </button>
-               <div
-                   :class="[
+                    ></i>
+                </button>
+                <div
+                    :class="[
                        'menus',
                        menuOpen ? 'open' : ''
                    ]"
-               >
-                   <button class="close-button" @click="toggleMenu()">
-                       <i class="fa-solid fa-xmark"></i>
-                   </button>
-                   <div class="top">
-                       <secondary-menu type="header"></secondary-menu>
-                       <lang-selector></lang-selector>
-                   </div>
-                   <primary-menu type="header"></primary-menu>
-               </div>
-               <div
-                   class="overlay"
-                   @click="toggleMenu()"
-                   v-if="menuOpen"
-               >
-               </div>
-           </header>
-           <div class="page-title">
-               <h2 v-if="props.pageSubTitle">{{ props.pageSubTitle }}</h2>
-               <h1 v-if="props.pageTitle">{{ props.pageTitle }}</h1>
-           </div>
-       </div>
+                >
+                    <button class="close-button" @click="toggleMenu()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <div class="top">
+                        <secondary-menu type="header"></secondary-menu>
+                        <lang-selector></lang-selector>
+                    </div>
+                    <primary-menu type="header"></primary-menu>
+                </div>
+                <div
+                    class="overlay"
+                    @click="toggleMenu()"
+                    v-if="menuOpen"
+                >
+                </div>
+            </header>
+            <div class="page-title">
+                <h2 v-if="props.pageSubTitle">{{ props.pageSubTitle }}</h2>
+                <h1 v-if="props.pageTitle">{{ props.pageTitle }}</h1>
+
+                <p v-if="props.pageDescription">{{ props.pageDescription }}</p>
+            </div>
+        </div>
     </section>
 </template>
 <style scoped>

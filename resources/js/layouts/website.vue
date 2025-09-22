@@ -13,6 +13,7 @@ setUrlDefaults({
 const props = withDefaults(defineProps<{
     pageTitle?: string;
     pageSubTitle?: string;
+    pageDescription?: string;
     metaTitle?: string | null;
     description?: string;
     marginBottom?: boolean;
@@ -22,7 +23,7 @@ const props = withDefaults(defineProps<{
 });
 
 const getTitle = computed(() => {
-  return props.metaTitle ? props.metaTitle + ' | Libaro' : 'Libaro';
+    return props.metaTitle ? props.metaTitle + ' | Libaro' : 'Libaro';
 })
 
 </script>
@@ -36,6 +37,7 @@ const getTitle = computed(() => {
             :margin-bottom="props.marginBottom"
             :page-title="props.pageTitle"
             :page-sub-title="props.pageSubTitle"
+            :page-description="props.pageDescription"
         ></Header>
         <main class="content">
             <slot></slot>
