@@ -15,9 +15,10 @@ const props = withDefaults(defineProps<{
     pageSubTitle?: string;
     metaTitle?: string | null;
     description?: string;
+    marginBottom?: boolean;
 }>(), {
     metaTitle: null,
-
+    marginBottom: true,
 });
 
 const getTitle = computed(() => {
@@ -32,6 +33,7 @@ const getTitle = computed(() => {
     ></Head>
     <div id="layout-website">
         <Header
+            :margin-bottom="props.marginBottom"
             :page-title="props.pageTitle"
             :page-sub-title="props.pageSubTitle"
         ></Header>

@@ -9,8 +9,10 @@ const props = withDefaults(defineProps<{
     pageTitle?: string;
     pageSubTitle?: string;
     background?: string;
+    marginBottom?: boolean;
 }>(), {
-    background: "/images/header_striped.webp"
+    background: "/images/header_striped.webp",
+    marginBottom: true,
 });
 
 const menuOpen: Ref<boolean> = ref(false);
@@ -29,9 +31,12 @@ const toggleMenu = () => {
 <template>
     <section
         :style="{
-            'background-image': 'url(' + props.background + ')'
+            'background-image': 'url(' + props.background + ')',
         }"
-        class="section-header">
+        :class="[
+            'section-header',
+            props.marginBottom ? 'margin-bottom' : ''
+        ]">
        <div class="container">
            <header>
                <div class="logo">

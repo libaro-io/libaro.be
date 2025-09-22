@@ -27,6 +27,8 @@
     --color-primary-dark: var(--primary-dark);
     --color-secondary: var(--secondary);
     --color-footer-text: var(--footer-text-color);
+
+    --gap-page: 2rem;
 }
 
 @layer base {
