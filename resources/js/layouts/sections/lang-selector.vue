@@ -2,15 +2,33 @@
 
 import {getActiveLanguage, loadLanguageAsync} from "laravel-vue-i18n";
 import {Ref, ref} from "vue";
+import {router} from "@inertiajs/vue3";
+import UpdateLangController from "@actions/App/Http/Controllers/UpdateLangController";
 
 const languages: string[] = ['nl', 'en'];
 
 const currentLanguage: Ref<string> = ref(getActiveLanguage());
 
 const setLanguage = (language: string) => {
-    // TODO: set language in url
+    const oldLanguage = getActiveLanguage();
+    router.visit(UpdateLangController().url, {
+        method: UpdateLangController().method,
+        data: {
+            language: language
+        },
+        preserveScroll: true,
+        preserveState: true,
+    });
+
+    const currentUrl = window.location.href;
+    const newUrl = currentUrl.replace(oldLanguage, language);
+    router.visit(newUrl, {
+        preserveScroll: true,
+        preserveState: true,
+    });
     loadLanguageAsync(language);
     currentLanguage.value = language;
+
 }
 
 </script>

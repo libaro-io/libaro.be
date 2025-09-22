@@ -40,7 +40,7 @@
     <meta name="msapplication-TileColor" content="#0091ff">
     <meta name="msapplication-TileImage" content="{{ asset('images/favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#0091ff">
-    
+
     <meta name="description"
           content="Wij zetten ideeën om in sterke en stijlvolle webapplicaties. Met onze state-of-the-art webapplicaties en onze persoonlijke aanpak veroveren samen het web.">
 

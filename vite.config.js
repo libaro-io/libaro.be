@@ -32,6 +32,7 @@ export default defineConfig({
             '@composables': path.resolve(__dirname, 'resources/js/composables'),
             '@pages': path.resolve(__dirname, 'resources/js/pages'),
             '@assets': path.resolve(__dirname, 'resources/assets'),
+            '@actions': path.resolve(__dirname, 'resources/js/actions'),
         },
     },
     plugins: [

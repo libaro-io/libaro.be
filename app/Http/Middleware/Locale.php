@@ -28,6 +28,7 @@ class Locale
         $isALivewireRoute = str_starts_with($request->path(), 'livewire');
 
         if($isSupportedLocale){
+            app()->setLocale($currentLocale);
             return $next($request);
         }
 
