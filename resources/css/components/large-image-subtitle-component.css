@@ -1,0 +1,10 @@
+.component-large-image-subtitle-component {
+    @apply relative;
+    &:after{
+        @apply bg-primary-light border-b-20 border-b-border block w-full h-1/2 absolute bottom-0 left-0 -z-10;
+        content: '';
+    }
+    p{
+        @apply font-grotesk font-semibold text-xl md:text-2xl text-primary-darkest text-center text-pretty py-10 lg:py-20;
+    }
+}

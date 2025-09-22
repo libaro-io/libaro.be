@@ -13,6 +13,7 @@ export const translations = {
   "contact.form.recaptcha": "",
   "contact.form.submit": "",
   "contact.form.success": "",
+  "contact.meet_us": "",
   "contact.meta_title": "",
   "contact.page_sub_title": "",
   "contact.page_title": "",

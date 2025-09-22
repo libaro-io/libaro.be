@@ -4,6 +4,7 @@ return [
     'page_title' => 'Questions? Comments?',
     'page_sub_title' => 'Contact Us',
     'meta_title' => 'Contact',
+    'meet_us' => 'Let\'s meet! Come to us or we will come to you. Ask us the difficult questions you don\'t have answers to.',
     'form' => [
         'name' => [
             'label' => 'Name',

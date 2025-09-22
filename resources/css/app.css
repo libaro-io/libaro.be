@@ -20,11 +20,13 @@
 
     --color-background: var(--background);
     --color-foreground: var(--foreground);
+    --color-border: var(--border);
 
     --color-primary: var(--primary);
     --color-primary-light: var(--primary-light);
     --color-primary-medium: var(--primary-medium);
     --color-primary-dark: var(--primary-dark);
+    --color-primary-darkest: var(--primary-darkest);
     --color-secondary: var(--secondary);
     --color-footer-text: var(--footer-text-color);
     --color-gradient: var(--gradient);
@@ -55,9 +57,11 @@
     --background: hsl(0 0% 100%);
     --foreground: hsl(0 0% 3.9%);
     --primary: hsl(206, 100%, 50%);
+    --border: #ebf4f7;
     --primary-light: hsl(195, 44%, 96%);
     --primary-medium: hsl(206, 59%, 71%);
     --primary-dark: hsl(206, 100%, 50%);
+    --primary-darkest: hsl(228, 47%, 46%);
     --secondary: hsl(36, 98%, 50%);
     --footer-text-color: hsl(210, 53%, 48%);
     --gradient: #3e53ab;

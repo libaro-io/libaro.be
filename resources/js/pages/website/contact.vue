@@ -3,6 +3,8 @@ import Website from "@layouts/website.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
 import ContactInformation from "@pages/website/sections/contact-information.vue";
 import ContactForm from "@pages/website/sections/contact-form.vue";
+import LargeImageSubtitleComponent from "@components/large-image-subtitle-component.vue";
+import strategy2 from "@assets/images/strategy_2.jpg";
 </script>
 <template>
     <Website
@@ -16,6 +18,11 @@ import ContactForm from "@pages/website/sections/contact-form.vue";
                 </div>
                 <contact-form></contact-form>
             </div>
+
+            <large-image-subtitle-component
+                :image="strategy2"
+                :subtitle="getTrans('contact.meet_us')"
+            ></large-image-subtitle-component>
         </div>
     </Website>
 </template>
