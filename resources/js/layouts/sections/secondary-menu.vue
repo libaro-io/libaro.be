@@ -6,6 +6,7 @@ import {getTrans} from "@composables/UseTranslationHelper";
 import {ref} from "vue";
 import {MenuInterface} from "@interfaces/MenuInterface";
 import HomeController from "../../actions/App/Http/Controllers/HomeController";
+import BlogController from "@actions/App/Http/Controllers/BlogController";
 
 const props = defineProps<{
     type: 'header' | 'footer'
@@ -15,7 +16,7 @@ const secondaryMenu = ref<MenuInterface[]>([
     {
         weight: 1,
         text: 'menu.secondary.blog',
-        url: HomeController(),
+        url: BlogController(),
         visible: true,
     },
     {

@@ -19,7 +19,7 @@ class ProjectController extends Controller
             ->get();
 
         return Inertia::render('website/projects', [
-            'projects' => ProjectResource::collection($projects),
+            'projects' => ProjectResource::collection($projects->prepend($projects->splice(1, 1)[0])),
         ]);
     }
 }

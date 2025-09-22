@@ -1,19 +1,32 @@
 <script setup lang="ts">
+import {computed} from "vue";
+
 const props = defineProps<{
     title: string;
     subTitle?: string;
     category?: string;
+    tags?: string[];
 }>()
+
+const hasTagsOrCategory = computed(() => {
+    return (props.tags && props.tags.length > 0) || props.category;
+})
 </script>
 <template>
     <article class="component-card-component">
         <div class="inner">
             <header>
-                <div class="tags">
+                <div class="tags"
+                     v-if="hasTagsOrCategory">
                     <span
                         v-if="props.category"
                         class="tag"
                     >{{ props.category }}</span>
+                    <span
+                        v-if="props.tags"
+                        v-for="(tag, index) in props.tags" :key="index"
+                        class="tag"
+                    >{{ tag }}</span>
                 </div>
                 <h2>{{ props.title }}</h2>
                 <h3 v-if="props.subTitle">{{ props.subTitle }}</h3>

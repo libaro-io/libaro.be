@@ -27,4 +27,12 @@ class Project extends Model
     {
         return $this->hasMany(ProjectBlock::class)->orderBy('sort');
     }
+
+    protected function casts(): array
+    {
+        return [
+            'visible' => 'boolean',
+            'is_product' => 'boolean',
+        ];
+    }
 }

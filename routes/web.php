@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
@@ -13,4 +14,5 @@ Route::prefix('{locale?}')->group(function () {
     Route::post('lang', UpdateLangController::class);
 
     Route::get('/realisaties', ProjectController::class);
+    Route::get('/blog', BlogController::class);
 });
