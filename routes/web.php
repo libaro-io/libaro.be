@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
@@ -15,4 +16,5 @@ Route::prefix('{locale?}')->group(function () {
 
     Route::get('/realisaties', ProjectController::class);
     Route::get('/blog', BlogController::class);
+    Route::get('/producten', ProductController::class);
 });
