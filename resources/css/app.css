@@ -8,14 +8,11 @@
 
 @theme inline {
     --font-sans: Instrument Sans, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-
     --font-grotesk: Grotesk, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-gilroy: Gilroy, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
     --radius-sm: calc(var(--radius) - 4px);
-
     --text-7xl: 4rem;
 
     --color-background: var(--background);
@@ -68,6 +65,7 @@
     --dark: rgb(62 83 171);
     --gradient: #3e53ab;
     --radius: 0.5rem;
+    --margin-page: var(--gap-page);
 }
 
 @layer base {
@@ -87,7 +85,6 @@
         @apply cursor-pointer;
     }
 }
-
 
 *:focus {
     outline: none !important;

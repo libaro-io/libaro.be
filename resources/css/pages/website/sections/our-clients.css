@@ -1,0 +1,6 @@
+.section-website-our-clients {
+    @apply my-(--margin-page);
+    .header{
+        @apply flex justify-between items-center gap-4;
+    }
+}

@@ -1,0 +1,3 @@
+.component-sub-title-component {
+    @apply font-gilroy font-extrabold text-lg text-secondary uppercase  mb-4 xl:mb-6;
+}

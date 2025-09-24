@@ -1,12 +1,6 @@
 .component-text-block-image-component {
     .content{
         @apply grid grid-cols-1 xl:grid-cols-2 gap-14 xl:gap-page;
-        .subtitle{
-            @apply font-gilroy font-extrabold text-lg text-secondary uppercase mb-4 xl:mb-6;
-        }
-        .title{
-            @apply font-gilroy font-bold text-3xl md:text-6xl xl:text-7xl text-primary-darkest mb-8 xl:mb-10;
-        }
         .text{
             @apply leading-normal font-semibold font-grotesk text-base text-primary-darkest flex flex-col gap-4;
         }

@@ -3,6 +3,8 @@
 import {TextBlockImageInterface} from "@interfaces/TextBlockImageInterface";
 import {getTrans} from "@composables/UseTranslationHelper";
 import LargeImageComponent from "@components/large-image-component.vue";
+import TitleComponent from "@components/title-component.vue";
+import SubTitleComponent from "@components/sub-title-component.vue";
 
 const props = withDefaults(defineProps<{
     textBlockImage: TextBlockImageInterface;
@@ -23,14 +25,18 @@ const props = withDefaults(defineProps<{
     >
         <div class="content">
             <div class="texts">
-                <h3
-                    v-if="props.textBlockImage.subTitle"
-                    class="subtitle">
-                    {{ getTrans(props.textBlockImage.subTitle) }}
-                </h3>
-                <h2 class="title">
-                    {{ getTrans(props.textBlockImage.title) }}
-                </h2>
+                <sub-title-component v-if="props.textBlockImage.subTitle">
+                    <h3
+                        class="subtitle">
+                        {{ getTrans(props.textBlockImage.subTitle) }}
+                    </h3>
+                </sub-title-component>
+                <title-component>
+                    <h2 class="title">
+                        {{ getTrans(props.textBlockImage.title) }}
+                    </h2>
+                </title-component>
+
                 <div class="text">
                     <p
                         v-html="getTrans(text)"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ContactController from "@/actions/App/Http/Controllers/ContactController";
+import ContactController from "@actions/App/Http/Controllers/ContactController";
 import {Link} from "@inertiajs/vue3";
 import {getTrans} from "@composables/UseTranslationHelper";
 
