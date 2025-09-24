@@ -3,16 +3,16 @@ import Website from "@layouts/website.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
 import TextBlockImageComponent from "@components/text-block-image-component.vue";
 import {TextBlockImageInterface} from "@interfaces/TextBlockImageInterface";
-import aboutImage1 from "@assets/images/team_4.jpg";
-import aboutImage2 from "@assets/images/team.jpg";
-import aboutImage3 from "@assets/images/team_10.jpg";
-import aboutImage4 from "@assets/images/team_3.jpg";
-import aboutImage5 from "@assets/images/team_5.jpg";
-import aboutImage6 from "@assets/images/team_2.jpg";
-import aboutImage7 from "@assets/images/team_6.jpg";
-import aboutImage8 from "@assets/images/team_7.jpg";
-import aboutImage9 from "@assets/images/team_8.jpg";
-import aboutImage10 from "@assets/images/team_9.jpg";
+import aboutImage1 from "@assets/images/team_4.webp";
+import aboutImage2 from "@assets/images/team.webp";
+import aboutImage3 from "@assets/images/team_10.webp";
+import aboutImage4 from "@assets/images/team_3.webp";
+import aboutImage5 from "@assets/images/team_5.webp";
+import aboutImage6 from "@assets/images/team_2.webp";
+import aboutImage7 from "@assets/images/team_6.webp";
+import aboutImage8 from "@assets/images/team_7.webp";
+import aboutImage9 from "@assets/images/team_8.webp";
+import aboutImage10 from "@assets/images/team_9.webp";
 import LargeImageComponent from "@components/large-image-component.vue";
 
 const textBlockImageComponents: TextBlockImageInterface[] = [

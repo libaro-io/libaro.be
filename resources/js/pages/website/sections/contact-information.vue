@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ProfileIconComponent from "@components/profile-icon-component.vue";
-import bert from "@assets/images/bert.jpg";
+import bert from "@assets/images/bert.webp";
 import {usePage} from "@inertiajs/vue3";
 import PageInterface from "@interfaces/PageInterface";
 

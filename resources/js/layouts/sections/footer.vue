@@ -7,7 +7,7 @@ import { getTrans } from "@composables/UseTranslationHelper";
 import HomeController from "../../actions/App/Http/Controllers/HomeController";
 import { TranslationKey } from "../../translations/lang-keys";
 import ProfileIconComponent from "@components/profile-icon-component.vue";
-import bert from "@assets/images/bert.jpg";
+import bert from "@assets/images/bert.webp";
 import PrivacyPolicyController from "@actions/App/Http/Controllers/PrivacyPolicyController";
 import CookiePolicyController from "@actions/App/Http/Controllers/CookiePolicyController";
 import TermsController from "@actions/App/Http/Controllers/TermsController";

@@ -4,7 +4,7 @@ import {getTrans} from "@composables/UseTranslationHelper";
 import ContactInformation from "@pages/website/sections/contact-information.vue";
 import ContactForm from "@pages/website/sections/contact-form.vue";
 import LargeImageSubtitleComponent from "@components/large-image-subtitle-component.vue";
-import strategy2 from "@assets/images/strategy_2.jpg";
+import strategy2 from "@assets/images/strategy_2.webp";
 </script>
 <template>
     <Website
