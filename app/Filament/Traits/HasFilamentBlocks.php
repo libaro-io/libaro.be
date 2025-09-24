@@ -11,7 +11,7 @@ use Filament\Forms\Components\TextInput;
 
 trait HasFilamentBlocks
 {
-    public static function getBlocksRepeater(): Repeater
+    public static function getBlocksRepeater(string $s3Directory = 'blocks'): Repeater
     {
         return Repeater::make('blocks')
             ->relationship('blocks')
@@ -26,9 +26,10 @@ trait HasFilamentBlocks
                 FileUpload::make('content.image')
                     ->label('Image')
                     ->image()
-                    ->disk('public')
-                    ->directory('blocks')
+                    ->disk('s3')
+                    ->directory($s3Directory)
                     ->visibility('public')
+                    ->preserveFilenames()
                     ->columnSpanFull()
                     ->visible(fn($state, $get): bool => in_array($get('type'), [
                         FilamentBlockType::Image->value,
