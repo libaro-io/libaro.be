@@ -1,18 +1,19 @@
 .section-website-project-block {
-    @apply mb-14 lg:mb-24;
 
     .container {
+        @apply py-10 lg:py-18;
+
         * {
             @apply text-dark;
         }
 
         .text {
-            * {
+            > *:not(:last-child) {
                 @apply mb-6;
             }
 
             p {
-                @apply text-lg;
+                @apply text-lg leading-loose;
             }
 
             h2 {
@@ -36,25 +37,80 @@
             }
         }
 
-        img {
-            @apply outline-3 outline-primary-medium/25
-            border-14 border-white
-            rounded-3xl shadow-xl shadow-gradient/10;
+        .image-container,
+        .img-wrapper {
+            @apply w-full aspect-[4/3] h-auto;
         }
-
 
         &.text {
         }
 
         &.image {
+            .image-container {
+                @apply aspect-auto;
+            }
+
             img {
-                @apply w-full
+                @apply w-full;
             }
         }
 
         &.image_text {
             img {
-                @apply w-full mb-6;
+                @apply object-cover object-center w-full h-full;
+            }
+
+            .grid-layout {
+                @apply grid grid-cols-1 xl:grid-cols-2 gap-14 xl:gap-24 items-center;
+            }
+        }
+
+        &.number_text,
+        &.logo_text {
+            @apply border-b border-gray-200;
+
+            .grid-layout {
+                @apply relative grid grid-cols-1 lg:grid-cols-6 gap-14 xl:gap-24 items-start;
+            }
+
+            .text {
+                @apply lg:col-span-4;
+            }
+        }
+
+        &.number_text {
+            .title {
+                @apply col-span-2 flex;
+            }
+
+            .number-wrapper {
+                @apply w-24 mt-1;
+            }
+
+            h4 {
+                @apply inline-block text-secondary font-gilroy font-bold text-3xl text-center border-b-4 border-secondary pb-4;
+            }
+
+            h2 {
+                @apply font-gilroy font-bold text-4xl;
+            }
+        }
+
+        &.logo_text {
+            .grid-layout {
+                @apply items-center;
+            }
+
+            .text * {
+                @apply font-gilroy text-2xl;
+            }
+
+            .img-wrapper {
+                @apply lg:col-span-2 max-w-[300px] mx-auto;
+            }
+
+            img {
+                @apply object-cover object-center w-full h-full;
             }
         }
     }

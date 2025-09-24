@@ -7,6 +7,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 
 trait HasFilamentBlocks
 {
@@ -32,6 +33,20 @@ trait HasFilamentBlocks
                     ->visible(fn($state, $get): bool => in_array($get('type'), [
                         FilamentBlockType::Image->value,
                         FilamentBlockType::ImageText->value,
+                        FilamentBlockType::LogoText->value,
+                    ])),
+                TextInput::make('content.number')
+                    ->numeric()
+                    ->label('Number')
+                    ->columnSpanFull()
+                    ->visible(fn($state, $get): bool => in_array($get('type'), [
+                        FilamentBlockType::NumberText->value,
+                    ])),
+                TextInput::make('content.title')
+                    ->label('Title')
+                    ->columnSpanFull()
+                    ->visible(fn($state, $get): bool => in_array($get('type'), [
+                        FilamentBlockType::NumberText->value,
                     ])),
                 RichEditor::make('content.text')
                     ->label('Text')
@@ -39,7 +54,19 @@ trait HasFilamentBlocks
                     ->visible(fn($state, $get): bool => in_array($get('type'), [
                         FilamentBlockType::Text->value,
                         FilamentBlockType::ImageText->value,
+                        FilamentBlockType::NumberText->value,
+                        FilamentBlockType::LogoText->value,
                     ])),
+                Select::make('content.layout')
+                    ->label('Layout')
+                    ->options([
+                        'image_text' => 'Image - Text',
+                        'text_image' => 'Text - Image',
+                    ])
+                    ->required()
+                    ->columnSpanFull()
+                    ->visible(fn($state, $get): bool => $get('type') === FilamentBlockType::ImageText->value),
+
             ])
             ->columnSpanFull()
             ->columns(6)

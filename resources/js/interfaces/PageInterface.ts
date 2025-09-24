@@ -9,6 +9,7 @@ export default interface PageInterface {
             github: string;
         },
         company: {
+            name: string;
             email: string;
             phone: string;
             address: {

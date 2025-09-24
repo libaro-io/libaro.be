@@ -41,6 +41,7 @@ class HandleInertiaRequests extends Middleware
                 'recaptcha_site_key' => config('services.google_recaptcha.site_key'),
                 'locale' => app()->getLocale(),
                 'company' => [
+                    'name' => 'Libaro',
                     'email' => 'bert@libaro.be',
                     'phone' => '+32 (0)494 207025',
                     'address' => [
