@@ -7,12 +7,12 @@ import aboutImage1 from "@assets/images/team_4_584.webp";
 import aboutImage2 from "@assets/images/team_584.webp";
 import aboutImage3 from "@assets/images/team_10_584.webp";
 import aboutImage4 from "@assets/images/team_3_584.webp";
-import aboutImage5 from "@assets/images/team_5.webp";
-import aboutImage6 from "@assets/images/team_2.webp";
-import aboutImage7 from "@assets/images/team_6.webp";
-import aboutImage8 from "@assets/images/team_7.webp";
-import aboutImage9 from "@assets/images/team_8.webp";
-import aboutImage10 from "@assets/images/team_9.webp";
+import aboutImage5 from "@assets/images/team_5_1046.webp";
+import aboutImage6 from "@assets/images/team_2_1046.webp";
+import aboutImage7 from "@assets/images/team_6_1046.webp";
+import aboutImage8 from "@assets/images/team_7_1046.webp";
+import aboutImage9 from "@assets/images/team_8_1046.webp";
+import aboutImage10 from "@assets/images/team_9_1046.webp";
 import LargeImageComponent from "@components/large-image-component.vue";
 
 const textBlockImageComponents: TextBlockImageInterface[] = [
