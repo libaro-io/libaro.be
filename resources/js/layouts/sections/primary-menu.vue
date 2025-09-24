@@ -8,6 +8,7 @@ import {MenuInterface} from "@interfaces/MenuInterface";
 import HomeController from "../../actions/App/Http/Controllers/HomeController";
 import ContactController from "../../actions/App/Http/Controllers/ContactController";
 import ProjectController from "../../actions/App/Http/Controllers/ProjectController";
+import AboutUsController from "@actions/App/Http/Controllers/AboutUsController";
 
 const props = defineProps<{
     type: 'header' | 'footer'
@@ -28,6 +29,12 @@ const primaryMenu = ref<MenuInterface[]>([
     },
     {
         weight: 3,
+        text: 'menu.primary.about_us',
+        url: AboutUsController(),
+        visible: true,
+    },
+    {
+        weight: 4,
         text: 'menu.primary.contact',
         url: ContactController(),
         visible: true,

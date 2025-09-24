@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CookiePolicyController;
 use App\Http\Controllers\DetailProjectController;
@@ -19,7 +20,7 @@ Route::prefix('{locale?}')->group(function () {
     Route::get('/contact', ContactController::class);
     Route::post('/contact', SubmitContactFormController::class);
     Route::post('lang', UpdateLangController::class);
-
+    Route::get('over-ons', AboutUsController::class);
     Route::get('/realisaties', ProjectController::class);
     Route::get('/realisaties/{project:slug}', DetailProjectController::class);
     Route::get('/blog', BlogController::class);

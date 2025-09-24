@@ -32,6 +32,7 @@ export const translations = {
   "footer.privacy": "",
   "footer.privacy_policy": "",
   "footer.terms_and_conditions": "",
+  "menu.primary.about_us": "",
   "menu.primary.contact": "",
   "menu.primary.home": "",
   "menu.primary.projects": "",

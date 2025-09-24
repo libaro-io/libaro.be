@@ -1,5 +1,5 @@
 .section-header {
-    @apply py-5 xl:py-14 border-b-4 xl:border-b-8 border-b-secondary bg-center bg-cover;
+    @apply py-5 xl:py-14 border-b-4 xl:border-b-8 border-b-secondary bg-top bg-cover;
     background-image: url("@assets/images/header_striped.webp");
 
     &.margin-bottom {
