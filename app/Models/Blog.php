@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Casts\AsTags;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Blog extends Model
 {
@@ -13,7 +14,13 @@ class Blog extends Model
     {
         return [
             'visible' => 'boolean',
+            'publish_date' => 'date',
             'tags' => AsTags::class,
         ];
+    }
+
+    public function blocks(): HasMany
+    {
+        return $this->hasMany(BlogBlock::class)->orderBy('sort');
     }
 }

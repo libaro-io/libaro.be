@@ -10,7 +10,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 /**
  * @mixin ProjectBlock
  */
-class ProjectBlockResource extends JsonResource
+class BlockResource extends JsonResource
 {
     /**
      * Transform the resource into an array.

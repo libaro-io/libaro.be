@@ -18,6 +18,7 @@ export const translations = {
   "about.block_4.title": "",
   "about.description": "",
   "about.page_title": "",
+  "blog.read_more": "",
   "blogs.meta_title": "",
   "blogs.page_description": "",
   "blogs.page_title": "",

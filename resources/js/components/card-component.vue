@@ -16,7 +16,7 @@ const hasTagsOrCategory = computed(() => {
 </script>
 <template>
     <article class="component-card-component">
-        <Link :href="props.link">
+        <Link :href="props.link" prefetch>
             <div class="inner">
                 <header>
                     <div class="tags"

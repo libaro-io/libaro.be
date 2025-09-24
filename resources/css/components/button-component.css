@@ -1,6 +1,15 @@
 .component-button-component {
     button{
-        @apply text-white bg-primary-dark px-6 py-2 rounded-xl shadow-lg uppercase font-bold cursor-pointer transform transition-all;
+        @apply text-white  px-6 py-2 rounded-xl shadow-lg uppercase font-bold cursor-pointer transform transition-all;
+
+        &.color-primary {
+            @apply bg-primary-dark;
+        }
+
+        &.color-secondary {
+            @apply bg-secondary;
+        }
+
         &:hover{
             @apply shadow-sm;
         }

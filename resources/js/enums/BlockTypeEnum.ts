@@ -1,5 +1,5 @@
 
-export enum ProjectBlockTypeEnum {
+export enum BlockTypeEnum {
     TEXT = 'text',
     IMAGE = 'image',
     IMAGE_TEXT = 'image_text',

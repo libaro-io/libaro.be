@@ -9,6 +9,7 @@ import {router} from "@inertiajs/vue3";
 export interface HeaderOptions {
     fullWidthDescription?: boolean;
     background?: string;
+    tags?: string[];
 }
 
 const props = withDefaults(defineProps<{
@@ -26,6 +27,7 @@ const options = computed((): HeaderOptions => {
     return {
         fullWidthDescription: props.options?.fullWidthDescription ?? false,
         background: props.options?.background ?? "/images/header_striped.webp",
+        tags: props.options?.tags ?? [],
     }
 })
 
@@ -46,13 +48,13 @@ router.on('navigate', () => {
     document.body.classList.remove('overflow-hidden');
 });
 
-    // Add preload for the background image
-    const preloadLink = document.createElement('link');
-    preloadLink.rel = 'preload';
-    preloadLink.as = 'image';
-    preloadLink.href = options.value.background?.startsWith('/') ? options.value.background : `/${options.value.background}`;
-    preloadLink.setAttribute('fetchpriority', 'high');
-    document.head.appendChild(preloadLink);
+// Add preload for the background image
+const preloadLink = document.createElement('link');
+preloadLink.rel = 'preload';
+preloadLink.as = 'image';
+preloadLink.href = options.value.background?.startsWith('/') ? options.value.background : `/${options.value.background}`;
+preloadLink.setAttribute('fetchpriority', 'high');
+document.head.appendChild(preloadLink);
 </script>
 <template>
     <section
@@ -105,8 +107,19 @@ router.on('navigate', () => {
                 <h2 v-if="props.pageSubTitle">{{ props.pageSubTitle }}</h2>
                 <h1 v-if="props.pageTitle">{{ props.pageTitle }}</h1>
 
-                <p v-if="props.pageDescription"
-                   :class="{'full-width': options.fullWidthDescription}">{{ props.pageDescription }}</p>
+                <div class="flex flex-col gap-4 lg:gap-0 lg:flex-row lg:items-center justify-between">
+                    <p v-if="props.pageDescription"
+                       :class="{'full-width': options.fullWidthDescription}"
+                    >{{ props.pageDescription }}</p>
+
+                    <div class="tags"
+                         v-if="options.tags">
+                        <span
+                            v-for="(tag, index) in options.tags" :key="index"
+                            class="tag"
+                        >{{ tag }}</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

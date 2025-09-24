@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Website from "@layouts/website.vue";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
-import ProjectBlock from "@pages/website/sections/project-block.vue";
+import ContentBlock from "@pages/website/sections/content-block.vue";
 
 const props = defineProps<{
     project: ProjectInterface
@@ -19,9 +19,9 @@ const props = defineProps<{
         :meta-title="props.project.name"
         :marginBottom="false">
         <div id="page-website-project">
-            <project-block
+            <content-block
                 v-for="(block, index) in project.blocks" :key="index"
-                :project="project"
+                :alt="project.name"
                 :block="block"/>
         </div>
     </website>

@@ -1,7 +1,7 @@
-import {ProjectBlockTypeEnum} from "@enums/ProjectBlockTypeEnum";
+import {BlockTypeEnum} from "@enums/BlockTypeEnum";
 
-export interface ProjectBlockInterface {
-    type: ProjectBlockTypeEnum;
+export interface BlockInterface {
+    type: BlockTypeEnum;
     data: {
         number?: number;
         title?: string;

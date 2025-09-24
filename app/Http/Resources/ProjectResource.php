@@ -25,7 +25,7 @@ class ProjectResource extends JsonResource
             'type' => $this->type,
             'client' => ClientResource::make($this->whenLoaded('client')),
             'tags' => $this->tags,
-            'blocks' => ProjectBlockResource::collection($this->whenLoaded('blocks')),
+            'blocks' => BlockResource::collection($this->whenLoaded('blocks')),
         ];
     }
 }

@@ -58,6 +58,14 @@
                 @apply lg:max-w-1/2 text-balance;
             }
         }
+
+        .tags {
+            @apply flex flex-wrap gap-2 xl:gap-4;
+
+            .tag {
+                @apply bg-secondary py-2 px-3 rounded-lg text-white;
+            }
+        }
     }
 
 }

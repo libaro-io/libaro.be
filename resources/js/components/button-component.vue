@@ -1,15 +1,20 @@
 <script setup lang="ts">
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
     text: string;
+    color?: 'primary' | 'secondary';
     disabled?: boolean;
-}>();
+}>(),{
+    color: 'primary',
+    disabled: false,
+});
 
 </script>
 <template>
     <section class="component-button-component">
        <button
            :disabled="props.disabled"
+              :class="[`color-${props.color}`]"
            >
            {{ props.text }}
        </button>

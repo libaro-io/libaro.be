@@ -4,6 +4,7 @@ import Website from "@layouts/website.vue";
 import {BlogInterface} from "@interfaces/BlogInterface";
 import CardListComponent from "@components/card-list-component.vue";
 import CardComponent from "@components/card-component.vue";
+import DetailBlogController from "@actions/App/Http/Controllers/DetailBlogController";
 
 const props = defineProps<{
     blogs: BlogInterface[]
@@ -19,7 +20,7 @@ const props = defineProps<{
             <card-list-component>
                 <card-component
                     v-for="(blog, index) in props.blogs" :key="index"
-                    :link="'#'"
+                    :link="DetailBlogController({blog: blog.slug}).url"
                     :title="blog.title"
                     :tags="blog.tags"
                 ></card-component>
