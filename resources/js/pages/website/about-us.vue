@@ -14,6 +14,7 @@ import aboutImage8 from "@assets/images/team_7_1046.webp";
 import aboutImage9 from "@assets/images/team_8_1046.webp";
 import aboutImage10 from "@assets/images/team_9_1046.webp";
 import LargeImageComponent from "@components/large-image-component.vue";
+import CtaContact from "@pages/website/sections/cta-contact.vue";
 
 const textBlockImageComponents: TextBlockImageInterface[] = [
     {
@@ -61,10 +62,10 @@ const largeImageComponents: string[] = [
             fullWidthDescription: true,
         }"
     >
-        <div id="page-website-about-us">
-            <div class="container">
+        <div id="page-website-about-us" class="grid">
+            <div class="container grid">
                 <text-block-image-component
-                    v-for="(textBlockImage, index) in textBlockImageComponents" 
+                    v-for="(textBlockImage, index) in textBlockImageComponents"
                     :key="index"
                     :text-block-image="textBlockImage"
                     :image-side="index % 2 === 0 ? 'right' : 'left'"
@@ -75,6 +76,7 @@ const largeImageComponents: string[] = [
                     :image="largeImage"
                 ></large-image-component>
             </div>
+            <cta-contact></cta-contact>
         </div>
     </website>
 </template>

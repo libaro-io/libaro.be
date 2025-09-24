@@ -1,0 +1,42 @@
+.section-website-cta-contact {
+    background-image: url("@assets/images/header_striped.webp");
+    @apply bg-center bg-cover;
+    .container{
+        @apply py-10 md:py-14;
+        .grid{
+            @apply grid-cols-1 md:grid-cols-2 gap-x-page gap-y-4 items-center;
+            .img{
+                @apply transition-all duration-700 ease-in-out;
+                &:hover{
+                    @apply rotate-45
+                }
+            }
+            .content{
+                h2{
+                    @apply mb-4 lg:mb-10 font-gilroy font-bold leading-snug text-white text-3xl md:text-4xl lg:text-5xl xl:text-6xl md:leading-tight;
+                }
+                p{
+                    @apply font-grotesk font-semibold text-white md:text-2xl;
+                }
+
+                .button{
+                    @apply mt-10 inline-flex items-center gap-4  bg-primary-medium rounded-full px-6 py-4 transition-all;
+                    &:hover{
+                        @apply bg-secondary;
+                        .icon{
+                            @apply bg-white text-secondary;
+                        }
+                    }
+                    .icon{
+                        @apply text-white rounded-full bg-secondary w-10 h-10 flex justify-center items-center transition-all;
+                    }
+                    .text{
+                        @apply text-white font-grotesk font-extrabold text-base md:text-2xl;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

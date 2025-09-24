@@ -5,6 +5,11 @@ return [
     'page_sub_title' => 'Contacteer Ons',
     'meta_title' => 'Contact',
     'meet_us' => 'Laat ons afspreken! Kom naar ons of wij komen naar jou. Stel ons de moeilijke vragen waar je geen antwoorden op hebt.',
+    'cta' => [
+        'title' => 'Benieuwd naar de digitale mogelijkheden?',
+        'description' => 'Pak de telefoon. Bel ons. Stel ons de moeilijke vragen waar u geen antwoord op heeft.',
+        'button' => 'Contacteer ons'
+    ],
     'form' => [
         'name' => [
             'label' => 'Naam',

@@ -5,6 +5,11 @@ return [
     'page_sub_title' => 'Contact Us',
     'meta_title' => 'Contact',
     'meet_us' => 'Let\'s meet! Come to us or we will come to you. Ask us the difficult questions you don\'t have answers to.',
+    'cta' => [
+        'title' => 'Curious about the digital possibilities?',
+        'description' => 'Pick up the phone. Call us. Ask us the difficult questions you don\'t have answers to.',
+        'button' => 'Contact us'
+    ],
     'form' => [
         'name' => [
             'label' => 'Name',
