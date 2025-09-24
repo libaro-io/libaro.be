@@ -7,8 +7,10 @@ import LargeImageComponent from "@components/large-image-component.vue";
 const props = withDefaults(defineProps<{
     textBlockImage: TextBlockImageInterface;
     imageSide?: 'left' | 'right';
+    fetchPriority?: 'high' | 'low' | 'auto';
 }>(),{
-    imageSide: 'left'
+    imageSide: 'left',
+    fetchPriority: 'auto'
 });
 
 </script>
@@ -40,6 +42,7 @@ const props = withDefaults(defineProps<{
             <large-image-component
                 class="image"
                 :image="props.textBlockImage.image"
+                :fetch-priority="props.fetchPriority"
             ></large-image-component>
         </div>
     </section>

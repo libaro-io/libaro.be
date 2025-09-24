@@ -64,9 +64,11 @@ const largeImageComponents: string[] = [
         <div id="page-website-about-us">
             <div class="container">
                 <text-block-image-component
-                    v-for="(textBlockImage, index) in textBlockImageComponents" :key="index"
+                    v-for="(textBlockImage, index) in textBlockImageComponents" 
+                    :key="index"
                     :text-block-image="textBlockImage"
                     :image-side="index % 2 === 0 ? 'right' : 'left'"
+                    :fetch-priority="index === 0 ? 'high' : 'auto'"
                 ></text-block-image-component>
                 <large-image-component
                     v-for="(largeImage, index) in largeImageComponents" :key="index"

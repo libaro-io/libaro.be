@@ -8,6 +8,7 @@ const page = usePage<PageInterface>()
 const props = defineProps<{
     image: string;
     alt?: string;
+    fetchPriority?: 'high' | 'low' | 'auto';
 }>()
 
 const alt = computed(() => props.alt ?? page.props.pageProps.company.name)
@@ -15,7 +16,11 @@ const alt = computed(() => props.alt ?? page.props.pageProps.company.name)
 <template>
     <section class="component-large-image-component">
         <div class="image-container">
-            <img :src="props.image" :alt="alt">
+            <img 
+                :src="props.image" 
+                :alt="alt"
+                :fetchpriority="props.fetchPriority || 'auto'"
+            >
         </div>
     </section>
 </template>

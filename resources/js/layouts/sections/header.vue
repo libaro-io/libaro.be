@@ -46,6 +46,13 @@ router.on('navigate', () => {
     document.body.classList.remove('overflow-hidden');
 });
 
+    // Add preload for the background image
+    const preloadLink = document.createElement('link');
+    preloadLink.rel = 'preload';
+    preloadLink.as = 'image';
+    preloadLink.href = options.value.background?.startsWith('/') ? options.value.background : `/${options.value.background}`;
+    preloadLink.setAttribute('fetchpriority', 'high');
+    document.head.appendChild(preloadLink);
 </script>
 <template>
     <section
