@@ -21,12 +21,6 @@ const secondaryMenu = ref<MenuInterface[]>([
         visible: true,
     },
     {
-        weight: 2,
-        text: 'menu.secondary.docs',
-        url: HomeController(),
-        visible: true,
-    },
-    {
         weight: 3,
         text: 'menu.secondary.products',
         url: ProductController(),
