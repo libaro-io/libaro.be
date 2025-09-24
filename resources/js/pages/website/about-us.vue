@@ -1,10 +1,59 @@
 <script setup lang="ts">
 import Website from "@layouts/website.vue";
+import {getTrans} from "@composables/UseTranslationHelper";
+import TextBlockImageComponent from "@components/text-block-image-component.vue";
+import {TextBlockImageInterface} from "@interfaces/TextBlockImageInterface";
+import aboutImage1 from "@assets/images/team_4.jpg";
+import aboutImage2 from "@assets/images/team.jpg";
+import aboutImage3 from "@assets/images/team_10.jpg";
+import aboutImage4 from "@assets/images/team_3.jpg";
+import LargeImageComponent from "@components/large-image-component.vue";
+
+const textBlockImageComponents: TextBlockImageInterface[] = [
+    {
+        subTitle: 'about.block_1.sub_title',
+        title: 'about.block_1.title',
+        texts: ['about.block_1.texts.0', 'about.block_1.texts.1'],
+        image: aboutImage1,
+    },
+    {
+        subTitle: 'about.block_2.sub_title',
+        title: 'about.block_2.title',
+        texts: ['about.block_2.texts.0'],
+        image: aboutImage2,
+    },
+    {
+        subTitle: 'about.block_3.sub_title',
+        title: 'about.block_3.title',
+        texts: ['about.block_3.texts.0', 'about.block_3.texts.1'],
+        image: aboutImage3,
+    },
+    {
+        subTitle: 'about.block_4.sub_title',
+        title: 'about.block_4.title',
+        texts: ['about.block_4.texts.0', 'about.block_4.texts.1'],
+        image: aboutImage4,
+    }
+]
+
 </script>
 <template>
-    <website>
+    <website
+        :page-title="getTrans('about.page_title')"
+        :page-description="getTrans('about.description')"
+        :header-options="{
+            fullWidthDescription: true,
+        }"
+    >
         <div id="page-website-about-us">
-            page about-us
+            <div class="container">
+                <text-block-image-component
+                    v-for="(textBlockImage, index) in textBlockImageComponents" :key="index"
+                    :text-block-image="textBlockImage"
+                    :image-side="index % 2 === 0 ? 'right' : 'left'"
+                ></text-block-image-component>
+                <large-image-component image=""></large-image-component>
+            </div>
         </div>
     </website>
 </template>

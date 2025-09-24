@@ -1,6 +1,23 @@
 // ⚠️ This file is auto-generated.
 
 export const translations = {
+  "about.block_1.sub_title": "",
+  "about.block_1.texts.0": "",
+  "about.block_1.texts.1": "",
+  "about.block_1.title": "",
+  "about.block_2.sub_title": "",
+  "about.block_2.texts.0": "",
+  "about.block_2.title": "",
+  "about.block_3.sub_title": "",
+  "about.block_3.texts.0": "",
+  "about.block_3.texts.1": "",
+  "about.block_3.title": "",
+  "about.block_4.sub_title": "",
+  "about.block_4.texts.0": "",
+  "about.block_4.texts.1": "",
+  "about.block_4.title": "",
+  "about.description": "",
+  "about.page_title": "",
   "blogs.meta_title": "",
   "blogs.page_description": "",
   "blogs.page_title": "",

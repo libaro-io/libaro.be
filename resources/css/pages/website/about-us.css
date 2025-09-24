@@ -1,3 +1,5 @@
 #page-website-about-us {
-    
+    .container{
+        @apply grid grid-cols-1 gap-page;
+    }
 }

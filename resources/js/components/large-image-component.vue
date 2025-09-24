@@ -1,7 +1,8 @@
 <script setup lang="ts">
-const props = defineProps< {
+const props = withDefaults(defineProps< {
     image: string;
-}>();
+}>(), {
+});
 </script>
 <template>
     <section class="component-large-image-component">

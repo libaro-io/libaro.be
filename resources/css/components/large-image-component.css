@@ -1,6 +1,6 @@
 .component-large-image-component {
     .image-container{
-        @apply rounded-3xl overflow-hidden w-full lg:h-[700px] object-cover object-top lg:p-6 lg:border-2 border-border overflow-hidden;
+        @apply rounded-3xl lg:max-h-[700px] overflow-hidden w-full object-cover object-top lg:p-6 lg:border-2 border-border overflow-hidden bg-gray-100/25;
         img{
             @apply w-full h-full object-cover object-center rounded-2xl;
         }
