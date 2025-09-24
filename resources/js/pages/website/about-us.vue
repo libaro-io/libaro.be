@@ -7,6 +7,12 @@ import aboutImage1 from "@assets/images/team_4.jpg";
 import aboutImage2 from "@assets/images/team.jpg";
 import aboutImage3 from "@assets/images/team_10.jpg";
 import aboutImage4 from "@assets/images/team_3.jpg";
+import aboutImage5 from "@assets/images/team_5.jpg";
+import aboutImage6 from "@assets/images/team_2.jpg";
+import aboutImage7 from "@assets/images/team_6.jpg";
+import aboutImage8 from "@assets/images/team_7.jpg";
+import aboutImage9 from "@assets/images/team_8.jpg";
+import aboutImage10 from "@assets/images/team_9.jpg";
 import LargeImageComponent from "@components/large-image-component.vue";
 
 const textBlockImageComponents: TextBlockImageInterface[] = [
@@ -34,7 +40,16 @@ const textBlockImageComponents: TextBlockImageInterface[] = [
         texts: ['about.block_4.texts.0', 'about.block_4.texts.1'],
         image: aboutImage4,
     }
-]
+];
+
+const largeImageComponents: string[] = [
+    aboutImage5,
+    aboutImage6,
+    aboutImage7,
+    aboutImage8,
+    aboutImage9,
+    aboutImage10,
+    ];
 
 </script>
 <template>
@@ -52,7 +67,10 @@ const textBlockImageComponents: TextBlockImageInterface[] = [
                     :text-block-image="textBlockImage"
                     :image-side="index % 2 === 0 ? 'right' : 'left'"
                 ></text-block-image-component>
-                <large-image-component image=""></large-image-component>
+                <large-image-component
+                    v-for="(largeImage, index) in largeImageComponents" :key="index"
+                    :image="largeImage"
+                ></large-image-component>
             </div>
         </div>
     </website>
