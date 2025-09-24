@@ -55,6 +55,7 @@ const largeImageComponents: string[] = [
 <template>
     <website
         :page-title="getTrans('about.page_title')"
+        :meta-title="getTrans('about.page_title')"
         :page-description="getTrans('about.description')"
         :header-options="{
             fullWidthDescription: true,
