@@ -2,12 +2,15 @@
 import NavigationFooter from "@layouts/sections/navigation-footer.vue";
 import Footer from "@layouts/sections/footer.vue";
 import {setUrlDefaults} from "../wayfinder";
-import {Head} from "@inertiajs/vue3";
+import {Head, usePage} from "@inertiajs/vue3";
 import {computed} from "vue";
 import Header, {HeaderOptions} from "@layouts/sections/header.vue";
+import PageInterface from "@interfaces/PageInterface";
+
+const page = usePage<PageInterface>();
 
 setUrlDefaults({
-    locale: 'nl',
+    locale: page.props.pageProps.locale
 });
 
 const props = withDefaults(defineProps<{

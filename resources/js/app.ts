@@ -4,12 +4,8 @@ import "vue3-toastify/dist/index.css";
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 import {i18nVue} from "laravel-vue-i18n";
-import {setUrlDefaults} from "./wayfinder";
 import {VueReCaptcha} from "vue-recaptcha-v3";
 import PageInterface from "@interfaces/PageInterface";
-setUrlDefaults({
-    locale: 'nl',
-});
 
 // Language files get loaded eagerly.
 const langs: Record<

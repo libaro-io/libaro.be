@@ -99,7 +99,9 @@ router.on('navigate', () => {
                 >
                 </div>
             </header>
-            <div class="page-title">
+            <div
+                v-if="props.pageTitle || props.pageSubTitle || props.pageDescription"
+                class="page-title">
                 <h2 v-if="props.pageSubTitle">{{ props.pageSubTitle }}</h2>
                 <h1 v-if="props.pageTitle">{{ props.pageTitle }}</h1>
 
