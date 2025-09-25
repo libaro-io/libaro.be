@@ -4,7 +4,6 @@ import ContentBlock from "@pages/website/sections/content-block.vue";
 import Website from "@layouts/website.vue";
 import ButtonComponent from "@components/button-component.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
-import {Link, router} from "@inertiajs/vue3";
 import BlogItemLink from "@pages/website/sections/blog-item-link.vue";
 import {computed} from "vue";
 import {useS3Image} from "@composables/useS3Image";
@@ -16,6 +15,13 @@ const props = defineProps<{
 const hero = computed(() => {
     return props.blog.image ? useS3Image(props.blog.image) : null
 })
+const visitLink = () => {
+    if(!props.blog.link){
+        return;
+    }
+
+    window.open(props.blog.link, '_blank');
+}
 </script>
 <template>
     <website
@@ -37,7 +43,7 @@ const hero = computed(() => {
 
             <blog-item-link v-if="props.blog.link">
                 <button-component
-                    @click="router.visit(props.blog.link)"
+                    @click="visitLink"
                     :text="getTrans('blog.read_more')"
                     color="tertiary"
                     size="large"
