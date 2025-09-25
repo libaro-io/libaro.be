@@ -7,6 +7,7 @@ import {ClientInterface} from "@interfaces/ClientInterface";
 import TextBlockImageComponent from "@components/text-block-image-component.vue";
 import {TextBlockImageInterface} from "@interfaces/TextBlockImageInterface";
 import homeImage from "@assets/images/strategy_1_584.webp";
+import OurProjects from "@pages/website/sections/our-projects.vue";
 
 const props = defineProps<{
     clients?: PaginationInterface<ClientInterface[]>
@@ -24,8 +25,11 @@ const textBlockImage: TextBlockImageInterface = {
 
 </script>
 <template>
-    <website meta-title="Digital Innovation Partner">
+    <website
+        :margin-bottom="false"
+        meta-title="Digital Innovation Partner">
         <div id="page-website-home">
+            <our-projects></our-projects>
             <text-block-image-component
                 class="container"
                 :text-block-image="textBlockImage"
