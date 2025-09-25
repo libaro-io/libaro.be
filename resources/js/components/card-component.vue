@@ -7,6 +7,7 @@ const props = defineProps<{
     title: string;
     subTitle?: string;
     category?: string;
+    image?: string | null;
     tags?: string[];
 }>()
 
@@ -35,7 +36,7 @@ const hasTagsOrCategory = computed(() => {
                     <h3 v-if="props.subTitle">{{ props.subTitle }}</h3>
                 </header>
 
-                <img src="https://placehold.co/400x600" :alt="props.title">
+                <img v-if="props.image" :src="props.image" :alt="props.title">
             </div>
         </Link>
     </article>

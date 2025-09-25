@@ -6,10 +6,16 @@ import ButtonComponent from "@components/button-component.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
 import {Link, router} from "@inertiajs/vue3";
 import BlogItemLink from "@pages/website/sections/blog-item-link.vue";
+import {computed} from "vue";
+import {useS3Image} from "@composables/useS3Image";
 
 const props = defineProps<{
     blog: BlogInterface
 }>()
+
+const hero = computed(() => {
+    return props.blog.image ? useS3Image(props.blog.image) : null
+})
 </script>
 <template>
     <website
@@ -19,6 +25,7 @@ const props = defineProps<{
         :header-options="{
             fullWidthDescription: true,
             tags: props.blog.tags,
+            background: hero
         }"
         :meta-title="props.blog.title"
         :marginBottom="false">

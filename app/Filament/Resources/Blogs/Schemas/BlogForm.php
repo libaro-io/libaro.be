@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Blogs\Schemas;
 
 use App\Filament\Traits\HasFilamentBlocks;
 use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -28,7 +29,15 @@ class BlogForm
                 DatePicker::make('publish_date')
                     ->columnSpan(2),
                 TextInput::make('link')
-                    ->columnSpan(2) ,
+                    ->columnSpan(2),
+                FileUpload::make('image')
+                    ->label('Image (webp only)')
+                    ->acceptedFileTypes(['image/webp'])
+                    ->disk('s3')
+                    ->directory('blogs')
+                    ->visibility('public')
+                    ->preserveFilenames()
+                    ->columnSpanFull(),
                 TagsInput::make('tags')
                     ->separator(',')
                     ->columnSpanFull(),

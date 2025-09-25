@@ -7,5 +7,6 @@ export interface BlogInterface {
     tags: string[];
     link: string | null;
     author: string;
+    image: string | null;
     blocks?: BlockInterface[]
 }

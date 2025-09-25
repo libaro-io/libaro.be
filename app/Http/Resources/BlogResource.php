@@ -21,6 +21,7 @@ class BlogResource extends JsonResource
             'tags' => $this->tags,
             'link' => $this->link,
             'author' => $this->author,
+            'image' => $this->image,
             'blocks' => BlockResource::collection($this->whenLoaded('blocks')),
         ];
     }
