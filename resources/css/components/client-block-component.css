@@ -1,0 +1,11 @@
+.component-client-block-component {
+    a{
+        @apply bg-white border border-primary-medium rounded aspect-square transform transition duration-300 block p-6;
+        &:hover{
+            @apply border border-secondary scale-110 z-50;
+        }
+        img{
+            @apply w-full h-full object-cover object-center;
+        }
+    }
+}

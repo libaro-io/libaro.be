@@ -2,15 +2,24 @@
 import SubTitleComponent from "@components/sub-title-component.vue";
 import TitleComponent from "@components/title-component.vue";
 import {PaginationInterface} from "@interfaces/PaginationInterface";
-import {HomeClientInterface} from "@interfaces/HomeClientInterface";
+import {usePagination} from "@composables/UsePaginationComposable";
+import ClientBlockComponent from "@components/client-block-component.vue";
+import {ClientInterface} from "@interfaces/ClientInterface";
 
 const props = defineProps<{
-    clients?: PaginationInterface<HomeClientInterface>;
+    clients?: PaginationInterface<ClientInterface[]>;
 }>();
+
+const {
+    goToNextPage,
+    goToPreviousPage,
+    canGoToNextPage,
+    canGoToPreviousPage,
+} = usePagination<ClientInterface>(() => props.clients, ['clients']);
 </script>
 <template>
     <section class="section-website-our-clients">
-       <div class="content container">
+        <div class="content container">
             <div class="header">
                 <div class="titles">
                     <sub-title-component>
@@ -21,12 +30,29 @@ const props = defineProps<{
                     </title-component>
                 </div>
                 <div class="buttons">
-                    <button>Vorige</button>
-                    <button>Volgende</button>
+                    <button
+                        :disabled="!canGoToPreviousPage"
+                        @click="goToPreviousPage"
+                    >
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button
+                        :disabled="!canGoToNextPage"
+                        @click="goToNextPage"
+                    >
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
-           {{props.clients}}
-       </div>
+            <div
+                v-if="props.clients"
+                class="client-wrapper">
+                <client-block-component
+                    v-for="client in props.clients.data" :key="client.name"
+                    :client="client"
+                ></client-block-component>
+            </div>
+        </div>
     </section>
 </template>
 <style scoped>

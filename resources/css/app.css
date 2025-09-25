@@ -94,3 +94,7 @@
 .grecaptcha-badge {
     @apply invisible;
 }
+
+button{
+    @apply cursor-pointer;
+}

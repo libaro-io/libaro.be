@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ClientRandomProjectController;
 use App\Http\Controllers\CookiePolicyController;
 use App\Http\Controllers\DetailBlogController;
 use App\Http\Controllers\DetailProjectController;
@@ -36,4 +37,7 @@ Route::prefix('{locale?}')->group(function () {
     Route::get('/privacy', PrivacyPolicyController::class);
     Route::get('/cookies', CookiePolicyController::class);
     Route::get('/terms', TermsController::class);
+
+    Route::get('/clients/{client}', ClientRandomProjectController::class);
+
 });
