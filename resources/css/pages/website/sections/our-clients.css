@@ -1,13 +1,13 @@
 .section-website-our-clients {
     @apply my-(--margin-page);
     .header{
-        @apply flex justify-between items-center gap-4;
+        @apply flex justify-between items-center gap-4 mb-8 xl:mb-14;
     }
 
     .buttons{
         @apply flex gap-2;
         button{
-            @apply flex items-center justify-center w-18 h-18 block rounded-full border-2 border-primary-light bg-secondary;
+            @apply flex items-center justify-center w-13 h-13 xl:w-18 xl:h-18 block rounded-full border-2 border-primary-light bg-secondary;
             i{
                 @apply text-white;
             }
@@ -21,6 +21,6 @@
     }
 
     .client-wrapper{
-        @apply grid grid-cols-4 gap-10;
+        @apply grid grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-10;
     }
 }

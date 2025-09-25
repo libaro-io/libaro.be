@@ -25,7 +25,7 @@ const {
                     <sub-title-component>
                         <h3>Uw success is onze reputatie</h3>
                     </sub-title-component>
-                    <title-component>
+                    <title-component :has-margin="false">
                         <h2>Onze klanten</h2>
                     </title-component>
                 </div>
