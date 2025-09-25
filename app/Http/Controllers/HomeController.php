@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 
-use App\Http\Resources\HomeClientResource;
+use App\Http\Resources\ClientResource;
 use App\Models\Client;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Inertia\Inertia;
@@ -21,10 +21,10 @@ class HomeController extends Controller
     private function getClients(): LengthAwarePaginator
     {
         return Client::query()
-        ->where('visible', 1)
-        //->has('showcases')
-        ->orderBy('weight', 'desc')
-        ->paginate(8)
-            ->through(fn (Client $client) => HomeClientResource::make($client));
+            ->where('visible', 1)
+            //->has('showcases')
+            ->orderBy('weight', 'desc')
+            ->paginate(8)
+            ->through(fn(Client $client) => ClientResource::make($client));
     }
 }
