@@ -6,6 +6,7 @@ export interface ProjectInterface {
     name: string;
     description: string | null;
     type: string;
+    image: string | null;
     client: ClientInterface;
     blocks?: BlockInterface[]
 }

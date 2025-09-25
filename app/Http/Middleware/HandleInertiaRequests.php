@@ -2,7 +2,9 @@
 
 namespace App\Http\Middleware;
 
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Middleware;
 
 class HandleInertiaRequests extends Middleware
@@ -59,6 +61,11 @@ class HandleInertiaRequests extends Middleware
                     'mail' => 'mailto:info@libaro.be',
                     'github' => 'https://github.com/libaro-io',
                 ],
+                'assets' => [
+                    's3' => [
+                        'prefix' => "https://" . config('filesystems.disks.s3.bucket') . ".s3.eu-west-1.amazonaws.com/",
+                    ]
+                ]
             ]
         ];
     }

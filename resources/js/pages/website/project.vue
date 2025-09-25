@@ -2,10 +2,16 @@
 import Website from "@layouts/website.vue";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
 import ContentBlock from "@pages/website/sections/content-block.vue";
+import {useS3Image} from "@composables/useS3Image";
+import {computed} from "vue";
 
 const props = defineProps<{
     project: ProjectInterface
 }>()
+
+const hero = computed(() => {
+    return props.project.image ? useS3Image(props.project.image) : null
+})
 </script>
 <template>
     <website
@@ -14,7 +20,7 @@ const props = defineProps<{
         :page-description="props.project.description"
         :header-options="{
             fullWidthDescription: true,
-            background: 'https://placehold.co/1500x1000'
+            background: hero
         }"
         :meta-title="props.project.name"
         :marginBottom="false">

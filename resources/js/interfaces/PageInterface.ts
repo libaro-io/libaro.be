@@ -1,5 +1,6 @@
+
 export default interface PageInterface {
-    pageProps:{
+    pageProps: {
         recaptcha_site_key: string;
         locale: string;
         socials: {
@@ -20,7 +21,12 @@ export default interface PageInterface {
             },
             btw: string;
             accountNumber: string;
-        }
+        },
+        assets: {
+            s3: {
+                prefix: string
+            }
+        },
     }
 
     [key: string]: string | number | object | boolean;

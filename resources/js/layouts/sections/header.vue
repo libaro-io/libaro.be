@@ -8,7 +8,7 @@ import {router} from "@inertiajs/vue3";
 
 export interface HeaderOptions {
     fullWidthDescription?: boolean;
-    background?: string;
+    background?: string | null;
     tags?: string[];
 }
 

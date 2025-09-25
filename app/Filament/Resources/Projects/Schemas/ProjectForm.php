@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Projects\Schemas;
 
 use App\Filament\Traits\HasFilamentBlocks;
 use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
@@ -55,6 +56,14 @@ class ProjectForm
                     ->rows(10)
                     ->label('Description')
                     ->required(),
+                FileUpload::make('image')
+                    ->label('Image (webp only)')
+                    ->acceptedFileTypes(['image/webp'])
+                    ->disk('s3')
+                    ->directory('projects')
+                    ->visibility('public')
+                    ->preserveFilenames()
+                    ->columnSpanFull(),
                 TagsInput::make('tags')
                     ->separator(',')
                     ->columnSpanFull(),
