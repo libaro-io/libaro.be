@@ -36,7 +36,7 @@ const hasTagsOrCategory = computed(() => {
                     <h3 v-if="props.subTitle">{{ props.subTitle }}</h3>
                 </header>
 
-                <img v-if="props.image" :src="props.image" :alt="props.title">
+                <img v-if="props.image" :src="props.image" :alt="props.title" loading="lazy">
             </div>
         </Link>
     </article>
