@@ -5,6 +5,8 @@ import SecondaryMenu from "@layouts/sections/secondary-menu.vue";
 import {computed, Ref, ref} from "vue";
 import LangSelector from "@layouts/sections/lang-selector.vue";
 import {router} from "@inertiajs/vue3";
+import HomeController from "@actions/App/Http/Controllers/HomeController";
+import {Link} from "@inertiajs/vue3";
 
 export interface HeaderOptions {
     fullWidthDescription?: boolean;
@@ -68,7 +70,9 @@ document.head.appendChild(preloadLink);
         <div class="container">
             <header>
                 <div class="logo">
-                    <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg" alt="logo">
+                    <Link :href="HomeController()">
+                        <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg" alt="logo">
+                    </Link>
                 </div>
                 <button class="menu-button" @click="toggleMenu()">
                     <i
