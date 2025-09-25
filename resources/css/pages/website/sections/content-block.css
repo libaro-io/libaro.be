@@ -1,7 +1,7 @@
 .section-website-content-block {
 
     .container {
-        @apply py-10 lg:py-18;
+        @apply py-10 lg:py-14;
 
         * {
             @apply text-dark;
@@ -110,7 +110,7 @@
             }
 
             img {
-                @apply object-cover object-center w-full h-full;
+                @apply object-contain object-center w-full h-full;
             }
         }
     }

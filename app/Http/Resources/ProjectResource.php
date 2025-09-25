@@ -23,8 +23,10 @@ class ProjectResource extends JsonResource
             'name' => $this->name,
             'description' => $this->description,
             'type' => $this->type,
+            'is_product' => $this->is_product,
             'image' => $this->image,
             'client' => ClientResource::make($this->whenLoaded('client')),
+            'client_url' => $this->client_url,
             'tags' => $this->tags,
             'blocks' => BlockResource::collection($this->whenLoaded('blocks')),
         ];

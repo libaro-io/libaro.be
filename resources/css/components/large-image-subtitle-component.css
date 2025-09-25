@@ -1,10 +1,32 @@
 .component-large-image-subtitle-component {
     @apply relative;
-    &:after{
-        @apply bg-primary-light border-b-20 border-b-border block w-full h-1/2 absolute bottom-0 left-0 -z-10;
-        content: '';
+
+    .align-center {
+        @apply text-center flex items-center flex-col;
     }
-    p{
-        @apply font-grotesk font-semibold text-xl md:text-2xl text-primary-darkest text-center text-pretty py-10 lg:py-20;
+
+    &:after {
+        /*@apply bg-primary-light border-b-20 border-b-border block w-full h-1/2 absolute bottom-0 left-0 -z-10;*/
+        /*content: '';*/
+    }
+
+    .img-container {
+        @apply relative;
+
+        &::after {
+            @apply content-[''] bg-primary-light h-1/2 block w-full absolute bottom-0 left-0 -z-10;
+        }
+    }
+
+    .content-container {
+        @apply bg-primary-light border-b-20 border-b-border py-18;
+
+        h3 {
+            @apply font-grotesk font-bold text-4xl lg:text-5xl text-primary-darkest pb-10;
+        }
+
+        p {
+            @apply font-grotesk font-semibold text-xl md:text-2xl text-primary-darkest text-center text-pretty py-10 lg:py-20;
+        }
     }
 }

@@ -57,7 +57,7 @@ const props = defineProps<{
                     <div class="img-wrapper">
                         <img
                             v-if="props.block.data.image"
-                            :src="useS3Image(props.block.data.image)"
+                            :src="useS3Image(props.block.data.image) ?? ''"
                             :alt="props.alt"
                             class="logo"
                         />
