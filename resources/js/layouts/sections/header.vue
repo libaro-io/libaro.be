@@ -12,6 +12,7 @@ export interface HeaderOptions {
     fullWidthDescription?: boolean;
     background?: string | null;
     tags?: string[];
+    isHome?: boolean;
 }
 
 const props = withDefaults(defineProps<{
@@ -30,6 +31,7 @@ const options = computed((): HeaderOptions => {
         fullWidthDescription: props.options?.fullWidthDescription ?? false,
         background: props.options?.background ?? "/images/header_striped.webp",
         tags: props.options?.tags ?? [],
+        isHome: props.options?.isHome ?? false,
     }
 })
 
@@ -65,7 +67,8 @@ document.head.appendChild(preloadLink);
         }"
         :class="[
             'section-header',
-            props.marginBottom ? 'margin-bottom' : ''
+            props.marginBottom ? 'margin-bottom' : '',
+            options.isHome ? 'is-home' : '',
         ]">
         <div class="container">
             <header>
@@ -74,7 +77,7 @@ document.head.appendChild(preloadLink);
                         <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg" alt="logo">
                     </Link>
                 </div>
-                <button class="menu-button" @click="toggleMenu()">
+                <button aria-label="Toggle menu" class="menu-button" @click="toggleMenu()">
                     <i
                         :class="[
 
@@ -105,24 +108,31 @@ document.head.appendChild(preloadLink);
                 >
                 </div>
             </header>
-            <div
-                v-if="props.pageTitle || props.pageSubTitle || props.pageDescription"
-                class="page-title">
-                <h2 v-if="props.pageSubTitle">{{ props.pageSubTitle }}</h2>
-                <h1 v-if="props.pageTitle">{{ props.pageTitle }}</h1>
+            <div class="page-title-container">
+                <div
+                    v-if="props.pageTitle || props.pageSubTitle || props.pageDescription"
+                    class="page-title">
+                    <h2 v-if="props.pageSubTitle">{{ props.pageSubTitle }}</h2>
+                    <h1 v-if="props.pageTitle">{{ props.pageTitle }}</h1>
+                    <div class="text-tags">
+                        <p v-if="props.pageDescription"
+                           :class="{'full-width': options.fullWidthDescription}"
+                        >{{ props.pageDescription }}</p>
 
-                <div class="flex flex-col gap-4 lg:gap-0 lg:flex-row lg:items-center justify-between">
-                    <p v-if="props.pageDescription"
-                       :class="{'full-width': options.fullWidthDescription}"
-                    >{{ props.pageDescription }}</p>
-
-                    <div class="tags"
-                         v-if="options.tags">
+                        <div class="tags"
+                             v-if="options.tags">
                         <span
                             v-for="(tag, index) in options.tags" :key="index"
                             class="tag"
                         >{{ tag }}</span>
+                        </div>
+
                     </div>
+                </div>
+                <div
+                    v-if="options.isHome"
+                    class="clock">
+                    <img src="@assets/images/clock_side.webp" alt="clock">
                 </div>
             </div>
         </div>

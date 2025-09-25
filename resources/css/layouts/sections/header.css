@@ -6,6 +6,20 @@
         @apply mb-16;
     }
 
+    &.is-home {
+        .page-title-container{
+            @apply flex flex-col xl:flex-row gap-10 xl:pt-14;
+            .clock{
+                @apply w-48 xl:w-[60rem] mx-auto;
+            }
+            .text-tags{
+                p{
+                    @apply md:text-2xl font-bold;
+                }
+            }
+        }
+    }
+
     header {
         @apply flex justify-between items-center;
 
@@ -16,7 +30,7 @@
         .menus {
             @apply flex-col flex flex-col justify-end flex-col-reverse
             xl:items-end xl:content-center xl:bg-transparent xl:relative xl:right-0 xl:py-0 xl:px-0 xl:flex-col
-            fixed -right-full top-0 h-full bg-primary  gap-4  z-20 transition-all duration-200 pl-6 pr-20 min-w-72 py-20 bg-bottom bg-cover;
+            fixed -right-full top-0 h-full bg-primary  gap-4  z-50 transition-all duration-200 pl-6 pr-20 min-w-72 py-20 bg-bottom bg-cover;
 
             &.open {
                 @apply right-0;
@@ -40,9 +54,10 @@
         }
     }
 
+
+
     .page-title {
         @apply mt-6 xl:mt-14 flex flex-col gap-y-2 font-gilroy;
-
         h2 {
             @apply font-extrabold text-lg md:text-lg uppercase text-secondary;
         }
@@ -51,21 +66,26 @@
             @apply font-bold leading-snug text-3xl md:text-5xl lg:text-7xl text-white;
         }
 
-        p {
-            @apply text-white text-lg md:text-2xl;
+        .text-tags{
+            @apply flex flex-col gap-4 lg:gap-0 lg:flex-row lg:items-center justify-between;
 
-            &:not(.full-width) {
-                @apply lg:max-w-1/2 text-balance;
+            p {
+                @apply text-white text-lg md:text-2xl;
+
+                &:not(.full-width) {
+                    @apply lg:max-w-1/2 text-balance;
+                }
+            }
+
+            .tags {
+                @apply flex flex-wrap gap-2 xl:gap-4;
+
+                .tag {
+                    @apply bg-secondary py-2 px-3 rounded-lg text-white;
+                }
             }
         }
 
-        .tags {
-            @apply flex flex-wrap gap-2 xl:gap-4;
-
-            .tag {
-                @apply bg-secondary py-2 px-3 rounded-lg text-white;
-            }
-        }
     }
 
 }

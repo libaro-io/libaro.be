@@ -29,6 +29,12 @@ const textBlockImage: TextBlockImageInterface = {
 <template>
     <website
         :margin-bottom="false"
+        :header-options="{
+            isHome: true,
+            fullWidthDescription: true,
+        }"
+        :page-title="'Uw partner voor digitale innovaties'"
+        :page-description="'Libaro is een A-team van digital natives. We bouwen hoogstaande, digitale oplossingen, gebruikmakende van technische innovatie en artificiële intelligentie.'"
         meta-title="Digital Innovation Partner">
         <div id="page-website-home">
             <our-projects
