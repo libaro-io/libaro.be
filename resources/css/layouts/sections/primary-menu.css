@@ -28,16 +28,16 @@
                     }
                 }
                 .children{
-                    @apply  xl:absolute z-50 overflow-hidden max-h-0 transition-all duration-200 xl:pt-4;
+                    @apply  xl:absolute z-50 overflow-hidden xl:max-h-0 transition-all duration-200 xl:pt-4;
                     ul{
                         @apply flex flex-col gap-2 xl:bg-white xl:rounded p-4 ;
                         li{
-                            @apply border-b border-gray-200 w-full;
+                            @apply xl:border-b border-gray-200 w-full;
                             &:last-child{
                                 @apply border-b-0;
                             }
                             a{
-                                @apply block font-grotesk block font-semibold text-nowrap text-white xl:text-black py-2 px-4;
+                                @apply block font-grotesk block font-semibold text-nowrap text-white xl:text-black xl:py-2 xl:px-4;
                                 &:hover{
                                     @apply text-secondary;
                                 }
