@@ -15,4 +15,9 @@ return [
             ],
         ],
     ],
+    'assets' => [
+        'title' => 'Bestanden',
+        'subtitle' => 'Huisstijl',
+        'description' => 'Hieronder vind je alle bestanden die je nodig hebt om de Libaro huisstijl toe te passen in een eigen project.',
+    ],
 ];

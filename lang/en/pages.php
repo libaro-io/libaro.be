@@ -15,4 +15,9 @@ return [
             ],
         ],
     ],
+    'assets' => [
+        'title' => 'Assets',
+        'subtitle' => 'Branding',
+        'description' => 'Below you\'ll find all the assets you need to apply the Libaro branding in your own project.',
+    ],
 ];

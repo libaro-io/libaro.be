@@ -11,6 +11,7 @@ import bert from "@assets/images/bert.webp";
 import PrivacyPolicyController from "@actions/App/Http/Controllers/PrivacyPolicyController";
 import CookiePolicyController from "@actions/App/Http/Controllers/CookiePolicyController";
 import TermsController from "@actions/App/Http/Controllers/TermsController";
+import AssetsController from "@actions/App/Http/Controllers/AssetsController";
 
 const page = usePage<PageInterface>();
 
@@ -129,7 +130,7 @@ const footerPrivacyUrls: Ref<
             </div>
             <div class="section">
                 <h2 class="footer-title">{{ getTrans("footer.assets") }}</h2>
-                <Link :href="HomeController()">
+                <Link :href="AssetsController()">
                     {{ getTrans("urls.branding") }}
                 </Link>
             </div>

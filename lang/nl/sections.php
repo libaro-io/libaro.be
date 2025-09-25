@@ -16,4 +16,12 @@ return [
                 ],
             ],
         ],
+    'assets' => [
+        'download_button' => 'Download',
+        'asset_names' => [
+            'libaro_icon' => 'Libaro Icoon',
+            'libaro_blue' => 'Libaro Blauw',
+            'libaro_blue_without_tagline' => 'Libaro Blauw Zonder Tagline',
+        ],
+    ],
 ];

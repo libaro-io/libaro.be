@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Resources\BlogResource;
 use App\Models\Blog;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class BlogController extends Controller
 {
-    public function __invoke()
+    public function __invoke(): Response
     {
         $blogs = Blog::query()
             ->where('visible', '=', true)

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\AssetsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ClientRandomProjectController;
 use App\Http\Controllers\CookiePolicyController;
@@ -41,4 +42,5 @@ Route::prefix('{locale?}')->group(function () {
 
     Route::get('/clients/{client}', ClientRandomProjectController::class);
 
+    Route::get('/assets', AssetsController::class);
 });
