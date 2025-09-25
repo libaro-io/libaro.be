@@ -3,31 +3,24 @@
 
     .inner {
         /* original xl:gap-2*/
-        @apply grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-10;
+        @apply grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10;
+
+        &.scrolled :deep(.component-card-component) {
+            @apply mt-0;
+        }
     }
 
     :deep() {
-        /* original: @apply lg:-mt-72;*/
-        /*
-           To avoid clashing, use more specific selectors for each breakpoint.
-           - Use 2xl: for 3-column layouts, only apply offsets for 2xl and up.
-           - Use lg: for 2-column layouts, only apply offsets for lg and xl.
-           - Prevent overlap by scoping each rule to its intended breakpoint.
-        */
-
-        /* 2-column layout (lg and xl): offset every 2nd card */
         .component-card-component:nth-child(2n+2) {
-            @apply lg:-mt-72 2xl:mt-0;
+            @apply lg:-mt-64 2xl:mt-0;
         }
 
-        /* 3-column layout (2xl): offset 2nd and 3rd cards in each row */
         .component-card-component:nth-child(3n+2) {
             @apply 2xl:-mt-32;
         }
 
         .component-card-component:nth-child(3n+3) {
-            @apply 2xl:-mt-72;
+            @apply 2xl:-mt-64;
         }
     }
-
 }

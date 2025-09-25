@@ -14,12 +14,12 @@
 
     header {
         @apply w-full flex flex-col gap-4 justify-end
-        z-10 p-8 xl:p-14
+        z-10 p-8
         text-white
         bg-linear-to-t from-gradient to-transparent to-60%;
 
         h2 {
-            @apply text-4xl xl:text-6xl font-bold text-balance;
+            @apply text-4xl font-bold text-balance;
         }
 
         h3 {

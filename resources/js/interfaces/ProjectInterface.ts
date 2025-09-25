@@ -10,5 +10,6 @@ export interface ProjectInterface {
     image: string | null;
     client: ClientInterface;
     client_url: string | null;
-    blocks?: BlockInterface[]
+    blocks?: BlockInterface[];
+    tags: string[];
 }

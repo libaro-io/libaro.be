@@ -31,7 +31,8 @@ const visitLink = () => {
         :page-description="props.project.description"
         :header-options="{
             fullWidthDescription: true,
-            background: hero
+            background: hero,
+            tags: props.project.tags
         }"
         :meta-title="props.project.name"
         :marginBottom="false">
