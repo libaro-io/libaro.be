@@ -16,13 +16,6 @@ const hero = computed(() => {
     return props.project.image ? useS3Image(props.project.image) : null
 })
 
-const visitLink = () => {
-    if (!props.project.client_url) {
-        return;
-    }
-
-    window.open(props.project.client_url, '_blank');
-}
 </script>
 <template>
     <website
@@ -49,14 +42,15 @@ const visitLink = () => {
                 :title="getTrans('projects.curious_result')"
                 align="center"
             >
-                <button-component
-                    v-if="props.project.client_url"
-                    @click="visitLink"
-                    :text="getTrans('projects.visit_application')"
-                    color="tertiary"
-                    size="large"
-                    icon="fa-solid fa-chevron-right"
-                ></button-component>
+                <a :href="props.project.client_url" target="_blank">
+                    <button-component
+                        v-if="props.project.client_url"
+                        :text="getTrans('projects.visit_application')"
+                        color="tertiary"
+                        size="large"
+                        icon="fa-solid fa-chevron-right"
+                    ></button-component>
+                </a>
             </large-image-subtitle-component>
         </div>
     </website>

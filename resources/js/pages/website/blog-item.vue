@@ -7,6 +7,7 @@ import {getTrans} from "@composables/UseTranslationHelper";
 import BlogItemLink from "@pages/website/sections/blog-item-link.vue";
 import {computed} from "vue";
 import {useS3Image} from "@composables/useS3Image";
+import {Link} from "@inertiajs/vue3";
 
 const props = defineProps<{
     blog: BlogInterface
@@ -15,13 +16,6 @@ const props = defineProps<{
 const hero = computed(() => {
     return props.blog.image ? useS3Image(props.blog.image) : null
 })
-const visitLink = () => {
-    if(!props.blog.link){
-        return;
-    }
-
-    window.open(props.blog.link, '_blank');
-}
 </script>
 <template>
     <website
@@ -42,13 +36,14 @@ const visitLink = () => {
                 :block="block"/>
 
             <blog-item-link v-if="props.blog.link">
-                <button-component
-                    @click="visitLink"
-                    :text="getTrans('blog.read_more')"
-                    color="tertiary"
-                    size="large"
-                    icon="fa-solid fa-chevron-right"
-                ></button-component>
+                <a :href="props.blog.link" target="_blank">
+                    <button-component
+                        :text="getTrans('blog.read_more')"
+                        color="tertiary"
+                        size="large"
+                        icon="fa-solid fa-chevron-right"
+                    ></button-component>
+                </a>
             </blog-item-link>
         </div>
     </website>

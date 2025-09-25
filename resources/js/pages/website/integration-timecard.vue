@@ -9,10 +9,7 @@ import robaws1 from "@assets/images/robaws-1.webp";
 import robaws2 from "@assets/images/robaws-2.webp";
 import robaws3 from "@assets/images/robaws-3.webp";
 import robaws4 from "@assets/images/robaws-4.webp";
-
-const openSupport = () => {
-    location.href = SupportTimecardController().url;
-};
+import {Link} from "@inertiajs/vue3";
 </script>
 <template>
     <website
@@ -159,10 +156,11 @@ const openSupport = () => {
 
                 <section>
                     <p>{{ getTrans("timecard.integration.questions") }}</p>
-                    <button-component
-                        :text="getTrans('timecard.integration.click_here')"
-                        @click="openSupport"
-                    ></button-component>
+                    <Link :href="SupportTimecardController().url">
+                        <button-component
+                            :text="getTrans('timecard.integration.click_here')"
+                        ></button-component>
+                    </Link>
                 </section>
 
                 <section>
