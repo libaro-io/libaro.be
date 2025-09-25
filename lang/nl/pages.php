@@ -2,6 +2,10 @@
 
 return [
     'home' => [
+        'header' => [
+            'title' => 'Uw partner voor digitale innovaties',
+            'description' => 'Libaro is een A-team van digital natives. We bouwen hoogstaande, digitale oplossingen, gebruikmakende van technische innovatie en artificiële intelligentie.'
+        ],
         'text-block-image' => [
             'subtitle' => 'Expertise uit de kast',
             'title' => 'De meest getalenteerde ontwikkelaars',

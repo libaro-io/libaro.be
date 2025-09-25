@@ -9,6 +9,7 @@ import {TextBlockImageInterface} from "@interfaces/TextBlockImageInterface";
 import homeImage from "@assets/images/strategy_1_584.webp";
 import OurProjects from "@pages/website/sections/our-projects.vue";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
+import {getTrans} from "@composables/UseTranslationHelper";
 
 const props = defineProps<{
     clients?: PaginationInterface<ClientInterface[]>,
@@ -33,8 +34,8 @@ const textBlockImage: TextBlockImageInterface = {
             isHome: true,
             fullWidthDescription: true,
         }"
-        :page-title="'Uw partner voor digitale innovaties'"
-        :page-description="'Libaro is een A-team van digital natives. We bouwen hoogstaande, digitale oplossingen, gebruikmakende van technische innovatie en artificiële intelligentie.'"
+        :page-title="getTrans('pages.home.header.title')"
+        :page-description="getTrans('pages.home.header.description')"
         meta-title="Digital Innovation Partner">
         <div id="page-website-home">
             <our-projects

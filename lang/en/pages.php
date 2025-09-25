@@ -2,6 +2,10 @@
 
 return [
     'home' => [
+        'header' => [
+            'title' => 'Your partner for digital innovations',
+            'description' => 'Libaro is an A-team of digital natives. We build high-quality digital solutions using technical innovation and artificial intelligence.'
+        ],
         'text-block-image' => [
             'subtitle' => 'Expertise off the shelf',
             'title' => 'The most talented developers',
