@@ -1,6 +1,10 @@
 #page-website-about-us {
-
+    .large-images{
+        @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4;
+    }
 }
 .grid{
     @apply grid grid-cols-1 gap-page;
 }
+
+

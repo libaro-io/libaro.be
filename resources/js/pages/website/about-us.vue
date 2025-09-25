@@ -71,10 +71,12 @@ const largeImageComponents: string[] = [
                     :image-side="index % 2 === 0 ? 'right' : 'left'"
                     :fetch-priority="index === 0 ? 'high' : 'auto'"
                 ></text-block-image-component>
-                <large-image-component
-                    v-for="(largeImage, index) in largeImageComponents" :key="index"
-                    :image="largeImage"
-                ></large-image-component>
+                <div class="large-images">
+                    <large-image-component
+                        v-for="(largeImage, index) in largeImageComponents" :key="index"
+                        :image="largeImage"
+                    ></large-image-component>
+                </div>
             </div>
             <cta-contact></cta-contact>
         </div>
