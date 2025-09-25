@@ -24,8 +24,8 @@ trait HasFilamentBlocks
                     ->live()
                     ->columnSpanFull(),
                 FileUpload::make('content.image')
-                    ->label('Image')
-                    ->image()
+                    ->label('Image (webp only)')
+                    ->acceptedFileTypes(['image/webp'])
                     ->disk('s3')
                     ->directory($s3Directory)
                     ->visibility('public')
