@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'read_more' => 'Lees meer',
+    'read_more' => 'Lees artikel',
 ];

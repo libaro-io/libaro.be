@@ -1,0 +1,7 @@
+.section-website-blog-item-link {
+   @apply bg-primary-light py-12 lg:py-20;
+
+    .container {
+        @apply flex items-center justify-center;
+    }
+}

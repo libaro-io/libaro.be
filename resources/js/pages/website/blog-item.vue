@@ -4,6 +4,8 @@ import ContentBlock from "@pages/website/sections/content-block.vue";
 import Website from "@layouts/website.vue";
 import ButtonComponent from "@components/button-component.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
+import {Link, router} from "@inertiajs/vue3";
+import BlogItemLink from "@pages/website/sections/blog-item-link.vue";
 
 const props = defineProps<{
     blog: BlogInterface
@@ -21,14 +23,20 @@ const props = defineProps<{
         :meta-title="props.blog.title"
         :marginBottom="false">
         <div id="page-website-blog-item">
-            <button-component
-                :text="getTrans('blog.read_more')"
-                color="secondary"
-            ></button-component>
             <content-block
                 v-for="(block, index) in props.blog.blocks" :key="index"
                 :alt="props.blog.title"
                 :block="block"/>
+
+            <blog-item-link v-if="props.blog.link">
+                <button-component
+                    @click="router.visit(props.blog.link)"
+                    :text="getTrans('blog.read_more')"
+                    color="tertiary"
+                    size="large"
+                    icon="fa-solid fa-chevron-right"
+                ></button-component>
+            </blog-item-link>
         </div>
     </website>
 </template>

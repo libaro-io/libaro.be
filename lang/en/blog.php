@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'read_more' => 'Read more',
+    'read_more' => 'Read article',
 
 ];
