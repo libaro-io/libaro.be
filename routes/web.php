@@ -8,8 +8,10 @@ use App\Http\Controllers\CookiePolicyController;
 use App\Http\Controllers\DetailBlogController;
 use App\Http\Controllers\DetailProductController;
 use App\Http\Controllers\DetailProjectController;
+use App\Http\Controllers\IntegrationTimecardController;
 use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SupportTimecardController;
 use App\Http\Controllers\TermsController;
 use App\Http\Controllers\SubmitContactFormController;
 use Illuminate\Support\Facades\Route;
@@ -43,4 +45,7 @@ Route::prefix('{locale?}')->group(function () {
     Route::get('/clients/{client}', ClientRandomProjectController::class);
 
     Route::get('/assets', AssetsController::class);
+
+    Route::get('/timecard/integration', IntegrationTimecardController::class);
+    Route::get('/timecard/support', SupportTimecardController::class);
 });

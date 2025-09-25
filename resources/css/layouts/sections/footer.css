@@ -44,7 +44,7 @@
         }
 
         a{
-            @apply text-footer-text font-grotesk font-semibold transition-all duration-200;
+            @apply text-footer-text font-grotesk font-semibold transition-all duration-300;
             &:hover{
                 @apply opacity-80;
             }
