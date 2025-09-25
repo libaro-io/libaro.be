@@ -6,8 +6,9 @@
             @apply flex gap-4 xl:gap-14 flex-col xl:flex-row items-center xl:items-start;
 
             li {
-                a {
-                    @apply uppercase  font-grotesk block font-extrabold text-lg rounded-full  transition-all duration-200;
+                @apply relative;
+                .primary-menu-item {
+                    @apply uppercase cursor-pointer font-grotesk block font-extrabold text-lg rounded-full  transition-all duration-200;
 
                     &:after {
                         @apply content-[''] block w-0 h-0.75 bg-secondary mt-2 rounded-full  transition-all duration-300;
@@ -17,6 +18,36 @@
                         &:after {
                             @apply w-1/2;
                         }
+                    }
+                }
+                &:has(.children){
+                    .primary-menu-item {
+                        &:after {
+                            content: none;
+                        }
+                    }
+                }
+                .children{
+                    @apply  xl:absolute z-50 overflow-hidden max-h-0 transition-all duration-200 xl:pt-4;
+                    ul{
+                        @apply flex flex-col gap-2 xl:bg-white xl:rounded p-4 ;
+                        li{
+                            @apply border-b border-gray-200 w-full;
+                            &:last-child{
+                                @apply border-b-0;
+                            }
+                            a{
+                                @apply block font-grotesk block font-semibold text-nowrap text-white xl:text-black py-2 px-4;
+                                &:hover{
+                                    @apply text-secondary;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    .children{
+                        @apply max-h-[200px]  xl:shadow-xl ;
                     }
                 }
             }
@@ -29,7 +60,7 @@
                 @apply items-start;
 
                 li {
-                    a {
+                    .primary-menu-item {
                         @apply text-white;
 
                         &.active {
@@ -47,7 +78,7 @@
         nav {
             ul {
                 li {
-                    a {
+                    .primary-menu-item {
                         @apply text-primary-dark;
 
                         &.active {

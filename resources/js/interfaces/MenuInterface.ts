@@ -4,7 +4,7 @@ import {TranslationKey} from "../translations/lang-keys";
 export interface MenuInterface {
     weight: number;
     text: TranslationKey;
-    url: URLInterface;
+    url?: URLInterface;
     visible: boolean;
     children?: MenuInterface[];
 }

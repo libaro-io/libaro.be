@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AssetsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ClientRandomProjectController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CookiePolicyController;
 use App\Http\Controllers\DetailBlogController;
 use App\Http\Controllers\DetailProductController;
@@ -15,9 +16,11 @@ use App\Http\Controllers\SupportTimecardController;
 use App\Http\Controllers\TermsController;
 use App\Http\Controllers\SubmitContactFormController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UpdateLangController;
+use App\Http\Controllers\Expertises\AiIntegrationsExpertiseController;
+use App\Http\Controllers\Expertises\AppsExpertiseController;
+use App\Http\Controllers\Expertises\WebDevelopmentExpertiseController;
 use App\Http\Controllers\ProjectController;
 
 Route::prefix('{locale?}')->group(function () {
@@ -41,6 +44,10 @@ Route::prefix('{locale?}')->group(function () {
     Route::get('/privacy', PrivacyPolicyController::class);
     Route::get('/cookies', CookiePolicyController::class);
     Route::get('/terms', TermsController::class);
+
+    Route::get('expertise/web-development', WebDevelopmentExpertiseController::class);
+    Route::get('expertise/apps', AppsExpertiseController::class);
+    Route::get('expertise/ai-integrations', AiIntegrationsExpertiseController::class);
 
     Route::get('/clients/{client}', ClientRandomProjectController::class);
 

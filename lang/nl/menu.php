@@ -4,6 +4,10 @@ return [
     'primary' => [
         'home' => 'Home',
         'about_us' => 'Over libaro',
+        'our-expertises' => 'Onze Expertises',
+        'web_development' => 'Web Ontwikkeling',
+        'ai_integrations' => 'AI Integraties',
+        'apps' => 'Apps',
         'contact' => 'Contact',
         'projects' => 'Onze realisaties',
     ],
