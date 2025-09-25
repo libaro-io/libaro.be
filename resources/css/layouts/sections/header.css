@@ -21,7 +21,7 @@
     }
 
     header {
-        @apply flex justify-between items-center;
+        @apply flex justify-between items-end;
 
         .logo {
             @apply w-48 xl:w-60;
@@ -54,10 +54,9 @@
         }
     }
 
-
-
     .page-title {
         @apply mt-6 xl:mt-14 flex flex-col gap-y-2 font-gilroy;
+
         h2 {
             @apply font-extrabold text-lg md:text-lg uppercase text-secondary;
         }
@@ -67,7 +66,7 @@
         }
 
         .text-tags{
-            @apply flex flex-col gap-4 lg:gap-0 lg:flex-row lg:items-center justify-between;
+            @apply flex flex-col gap-4 xl:gap-0 xl:flex-row xl:items-end justify-between;
 
             p {
                 @apply text-white text-lg md:text-2xl;
@@ -78,10 +77,10 @@
             }
 
             .tags {
-                @apply flex flex-wrap gap-2 xl:gap-4;
+                @apply flex flex-wrap xl:justify-end gap-2 xl:gap-4 min-w-92 xl:ml-20 mt-4 xl:mt-0;
 
                 .tag {
-                    @apply bg-secondary py-2 px-3 rounded-lg text-white;
+                    @apply text-sm bg-secondary py-2 px-3 rounded-lg text-white leading-none;
                 }
             }
         }

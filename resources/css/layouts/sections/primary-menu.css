@@ -1,42 +1,56 @@
 .section-primary-menu {
-    nav{
-        ul{
-            @apply flex gap-4 xl:gap-2 xl:-mr-7 flex-col xl:flex-row items-center xl:items-start;
-            li{
-                a{
-                    @apply uppercase  font-grotesk block font-extrabold text-lg border-2 border-transparent rounded-full xl:px-7 xl:py-5 transition-all duration-200;
-                }
-            }
-        }
-    }
-    &.section-primary-menu-header{
-        nav{
-            ul{
-                @apply items-start;
-                li{
-                    a{
-                        @apply text-white;
-                        &:hover{
-                            @apply xl:border-white;
-                        }
-                        &.active{
-                            @apply xl:border-secondary;
+    nav {
+        @apply mt-4;
+
+        ul {
+            @apply flex gap-4 xl:gap-14 flex-col xl:flex-row items-center xl:items-start;
+
+            li {
+                a {
+                    @apply uppercase  font-grotesk block font-extrabold text-lg rounded-full  transition-all duration-200;
+
+                    &:after {
+                        @apply content-[''] block w-0 h-0.75 bg-secondary mt-2 rounded-full  transition-all duration-300;
+                    }
+
+                    &:hover {
+                        &:after {
+                            @apply w-1/2;
                         }
                     }
                 }
             }
         }
     }
-    &.section-primary-menu-footer{
-        nav{
-            ul{
-                li{
-                    a{
-                        @apply text-primary-dark;
-                        &:hover{
-                            @apply xl:border-secondary;
+
+    &.section-primary-menu-header {
+        nav {
+            ul {
+                @apply items-start;
+
+                li {
+                    a {
+                        @apply text-white;
+
+                        &.active {
+                            &:after {
+                                @apply w-full;
+                            }
                         }
-                        &.active{
+                    }
+                }
+            }
+        }
+    }
+
+    &.section-primary-menu-footer {
+        nav {
+            ul {
+                li {
+                    a {
+                        @apply text-primary-dark;
+
+                        &.active {
                             @apply text-secondary;
                         }
                     }

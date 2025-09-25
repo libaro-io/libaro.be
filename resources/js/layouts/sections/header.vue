@@ -80,7 +80,6 @@ document.head.appendChild(preloadLink);
                 <button aria-label="Toggle menu" class="menu-button" @click="toggleMenu()">
                     <i
                         :class="[
-
                            'fa-solid',
                            menuOpen ? 'fa-xmark' : 'fa-bars'
                         ]"
