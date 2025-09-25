@@ -6,9 +6,11 @@ use App\Casts\AsTags;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
 class Project extends Model
 {
+    use InteractsWithMedia;
     protected $table = 'projects';
 
     protected $guarded = [];

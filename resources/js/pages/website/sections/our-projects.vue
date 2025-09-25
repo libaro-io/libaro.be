@@ -1,31 +1,29 @@
 <script setup lang="ts">
 import CtaBlockComponent from "@components/cta-block-component.vue";
 import {Link} from "@inertiajs/vue3";
-import ProjectController from "@actions/App/Http/Controllers/ProjectController";
+import {ProjectInterface} from "@interfaces/ProjectInterface";
+import DetailProjectController from "@actions/App/Http/Controllers/DetailProjectController";
+import {useS3Image} from "@composables/useS3Image";
+
+const props = defineProps<{
+    projects: ProjectInterface[]
+}>();
+
 </script>
 <template>
     <section class="section-website-our-projects">
         <div class="container">
             <div class="inner-container ">
-                <Link :href="ProjectController({})">
+                <Link
+                    v-for="project in props.projects"
+                    :href="DetailProjectController({
+                    project: project,
+                    })">
                     <cta-block-component
-                        title="Zoute Grand Prix"
-                        subtitle="Webapplicatie"
-                        description="test description"
-                    ></cta-block-component>
-                </Link>
-                <Link>
-                    <cta-block-component
-                        title="Zoute Grand Prix"
-                        subtitle="Webapplicatie"
-                        description="test description"
-                    ></cta-block-component>
-                </Link>
-                <Link>
-                    <cta-block-component
-                        title="Zoute Grand Prix"
-                        subtitle="Webapplicatie"
-                        description="test description"
+                        :title="project.name"
+                        :subtitle="project.type"
+                        :description="project.client.name"
+                        :background-image="useS3Image(project.image) ?? ''"
                     ></cta-block-component>
                 </Link>
             </div>

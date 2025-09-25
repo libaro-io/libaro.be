@@ -1,8 +1,11 @@
 .component-cta-block-component {
     .inner-container{
-        @apply bg-center bg-cover px-11 py-8 relative rounded-xl overflow-hidden;
+        @apply bg-center bg-cover px-11 py-8 relative rounded-xl overflow-hidden h-full flex flex-col justify-end;
+        img{
+            @apply w-full h-full object-cover object-center absolute inset-0 z-10;
+        }
         .gradient{
-            @apply absolute z-30 inset-0 bg-gradient-to-t from-primary-darkest via-transparent to-transparent opacity-80 overflow-hidden;
+            @apply absolute z-20 inset-0 bg-gradient-to-t from-primary-darkest via-transparent to-transparent opacity-80 overflow-hidden;
         }
         .inner{
             @apply mt-80 xl:mt-120 relative z-40;

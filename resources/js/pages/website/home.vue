@@ -8,9 +8,11 @@ import TextBlockImageComponent from "@components/text-block-image-component.vue"
 import {TextBlockImageInterface} from "@interfaces/TextBlockImageInterface";
 import homeImage from "@assets/images/strategy_1_584.webp";
 import OurProjects from "@pages/website/sections/our-projects.vue";
+import {ProjectInterface} from "@interfaces/ProjectInterface";
 
 const props = defineProps<{
-    clients?: PaginationInterface<ClientInterface[]>
+    clients?: PaginationInterface<ClientInterface[]>,
+    projects: ProjectInterface[],
 }>();
 
 const textBlockImage: TextBlockImageInterface = {
@@ -29,7 +31,9 @@ const textBlockImage: TextBlockImageInterface = {
         :margin-bottom="false"
         meta-title="Digital Innovation Partner">
         <div id="page-website-home">
-            <our-projects></our-projects>
+            <our-projects
+                :projects="props.projects"
+            ></our-projects>
             <text-block-image-component
                 class="container"
                 :text-block-image="textBlockImage"
