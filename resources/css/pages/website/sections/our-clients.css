@@ -7,7 +7,7 @@
     .buttons{
         @apply flex gap-2;
         button{
-            @apply flex items-center justify-center w-13 h-13 xl:w-18 xl:h-18 block rounded-full border-2 border-primary-light bg-secondary;
+            @apply flex items-center justify-center w-13 h-13 xl:w-18 xl:h-18 block rounded-full border-2 border-primary-light bg-secondary transition-all;
             i{
                 @apply text-white;
             }
@@ -17,10 +17,13 @@
                     @apply text-primary-darkest;
                 }
             }
+            &:hover{
+                @apply opacity-75;
+            }
         }
     }
 
     .client-wrapper{
-        @apply grid grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-10;
+        @apply grid grid-cols-2 xl:grid-cols-5 gap-6 xl:gap-10;
     }
 }

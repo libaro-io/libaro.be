@@ -70,7 +70,7 @@ document.head.appendChild(preloadLink);
         <div class="container">
             <header>
                 <div class="logo">
-                    <Link :href="HomeController()">
+                    <Link prefetch :href="HomeController()">
                         <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg" alt="logo">
                     </Link>
                 </div>

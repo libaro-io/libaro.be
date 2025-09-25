@@ -24,7 +24,7 @@ class HomeController extends Controller
             ->where('visible', 1)
             //->has('showcases')
             ->orderBy('weight', 'desc')
-            ->paginate(8)
+            ->paginate(5)
             ->through(fn(Client $client) => ClientResource::make($client));
     }
 }

@@ -6,18 +6,20 @@ import {PaginationInterface} from "@interfaces/PaginationInterface";
 import {ClientInterface} from "@interfaces/ClientInterface";
 import TextBlockImageComponent from "@components/text-block-image-component.vue";
 import {TextBlockImageInterface} from "@interfaces/TextBlockImageInterface";
+import homeImage from "@assets/images/strategy_1_584.webp";
 
 const props = defineProps<{
     clients?: PaginationInterface<ClientInterface[]>
 }>();
 
 const textBlockImage: TextBlockImageInterface = {
-    subTitle: 'sections.home.text-block-image.subtitle',
-    title: 'sections.home.text-block-image.title',
+    subTitle: 'pages.home.text-block-image.subtitle',
+    title: 'pages.home.text-block-image.title',
     texts: [
-        'sections.home.text-block-image.texts.0',
-        'sections.home.text-block-image.texts.1',
-    ]
+        'pages.home.text-block-image.texts.0',
+        'pages.home.text-block-image.texts.1',
+    ],
+    image: homeImage,
 }
 
 </script>
@@ -30,7 +32,8 @@ const textBlockImage: TextBlockImageInterface = {
                 image-side="right"
             ></text-block-image-component>
             <our-clients
-                :clients="props.clients"></our-clients>
+                :clients="props.clients"
+            ></our-clients>
             <cta-contact></cta-contact>
         </div>
     </website>
