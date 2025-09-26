@@ -1,8 +1,8 @@
 import {TranslationKey} from "../translations/lang-keys";
 
 export interface TextBlockImageInterface{
-    subTitle?: TranslationKey;
-    title: TranslationKey;
-    texts: TranslationKey[];
+    subTitle?: string;
+    title: string;
+    texts: string[];
     image: string;
 }

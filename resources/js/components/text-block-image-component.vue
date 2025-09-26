@@ -12,7 +12,8 @@ const props = withDefaults(defineProps<{
     fetchPriority?: 'high' | 'low' | 'auto';
 }>(),{
     imageSide: 'left',
-    fetchPriority: 'auto'
+    fetchPriority: 'auto',
+    title: '',
 });
 
 </script>
@@ -28,18 +29,18 @@ const props = withDefaults(defineProps<{
                 <sub-title-component v-if="props.textBlockImage.subTitle">
                     <h3
                         class="subtitle">
-                        {{ getTrans(props.textBlockImage.subTitle) }}
+                        {{ props.textBlockImage.subTitle }}
                     </h3>
                 </sub-title-component>
                 <title-component>
                     <h2 class="title">
-                        {{ getTrans(props.textBlockImage.title) }}
+                        {{ props.textBlockImage.title }}
                     </h2>
                 </title-component>
 
                 <div class="text">
                     <p
-                        v-html="getTrans(text)"
+                        v-html="text"
                         v-for="(text, index) in props.textBlockImage.texts"
                         :key="index"
                     ></p>

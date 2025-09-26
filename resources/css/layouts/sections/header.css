@@ -62,7 +62,7 @@
         }
 
         h1 {
-            @apply font-bold leading-snug text-3xl md:text-5xl lg:text-7xl text-white;
+            @apply font-bold leading-snug text-3xl md:text-5xl lg:text-7xl text-white text-pretty;
         }
 
         .text-tags{

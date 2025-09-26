@@ -11,6 +11,7 @@ use App\Http\Controllers\DetailProductController;
 use App\Http\Controllers\DetailProjectController;
 use App\Http\Controllers\Expertises\OdooExpertiseController;
 use App\Http\Controllers\IntegrationTimecardController;
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupportTimecardController;
@@ -25,8 +26,10 @@ use App\Http\Controllers\Expertises\WebDevelopmentExpertiseController;
 use App\Http\Controllers\ProjectController;
 
 Route::prefix('{locale?}')->group(function () {
-    Route::get('/', HomeController::class);
     Route::post('lang', UpdateLangController::class);
+
+    Route::get('/', HomeController::class);
+    Route::get('/l/{landingPage:slug}', LandingPageController::class);
 
     Route::get('/contact', ContactController::class);
     Route::post('/contact', SubmitContactFormController::class);

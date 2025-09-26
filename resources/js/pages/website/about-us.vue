@@ -15,33 +15,34 @@ import aboutImage9 from "@assets/images/team_8_1046.webp";
 import aboutImage10 from "@assets/images/team_9_1046.webp";
 import LargeImageComponent from "@components/large-image-component.vue";
 import CtaContact from "@pages/website/sections/cta-contact.vue";
+import {computed} from "vue";
 
-const textBlockImageComponents: TextBlockImageInterface[] = [
+const textBlockImageComponents = computed<TextBlockImageInterface[]>(() => [
     {
-        subTitle: 'about.block_1.sub_title',
-        title: 'about.block_1.title',
-        texts: ['about.block_1.texts.0', 'about.block_1.texts.1'],
+        subTitle: getTrans('about.block_1.sub_title'),
+        title: getTrans('about.block_1.title'),
+        texts: [getTrans('about.block_1.texts.0'), getTrans('about.block_1.texts.1')],
         image: aboutImage1,
     },
     {
-        subTitle: 'about.block_2.sub_title',
-        title: 'about.block_2.title',
-        texts: ['about.block_2.texts.0'],
+        subTitle: getTrans('about.block_2.sub_title'),
+        title: getTrans('about.block_2.title'),
+        texts: [getTrans('about.block_2.texts.0')],
         image: aboutImage2,
     },
     {
-        subTitle: 'about.block_3.sub_title',
-        title: 'about.block_3.title',
-        texts: ['about.block_3.texts.0', 'about.block_3.texts.1'],
+        subTitle: getTrans('about.block_3.sub_title'),
+        title: getTrans('about.block_3.title'),
+        texts: [getTrans('about.block_3.texts.0'), getTrans('about.block_3.texts.1')],
         image: aboutImage3,
     },
     {
-        subTitle: 'about.block_4.sub_title',
-        title: 'about.block_4.title',
-        texts: ['about.block_4.texts.0', 'about.block_4.texts.1'],
+        subTitle: getTrans('about.block_4.sub_title'),
+        title: getTrans('about.block_4.title'),
+        texts: [getTrans('about.block_4.texts.0'), getTrans('about.block_4.texts.1')],
         image: aboutImage4,
     }
-];
+]);
 
 const largeImageComponents: string[] = [
     aboutImage5,

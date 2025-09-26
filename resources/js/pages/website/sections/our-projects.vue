@@ -4,11 +4,12 @@ import {Link} from "@inertiajs/vue3";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
 import DetailProjectController from "@actions/App/Http/Controllers/DetailProjectController";
 import {useS3Image} from "@composables/useS3Image";
+import {LandingPageInterface} from "@interfaces/LandingPageInterface";
+import {computed} from "vue";
 
 const props = defineProps<{
-    projects: ProjectInterface[]
+    projects: ProjectInterface[],
 }>();
-
 </script>
 <template>
     <section class="section-website-our-projects">

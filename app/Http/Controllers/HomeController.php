@@ -17,13 +17,20 @@ class HomeController extends Controller
 {
     public function __invoke(): Response
     {
-        return Inertia::render('website/home', [
-            'clients' => Inertia::defer(fn() => $this->getClients()),
-            'projects' => $this->getProjects()
-        ]);
+        return $this->render();
     }
 
-    private function getClients(): LengthAwarePaginator
+    public function render(array $props = []): Response
+    {
+        return Inertia::render('website/home',
+            array_merge([
+                'clients' => Inertia::defer(fn() => $this->getClients()),
+                'projects' => $this->getProjects(),
+            ], $props)
+        );
+    }
+
+    protected function getClients(): LengthAwarePaginator
     {
         return Client::query()
             ->where('visible', 1)
@@ -33,14 +40,14 @@ class HomeController extends Controller
             ->through(fn(Client $client) => ClientResource::make($client));
     }
 
-    private function getProjects(): AnonymousResourceCollection
+    protected function getProjects(): AnonymousResourceCollection
     {
         $randomShowcaseIds = Project::query()
             ->where('visible', true)
             ->where('pin_on_homepage', '=', 1)
             ->select('id')
             ->pluck('id')
-            ->whenNotEmpty(fn (Collection $c) => $c->random(3));
+            ->whenNotEmpty(fn(Collection $c) => $c->random(3));
 
 
         $projects = Project::query()
@@ -48,6 +55,7 @@ class HomeController extends Controller
             ->with('media')
             ->whereIn('id', $randomShowcaseIds)
             ->get();
+
         return ProjectResource::collection($projects);
     }
 }
