@@ -134,6 +134,11 @@ const footerPrivacyUrls: Ref<
                     {{ getTrans("urls.branding") }}
                 </Link>
             </div>
+            <div class="section md:col-span-2">
+                <div class="odoo-logo">
+                    <img class="image" src="@assets/logos/odoo_ready_partners_rgb.svg" alt="">
+                </div>
+            </div>
         </div>
     </footer>
 </template>

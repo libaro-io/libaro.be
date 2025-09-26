@@ -9,6 +9,7 @@ use App\Http\Controllers\CookiePolicyController;
 use App\Http\Controllers\DetailBlogController;
 use App\Http\Controllers\DetailProductController;
 use App\Http\Controllers\DetailProjectController;
+use App\Http\Controllers\Expertises\OdooExpertiseController;
 use App\Http\Controllers\IntegrationTimecardController;
 use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ProductController;
@@ -48,6 +49,7 @@ Route::prefix('{locale?}')->group(function () {
     Route::get('expertise/web-development', WebDevelopmentExpertiseController::class);
     Route::get('expertise/apps', AppsExpertiseController::class);
     Route::get('expertise/ai-integrations', AiIntegrationsExpertiseController::class);
+    Route::get('expertise/odoo', OdooExpertiseController::class);
 
     Route::get('/clients/{client}', ClientRandomProjectController::class);
 

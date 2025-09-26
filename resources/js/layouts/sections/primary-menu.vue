@@ -14,6 +14,7 @@ import WebDevelopmentExpertiseController
 import AiIntegrationsExpertiseController
     from "@actions/App/Http/Controllers/Expertises/AiIntegrationsExpertiseController";
 import AppsExpertiseController from "@actions/App/Http/Controllers/Expertises/AppsExpertiseController";
+import OdooExpertiseController from "@actions/App/Http/Controllers/Expertises/OdooExpertiseController";
 
 const props = defineProps<{
     type: 'header' | 'footer'
@@ -47,6 +48,12 @@ const primaryMenu = ref<MenuInterface[]>([
                 weight: 3,
                 text: 'menu.primary.apps',
                 url: AppsExpertiseController(),
+                visible: true,
+            },
+            {
+                weight: 3,
+                text: 'menu.primary.odoo',
+                url: OdooExpertiseController(),
                 visible: true,
             }
         ]
