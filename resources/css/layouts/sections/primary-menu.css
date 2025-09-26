@@ -87,6 +87,23 @@
                     }
                 }
             }
+            .children{
+                ul{
+                    li{
+                        a{
+                            @apply text-black text-center font-normal text-primary-dark xl:text-left xl:text-black xl:font-semibold;
+                            &:hover{
+                                @apply text-secondary;
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .children{
+                    @apply max-h-[200px]  xl:shadow-xl ;
+                }
+            }
         }
     }
 }
