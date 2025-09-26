@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import TitleComponent from "@components/title-component.vue";
-import {ref, onMounted, nextTick} from "vue";
+import {ref, onMounted, nextTick, onUnmounted} from "vue";
 import LargeImageComponent from "@components/large-image-component.vue";
+import {getTrans} from "@composables/UseTranslationHelper";
 
 const props = defineProps<{
     listWithImage: ListWithImageInterface
@@ -22,7 +23,7 @@ const getImage = (): string => {
 }
 
 const getAlt = (): string => {
-    return props.listWithImage.listItems[activeList.value].title;
+    return getTrans(props.listWithImage.listItems[activeList.value].title);
 }
 
 const updateIndicatorPosition = (index: number) => {
@@ -50,10 +51,20 @@ const handleMouseLeave = () => {
     updateIndicatorPosition(activeList.value);
 }
 
+const handleResize = () => {
+    updateIndicatorPosition(activeList.value);
+}
+
 onMounted(() => {
-    nextTick(() => {
+    setTimeout(() => {
         updateIndicatorPosition(activeList.value);
-    });
+        window.addEventListener('resize', handleResize);
+    }, 100);
+
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', handleResize);
 });
 
 
@@ -62,11 +73,11 @@ onMounted(() => {
     <section class="component-list-with-image-component">
         <header v-if="listWithImage.title || listWithImage.descriptions">
             <title-component v-if="listWithImage.title">
-                {{ listWithImage.title }}
+                {{ getTrans(listWithImage.title) }}
             </title-component>
             <div class="texts" v-if="listWithImage.descriptions">
                 <p v-for="description in listWithImage.descriptions">
-                    {{ description }}
+                    {{ getTrans(description) }}
                 </p>
             </div>
         </header>
@@ -88,8 +99,8 @@ onMounted(() => {
                     ]"
                             :data-indicator-position="index"
                             v-for="(listItem, index) in listWithImage.listItems">
-                            <h3>{{ listItem.title }}</h3>
-                            <p>{{ listItem.description }}</p>
+                            <h3>{{ getTrans(listItem.title) }}</h3>
+                            <p>{{ getTrans(listItem.description) }}</p>
                         </li>
                     </ul>
                 </div>

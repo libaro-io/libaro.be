@@ -1,9 +1,11 @@
+import {TranslationKey} from "../translations/lang-keys";
+
 export interface ListWithImageInterface {
-    title?: string;
-    descriptions?: string[];
+    title?: TranslationKey;
+    descriptions?: TranslationKey[];
     listItems: {
-        title: string;
-        description: string;
+        title: TranslationKey;
+        description: TranslationKey;
         image: string;
     }[]
 }
