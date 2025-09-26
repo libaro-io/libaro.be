@@ -21,5 +21,35 @@ return [
                 'description' => 'Onze ontwikkelaars zetten de blauwdruk om in robuuste en schone code, waarbij we bouwen aan een schaalbare en veilige applicatie. Gedurende het volledige ontwikkelproces wordt de applicatie continu en grondig getest op verschillende apparaten en browsers. Zo garanderen we een feilloze werking en optimale prestaties bij de uiteindelijke oplevering.'
             ]
         ]
+    ],
+    'usp_list' => [
+        'title' => 'De Kracht van een Webapplicatie op Maat',
+        'description' => 'Een webapplicatie biedt unieke voordelen ten opzichte van standaardsoftware door zijn flexibiliteit, efficiëntie en focus op uw specifieke bedrijfsdoelen.',
+        'list_items' => [
+            'always_accessible' => [
+                'title' => 'Altijd en overal toegankelijk',
+                'description' => 'Medewerkers en klanten hebben overal en altijd toegang tot de applicatie via een eenvoudige webbrowser.'
+            ],
+            'no_license_costs' => [
+                'title' => 'Geen licentiekosten',
+                'description' => 'U vermijdt terugkerende licentiekosten per gebruiker wat op lange termijn een aanzienlijke kostenbesparing oplevert.'
+            ],
+            'sme_scale' => [
+                'title' => 'Op schaal van jouw KMO',
+                'description' => 'De applicatie wordt volledig op maat van uw unieke bedrijfsprocessen gebouwd en groeit moeiteloos met uw onderneming mee.'
+            ],
+            'no_installation' => [
+                'title' => 'Geen installatie nodig',
+                'description' => 'Gebruikers hoeven geen software te installeren op hun computer of smartphone om aan de slag te gaan.'
+            ],
+            'background_maintenance' => [
+                'title' => 'Onderhoud en updates achter de schermen',
+                'description' => 'Alle updates en het technisch onderhoud worden centraal en onzichtbaar voor de gebruiker uitgevoerd.'
+            ],
+            'software_integration' => [
+                'title' => 'Verbonden met uw software',
+                'description' => 'We koppelen de applicatie naadloos aan uw bestaande softwarepakketten voor een perfect gestroomlijnde workflow.'
+            ]
+        ]
     ]
 ];
