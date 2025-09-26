@@ -19,10 +19,10 @@
         }
 
         &.size-large {
-            @apply text-xl px-8 py-5 rounded-full;
+            @apply text-2xl px-8 py-5 rounded-full normal-case;
 
             .icon {
-                @apply w-8 h-8 ml-4 rounded-full flex items-center justify-center;
+                @apply w-10 h-10 ml-4 rounded-full flex items-center justify-center;
             }
         }
 

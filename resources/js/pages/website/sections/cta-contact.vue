@@ -2,6 +2,7 @@
 import ContactController from "@actions/App/Http/Controllers/ContactController";
 import {Link} from "@inertiajs/vue3";
 import {getTrans} from "@composables/UseTranslationHelper";
+import ButtonComponent from "@components/button-component.vue";
 
 </script>
 <template>
@@ -18,11 +19,13 @@ import {getTrans} from "@composables/UseTranslationHelper";
                    <p>
                        {{ getTrans('sections.cta-contact.description') }}
                    </p>
-                   <Link class="button" :href="ContactController()">
-                       <span class="text">{{ getTrans('sections.cta-contact.button') }}</span>
-                       <span class="icon">
-                           <i class="fa-solid fa-chevron-right"></i>
-                       </span>
+                   <Link :href="ContactController()">
+                       <button-component
+                           :text="getTrans('projects.visit_application')"
+                           color="tertiary"
+                           size="large"
+                           icon="fa-solid fa-chevron-right"
+                       ></button-component>
                    </Link>
                </div>
            </div>
