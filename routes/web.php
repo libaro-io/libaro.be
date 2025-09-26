@@ -25,6 +25,8 @@ use App\Http\Controllers\Expertises\AppsExpertiseController;
 use App\Http\Controllers\Expertises\WebDevelopmentExpertiseController;
 use App\Http\Controllers\ProjectController;
 
+// Don't forget to add new routes to the sitemap.blade.php!
+
 Route::prefix('{locale?}')->group(function () {
     Route::post('lang', UpdateLangController::class);
 
