@@ -1,0 +1,23 @@
+.component-accordion {
+    .accordion {
+        @apply border border-primary-light rounded-md overflow-hidden mb-4;
+
+        label {
+            @apply bg-primary-light w-full
+            font-bold text-lg p-3 cursor-pointer
+            flex justify-between items-center;
+        }
+
+        .accordion-content {
+                @apply text-lg p-3 hidden;
+
+            &.active {
+                @apply block;
+            }
+
+            p {
+                @apply m-0;
+            }
+        }
+    }
+}

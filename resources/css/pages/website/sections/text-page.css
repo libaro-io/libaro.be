@@ -24,6 +24,10 @@
             @apply list-decimal pl-5 mb-5;
         }
 
+        a {
+            @apply text-secondary font-bold;
+        }
+
         ul, ol {
             li {
                 @apply mb-2;
@@ -42,8 +46,13 @@
             @apply grid lg:grid-cols-3 gap-12;
 
             img {
-                @apply w-full max-w-[80vw] mx-auto border-2 border-primary-light rounded-xl shadow-lg shadow-gradient/5;
+                @apply max-w-[80vw];
             }
+        }
+
+        .img-grid img,
+        .img-border {
+            @apply w-full mx-auto border-2 border-primary-light rounded-xl shadow-lg shadow-gradient/5;
         }
     }
 }

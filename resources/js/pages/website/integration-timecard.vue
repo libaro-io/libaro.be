@@ -166,13 +166,13 @@ import {Link} from "@inertiajs/vue3";
                 <section>
                     <div class="img-grid">
                         <div>
-                            <img :src="robaws1" alt="Robaws" class=""/>
+                            <img :src="robaws1" alt="Robaws"/>
                         </div>
                         <div>
-                            <img :src="robaws2" alt="Robaws" class=""/>
+                            <img :src="robaws2" alt="Robaws"/>
                         </div>
                         <div>
-                            <img :src="robaws3" alt="Robaws" class=""/>
+                            <img :src="robaws3" alt="Robaws"/>
                         </div>
                         <div class="col-span-full">
                             <img :src="robaws4" alt="Robaws"/>

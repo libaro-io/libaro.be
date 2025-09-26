@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class SupportTimecardController extends Controller
 {
     public function __invoke()
     {
-        // TODO: Implement __invoke() method.
+        return Inertia::render('website/support-timecard', []);
     }
 }
