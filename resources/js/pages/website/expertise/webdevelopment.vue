@@ -13,17 +13,17 @@ const conceptToWebApplicationBlock: ListWithImageInterface = {
         {
             title: 'Strategie & Analyse',
             description: 'In deze cruciale fase duiken we diep in uw bedrijfsprocessen, doelen en de specifieke uitdagingen die de applicatie moet oplossen. Samen met u vertalen we uw wensen naar een heldere functionele blauwdruk en een technische roadmap. Het resultaat is een glashelder plan dat garandeert dat we de juiste oplossing voor uw unieke situatie bouwen.',
-            image: 'https://placehold.co/600x400'
+            image: 'https://placehold.co/400x400'
         },
         {
             title: 'UX/UI Design',
             description: 'Een applicatie moet niet alleen krachtig, maar ook intuïtief zijn. Onze ontwerpers focussen zich eerst op de User Experience (UX): de meest logische en efficiënte flow voor de gebruiker. Vervolgens gieten we die structuur in een visueel aantrekkelijke en gebruiksvriendelijke User Interface (UI). Via interactieve prototypes krijgt u al een concreet gevoel bij de applicatie, nog voor er één regel code is geschreven.',
-            image: 'https://placehold.co/600x400'
+            image: 'https://placehold.co/200x400'
         },
         {
             title: 'Ontwikkeling & Testing',
             description: 'Onze ontwikkelaars zetten de blauwdruk om in robuuste en schone code, waarbij we bouwen aan een schaalbare en veilige applicatie. Gedurende het volledige ontwikkelproces wordt de applicatie continu en grondig getest op verschillende apparaten en browsers. Zo garanderen we een feilloze werking en optimale prestaties bij de uiteindelijke oplevering.',
-            image: 'https://placehold.co/600x400'
+            image: 'https://placehold.co/500x400'
         }
     ]
 }
