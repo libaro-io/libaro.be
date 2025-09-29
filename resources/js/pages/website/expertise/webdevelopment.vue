@@ -4,59 +4,60 @@ import ListWithImageComponent from "@components/list-with-image-component.vue";
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import UspListComponent from "@components/usp-list-component.vue";
 import {UspListInterface} from "@interfaces/UspListInterface";
+import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
 
 const conceptToWebApplicationBlock: ListWithImageInterface = {
-    title: 'webdevelopment.concept_to_web_application.title',
+    title: 'pages.webdevelopment.concept_to_web_application.title',
     descriptions: [
-        'webdevelopment.concept_to_web_application.descriptions.0',
-        'webdevelopment.concept_to_web_application.descriptions.1'
+        'pages.webdevelopment.concept_to_web_application.descriptions.0',
+        'pages.webdevelopment.concept_to_web_application.descriptions.1'
     ],
     listItems: [
         {
-            title: 'webdevelopment.concept_to_web_application.list_items.strategy_analysis.title',
-            description: 'webdevelopment.concept_to_web_application.list_items.strategy_analysis.description',
+            title: 'pages.webdevelopment.concept_to_web_application.list_items.strategy_analysis.title',
+            description: 'pages.webdevelopment.concept_to_web_application.list_items.strategy_analysis.description',
             image: 'https://placehold.co/400x400'
         },
         {
-            title: 'webdevelopment.concept_to_web_application.list_items.ux_ui_design.title',
-            description: 'webdevelopment.concept_to_web_application.list_items.ux_ui_design.description',
+            title: 'pages.webdevelopment.concept_to_web_application.list_items.ux_ui_design.title',
+            description: 'pages.webdevelopment.concept_to_web_application.list_items.ux_ui_design.description',
             image: 'https://placehold.co/200x400'
         },
         {
-            title: 'webdevelopment.concept_to_web_application.list_items.development_testing.title',
-            description: 'webdevelopment.concept_to_web_application.list_items.development_testing.description',
+            title: 'pages.webdevelopment.concept_to_web_application.list_items.development_testing.title',
+            description: 'pages.webdevelopment.concept_to_web_application.list_items.development_testing.description',
             image: 'https://placehold.co/500x400'
         }
     ]
 }
 
 const uspListBlock: UspListInterface = {
-    title: 'webdevelopment.usp_list.title',
-    description: 'webdevelopment.usp_list.description',
+    title: 'pages.webdevelopment.usp_list.title',
+    description: 'pages.webdevelopment.usp_list.description',
     listItems: [
         {
-            title: 'webdevelopment.usp_list.list_items.always_accessible.title',
-            description: 'webdevelopment.usp_list.list_items.always_accessible.description',
+            title: 'pages.webdevelopment.usp_list.list_items.always_accessible.title',
+            description: 'pages.webdevelopment.usp_list.list_items.always_accessible.description',
         },
         {
-            title: 'webdevelopment.usp_list.list_items.no_license_costs.title',
-            description: 'webdevelopment.usp_list.list_items.no_license_costs.description',
+            title: 'pages.webdevelopment.usp_list.list_items.no_license_costs.title',
+            description: 'pages.webdevelopment.usp_list.list_items.no_license_costs.description',
         },
         {
-            title: 'webdevelopment.usp_list.list_items.sme_scale.title',
-            description: 'webdevelopment.usp_list.list_items.sme_scale.description',
+            title: 'pages.webdevelopment.usp_list.list_items.sme_scale.title',
+            description: 'pages.webdevelopment.usp_list.list_items.sme_scale.description',
         },
         {
-            title: 'webdevelopment.usp_list.list_items.no_installation.title',
-            description: 'webdevelopment.usp_list.list_items.no_installation.description',
+            title: 'pages.webdevelopment.usp_list.list_items.no_installation.title',
+            description: 'pages.webdevelopment.usp_list.list_items.no_installation.description',
         },
         {
-            title: 'webdevelopment.usp_list.list_items.background_maintenance.title',
-            description: 'webdevelopment.usp_list.list_items.background_maintenance.description',
+            title: 'pages.webdevelopment.usp_list.list_items.background_maintenance.title',
+            description: 'pages.webdevelopment.usp_list.list_items.background_maintenance.description',
         },
         {
-            title: 'webdevelopment.usp_list.list_items.software_integration.title',
-            description: 'webdevelopment.usp_list.list_items.software_integration.description',
+            title: 'pages.webdevelopment.usp_list.list_items.software_integration.title',
+            description: 'pages.webdevelopment.usp_list.list_items.software_integration.description',
         },
     ],
 };
@@ -64,8 +65,13 @@ const uspListBlock: UspListInterface = {
 </script>
 <template>
 
-    <website>
+    <website :margin-bottom="false">
         <div id="page-website-expertise-webdevelopment">
+            <expertise-header
+                title="Een mobiele app op maat van uw noden"
+                description="Digitale maatwerkoplossingen die uw processen automatiseren. Het resultaat? U bespaart tijd én geld."
+                image="https://placehold.co/400x400"
+            ></expertise-header>
             <list-with-image-component
                 :list-with-image="conceptToWebApplicationBlock"
                 class="container"

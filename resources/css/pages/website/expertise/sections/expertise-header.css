@@ -1,0 +1,26 @@
+.section-website-expertise-expertise-header {
+    @apply relative;
+    .container{
+        .text {
+            @apply py-20 xl:py-56 relative z-20 xl:max-w-[50%] pr-16;
+            h1{
+                @apply font-gilroy font-bold text-5xl xl:text-6xl mb-10 text-white  xl:text-primary-darkest;
+            }
+            p{
+                @apply font-grotesk text-xl xl:text-2xl text-white xl:text-primary-darkest;
+            }
+        }
+
+        .image {
+            @apply absolute top-0 right-0 h-full w-full xl:w-1/2;
+
+            &:before{
+                @apply content-[''] xl:content-none absolute top-0 left-0 h-full w-full bg-black opacity-50 z-10;
+            }
+
+            img {
+                @apply w-full h-full object-cover;
+            }
+        }
+    }
+}

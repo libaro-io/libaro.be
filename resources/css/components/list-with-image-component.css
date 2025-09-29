@@ -20,12 +20,12 @@
                 ul{
                     @apply pl-5 flex flex-col gap-4;
                     li{
-                        @apply py-4 px-4 rounded-xl;
+                        @apply py-4 px-4 rounded-xl transition-all duration-200;
                         &:hover{
-                            @apply cursor-pointer;
+                            @apply cursor-pointer translate-x-1;
                         }
                         &.active{
-                            @apply cursor-default bg-slate-50;
+                            @apply bg-slate-50;
                         }
                         h3{
                             @apply font-gilroy text-primary font-bold text-xl mb-2;
