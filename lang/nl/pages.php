@@ -22,6 +22,10 @@ return [
         'description' => 'Hieronder vind je alle bestanden die je nodig hebt om de Libaro huisstijl toe te passen in een eigen project.',
     ],
     'webdevelopment' => [
+        'header' => [
+            'title' => 'Een mobiele app op maat van uw noden',
+            'description' => 'Digitale maatwerkoplossingen die uw processen automatiseren. Het resultaat? U bespaart tijd én geld.'
+        ],
         'concept_to_web_application' => [
             'title' => 'Van concept tot webapplicatie',
             'descriptions' => [

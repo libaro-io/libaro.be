@@ -1,8 +1,11 @@
 <script setup lang="ts">
 
+import {TranslationKey} from "../../../../translations/lang-keys";
+import {getTrans} from "@composables/UseTranslationHelper";
+
 const props = defineProps<{
-    title: string;
-    description: string;
+    title: TranslationKey;
+    description: TranslationKey;
     image: string;
 }>();
 
@@ -11,8 +14,8 @@ const props = defineProps<{
     <section class="section-website-expertise-expertise-header">
         <div class="container">
             <div class="text">
-                <h1>{{props.title}}</h1>
-                <p>{{props.description}}</p>
+                <h1>{{getTrans(props.title)}}</h1>
+                <p>{{ getTrans(props.description)}}</p>
             </div>
             <div class="image">
                 <img :src="props.image" alt="">

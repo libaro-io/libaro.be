@@ -68,8 +68,8 @@ const uspListBlock: UspListInterface = {
     <website :margin-bottom="false">
         <div id="page-website-expertise-webdevelopment">
             <expertise-header
-                title="Een mobiele app op maat van uw noden"
-                description="Digitale maatwerkoplossingen die uw processen automatiseren. Het resultaat? U bespaart tijd én geld."
+                title="pages.webdevelopment.header.title"
+                description="pages.webdevelopment.header.description"
                 image="https://placehold.co/400x400"
             ></expertise-header>
             <list-with-image-component

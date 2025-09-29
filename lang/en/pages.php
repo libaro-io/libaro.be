@@ -22,6 +22,10 @@ return [
         'description' => 'Below you\'ll find all the assets you need to apply the Libaro branding in your own project.',
     ],
     'webdevelopment' => [
+        'header' => [
+            'title' => 'A custom mobile app tailored to your needs',
+            'description' => 'Custom digital solutions that automate your processes. The result? You save both time and money.'
+        ],
         'concept_to_web_application' => [
             'title' => 'From concept to web application',
             'descriptions' => [
