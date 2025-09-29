@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\LandingPageResource;
 use App\Http\Resources\ProjectResource;
+use App\Models\LandingPage;
 use App\Models\Project;
 use Inertia\Inertia;
 

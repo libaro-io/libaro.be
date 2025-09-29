@@ -4,6 +4,8 @@ import {ProjectInterface} from "@interfaces/ProjectInterface";
 
 export interface LandingPageInterface {
     title: string;
+    slug: string;
+    skill: string;
     block: {
         title: string;
         subtitle: string;

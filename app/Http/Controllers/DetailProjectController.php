@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\LandingPageResource;
 use App\Http\Resources\ProjectResource;
+use App\Models\LandingPage;
 use App\Models\Project;
 use Inertia\Inertia;
 
@@ -12,8 +14,17 @@ class DetailProjectController extends Controller
     {
         $project->loadMissing('blocks');
 
+        $landingPages = LandingPage::query()
+            ->where('active', '=', true)
+            ->where('location', '=', 'Brugge')
+            ->inRandomOrder()
+            ->distinct('skill')
+            ->take(3)
+            ->get();
+
         return Inertia::render('website/project', [
-            'project' => ProjectResource::make($project)
+            'project' => ProjectResource::make($project),
+            'landingPages' => LandingPageResource::collection($landingPages),
         ]);
     }
 }

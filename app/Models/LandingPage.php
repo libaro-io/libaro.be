@@ -17,4 +17,11 @@ class LandingPage extends Model
             'project_id'
         );
     }
+
+    protected function casts(): array
+    {
+        return [
+            'active' => 'boolean',
+        ];
+    }
 }

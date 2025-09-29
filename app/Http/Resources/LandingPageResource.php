@@ -19,6 +19,8 @@ class LandingPageResource extends JsonResource
     {
         return [
             'title' => $this->title,
+            'slug' => $this->slug,
+            'skill' => $this->skill,
             'block' => [
                 'title' => $this->text1,
                 'subtitle' => trans('landing.expertise'),

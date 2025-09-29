@@ -7,9 +7,12 @@ import {computed} from "vue";
 import {getTrans} from "@composables/UseTranslationHelper";
 import LargeImageSubtitleComponent from "@components/large-image-subtitle-component.vue";
 import ButtonComponent from "@components/button-component.vue";
+import InterestingForYou from "@pages/website/sections/interesting-for-you.vue";
+import {LandingPageInterface} from "@interfaces/LandingPageInterface";
 
 const props = defineProps<{
-    project: ProjectInterface
+    project: ProjectInterface,
+    landingPages: LandingPageInterface[]
 }>()
 
 const hero = computed(() => {
@@ -52,6 +55,10 @@ const hero = computed(() => {
                     ></button-component>
                 </a>
             </large-image-subtitle-component>
+
+            <interesting-for-you
+                :landing-pages="props.landingPages"
+            ></interesting-for-you>
         </div>
     </website>
 </template>

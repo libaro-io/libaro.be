@@ -14,7 +14,7 @@ const props = defineProps<{
 <template>
     <section class="section-website-our-projects">
         <div class="container">
-            <div class="inner-container ">
+            <div class="inner-container">
                 <Link
                     v-for="project in props.projects"
                     :href="DetailProjectController({

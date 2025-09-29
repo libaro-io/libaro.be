@@ -7,4 +7,5 @@ return [
     'meta_title' => 'Our projects',
     'curious_result' => 'Curious about the result?',
     'visit_application' => 'Visit project',
+    'interesting_for_you' => 'Interesting for you',
 ];

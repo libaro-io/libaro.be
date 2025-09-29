@@ -1,0 +1,19 @@
+.section-website-interesting-for-you {
+    @apply bg-white py-14 lg:py-24;
+
+    .inner-container {
+        @apply relative grid grid-cols-1 lg:grid-cols-3 gap-6;
+
+        a {
+            @apply transition-all duration-300 ease-in-out flex;
+
+            &:hover {
+                @apply scale-[1.02];
+            }
+
+            .component-cta-block-component {
+                @apply flex-1;
+            }
+        }
+    }
+}
