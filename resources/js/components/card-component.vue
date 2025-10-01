@@ -2,21 +2,31 @@
 import {computed} from "vue";
 import {Link} from "@inertiajs/vue3";
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
     link: string;
     title: string;
     subTitle?: string;
     category?: string;
     image?: string | null;
     tags?: string[];
-}>()
+    hasShadow?: boolean;
+    scaleOnHover?: boolean;
+}>(), {
+    hasShadow: true,
+    scaleOnHover: true,
+})
 
 const hasTagsOrCategory = computed(() => {
     return (props.tags && props.tags.length > 0) || props.category;
 })
 </script>
 <template>
-    <article class="component-card-component">
+    <article
+        :class="[
+            'component-card-component',
+            props.hasShadow ? 'has-shadow' : '',
+            props.scaleOnHover ? 'scale-on-hover' : '',
+        ]">
         <Link :href="props.link" prefetch>
             <div class="inner">
                 <header>

@@ -16,9 +16,12 @@ import Odoo from "@assets/tools/odoo.png";
 import Officient from "@assets/tools/officient.png";
 import Robaws from "@assets/tools/robaws.png";
 import Sharepoint from "@assets/tools/sharepoint.webp";
+import TheseSectors from "@pages/website/expertise/sections/these-sectors.vue";
+import {ProjectInterface} from "@interfaces/ProjectInterface";
 
 const props = defineProps<{
     clients: ClientInterface[];
+    projects?: ProjectInterface[];
 }>();
 
 const conceptToWebApplicationBlock: ListWithImageInterface = {
@@ -112,7 +115,7 @@ const ourToolsBlocks: ToolInterface[] = [
 
 </script>
 <template>
-
+    {{}}
     <website
         :meta-title="getTrans('pages.webdevelopment.meta_title')"
         :margin-bottom="false">
@@ -123,12 +126,16 @@ const ourToolsBlocks: ToolInterface[] = [
                 image="https://placehold.co/400x400"
             ></expertise-header>
             <our-clients
-                :clients="clients"
+                :clients="props.clients"
             ></our-clients>
             <list-with-image-component
                 :list-with-image="conceptToWebApplicationBlock"
                 class="container"
             ></list-with-image-component>
+            <these-sectors
+                :title="getTrans('pages.webdevelopment.these_sectors.title')"
+                :projects="props.projects"
+            ></these-sectors>
             <usp-list-component
                 :usp-list="uspListBlock"
                 class="container"

@@ -78,6 +78,9 @@ return [
                 ]
             ]
         ],
+        'these_sectors' => [
+            'title' => 'Voor deze sectoren bouwden we al webapplicaties'
+        ],
         'our_tools' => [
             'tools' => [
                 'checkin_at_work' => [

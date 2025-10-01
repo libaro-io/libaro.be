@@ -6,6 +6,7 @@ import {usePagination} from "@composables/UsePaginationComposable";
 import ClientBlockComponent from "@components/client-block-component.vue";
 import {ClientInterface} from "@interfaces/ClientInterface";
 import {computed} from "vue";
+import RoundedButton from "@components/buttons/rounded-button.vue";
 
 const props = defineProps<{
     clients?: PaginationInterface<ClientInterface[]> | ClientInterface[];
@@ -47,18 +48,18 @@ const {
                     </title-component>
                 </div>
                 <div v-if="isPaginated" class="buttons">
-                    <button
+                    <rounded-button
                         :disabled="!canGoToPreviousPage"
                         @click="goToPreviousPage"
                     >
                         <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-                    <button
+                    </rounded-button>
+                    <rounded-button
                         :disabled="!canGoToNextPage"
                         @click="goToNextPage"
-                    >
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
+                        >
+                                            <i class="fa-solid fa-chevron-right"></i>
+                    </rounded-button>
                 </div>
             </div>
             <div

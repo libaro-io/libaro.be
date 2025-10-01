@@ -1,0 +1,7 @@
+.section-website-expertise-these-sectors {
+    .projects{
+        .card-component{
+            @apply h-[35rem] w-[25rem];
+        }
+    }
+}

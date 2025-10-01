@@ -78,6 +78,9 @@ return [
                 ]
             ]
         ],
+        'these_sectors' => [
+            'title' => 'We have built web applications for these sectors'
+        ],
         'our_tools' => [
             'tools' => [
                 'checkin_at_work' => [

@@ -1,0 +1,20 @@
+.component-slider-component {
+    .slider-container{
+        @apply relative;
+        .slider{
+            @apply flex gap-6 overflow-x-scroll;
+            &::-webkit-scrollbar {
+                @apply hidden;
+            }
+            &::-webkit-scrollbar-track {
+                @apply hidden;
+            }
+            &::-webkit-scrollbar-thumb {
+                @apply hidden;
+            }
+        }
+    }
+    .buttons{
+        @apply flex gap-2 mt-6;
+    }
+}

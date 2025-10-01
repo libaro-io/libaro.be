@@ -2,8 +2,17 @@
     @apply border-3 border-primary-medium/25 bg-gray-100/25
     rounded-3xl p-6
     aspect-[3/4] font-gilroy
-    shadow-2xl shadow-gradient/20 transition-all duration-300 hover:scale-105;
+    transition-all duration-300;
 
+    &.scale-on-hover{
+        &:hover{
+            @apply scale-105
+        }
+    }
+
+    &.has-shadow{
+        @apply shadow-2xl shadow-gradient/20;
+    }
     .inner {
        @apply flex h-full relative rounded-xl overflow-hidden;
     }
