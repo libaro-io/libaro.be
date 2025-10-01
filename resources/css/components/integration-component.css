@@ -1,0 +1,11 @@
+.component-integration-component {
+    .icon{
+        @apply mb-8;
+    }
+    .title{
+        @apply mb-4;
+    }
+    ul{
+        @apply mt-4 flex gap-4 flex-wrap;
+    }
+}

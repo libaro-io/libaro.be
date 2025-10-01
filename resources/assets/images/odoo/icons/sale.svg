@@ -1,0 +1,31 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g filter="url(#filter0_dii_102_1165)">
+<path d="M2 11C2 5.47715 6.47715 1 12 1H40C45.5229 1 50 5.47715 50 11V39C50 44.5229 45.5228 49 40 49H12C6.47715 49 2 44.5228 2 39V11Z" fill="url(#pattern0_102_1165)"/>
+</g>
+<defs>
+<filter id="filter0_dii_102_1165" x="0" y="0" width="52" height="52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0392157 0 0 0 0 0.0496732 0 0 0 0 0.0705882 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_102_1165"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_102_1165" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0392157 0 0 0 0 0.0496732 0 0 0 0 0.0705882 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_102_1165"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect3_innerShadow_102_1165"/>
+<feOffset/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.0392157 0 0 0 0 0.0496732 0 0 0 0 0.0705882 0 0 0 0.18 0"/>
+<feBlend mode="normal" in2="effect2_innerShadow_102_1165" result="effect3_innerShadow_102_1165"/>
+</filter>
+<pattern id="pattern0_102_1165" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_102_1165" transform="scale(0.02)"/>
+</pattern>
+<image id="image0_102_1165" width="50" height="50" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUCSURBVHgB7VmxziM1EJ7Z5M8hHYeC+CVKAgUSVAgJIURzFRUS0FFxVIiaJzjxAOQRjg5eAEHFX9IgwRvAI9Ahkaw/vFnbO54Zb3IKF5rMKbLXO7Znxt834/2P6CpXucqcMF1Q/r779NUbCt8QwkOisI4tHX6E1AYCUl+Nj2NIfeDmw186ufaSLiTRic0N4edoxeZgYFPSOyalFgcYzakdXUgWRI9HJzwZrQP0EOr+jP8Xc6RjejT2snFIfdRGe1IIANWK9elikg03mGnoir48qv8bWkVwAj+0sMhJ7Otc2BGZJBtGV4ehYUhNGF7OkVkeCEObPJivFBfmiGypgtnU5SPzfTm7jmC73YBXW8QiF+vU+mBRSBEOIQUb1P/wE1G/J9rvYtvH3258jj8c2h0tHr1O9emc7sxZjgxOhG51Fw3d+BpDdHOFxhGi55PQ6VhwYwaeZ0Gr724ex2Yj96slp9tspIJNJrGsKUXNSQz8jOoIc/fRFOUc9dyn2hBbtuu0arJVcOax1U1yHtkHTgzGxM0EbafWQEGkU0jHSR2Wd4rz0Dw/a6XFTa5Bo99SguCCm46pPkEl/1n6NbbmoGrImKjKYgcREcfoZ3oiZjMqKXe+CA4i4GP8a5xKYz03/T75fBu/HZZP0PdvhX1Yow8U4g9hbEMfORHb73/8NbY9hf3w26c2/napH+vDF599QIW4pLLUwC1oo7WjUFcUX9c48t2XsTb8s/wNe6yRjtLGBRNsDvs4BrE+kRx1ngwavpUIyiznJFJCGfdlF2IWWrvVNtqwHm3ReV90lZMltxzsd2Al07RQhl7YbIbat4ZYR5g+zgtMCWSKWusrDkVfmWbqSdbxMlDL6Nr5kxypOYrp4N2PG9QoUJv4e0IvYqNjfORGf5LOneIgY9oc6S8dEi1KMQiCMlGTzIYOSqesG5TiCRwxNVoY3Ewu1QRtqIARxJhZrAU3Ijc9K+nmLGLR14EoZAdcWLnPFUK42svu3xr3X3Ut3ZHgaoaBqiC6nOdWbyZbD0j05bu8gTfui3siqHBbTFW8IPeUMpJApBxyHMjPzM4hOFYz08kcoVkeeDCDjbQHNWkMlFNZlR0DTOSK4hFHSmYimq4Q4hXVkCscqZZAfWIgqhwtmUzuKaWRbp8GWlXOUh8+UJrDP2ae7HS5IR9bWMe0wewaoMYCR26/KU1C8SC/0sTWjhoj5bNHslx3KjIao9zRNkdQnw4kPp1kBpHB7Fu5+PTswr+ypXWCVlyOaFhT2UxDhVLwYJ5RxmE4lvVYL6T3rN7nub7XDY6gdaUjvyJ7fT3ZMdSQntTfeeUEyEEjPkdAtnKTvYBWGSvfr3QR0ob72BVzGqdzBF7tyl4sTp8+UOiH4ARqNjVriTHMsc5Fjho86cNK71UtQPWakhrJUW6CUkWaW2SH03J9N+NTCmJBiCbw+JBTAaQyUcF7ITpNc/T6/t+OdJRZKKM+wdNOZFx07m5aL8YTlMo4LLmLrZJLQm/VGRusXW1pQitnKO8qXwcEVXKQ8trm5Smwzain3isPyOeMyRbDbeJbOuaIvZxKIov1qqAjXUwnh++tFvT+u28cCWQYm+eX1L19q3R1ZkDaGn8s+vC1Xsn7u9YE/+IM0Snf7EN3tVrSi7cv0MP33qQH959j/6oxRoGjs7i9R4t3XiK6H/8DG+KT1k77Kw7eRSe+4k9+/5OucpWrPJX8C+RU0N6oxYqKAAAAAElFTkSuQmCC"/>
+</defs>
+</svg>

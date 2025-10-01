@@ -24,7 +24,7 @@ return [
     'webdevelopment' => [
         'meta_title' => 'Web Development - Custom Web Applications | Libaro',
         'header' => [
-            'title' => 'A custom mobile app tailored to your needs',
+            'title' => 'A custom web application tailored to your needs',
             'description' => 'Custom digital solutions that automate your processes. The result? You save both time and money.'
         ],
         'concept_to_web_application' => [
@@ -131,6 +131,87 @@ return [
                 'website' => [
                     'title' => 'Build a professional website with Odoo',
                     'description' => 'With Odoo, build a modern, responsive website in just a few clicks that perfectly matches your brand. Seamlessly integrate with your webshop, CRM, and marketing tools for a complete online experience.'
+                ]
+            ]
+        ],
+        'why_choose_odoo' => [
+            'title' => 'Why choose Odoo',
+            'text' => 'Odoo is Belgian, user-friendly and scalable, with thousands of satisfied companies worldwide. As a certified Odoo partner, Libaro helps you with implementation and support, so you get maximum return from your digital processes.'
+        ],
+        'integrations' => [
+            'title' => 'Libaro helps you with proper implementation',
+            'description' => 'With Odoo\'s integrated apps, you work smarter, faster, and more efficiently. Libaro helps you set up these processes optimally, so your organization gets the most out of Odoo.',
+            'categories' => [
+                'finance' => [
+                    'title' => 'Finance',
+                    'description' => 'Manage all your financial processes clearly and efficiently with Odoo. From accounting to invoicing and expense management: everything comes together in one user-friendly platform.',
+                    'badges' => [
+                        'accounting' => 'Accounting',
+                        'invoicing' => 'Invoicing',
+                        'expenses' => 'Expenses',
+                        'documents' => 'Documents',
+                        'spreadsheets' => 'Spreadsheets',
+                        'sign' => 'Sign',
+                    ]
+                ],
+                'sales' => [
+                    'title' => 'Sales',
+                    'description' => 'Streamline your entire sales process with Odoo. From leads and quotes to subscriptions and rentals: everything runs smoothly through one integrated system.',
+                    'badges' => [
+                        'crm' => 'CRM',
+                        'sales' => 'Sales',
+                        'pos' => 'Point of Sale',
+                        'subscriptions' => 'Subscriptions',
+                        'rental' => 'Rental',
+                    ]
+                ],
+                'marketing' => [
+                    'title' => 'Marketing',
+                    'description' => 'Reach your target audience and increase your impact with Odoo Marketing. Automate campaigns, manage your channels, and analyze results – all from one platform.',
+                    'badges' => [
+                        'marketing_automation' => 'Marketing Automation',
+                        'email_marketing' => 'Email Marketing',
+                        'sms_marketing' => 'SMS Marketing',
+                        'social_media_marketing' => 'Social Media Marketing',
+                        'events' => 'Events',
+                        'surveys' => 'Surveys',
+                    ]
+                ],
+                'inventory_production' => [
+                    'title' => 'Inventory & Production',
+                    'description' => 'Optimize your supply chain and production processes with Odoo. From inventory management to maintenance and quality control: everything runs streamlined within one system.',
+                    'badges' => [
+                        'inventory' => 'Inventory',
+                        'manufacturing' => 'Manufacturing',
+                        'plm' => 'PLM',
+                        'purchase' => 'Purchase',
+                        'maintenance' => 'Maintenance',
+                        'quality' => 'Quality',
+                    ]
+                ],
+                'websites_ecommerce' => [
+                    'title' => 'Websites & E-commerce',
+                    'description' => 'Build and manage your complete online presence with Odoo. From a professional website and webshop to blogs, courses, and live chats: everything integrated on one platform.',
+                    'badges' => [
+                        'website' => 'Website',
+                        'ecommerce' => 'E-commerce',
+                        'blog' => 'Blog',
+                        'forum' => 'Forum',
+                        'elearning' => 'eLearning',
+                        'live_chat' => 'Live Chat',
+                    ]
+                ],
+                'services' => [
+                    'title' => 'Services',
+                    'description' => 'Manage all your services and customer-focused processes centrally in Odoo. From project planning to helpdesk and appointments: everything in one platform for maximum efficiency.',
+                    'badges' => [
+                        'project' => 'Project',
+                        'timesheet' => 'Timesheet',
+                        'field_service' => 'Field Service',
+                        'helpdesk' => 'Helpdesk',
+                        'planning' => 'Planning',
+                        'appointments' => 'Appointments',
+                    ]
                 ]
             ]
         ]

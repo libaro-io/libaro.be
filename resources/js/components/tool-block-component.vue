@@ -2,6 +2,7 @@
 
 import {ToolInterface} from "@interfaces/ToolInterface";
 import {getTrans} from "@composables/UseTranslationHelper";
+import IconComponent from "@components/icon-component.vue";
 
 const props = defineProps<{
     tool: ToolInterface
@@ -11,9 +12,11 @@ const props = defineProps<{
 <template>
     <section class="component-tool-block-component">
        <header>
-           <div class="image-container">
-               <img :src="props.tool.image" :alt="props.tool.name">
-           </div>
+           <icon-component
+               :image="props.tool.image"
+               :name="props.tool.name"
+           ></icon-component>
+
            <h3>{{ props.tool.name }}</h3>
        </header>
         <p>

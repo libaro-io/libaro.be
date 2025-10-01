@@ -45,6 +45,7 @@ const getTitle = computed(() => {
             :options="props.headerOptions ?? {}"
         ></Header>
         <main class="content">
+
             <slot></slot>
         </main>
         <navigation-footer></navigation-footer>

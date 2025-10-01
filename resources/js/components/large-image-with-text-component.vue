@@ -3,6 +3,7 @@
 import {TranslationKey} from "../translations/lang-keys";
 import LargeImageComponent from "@components/large-image-component.vue";
 import titleComponent from "@components/title-component.vue";
+import {getTrans} from "@composables/UseTranslationHelper";
 
 const props = defineProps<{
     image: string;
@@ -16,11 +17,11 @@ const props = defineProps<{
         <div class="text-container">
             <title-component :has-margin="false">
                 <h2 class="title">
-                    {{ props.title }}
+                    {{getTrans( props.title) }}
                 </h2>
             </title-component>
             <p class="text">
-                {{ props.text }}
+                {{ getTrans(props.text) }}
             </p>
         </div>
        <large-image-component :image="props.image"></large-image-component>

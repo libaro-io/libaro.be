@@ -2,12 +2,6 @@
     @apply  bg-primary-light rounded-xl p-4 xl:p-8 pt-0 xl:pt-0;
     header{
         @apply flex flex-col items-center gap-4 -mt-8 mb-2;
-        .image-container{
-            @apply  bg-white rounded-xl size-16 border p-2 shadow;
-            img{
-                @apply w-full h-full object-contain object-center;
-            }
-        }
         h3{
             @apply font-gilroy font-bold text-xl text-primary-darkest;
         }

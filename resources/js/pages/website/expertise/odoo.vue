@@ -7,43 +7,21 @@ import OurClients from "@pages/website/sections/our-clients.vue";
 import {ClientInterface} from "@interfaces/ClientInterface";
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import ListWithImageComponent from "@components/list-with-image-component.vue";
-import OdooForYou from "@assets/images/odoo/odoo_for_you.jpg";
+
 import LargeImageWithTextComponent from "@components/large-image-with-text-component.vue";
 import ChooseOdoo from "@assets/images/odoo/choose_odoo.webp";
+import Integrations from "@pages/website/expertise/sections/integrations.vue";
+import {IntegrationInterface} from "@interfaces/IntegrationInterface";
+import {getIntegrations, getWhatIsOdooYou} from "@composables/expertises/UseOdooComposable";
 
 const props = defineProps<{
     clients: ClientInterface[];
 }>();
 
-const WhatIsOdooForYou: ListWithImageInterface = {
-    title: 'pages.odoo.what_is_odoo_for_you.title',
-    descriptions: [
-        'pages.odoo.what_is_odoo_for_you.descriptions.0',
-    ],
-    listItems: [
-        {
-            title: 'pages.odoo.what_is_odoo_for_you.list_items.inventory_management.title',
-            description: 'pages.odoo.what_is_odoo_for_you.list_items.inventory_management.description',
-            image: OdooForYou
-        },
-        {
-            title: 'pages.odoo.what_is_odoo_for_you.list_items.e_invoicing.title',
-            description: 'pages.odoo.what_is_odoo_for_you.list_items.e_invoicing.description',
-            image: OdooForYou
-        },
-        {
-            title: 'pages.odoo.what_is_odoo_for_you.list_items.crm.title',
-            description: 'pages.odoo.what_is_odoo_for_you.list_items.crm.description',
-            image: OdooForYou
-        },
-        {
-            title: 'pages.odoo.what_is_odoo_for_you.list_items.website.title',
-            description: 'pages.odoo.what_is_odoo_for_you.list_items.website.description',
-            image: OdooForYou
-        }
-    ]
-}
+const WhatIsOdooForYou: ListWithImageInterface = getWhatIsOdooYou();
 
+
+const integrationsList: IntegrationInterface[] = getIntegrations();
 
 </script>
 <template>
@@ -62,11 +40,16 @@ const WhatIsOdooForYou: ListWithImageInterface = {
                 class="container"
                 :is-clickable="false"
             ></list-with-image-component>
+            <integrations
+                :integrations-list="integrationsList"
+                title="pages.odoo.integrations.title"
+                description="pages.odoo.integrations.description"
+            ></integrations>
             <large-image-with-text-component
                 class="container"
                 :image="ChooseOdoo"
-                :title="'Waarom kiezen voor Odoo'"
-                :text="'Odoo is Belgisch, gebruiksvriendelijk en schaalbaar, met duizenden tevreden bedrijven wereldwijd. Als gecertificeerde Odoo-partner helpt Libaro je bij de implementatie en ondersteuning, zodat jij maximaal rendement haalt uit je digitale processen.'"
+                :title="'pages.odoo.why_choose_odoo.title'"
+                :text="'pages.odoo.why_choose_odoo.text'"
             ></large-image-with-text-component>
             <our-clients
                 :clients="props.clients"

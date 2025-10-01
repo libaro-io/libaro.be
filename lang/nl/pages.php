@@ -24,7 +24,7 @@ return [
     'webdevelopment' => [
         'meta_title' => 'Webontwikkeling - Webapplicaties op Maat | Libaro',
         'header' => [
-            'title' => 'Een mobiele app op maat van uw noden',
+            'title' => 'Een webapplicatie op maat van uw noden',
             'description' => 'Digitale maatwerkoplossingen die uw processen automatiseren. Het resultaat? U bespaart tijd én geld.'
         ],
         'concept_to_web_application' => [
@@ -131,6 +131,87 @@ return [
                 'website' => [
                     'title' => 'Professionele website bouwen met Odoo',
                     'description' => 'Met Odoo bouw je in een paar klikken een moderne, responsive website die perfect aansluit bij je merk. Integreer moeiteloos met je webshop, CRM en marketingtools voor een complete online ervaring.'
+                ]
+            ]
+        ],
+        'why_choose_odoo' => [
+            'title' => 'Waarom kiezen voor Odoo',
+            'text' => 'Odoo is Belgisch, gebruiksvriendelijk en schaalbaar, met duizenden tevreden bedrijven wereldwijd. Als gecertificeerde Odoo-partner helpt Libaro je bij de implementatie en ondersteuning, zodat jij maximaal rendement haalt uit je digitale processen.'
+        ],
+        'integrations' => [
+            'title' => 'Libaro helpt je met een correcte implementatie',
+            'description' => 'Met de geïntegreerde apps van Odoo werk je slimmer, sneller en efficiënter. Libaro helpt je om deze processen optimaal in te richten, zodat je organisatie het maximale uit Odoo haalt.',
+            'categories' => [
+                'finance' => [
+                    'title' => 'Financiën',
+                    'description' => 'Beheer al je financiële processen overzichtelijk en efficiënt met Odoo. Van boekhouding tot facturatie en onkostenbeheer: alles komt samen in één gebruiksvriendelijk platform.',
+                    'badges' => [
+                        'accounting' => 'Boekhouding',
+                        'invoicing' => 'Facturatie',
+                        'expenses' => 'Onkosten',
+                        'documents' => 'Documenten',
+                        'spreadsheets' => 'Spreadsheets',
+                        'sign' => 'Ondertekenen',
+                    ]
+                ],
+                'sales' => [
+                    'title' => 'Verkoop',
+                    'description' => 'Stroomlijn je volledige verkoopproces met Odoo. Van leads en offertes tot abonnementen en verhuur: alles loopt vlot via één geïntegreerd systeem.',
+                    'badges' => [
+                        'crm' => 'CRM',
+                        'sales' => 'Verkoop',
+                        'pos' => 'Kassa',
+                        'subscriptions' => 'Abonnementen',
+                        'rental' => 'Verhuur',
+                    ]
+                ],
+                'marketing' => [
+                    'title' => 'Marketing',
+                    'description' => 'Bereik je doelgroep en vergroot je impact met Odoo Marketing. Automatiseer campagnes, beheer je kanalen en analyseer resultaten – allemaal vanuit één platform.',
+                    'badges' => [
+                        'marketing_automation' => 'Marketingautomatisering',
+                        'email_marketing' => 'E-mailmarketing',
+                        'sms_marketing' => 'SMS-Marketing',
+                        'social_media_marketing' => 'Social Media Marketing',
+                        'events' => 'Evenementen',
+                        'surveys' => 'Enquête',
+                    ]
+                ],
+                'inventory_production' => [
+                    'title' => 'Inventaris & productie',
+                    'description' => 'Optimaliseer je supply chain en productieprocessen met Odoo. Van voorraadbeheer tot onderhoud en kwaliteitscontrole: alles verloopt gestroomlijnd binnen één systeem.',
+                    'badges' => [
+                        'inventory' => 'Voorraad',
+                        'manufacturing' => 'Productie',
+                        'plm' => 'PLM',
+                        'purchase' => 'Inkoop',
+                        'maintenance' => 'Onderhoud',
+                        'quality' => 'Kwaliteit',
+                    ]
+                ],
+                'websites_ecommerce' => [
+                    'title' => 'Websites & E-commerce',
+                    'description' => 'Bouw en beheer je volledige online aanwezigheid met Odoo. Van een professionele website en webshop tot blogs, cursussen en live chats: alles geïntegreerd op één platform.',
+                    'badges' => [
+                        'website' => 'Website',
+                        'ecommerce' => 'E-commerce',
+                        'blog' => 'Blog',
+                        'forum' => 'Forum',
+                        'elearning' => 'eLearning',
+                        'live_chat' => 'Live Chat',
+                    ]
+                ],
+                'services' => [
+                    'title' => 'Services',
+                    'description' => 'Beheer al je diensten en klantgerichte processen centraal in Odoo. Van projectplanning tot helpdesk en afspraken: alles in één platform voor maximale efficiëntie.',
+                    'badges' => [
+                        'project' => 'Project',
+                        'timesheet' => 'Urenstaat',
+                        'field_service' => 'Buitendienst',
+                        'helpdesk' => 'Helpdesk',
+                        'planning' => 'Planning',
+                        'appointments' => 'Afspraken',
+                    ]
                 ]
             ]
         ]

@@ -124,12 +124,13 @@ const ourToolsBlocks: ToolInterface[] = [
         :meta-title="getTrans('pages.webdevelopment.meta_title')"
     >
         <div id="page-website-expertise-webdevelopment">
-            <large-image-component class="container" :image="WebDevelopmentHeader"></large-image-component>
             <list-with-image-component
                 :list-with-image="conceptToWebApplicationBlock"
                 class="container"
                 :is-clickable="false"
             ></list-with-image-component>
+            <large-image-component class="container" :image="WebDevelopmentHeader"></large-image-component>
+
             <these-sectors
                 :title="getTrans('pages.webdevelopment.these_sectors.title')"
                 :projects="props.projects"

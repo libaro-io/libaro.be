@@ -12,7 +12,13 @@
         }
 
         .image {
-            @apply absolute top-0 right-0 h-full w-full xl:w-1/2 xl:rounded-bl-3xl overflow-hidden;
+            @apply absolute top-0 right-0 h-full w-full xl:w-1/2 rounded-bl-3xl overflow-hidden;
+
+            @media (min-width: 1800px) {
+                @apply max-w-[700px];
+                left: 50%;
+                right: auto;
+            }
 
             &:before{
                 @apply content-[''] xl:content-none absolute top-0 left-0 h-full w-full bg-black opacity-50 z-10;

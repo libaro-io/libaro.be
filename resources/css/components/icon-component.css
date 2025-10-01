@@ -1,0 +1,8 @@
+.component-icon-component {
+    .image-container{
+        @apply  bg-white rounded-xl size-16 border p-2 shadow;
+        img{
+            @apply w-full h-full object-contain object-center;
+        }
+    }
+}
