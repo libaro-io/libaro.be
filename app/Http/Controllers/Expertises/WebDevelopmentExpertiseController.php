@@ -6,10 +6,12 @@ use App\Http\Controllers\Controller;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class WebDevelopmentExpertiseController extends Controller
+class WebDevelopmentExpertiseController extends BaseExpertiseController
 {
     public function __invoke(): Response
     {
-        return Inertia::render('website/expertise/webdevelopment');
+        return Inertia::render('website/expertise/webdevelopment', [
+            'clients' => $this->getClients(),
+        ]);
     }
 }

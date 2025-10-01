@@ -5,6 +5,12 @@ import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import UspListComponent from "@components/usp-list-component.vue";
 import {UspListInterface} from "@interfaces/UspListInterface";
 import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
+import {ClientInterface} from "@interfaces/ClientInterface";
+import OurClients from "@pages/website/sections/our-clients.vue";
+
+const props = defineProps<{
+    clients: ClientInterface[];
+}>();
 
 const conceptToWebApplicationBlock: ListWithImageInterface = {
     title: 'pages.webdevelopment.concept_to_web_application.title',
@@ -72,6 +78,9 @@ const uspListBlock: UspListInterface = {
                 description="pages.webdevelopment.header.description"
                 image="https://placehold.co/400x400"
             ></expertise-header>
+            <our-clients
+                :clients="clients"
+            ></our-clients>
             <list-with-image-component
                 :list-with-image="conceptToWebApplicationBlock"
                 class="container"

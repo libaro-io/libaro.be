@@ -5,17 +5,34 @@ import {PaginationInterface} from "@interfaces/PaginationInterface";
 import {usePagination} from "@composables/UsePaginationComposable";
 import ClientBlockComponent from "@components/client-block-component.vue";
 import {ClientInterface} from "@interfaces/ClientInterface";
+import {computed} from "vue";
 
 const props = defineProps<{
-    clients?: PaginationInterface<ClientInterface[]>;
+    clients?: PaginationInterface<ClientInterface[]> | ClientInterface[];
 }>();
+
+const isPaginated = computed(() => {
+    return props.clients && 'data' in props.clients;
+});
+
+const clientList = computed<ClientInterface[]>(() => {
+    if (!props.clients) {
+        return [];
+    }
+    return isPaginated.value
+        ? (props.clients as PaginationInterface<ClientInterface[]>).data
+        : props.clients as ClientInterface[];
+});
 
 const {
     goToNextPage,
     goToPreviousPage,
     canGoToNextPage,
     canGoToPreviousPage,
-} = usePagination<ClientInterface>(() => props.clients, ['clients']);
+} = usePagination<ClientInterface>(
+    () => isPaginated.value ? props.clients as PaginationInterface<ClientInterface[]> : undefined,
+    ['clients']
+);
 </script>
 <template>
     <section class="section-website-our-clients">
@@ -29,7 +46,7 @@ const {
                         <h2>Onze klanten</h2>
                     </title-component>
                 </div>
-                <div class="buttons">
+                <div v-if="isPaginated" class="buttons">
                     <button
                         :disabled="!canGoToPreviousPage"
                         @click="goToPreviousPage"
@@ -45,10 +62,10 @@ const {
                 </div>
             </div>
             <div
-                v-if="props.clients"
+                v-if="clientList.length"
                 class="client-wrapper">
                 <client-block-component
-                    v-for="client in props.clients.data" :key="client.name"
+                    v-for="client in clientList" :key="client.name"
                     :client="client"
                 ></client-block-component>
             </div>
