@@ -131,6 +131,7 @@ const ourToolsBlocks: ToolInterface[] = [
             <list-with-image-component
                 :list-with-image="conceptToWebApplicationBlock"
                 class="container"
+                :is-clickable="false"
             ></list-with-image-component>
             <these-sectors
                 :title="getTrans('pages.webdevelopment.these_sectors.title')"

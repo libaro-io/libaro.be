@@ -1,19 +1,25 @@
 <script setup lang="ts">
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import TitleComponent from "@components/title-component.vue";
-import {ref, onMounted, nextTick, onUnmounted} from "vue";
+import {ref, onMounted, nextTick, onUnmounted, computed} from "vue";
 import LargeImageComponent from "@components/large-image-component.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
 
-const props = defineProps<{
-    listWithImage: ListWithImageInterface
-}>();
+const props = withDefaults(defineProps<{
+    listWithImage: ListWithImageInterface;
+    isClickable?: boolean;
+}>(),{
+    isClickable: true
+});
 
 const activeList = ref(0);
 const indicatorRef = ref<HTMLElement>();
 const listRef = ref<HTMLElement>();
 
 const setActive = (index: number) => {
+    if (!props.isClickable) {
+        return;
+    }
     activeList.value = index;
     updateIndicatorPosition(index);
 }
@@ -67,6 +73,13 @@ onUnmounted(() => {
     window.removeEventListener('resize', handleResize);
 });
 
+const listClasses = (index: number): string[] => {
+    return [
+        'list-item',
+        index === activeList.value ? 'active' : '',
+        props.isClickable ? 'clickable' : '',
+    ]
+}
 
 </script>
 <template>
@@ -93,10 +106,7 @@ onUnmounted(() => {
                             @click="setActive(index)"
                             @mouseenter="handleMouseEnter(index)"
                             @mouseleave="handleMouseLeave"
-                            :class="[
-                        'list-item',
-                        activeList === index ? 'active' : ''
-                    ]"
+                            :class="listClasses(index)"
                             :data-indicator-position="index"
                             v-for="(listItem, index) in listWithImage.listItems">
                             <h3>{{ getTrans(listItem.title) }}</h3>
