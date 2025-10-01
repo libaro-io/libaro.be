@@ -21,7 +21,7 @@
     }
 
     header {
-        @apply flex justify-between items-end;
+        @apply flex justify-between items-center xl:items-end;
 
         .logo {
             @apply w-48 xl:w-60;
