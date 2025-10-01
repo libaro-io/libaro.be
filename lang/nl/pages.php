@@ -103,5 +103,36 @@ return [
                 ]
             ]
         ]
+    ],
+    'odoo' => [
+        'meta_title' => 'Odoo Implementatie - ERP Software op Maat',
+        'header' => [
+            'title' => 'Professionele Odoo implementatie voor uw bedrijf',
+            'description' => 'Odoo is ERP-software die al je bedrijfsprocessen samenbrengt in één krachtig platform. Van CRM, boekhouding en voorraadbeheer tot online marketing, projectmanagement en HR: voor elke behoefte is er een slimme Odoo-app.'
+        ],
+        'what_is_odoo_for_you' => [
+            'title' => 'Wat kan Odoo voor je doen',
+            'descriptions' => [
+                'Dankzij de modulaire en betaalbare opzet groeit Odoo mee met je organisatie, zodat je tijd wint, kosten bespaart en al je activiteiten eenvoudig en efficiënt in één systeem beheert.'
+            ],
+            'list_items' => [
+                'inventory_management' => [
+                    'title' => 'Voorraadbeheer automatiseren met Odoo',
+                    'description' => 'Beheer je voorraad slimmer met Odoo: realtime inzicht, automatische bestellingen en foutloze traceerbaarheid. Zo minimaliseer je kosten en maximaliseer je efficiëntie.'
+                ],
+                'e_invoicing' => [
+                    'title' => 'E‑facturatie 2026: Word Peppol‑ready met Odoo',
+                    'description' => 'Vanaf 2026 wordt e-facturatie via Peppol de standaard. Met Odoo ben je volledig voorbereid en verstuur je facturen veilig, snel en compliant.'
+                ],
+                'crm' => [
+                    'title' => 'Stroomlijn je klantrelaties & verkoop met Odoo CRM',
+                    'description' => 'Odoo CRM helpt je om leads te beheren, kansen te benutten en klanten beter te bedienen. Zo vergroot je je omzet en bouw je duurzame relaties op.'
+                ],
+                'website' => [
+                    'title' => 'Professionele website bouwen met Odoo',
+                    'description' => 'Met Odoo bouw je in een paar klikken een moderne, responsive website die perfect aansluit bij je merk. Integreer moeiteloos met je webshop, CRM en marketingtools voor een complete online ervaring.'
+                ]
+            ]
+        ]
     ]
 ];

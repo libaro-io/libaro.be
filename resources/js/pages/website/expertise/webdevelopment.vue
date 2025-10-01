@@ -125,9 +125,6 @@ const ourToolsBlocks: ToolInterface[] = [
     >
         <div id="page-website-expertise-webdevelopment">
             <large-image-component class="container" :image="WebDevelopmentHeader"></large-image-component>
-            <our-clients
-                :clients="props.clients"
-            ></our-clients>
             <list-with-image-component
                 :list-with-image="conceptToWebApplicationBlock"
                 class="container"
@@ -144,6 +141,9 @@ const ourToolsBlocks: ToolInterface[] = [
             <our-tools
                 :our-tools="ourToolsBlocks"
             ></our-tools>
+            <our-clients
+                :clients="props.clients"
+            ></our-clients>
         </div>
     </website>
 </template>

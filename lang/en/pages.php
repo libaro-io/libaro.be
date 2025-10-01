@@ -103,5 +103,36 @@ return [
                 ]
             ]
         ]
+    ],
+    'odoo' => [
+        'meta_title' => 'Odoo Implementation - Custom ERP Software',
+        'header' => [
+            'title' => 'Professional Odoo implementation for your business',
+            'description' => 'Odoo is ERP software that brings all your business processes together in one powerful platform. From CRM, accounting and inventory management to online marketing, project management and HR: there is a smart Odoo app for every need.'
+        ],
+        'what_is_odoo_for_you' => [
+            'title' => 'What can Odoo do for you',
+            'descriptions' => [
+                'Thanks to its modular and affordable structure, Odoo grows with your organization, saving you time, reducing costs, and managing all your activities easily and efficiently in one system.'
+            ],
+            'list_items' => [
+                'inventory_management' => [
+                    'title' => 'Automate inventory management with Odoo',
+                    'description' => 'Manage your inventory smarter with Odoo: real-time insights, automatic ordering, and flawless traceability. Minimize costs and maximize efficiency.'
+                ],
+                'e_invoicing' => [
+                    'title' => 'E-invoicing 2026: Get Peppol-ready with Odoo',
+                    'description' => 'From 2026, e-invoicing via Peppol becomes the standard. With Odoo, you are fully prepared and send invoices securely, quickly, and compliantly.'
+                ],
+                'crm' => [
+                    'title' => 'Streamline customer relations & sales with Odoo CRM',
+                    'description' => 'Odoo CRM helps you manage leads, seize opportunities, and serve customers better. Increase your revenue and build lasting relationships.'
+                ],
+                'website' => [
+                    'title' => 'Build a professional website with Odoo',
+                    'description' => 'With Odoo, build a modern, responsive website in just a few clicks that perfectly matches your brand. Seamlessly integrate with your webshop, CRM, and marketing tools for a complete online experience.'
+                ]
+            ]
+        ]
     ]
 ];

@@ -8,7 +8,6 @@ const props = defineProps<{
     description: TranslationKey;
     image: string;
 }>();
-
 </script>
 <template>
     <section class="section-website-expertise-expertise-header">
@@ -18,7 +17,10 @@ const props = defineProps<{
                 <p>{{ getTrans(props.description)}}</p>
             </div>
             <div class="image">
-                <img :src="props.image" alt="">
+                <img
+                    :src="props.image"
+                    alt=""
+                >
             </div>
         </div>
     </section>
