@@ -18,6 +18,9 @@ import Robaws from "@assets/tools/robaws.png";
 import Sharepoint from "@assets/tools/sharepoint.webp";
 import TheseSectors from "@pages/website/expertise/sections/these-sectors.vue";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
+import LargeImageComponent from "@components/large-image-component.vue";
+import WebDevelopmentHeader from "@assets/images/webapplication/header.jpg";
+import conceptToApplicationImage from "@assets/images/webapplication/concept_to_application.png";
 
 const props = defineProps<{
     clients: ClientInterface[];
@@ -34,17 +37,17 @@ const conceptToWebApplicationBlock: ListWithImageInterface = {
         {
             title: 'pages.webdevelopment.concept_to_web_application.list_items.strategy_analysis.title',
             description: 'pages.webdevelopment.concept_to_web_application.list_items.strategy_analysis.description',
-            image: 'https://placehold.co/400x400'
+            image: conceptToApplicationImage
         },
         {
             title: 'pages.webdevelopment.concept_to_web_application.list_items.ux_ui_design.title',
             description: 'pages.webdevelopment.concept_to_web_application.list_items.ux_ui_design.description',
-            image: 'https://placehold.co/200x400'
+            image: conceptToApplicationImage
         },
         {
             title: 'pages.webdevelopment.concept_to_web_application.list_items.development_testing.title',
             description: 'pages.webdevelopment.concept_to_web_application.list_items.development_testing.description',
-            image: 'https://placehold.co/500x400'
+            image: conceptToApplicationImage
         }
     ]
 }
@@ -115,16 +118,13 @@ const ourToolsBlocks: ToolInterface[] = [
 
 </script>
 <template>
-    {{}}
     <website
+        :page-title="getTrans('pages.webdevelopment.header.title')"
+        :page-description="getTrans('pages.webdevelopment.header.description')"
         :meta-title="getTrans('pages.webdevelopment.meta_title')"
-        :margin-bottom="false">
+    >
         <div id="page-website-expertise-webdevelopment">
-            <expertise-header
-                title="pages.webdevelopment.header.title"
-                description="pages.webdevelopment.header.description"
-                image="https://placehold.co/400x400"
-            ></expertise-header>
+            <large-image-component class="container" :image="WebDevelopmentHeader"></large-image-component>
             <our-clients
                 :clients="props.clients"
             ></our-clients>
