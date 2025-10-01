@@ -22,6 +22,7 @@ return [
         'description' => 'Below you\'ll find all the assets you need to apply the Libaro branding in your own project.',
     ],
     'webdevelopment' => [
+        'meta_title' => 'Web Development - Custom Web Applications | Libaro',
         'header' => [
             'title' => 'A custom mobile app tailored to your needs',
             'description' => 'Custom digital solutions that automate your processes. The result? You save both time and money.'
@@ -74,6 +75,28 @@ return [
                 'software_integration' => [
                     'title' => 'Connected to your software',
                     'description' => 'We seamlessly connect the application to your existing software packages for a perfectly streamlined workflow.'
+                ]
+            ]
+        ],
+        'our_tools' => [
+            'tools' => [
+                'checkin_at_work' => [
+                    'description' => 'Seamlessly integrate time tracking and attendance management. Automatically sync employee hours and presence data with your web application for real-time workforce insights.'
+                ],
+                'clearfacts' => [
+                    'description' => 'Connect your accounting software directly to your application. Automate invoicing, financial reporting, and bookkeeping processes for streamlined financial management.'
+                ],
+                'odoo' => [
+                    'description' => 'Integrate with the comprehensive ERP suite. Synchronize inventory, CRM, sales, and operations data to create a unified business management system.'
+                ],
+                'officient' => [
+                    'description' => 'Link your HR platform for complete employee lifecycle management. Automate onboarding, leave requests, and personnel administration in one central location.'
+                ],
+                'robaws' => [
+                    'description' => 'Connect your payroll and salary administration system. Ensure accurate and timely salary processing with automated data exchange between systems.'
+                ],
+                'sharepoint' => [
+                    'description' => 'Integrate Microsoft SharePoint for document management and collaboration. Access, share, and manage files directly from your web application with full version control.'
                 ]
             ]
         ]

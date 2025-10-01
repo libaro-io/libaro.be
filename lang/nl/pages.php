@@ -22,6 +22,7 @@ return [
         'description' => 'Hieronder vind je alle bestanden die je nodig hebt om de Libaro huisstijl toe te passen in een eigen project.',
     ],
     'webdevelopment' => [
+        'meta_title' => 'Webontwikkeling - Webapplicaties op Maat | Libaro',
         'header' => [
             'title' => 'Een mobiele app op maat van uw noden',
             'description' => 'Digitale maatwerkoplossingen die uw processen automatiseren. Het resultaat? U bespaart tijd én geld.'
@@ -74,6 +75,28 @@ return [
                 'software_integration' => [
                     'title' => 'Verbonden met uw software',
                     'description' => 'We koppelen de applicatie naadloos aan uw bestaande softwarepakketten voor een perfect gestroomlijnde workflow.'
+                ]
+            ]
+        ],
+        'our_tools' => [
+            'tools' => [
+                'checkin_at_work' => [
+                    'description' => 'Integreer naadloos tijdsregistratie en aanwezigheidsbeheer. Synchroniseer automatisch werkuren en aanwezigheidsgegevens van medewerkers met uw webapplicatie voor real-time personeelsinzichten.'
+                ],
+                'clearfacts' => [
+                    'description' => 'Verbind uw boekhoudsoftware rechtstreeks met uw applicatie. Automatiseer facturatie, financiële rapportage en boekhoudprocessen voor gestroomlijnd financieel beheer.'
+                ],
+                'odoo' => [
+                    'description' => 'Integreer met de uitgebreide ERP-suite. Synchroniseer voorraad, CRM, verkoop en operationele gegevens om een uniform bedrijfsbeheersysteem te creëren.'
+                ],
+                'officient' => [
+                    'description' => 'Koppel uw HR-platform voor compleet levenscyclusbeheer van medewerkers. Automatiseer onboarding, verlofaanvragen en personeelsadministratie op één centrale locatie.'
+                ],
+                'robaws' => [
+                    'description' => 'Verbind uw loon- en salarisadministratiesysteem. Zorg voor nauwkeurige en tijdige salarisverwerking met geautomatiseerde gegevensuitwisseling tussen systemen.'
+                ],
+                'sharepoint' => [
+                    'description' => 'Integreer Microsoft SharePoint voor documentbeheer en samenwerking. Benader, deel en beheer bestanden rechtstreeks vanuit uw webapplicatie met volledige versiebeheer.'
                 ]
             ]
         ]

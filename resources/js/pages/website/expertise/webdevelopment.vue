@@ -7,6 +7,15 @@ import {UspListInterface} from "@interfaces/UspListInterface";
 import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
 import {ClientInterface} from "@interfaces/ClientInterface";
 import OurClients from "@pages/website/sections/our-clients.vue";
+import OurTools from "@pages/website/expertise/sections/our-tools.vue";
+import {ToolInterface} from "@interfaces/ToolInterface";
+import {getTrans} from "@composables/UseTranslationHelper";
+import CheckInAtWork from "@assets/tools/checkinatwork.png";
+import Clearfacts from "@assets/tools/clearfacts.png";
+import Odoo from "@assets/tools/odoo.png";
+import Officient from "@assets/tools/officient.png";
+import Robaws from "@assets/tools/robaws.png";
+import Sharepoint from "@assets/tools/sharepoint.webp";
 
 const props = defineProps<{
     clients: ClientInterface[];
@@ -68,10 +77,45 @@ const uspListBlock: UspListInterface = {
     ],
 };
 
+const ourToolsBlocks: ToolInterface[] = [
+    {
+        image: CheckInAtWork,
+        name: 'Checkin@work',
+        description: 'pages.webdevelopment.our_tools.tools.checkin_at_work.description',
+    },
+    {
+        image: Clearfacts,
+        name: 'Clearfacts',
+        description: 'pages.webdevelopment.our_tools.tools.clearfacts.description',
+    },
+    {
+        image: Odoo,
+        name: 'Odoo',
+        description: 'pages.webdevelopment.our_tools.tools.odoo.description',
+    },
+    {
+        image: Officient,
+        name: 'Officient',
+        description: 'pages.webdevelopment.our_tools.tools.officient.description',
+    },
+    {
+        image: Robaws,
+        name: 'Robaws',
+        description: 'pages.webdevelopment.our_tools.tools.robaws.description',
+    },
+    {
+        image: Sharepoint,
+        name: 'Sharepoint',
+        description: 'pages.webdevelopment.our_tools.tools.sharepoint.description',
+    }
+]
+
 </script>
 <template>
 
-    <website :margin-bottom="false">
+    <website
+        :meta-title="getTrans('pages.webdevelopment.meta_title')"
+        :margin-bottom="false">
         <div id="page-website-expertise-webdevelopment">
             <expertise-header
                 title="pages.webdevelopment.header.title"
@@ -89,6 +133,9 @@ const uspListBlock: UspListInterface = {
                 :usp-list="uspListBlock"
                 class="container"
             ></usp-list-component>
+            <our-tools
+                :our-tools="ourToolsBlocks"
+            ></our-tools>
         </div>
     </website>
 </template>

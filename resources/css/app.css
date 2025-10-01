@@ -29,7 +29,7 @@
     --color-gradient: var(--gradient);
     --color-dark: var(--dark);
 
-    --gap-page: 6rem;
+    --gap-page: 8rem;
     --gap-form: 2rem;
 }
 
@@ -78,7 +78,7 @@
     }
 
     p, li {
-        @apply font-grotesk font-medium;
+        @apply font-grotesk font-medium text-primary-darkest;
     }
 
     a {
