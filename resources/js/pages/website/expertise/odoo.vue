@@ -8,6 +8,8 @@ import {ClientInterface} from "@interfaces/ClientInterface";
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import ListWithImageComponent from "@components/list-with-image-component.vue";
 import OdooForYou from "@assets/images/odoo/odoo_for_you.jpg";
+import LargeImageWithTextComponent from "@components/large-image-with-text-component.vue";
+import ChooseOdoo from "@assets/images/odoo/choose_odoo.webp";
 
 const props = defineProps<{
     clients: ClientInterface[];
@@ -60,7 +62,12 @@ const WhatIsOdooForYou: ListWithImageInterface = {
                 class="container"
                 :is-clickable="false"
             ></list-with-image-component>
-
+            <large-image-with-text-component
+                class="container"
+                :image="ChooseOdoo"
+                :title="'Waarom kiezen voor Odoo'"
+                :text="'Odoo is Belgisch, gebruiksvriendelijk en schaalbaar, met duizenden tevreden bedrijven wereldwijd. Als gecertificeerde Odoo-partner helpt Libaro je bij de implementatie en ondersteuning, zodat jij maximaal rendement haalt uit je digitale processen.'"
+            ></large-image-with-text-component>
             <our-clients
                 :clients="props.clients"
             ></our-clients>
