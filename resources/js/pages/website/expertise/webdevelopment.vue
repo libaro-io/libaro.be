@@ -4,7 +4,6 @@ import ListWithImageComponent from "@components/list-with-image-component.vue";
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import UspListComponent from "@components/usp-list-component.vue";
 import {UspListInterface} from "@interfaces/UspListInterface";
-import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
 import {ClientInterface} from "@interfaces/ClientInterface";
 import OurClients from "@pages/website/sections/our-clients.vue";
 import OurTools from "@pages/website/expertise/sections/our-tools.vue";
@@ -140,6 +139,7 @@ const ourToolsBlocks: ToolInterface[] = [
                 class="container"
             ></usp-list-component>
             <our-tools
+                title="pages.webdevelopment.our_tools.title"
                 :our-tools="ourToolsBlocks"
             ></our-tools>
             <our-clients

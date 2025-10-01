@@ -20,7 +20,6 @@ const props = defineProps<{
 
 const WhatIsOdooForYou: ListWithImageInterface = getWhatIsOdooYou();
 
-
 const integrationsList: IntegrationInterface[] = getIntegrations();
 
 </script>

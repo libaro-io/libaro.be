@@ -3,8 +3,10 @@ import {getTrans} from "@composables/UseTranslationHelper";
 import TitleComponent from "@components/title-component.vue";
 import {ToolInterface} from "@interfaces/ToolInterface";
 import ToolBlockComponent from "@components/tool-block-component.vue";
+import {TranslationKey} from "../../../../translations/lang-keys";
 
 const props = defineProps<{
+    title: TranslationKey;
     ourTools: ToolInterface[];
 }>();
 
@@ -17,7 +19,7 @@ const props = defineProps<{
                    :has-margin="false"
                >
                    <h2>
-                       {{ getTrans('sections.our_tools.title') }}
+                       {{ getTrans(props.title) }}
                    </h2>
                </title-component>
 

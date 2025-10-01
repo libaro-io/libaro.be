@@ -6,10 +6,13 @@ use App\Http\Controllers\Controller;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class AppsExpertiseController extends Controller
+class AppsExpertiseController extends BaseExpertiseController
 {
     public function __invoke(): Response
     {
-        return Inertia::render('website/expertise/apps');
+        return Inertia::render('website/expertise/apps',[
+            'projects' => Inertia::defer(fn() => $this->getProjects('app')),
+            'clients' => Inertia::defer(fn() => $this->getClients()),
+        ]);
     }
 }

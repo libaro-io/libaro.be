@@ -1,11 +1,8 @@
 .section-website-expertise-our-tools {
     header{
         @apply flex flex-col gap-6 mb-20;
-        h2{
-            @apply text-center;
-        }
         p{
-            @apply xl:w-3/4 mx-auto text-center;
+            @apply xl:w-3/4 text-lg;
         }
     }
     .blocks{

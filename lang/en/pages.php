@@ -82,6 +82,7 @@ return [
             'title' => 'We have built web applications for these sectors'
         ],
         'our_tools' => [
+            'title' => 'Connect your tools with our web applications',
             'tools' => [
                 'checkin_at_work' => [
                     'description' => 'Seamlessly integrate time tracking and attendance management. Automatically sync employee hours and presence data with your web application for real-time workforce insights.'
@@ -215,5 +216,86 @@ return [
                 ]
             ]
         ]
-    ]
+    ],
+    'apps' => [
+        'meta_title' => 'Custom Mobile Apps - iOS & Android Development',
+        'header' => [
+            'title' => 'A mobile app tailored to your needs',
+            'description' => 'Custom digital solutions that automate your processes. The result? You save time and money.'
+        ],
+        'concept_to_apps' => [
+            'title' => 'From concept to mobile app',
+            'descriptions' => [
+                'We don\'t start from what is technically possible, but from the specific needs of your business. That is the core of a mobile app.',
+                'Moreover, you don\'t have to start from scratch. We can seamlessly connect your existing tools and favorite software to the new apps. This way we create one central and powerful system that works the way you want it to, and optimizes your workflow.'
+            ],
+            'list_items' => [
+                'strategy_analysis' => [
+                    'title' => 'Strategy & Analysis',
+                    'description' => 'In this crucial phase, we dive deep into your business processes, goals, and the specific challenges the application must solve. Together with you, we translate your wishes into a clear functional blueprint and technical roadmap. The result is a crystal-clear plan that guarantees we build the right solution for your unique situation.'
+                ],
+                'ux_ui_design' => [
+                    'title' => 'UX/UI Design',
+                    'description' => 'An application must not only be powerful, but also intuitive. Our designers first focus on the User Experience (UX): the most logical and efficient flow for the user. Then we pour that structure into a visually attractive and user-friendly User Interface (UI). Through interactive prototypes, you already get a concrete feel for the application, even before a single line of code is written.'
+                ],
+                'development_testing' => [
+                    'title' => 'Development & Testing',
+                    'description' => 'Our developers transform the blueprint into robust and clean code, building a scalable and secure application. Throughout the entire development process, the application is continuously and thoroughly tested on different devices and browsers. This guarantees flawless operation and optimal performance upon final delivery.'
+                ]
+            ]
+        ],
+        'these_sectors' => [
+            'title' => 'We have built mobile apps for these sectors'
+        ],
+        'strategic_advantages' => [
+            'title' => 'The strategic advantages of an app for your business',
+            'description' => 'A mobile app is a powerful tool to streamline your processes, strengthen collaboration, and increase the efficiency of your entire ecosystem.',
+            'list_items' => [
+                'direct_communication' => [
+                    'title' => 'Direct and Relevant Communication',
+                    'description' => 'An app creates a direct communication channel with all your users, whether they are customers, employees, or partners. Through push notifications, you share important updates, project information, or security alerts in a targeted way.'
+                ],
+                'user_engagement' => [
+                    'title' => 'Enhanced User Engagement and Efficiency',
+                    'description' => 'By simplifying processes and giving users direct access to the information they need, you build a strong connection. An app that makes work easier creates loyal and efficient users.'
+                ],
+                'process_optimization' => [
+                    'title' => 'Optimization of Core Processes',
+                    'description' => 'An app is the ideal tool to digitize and streamline specific business processes. Think of time tracking for contractors, managing inventory, approving documents, or tracking projects.'
+                ],
+                'improved_service' => [
+                    'title' => 'Improved Service and Support',
+                    'description' => 'Offer your users superior support by providing direct access to manuals, reporting problems, or checking the status of a project. This increases self-reliance and satisfaction.'
+                ],
+                'new_value_channels' => [
+                    'title' => 'New Value Channels and Insights',
+                    'description' => 'An app can create new value by offering paid premium features or by accelerating transactions. Moreover, you collect valuable data about usage, which gives you insights to further optimize your services and processes.'
+                ]
+            ]
+        ],
+        'our_tools' => [
+            'title' => 'Connect your tools with our apps',
+            'tools' => [
+                'checkin_at_work' => [
+                    'description' => 'Seamlessly integrate time tracking and attendance management. Automatically sync employee hours and presence data with your web application for real-time workforce insights.'
+                ],
+                'clearfacts' => [
+                    'description' => 'Connect your accounting software directly to your application. Automate invoicing, financial reporting, and bookkeeping processes for streamlined financial management.'
+                ],
+                'odoo' => [
+                    'description' => 'Integrate with the comprehensive ERP suite. Synchronize inventory, CRM, sales, and operations data to create a unified business management system.'
+                ],
+                'officient' => [
+                    'description' => 'Link your HR platform for complete employee lifecycle management. Automate onboarding, leave requests, and personnel administration in one central location.'
+                ],
+                'robaws' => [
+                    'description' => 'Connect your payroll and salary administration system. Ensure accurate and timely salary processing with automated data exchange between systems.'
+                ],
+                'sharepoint' => [
+                    'description' => 'Integrate Microsoft SharePoint for document management and collaboration. Access, share, and manage files directly from your web application with full version control.'
+                ]
+            ]
+        ]
+    ],
+
 ];
