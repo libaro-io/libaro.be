@@ -2,7 +2,7 @@
     header{
         @apply mb-10 xl:mb-16;
         p{
-            @apply xl:w-3/4;
+            @apply xl:w-3/4 text-xl;
         }
     }
     .integrations{

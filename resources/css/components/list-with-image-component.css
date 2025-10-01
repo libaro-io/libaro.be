@@ -2,7 +2,7 @@
     header{
         @apply mb-8 xl:mb-16;
         .texts{
-            @apply flex flex-col gap-4 xl:max-w-3/4 text-primary-darkest;
+            @apply flex flex-col gap-4 xl:max-w-3/4 text-xl;
         }
     }
     .list-image{

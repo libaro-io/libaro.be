@@ -11,7 +11,7 @@ class WebDevelopmentExpertiseController extends BaseExpertiseController
     public function __invoke(): Response
     {
         return Inertia::render('website/expertise/webdevelopment', [
-            'clients' => $this->getClients(),
+            'clients' => Inertia::defer(fn() => $this->getClients()),
             'projects' => Inertia::defer(fn() => $this->getProjects('webapplicatie')),
         ]);
     }

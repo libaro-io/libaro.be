@@ -15,7 +15,7 @@ import {IntegrationInterface} from "@interfaces/IntegrationInterface";
 import {getIntegrations, getWhatIsOdooYou} from "@composables/expertises/UseOdooComposable";
 
 const props = defineProps<{
-    clients: ClientInterface[];
+    clients?: ClientInterface[];
 }>();
 
 const WhatIsOdooForYou: ListWithImageInterface = getWhatIsOdooYou();

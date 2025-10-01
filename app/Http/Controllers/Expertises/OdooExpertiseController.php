@@ -11,7 +11,7 @@ class OdooExpertiseController extends BaseExpertiseController
     public function __invoke(): Response
     {
         return Inertia::render('website/expertise/odoo',[
-            'clients' => $this->getClients(),
+            'clients' => Inertia::defer(fn() => $this->getClients()),
         ]);
     }
 }

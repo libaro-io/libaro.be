@@ -23,7 +23,7 @@ import WebDevelopmentHeader from "@assets/images/webapplication/header.jpg";
 import conceptToApplicationImage from "@assets/images/webapplication/concept_to_application.png";
 
 const props = defineProps<{
-    clients: ClientInterface[];
+    clients?: ClientInterface[];
     projects?: ProjectInterface[];
 }>();
 
