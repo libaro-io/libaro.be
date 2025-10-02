@@ -7,6 +7,7 @@ import ClientBlockComponent from "@components/client-block-component.vue";
 import {ClientInterface} from "@interfaces/ClientInterface";
 import {computed} from "vue";
 import RoundedButton from "@components/buttons/rounded-button.vue";
+import {getTrans} from "@composables/UseTranslationHelper";
 
 const props = defineProps<{
     clients?: PaginationInterface<ClientInterface[]> | ClientInterface[];
@@ -41,10 +42,10 @@ const {
             <div class="header">
                 <div class="titles">
                     <sub-title-component>
-                        <h3>Uw success is onze reputatie</h3>
+                        <h3>{{ getTrans('sections.clients.subtitle') }}</h3>
                     </sub-title-component>
                     <title-component :has-margin="false">
-                        <h2>Onze klanten</h2>
+                        <h2>{{ getTrans('sections.clients.title') }}</h2>
                     </title-component>
                 </div>
                 <div v-if="isPaginated" class="buttons">

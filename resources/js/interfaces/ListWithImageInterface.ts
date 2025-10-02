@@ -7,5 +7,6 @@ export interface ListWithImageInterface {
         title: TranslationKey;
         description: TranslationKey;
         image: string;
+        badges?: TranslationKey[];
     }[]
 }

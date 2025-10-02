@@ -4,6 +4,7 @@ import TitleComponent from "@components/title-component.vue";
 import {ref, onMounted, nextTick, onUnmounted, computed} from "vue";
 import LargeImageComponent from "@components/large-image-component.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
+import BadgeComponent from "@components/badge-component.vue";
 
 const props = withDefaults(defineProps<{
     listWithImage: ListWithImageInterface;
@@ -111,6 +112,13 @@ const listClasses = (index: number): string[] => {
                             v-for="(listItem, index) in listWithImage.listItems">
                             <h3>{{ getTrans(listItem.title) }}</h3>
                             <p>{{ getTrans(listItem.description) }}</p>
+                            <div
+                                v-if="listItem.badges"
+                                class="badges">
+                                <badge-component v-for="badge in listItem.badges">
+                                    {{ getTrans(badge) }}
+                                </badge-component>
+                            </div>
                         </li>
                     </ul>
                 </div>

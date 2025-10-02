@@ -296,5 +296,51 @@ return [
                 ]
             ]
         ]
+    ],
+    'iot' => [
+        'meta_title' => 'IoT Integraties - Slimme Kantooroplossingen',
+        'header' => [
+            'title' => 'Slimme IoT integraties voor moderne kantoren',
+            'description' => 'Automatiseer en optimaliseer uw kantooromgeving met onze IoT oplossingen. Van slimme verlichting tot parkeermanagement - maak uw bedrijf efficiënter, veiliger en kostenbesparender.'
+        ],
+        'how_it_works' => [
+            'title' => 'Hoe werkt het?',
+            'descriptions' => [
+                'Van analyse tot implementatie - ons bewezen proces zorgt voor een succesvolle IoT transformatie van uw kantoor'
+            ],
+            'list_items' => [
+                'strategy_analysis' => [
+                    'title' => 'Strategie & Analyse',
+                    'description' => 'Grondige analyse van uw kantooromgeving en behoeften. Wij adviseren de beste IoT oplossingen voor uw specifieke situatie.',
+                    'badges' => [
+                        'Site survey en inventarisatie',
+                        'Behoefteanalyse en doelstellingen',
+                        'Technische haalbaarheidstudie',
+                        'ROI berekening en business case'
+                    ]
+                ],
+                'custom_design' => [
+                    'title' => 'Maatwerk Ontwerp',
+                    'description' => 'Op maat gemaakte IoT architectuur en implementatieplan, afgestemd op uw bedrijfsprocessen en infrastructuur.',
+                    'badges' => [
+                        'Systeem architectuur ontwerp',
+                        'Integratie met bestaande systemen',
+                        'Netwerkinfrastructuur planning',
+                        'Security en privacy assessment'
+                    ]
+                ],
+                'implementation_support' => [
+                    'title' => 'Implementatie en ondersteuning',
+                    'description' => 'Professionele installatie en configuratie van alle IoT systemen met minimale verstoring van uw bedrijfsvoering. Continue monitoring, onderhoud en support om optimale prestaties en beschikbaarheid te garanderen.',
+                    'badges' => [
+                        'Hardware installatie en configuratie',
+                        'Software setup en integratie',
+                        'Netwerk implementatie',
+                        '24/7 monitoring en alerting',
+                        'Helpdesk en technische support'
+                    ]
+                ]
+            ]
+        ]
     ]
 ];

@@ -28,7 +28,7 @@ const integrationsList: IntegrationInterface[] = getIntegrations();
         :margin-bottom="false"
         :meta-title="getTrans('pages.odoo.meta_title')"
     >
-        <div id="page-website-expertise-odoo">
+        <div id="page-website-expertise-odoo" class="page-grid">
             <expertise-header
                 title="pages.odoo.header.title"
                 description="pages.odoo.header.description"

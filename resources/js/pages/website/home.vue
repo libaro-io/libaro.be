@@ -69,7 +69,7 @@ const projects = computed(() => props.landingPage?.projects ?? props.projects);
         :page-description="getTrans('pages.home.header.description')"
         :meta-title="metaTitle"
     >
-        <div id="page-website-home">
+        <div id="page-website-home" class="page-grid">
             <our-projects :projects="projects"></our-projects>
             <text-block-image-component
                 class="container"

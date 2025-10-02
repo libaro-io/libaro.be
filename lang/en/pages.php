@@ -297,5 +297,51 @@ return [
             ]
         ]
     ],
+    'iot' => [
+        'meta_title' => 'IoT Integrations - Smart Office Solutions',
+        'header' => [
+            'title' => 'Smart IoT integrations for modern offices',
+            'description' => 'Automate and optimize your office environment with our IoT solutions. From smart lighting to parking management - make your business more efficient, safer and more cost-effective.'
+        ],
+        'how_it_works' => [
+            'title' => 'How does it work?',
+            'descriptions' => [
+                'From analysis to implementation - our proven process ensures a successful IoT transformation of your office'
+            ],
+            'list_items' => [
+                'strategy_analysis' => [
+                    'title' => 'Strategy & Analysis',
+                    'description' => 'Thorough analysis of your office environment and needs. We advise the best IoT solutions for your specific situation.',
+                    'badges' => [
+                        'Site survey and inventory',
+                        'Needs analysis and objectives',
+                        'Technical feasibility study',
+                        'ROI calculation and business case'
+                    ]
+                ],
+                'custom_design' => [
+                    'title' => 'Custom Design',
+                    'description' => 'Tailored IoT architecture and implementation plan, aligned with your business processes and infrastructure.',
+                    'badges' => [
+                        'System architecture design',
+                        'Integration with existing systems',
+                        'Network infrastructure planning',
+                        'Security and privacy assessment'
+                    ]
+                ],
+                'implementation_support' => [
+                    'title' => 'Implementation and Support',
+                    'description' => 'Professional installation and configuration of all IoT systems with minimal disruption to your business operations. Continuous monitoring, maintenance and support to ensure optimal performance and availability.',
+                    'badges' => [
+                        'Hardware installation and configuration',
+                        'Software setup and integration',
+                        'Network implementation',
+                        '24/7 monitoring and alerting',
+                        'Helpdesk and technical support'
+                    ]
+                ]
+            ]
+        ]
+    ]
 
 ];

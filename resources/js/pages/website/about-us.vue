@@ -63,8 +63,8 @@ const largeImageComponents: string[] = [
             fullWidthDescription: true,
         }"
     >
-        <div id="page-website-about-us" class="grid">
-            <div class="container grid">
+        <div id="page-website-about-us">
+            <div class="container page-grid">
                 <text-block-image-component
                     v-for="(textBlockImage, index) in textBlockImageComponents"
                     :key="index"

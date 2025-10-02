@@ -122,7 +122,7 @@ const ourToolsBlocks: ToolInterface[] = [
         :page-description="getTrans('pages.webdevelopment.header.description')"
         :meta-title="getTrans('pages.webdevelopment.meta_title')"
     >
-        <div id="page-website-expertise-webdevelopment">
+        <div id="page-website-expertise-webdevelopment" class="page-grid">
             <list-with-image-component
                 :list-with-image="conceptToWebApplicationBlock"
                 class="container"

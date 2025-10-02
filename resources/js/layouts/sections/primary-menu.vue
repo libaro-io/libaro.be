@@ -49,7 +49,7 @@ const primaryMenu = ref<MenuInterface[]>([
             {
                 text: 'menu.primary.iot',
                 url: IOTExpertiseController(),
-                visible: false,
+                visible: true,
             },
             {
                 text: 'menu.primary.odoo',

@@ -27,4 +27,8 @@ return [
     'our_tools' => [
         'description' => 'Wij zijn meesters in software-integraties. We koppelen al uw bestaande pakketten tot één naadloze en geautomatiseerde workflow, waardoor u dubbel werk elimineert en een krachtig, centraal overzicht krijgt.'
     ],
+    'clients' => [
+        'subtitle' => 'Uw succes is onze reputatie',
+        'title' => 'Onze klanten'
+    ],
 ];

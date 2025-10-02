@@ -33,6 +33,9 @@
                         h3{
                             @apply font-gilroy text-primary font-bold text-xl mb-2;
                         }
+                        .badges{
+                            @apply flex flex-wrap gap-3 mt-4;
+                        }
                     }
                 }
             }

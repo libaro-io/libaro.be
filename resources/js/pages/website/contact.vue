@@ -11,7 +11,7 @@ import strategy2 from "@assets/images/strategy_2.webp";
         :page-title="getTrans('contact.page_title')"
         :page-sub-title="getTrans('contact.page_sub_title')"
         :meta-title="getTrans('contact.meta_title')">
-        <div id="page-website-contact">
+        <div id="page-website-contact" class="page-grid">
             <div class="grid container">
                 <div>
                     <contact-information></contact-information>

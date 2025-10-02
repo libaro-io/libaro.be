@@ -27,4 +27,8 @@ return [
     'our_tools' => [
         'description' => 'We are masters in software integrations. We connect all your existing packages into one seamless and automated workflow, eliminating duplicate work and providing you with a powerful, centralized overview.'
     ],
+    'clients' => [
+        'subtitle' => 'Your success is our reputation',
+        'title' => 'Our clients'
+    ],
 ];
