@@ -55,7 +55,7 @@ const getDescription = computed(() => {
 });
 
 const getCanonical = computed(() => {
-    return window.location.origin + window.location.pathname;
+    //return window.location.origin + window.location.pathname;
 });
 </script>
 <template>
@@ -70,19 +70,10 @@ const getCanonical = computed(() => {
         <meta property="twitter:description" :content="getDescription"/>
     </Head>
     <div id="layout-website">
-        <Header
-            :margin-bottom="props.marginBottom"
-            :page-title="props.pageTitle"
-            :page-sub-title="props.pageSubTitle"
-            :page-description="props.pageDescription"
-            :options="props.headerOptions ?? {}"
-        ></Header>
         <main class="content">
 
             <slot></slot>
         </main>
-        <navigation-footer></navigation-footer>
-        <Footer></Footer>
     </div>
 </template>
 <style scoped>
