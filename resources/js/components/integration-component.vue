@@ -7,15 +7,18 @@ import {getTrans} from "@composables/UseTranslationHelper";
 
 const props = defineProps<{
     integration: IntegrationInterface;
+    iconSize?: 'small' | 'large';
 }>();
 
 </script>
 <template>
-    <section class="component-integration-component">
+    <section
+        class="component-integration-component">
         <div class="icon">
             <icon-component
                 :image="props.integration.icon"
                 :name="props.integration.title"
+                :icon-size="props.iconSize"
             ></icon-component>
         </div>
         <div class="title">

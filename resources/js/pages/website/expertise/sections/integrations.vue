@@ -9,6 +9,7 @@ const props = defineProps<{
     integrationsList: IntegrationInterface[];
     title: TranslationKey;
     description: TranslationKey;
+    iconSize?: 'small' | 'large';
 }>();
 
 </script>
@@ -25,6 +26,7 @@ const props = defineProps<{
                 v-for="integration in props.integrationsList"
                 :key="integration.title"
                 :integration="integration"
+                :icon-size="props.iconSize"
             ></integration-component>
         </div>
     </section>

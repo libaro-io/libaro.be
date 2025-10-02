@@ -5,4 +5,9 @@
             @apply w-full h-full object-contain object-center;
         }
     }
+    &.icon-small{
+        .image-container{
+            @apply p-4;
+        }
+    }
 }

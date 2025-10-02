@@ -341,6 +341,20 @@ return [
                     ]
                 ]
             ]
+        ],
+        'integrations' => [
+            'title' => 'IoT Solutions for your office',
+            'description' => 'Discover our smart IoT integrations that transform your office environment into an efficient, safe and cost-effective workplace.',
+            'smart_lighting' => [
+                'title' => 'Smart Lighting',
+                'description' => 'Automatic lighting based on presence, daylight and schedules. Up to 60% energy savings.',
+                'badges' => [
+                    'Motion sensors',
+                    'Daylight control',
+                    'Dimming functions',
+                    'Time schedules'
+                ]
+            ]
         ]
     ]
 

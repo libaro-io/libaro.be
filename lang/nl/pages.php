@@ -341,6 +341,20 @@ return [
                     ]
                 ]
             ]
+        ],
+        'integrations' => [
+            'title' => 'IoT Oplossingen voor uw kantoor',
+            'description' => 'Ontdek onze slimme IoT integraties die uw kantooromgeving transformeren naar een efficiënte, veilige en kostenbesparende werkplek.',
+            'smart_lighting' => [
+                'title' => 'Slimme Verlichting',
+                'description' => 'Automatische verlichting gebaseerd op aanwezigheid, daglicht en tijdschema\'s. Tot 60% energiebesparing.',
+                'badges' => [
+                    'Bewegingssensoren',
+                    'Daglichtregeling',
+                    'Dimfuncties',
+                    'Tijdschema\'s'
+                ]
+            ]
         ]
     ]
 ];
