@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Resources\BlogResource;
 use App\Models\Blog;
 use Inertia\Inertia;
-use Inertia\Response;
 
 class DetailBlogController extends Controller
 {

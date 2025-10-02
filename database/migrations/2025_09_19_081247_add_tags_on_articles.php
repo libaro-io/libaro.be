@@ -22,7 +22,6 @@ return new class extends Migration
             ->each(function ($tagRelations, $articleId) {
                 $commaSeperatedTags = DB::table('tags')
                     ->whereIn('id', $tagRelations->pluck('tag_id'))
-                    ->get()
                     ->pluck('name')
                     ->map(fn($name) => array_values(json_decode($name, true))[0])
                     ->implode(',');

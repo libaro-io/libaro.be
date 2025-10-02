@@ -17,6 +17,7 @@ return new class extends Migration
             ->each(function (Blog $blog) {
                 $blog->blocks()->create([
                     'type' => FilamentBlockType::Text,
+                    // @phpstan-ignore property.notFound
                     'content' => ['text' => $blog->body],
                     'sort' => 0,
                 ]);
