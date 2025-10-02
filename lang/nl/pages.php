@@ -354,6 +354,74 @@ return [
                     'Dimfuncties',
                     'Tijdschema\'s'
                 ]
+            ],
+            'tv_display' => [
+                'title' => 'TV & Display Management',
+                'description' => 'Centraal beheer van alle displays, digitale signage en presentatieschermen in uw kantoor.',
+                'badges' => [
+                    'Content scheduling',
+                    'Remote control',
+                    'Multi-screen beheer',
+                    'Digital signage'
+                ]
+            ],
+            'parking' => [
+                'title' => 'Parkeermanagement',
+                'description' => 'Real-time parkeerplaats monitoring, reserveringssysteem en geautomatiseerde betalingen.',
+                'badges' => [
+                    'RFID toegang',
+                    'Kentekenherkenning',
+                    'Mobile app',
+                    'Bezoekersbeheer'
+                ]
+            ],
+            'access_control' => [
+                'title' => 'Toegangscontrole',
+                'description' => 'Geavanceerde sloten met keyless entry, tijdgebonden toegang en uitgebreide logging.',
+                'badges' => [
+                    'Keyless entry',
+                    'Tijdschema\'s',
+                    'Toegangslogboek',
+                    'Noodontgrendeling'
+                ]
+            ],
+            'climate' => [
+                'title' => 'Klimaatbeheersing',
+                'description' => 'Intelligente HVAC systemen die automatisch de temperatuur en luchtkwaliteit optimaliseren.',
+                'badges' => [
+                    'Temperatuursensoren',
+                    'Luchtkwaliteit monitoring',
+                    'Energieoptimalisatie',
+                    'Zonesturing'
+                ]
+            ],
+            'vending' => [
+                'title' => 'Integratie voeding- en drank-automaten',
+                'description' => 'Slimme koffiemachines met voorraadmonitoring, onderhoudsmeldingen en gebruiksanalytics.',
+                'badges' => [
+                    'Voorraadmonitoring',
+                    'Onderhoudswaarschuwingen',
+                    'Gebruiksstatistieken',
+                    'Remote beheer'
+                ]
+            ]
+        ],
+        'why_choose_iot' => [
+            'title' => 'Waarom kiezen voor onze IoT oplossingen?',
+            'text' => 'Onze IoT integraties zijn niet alleen technologische upgrades, maar strategische investeringen die uw bedrijfsvoering fundamenteel verbeteren. We focussen op praktische voordelen die direct impact hebben op uw dagelijkse operaties, medewerkers en bedrijfsresultaten.',
+            'benefits' => [
+                'productivity' => [
+                    'title' => 'Werkplekcomfort & Productiviteit',
+                    'description' => 'Medewerkers ervaren een naadloze omgeving waar verlichting, temperatuur en faciliteiten automatisch worden aangepast aan hun behoeften. Dit verhoogt comfort, welzijn en uiteindelijk productiviteit.'
+                ],
+                'energy' => [
+                    'title' => 'Intelligente Energiebeheersing',
+                    'description' => 'Ons systeem leert van gebruikspatronen en past automatisch aan. Door voorspellende algoritmes weet het systeem wanneer verwarmingskosten kan worden gereduceerd en wanneer verlichting preventief kan worden aangepast.'
+                ],
+                'security' => [
+                    'title' => 'Geïntegreerde Beveiligingsarchitectuur',
+                    'description' => 'Volledige controle over toegangspunten, real-time monitoring van alle systemen en geautomatiseerde response op incidenten. Uw gebouw wordt een slim ecosysteem dat proactief beveiligingsrisico\'s identificeert.'
+                ]
             ]
         ]
     ]

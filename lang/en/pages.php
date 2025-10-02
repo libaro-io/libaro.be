@@ -354,6 +354,74 @@ return [
                     'Dimming functions',
                     'Time schedules'
                 ]
+            ],
+            'tv_display' => [
+                'title' => 'TV & Display Management',
+                'description' => 'Centralized management of all displays, digital signage and presentation screens in your office.',
+                'badges' => [
+                    'Content scheduling',
+                    'Remote control',
+                    'Multi-screen management',
+                    'Digital signage'
+                ]
+            ],
+            'parking' => [
+                'title' => 'Parking Management',
+                'description' => 'Real-time parking space monitoring, reservation system and automated payments.',
+                'badges' => [
+                    'RFID access',
+                    'License plate recognition',
+                    'Mobile app',
+                    'Visitor management'
+                ]
+            ],
+            'access_control' => [
+                'title' => 'Access Control',
+                'description' => 'Advanced locks with keyless entry, time-based access and extensive logging.',
+                'badges' => [
+                    'Keyless entry',
+                    'Time schedules',
+                    'Access log',
+                    'Emergency unlock'
+                ]
+            ],
+            'climate' => [
+                'title' => 'Climate Control',
+                'description' => 'Intelligent HVAC systems that automatically optimize temperature and air quality.',
+                'badges' => [
+                    'Temperature sensors',
+                    'Air quality monitoring',
+                    'Energy optimization',
+                    'Zone control'
+                ]
+            ],
+            'vending' => [
+                'title' => 'Food & Beverage Vending Integration',
+                'description' => 'Smart coffee machines with inventory monitoring, maintenance alerts and usage analytics.',
+                'badges' => [
+                    'Inventory monitoring',
+                    'Maintenance alerts',
+                    'Usage statistics',
+                    'Remote management'
+                ]
+            ]
+        ],
+        'why_choose_iot' => [
+            'title' => 'Why choose our IoT solutions?',
+            'text' => 'Our IoT integrations are not just technological upgrades, but strategic investments that fundamentally improve your business operations. We focus on practical benefits that have a direct impact on your daily operations, employees and business results.',
+            'benefits' => [
+                'productivity' => [
+                    'title' => 'Workplace Comfort & Productivity',
+                    'description' => 'Employees experience a seamless environment where lighting, temperature and facilities are automatically adjusted to their needs. This increases comfort, well-being and ultimately productivity.'
+                ],
+                'energy' => [
+                    'title' => 'Intelligent Energy Management',
+                    'description' => 'Our system learns from usage patterns and adjusts automatically. Through predictive algorithms, the system knows when heating costs can be reduced and when lighting can be preventively adjusted.'
+                ],
+                'security' => [
+                    'title' => 'Integrated Security Architecture',
+                    'description' => 'Complete control over access points, real-time monitoring of all systems and automated response to incidents. Your building becomes a smart ecosystem that proactively identifies security risks.'
+                ]
             ]
         ]
     ]

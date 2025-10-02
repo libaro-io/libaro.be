@@ -47,8 +47,8 @@ const integrationsList: IntegrationInterface[] = getIntegrations();
             <large-image-with-text-component
                 class="container"
                 :image="ChooseOdoo"
-                :title="'pages.odoo.why_choose_odoo.title'"
-                :text="'pages.odoo.why_choose_odoo.text'"
+                title="pages.odoo.why_choose_odoo.title"
+                text="pages.odoo.why_choose_odoo.text"
             ></large-image-with-text-component>
             <our-clients
                 :clients="props.clients"

@@ -7,19 +7,25 @@ import {getTrans} from "@composables/UseTranslationHelper";
 
 const props = defineProps<{
     integrationsList: IntegrationInterface[];
-    title: TranslationKey;
-    description: TranslationKey;
+    title?: TranslationKey;
+    description?: TranslationKey;
     iconSize?: 'small' | 'large';
 }>();
 
 </script>
 <template>
     <section class="section-website-expertise-integrations container">
-       <header>
-           <title-component>
+       <header
+           v-if="props.title && props.description"
+       >
+           <title-component v-if="props.title">
                <h2>{{getTrans(props.title)}}</h2>
            </title-component>
-            <p>{{getTrans(props.description)}}</p>
+            <p
+                v-if="props.description"
+            >
+                {{getTrans(props.description)}}
+            </p>
        </header>
         <div class="integrations">
             <integration-component
