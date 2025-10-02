@@ -17,7 +17,7 @@ class BlogController extends Controller
             ->get();
 
         return Inertia::render('website/blog', [
-            'blogs' => BlogResource::collection($blogs->prepend($blogs->splice(1, 1)[0])),
+            'blogs' => BlogResource::collection($blogs),
         ]);
     }
 }

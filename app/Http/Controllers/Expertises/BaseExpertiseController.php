@@ -11,6 +11,9 @@ use Illuminate\Support\Collection;
 
 class BaseExpertiseController extends Controller
 {
+    /**
+     * @return Collection<int, ClientResource>
+     */
     protected function getClients(): Collection
     {
         return Client::query()
@@ -19,10 +22,13 @@ class BaseExpertiseController extends Controller
             ->orderBy('weight', 'desc')
             ->limit(5)
             ->get()
-            ->map(fn(Client $client) => ClientResource::make($client));
+            ->map(fn (Client $client) => ClientResource::make($client));
     }
 
-    protected function getProjects(string $type)
+    /**
+     * @return Collection<int, ProjectResource>
+     */
+    protected function getProjects(string $type): Collection
     {
         return Project::query()
             ->with('client')
@@ -30,7 +36,6 @@ class BaseExpertiseController extends Controller
             ->where('is_product', '=', false)
             ->where('type', '=', $type)
             ->get()
-            ->map(fn(Project $project) => ProjectResource::make($project));
+            ->map(fn (Project $project) => ProjectResource::make($project));
     }
-
 }

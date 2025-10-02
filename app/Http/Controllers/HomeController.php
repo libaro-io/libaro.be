@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Http\Resources\ClientResource;
 use App\Http\Resources\ProjectResource;
 use App\Models\Client;
@@ -15,21 +14,27 @@ use Inertia\Response;
 
 class HomeController extends Controller
 {
-    public function __invoke(string $locale = null): Response
+    public function __invoke(string $locale): Response
     {
         return $this->render();
     }
 
+    /**
+     * @param  array<string, mixed>  $props
+     */
     public function render(array $props = []): Response
     {
         return Inertia::render('website/home',
             array_merge([
-                'clients' => Inertia::defer(fn() => $this->getClients()),
+                'clients' => Inertia::defer(fn () => $this->getClients()),
                 'projects' => $this->getProjects(),
             ], $props)
         );
     }
 
+    /**
+     * @return LengthAwarePaginator<int, ClientResource>
+     */
     protected function getClients(): LengthAwarePaginator
     {
         return Client::query()
@@ -37,7 +42,7 @@ class HomeController extends Controller
             ->has('projects')
             ->orderBy('weight', 'desc')
             ->paginate(5)
-            ->through(fn(Client $client) => ClientResource::make($client));
+            ->through(fn (Client $client) => ClientResource::make($client));
     }
 
     protected function getProjects(): AnonymousResourceCollection
@@ -47,8 +52,7 @@ class HomeController extends Controller
             ->where('pin_on_homepage', '=', 1)
             ->select('id')
             ->pluck('id')
-            ->whenNotEmpty(fn(Collection $c) => $c->random(3));
-
+            ->whenNotEmpty(fn (Collection $c) => $c->random(3));
 
         $projects = Project::query()
             ->with('client')

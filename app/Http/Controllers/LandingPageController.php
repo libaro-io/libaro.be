@@ -8,11 +8,11 @@ use Inertia\Response;
 
 class LandingPageController extends Controller
 {
-    public function __invoke(string $locale = null, LandingPage $landingPage = null): Response
+    public function __invoke(string $locale, LandingPage $landingPage): Response
     {
         $landingPage->loadMissing('projects.client');
 
-        return (new HomeController())->render([
+        return (new HomeController)->render([
             'landingPage' => LandingPageResource::make($landingPage),
         ]);
     }

@@ -7,10 +7,11 @@ use App\Http\Resources\ProjectResource;
 use App\Models\LandingPage;
 use App\Models\Project;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class DetailProjectController extends Controller
 {
-    public function __invoke(string $locale, Project $project)
+    public function __invoke(string $locale, Project $project): Response
     {
         $project->loadMissing('blocks');
 

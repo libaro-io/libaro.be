@@ -10,6 +10,9 @@ enum FilamentBlockType: string
     case NumberText = 'number_text';
     case LogoText = 'logo_text';
 
+    /**
+     * @return array<string, string>
+     */
     public static function options(): array
     {
         return [

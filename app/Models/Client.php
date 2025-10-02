@@ -3,28 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
- * @property int $id
- * @property string $name
- * @property string|null $image
- * @property int $visible
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property int $weight
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Project> $projects
- * @property-read int|null $projects_count
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Client newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Client newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Client query()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Client whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Client whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Client whereImage($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Client whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Client whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Client whereVisible($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Client whereWeight($value)
- * @mixin \Eloquent
  * @mixin IdeHelperClient
  */
 class Client extends Model
@@ -33,7 +14,10 @@ class Client extends Model
 
     protected $table = 'clients';
 
-    public function projects()
+    /**
+     * @return HasMany<Project, $this>
+     */
+    public function projects(): HasMany
     {
         return $this->hasMany(Project::class, 'client_id', 'id');
     }

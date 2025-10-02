@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Resources\ProjectResource;
 use App\Models\Project;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class ProductController extends Controller
 {
-    public function __invoke()
+    public function __invoke(): Response
     {
         $products = Project::query()
             ->with('client')
@@ -19,7 +20,7 @@ class ProductController extends Controller
             ->get();
 
         return Inertia::render('website/products', [
-            'products' => ProjectResource::collection($products->prepend($products->splice(1, 1)[0])),
+            'products' => ProjectResource::collection($products),
         ]);
     }
 }

@@ -22,7 +22,7 @@ namespace App\Models{
  * @property string|null $author
  * @property \Illuminate\Support\Carbon|null $publish_date
  * @property string|null $link
- * @property mixed $tags
+ * @property array $tags
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\BlogBlock> $blocks
@@ -205,7 +205,7 @@ namespace App\Models{
  * @property int|null $client_id
  * @property string|null $date
  * @property int $pin_on_homepage
- * @property mixed $tags
+ * @property array $tags
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\ProjectBlock> $blocks
  * @property-read int|null $blocks_count
  * @property-read \App\Models\Client|null $client

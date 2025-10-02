@@ -12,13 +12,13 @@ class Locale
     /**
      * Handle an incoming request.
      *
-     * @param \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response) $next
+     * @param  Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
         $currentLocale = $request->route()?->parameter('locale');
 
-        if (is_null($currentLocale) && $request->path() === '/') {
+        if ((is_object($currentLocale) || is_null($currentLocale)) && $request->path() === '/') {
             return redirect()->action(HomeController::class, ['locale' => app()->getLocale()]);
         }
 
@@ -27,16 +27,17 @@ class Locale
         $isAnAdminRoute = str_starts_with($request->path(), config('filament.path'));
         $isALivewireRoute = str_starts_with($request->path(), 'livewire');
 
-        if($isSupportedLocale){
-            app()->setLocale($currentLocale);
+        if ($isSupportedLocale) {
+            app()->setLocale(is_string($currentLocale) ? $currentLocale : config('app.locale'));
+
             return $next($request);
         }
 
-        if($isAnAdminRoute){
+        if ($isAnAdminRoute) {
             return $next($request);
         }
 
-        if($isALivewireRoute){
+        if ($isALivewireRoute) {
             return $next($request);
         }
 

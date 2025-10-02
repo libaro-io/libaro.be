@@ -2,11 +2,12 @@
 
 namespace App\Http\Resources;
 
+use App\Models\LandingPage;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-/*
- * @mixin \App\Models\LandingPage
+/**
+ * @mixin LandingPage
  */
 class LandingPageResource extends JsonResource
 {

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Website from "@layouts/website.vue";
 import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
-import {getTrans} from "@composables/UseTranslationHelper";
 import ListWithImageComponent from "@components/list-with-image-component.vue";
 import Integrations from "@pages/website/expertise/sections/integrations.vue";
 import {conceptToAppsBlock, integrationsList, whyIOTList} from "@composables/expertises/useIOTComposable";

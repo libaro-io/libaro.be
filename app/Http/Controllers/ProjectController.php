@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\LandingPageResource;
 use App\Http\Resources\ProjectResource;
-use App\Models\LandingPage;
 use App\Models\Project;
 use Inertia\Inertia;
+use Inertia\Response;
 
 class ProjectController extends Controller
 {
-    public function __invoke()
+    public function __invoke(): Response
     {
         $projects = Project::query()
             ->with('client')
@@ -21,7 +20,7 @@ class ProjectController extends Controller
             ->get();
 
         return Inertia::render('website/projects', [
-            'projects' => ProjectResource::collection($projects->prepend($projects->splice(1, 1)[0])),
+            'projects' => ProjectResource::collection($projects),
         ]);
     }
 }
