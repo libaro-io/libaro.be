@@ -8,6 +8,7 @@ import {useS3Image} from "@composables/useS3Image";
 const props = defineProps<{
     projects: ProjectInterface[],
 }>();
+
 </script>
 <template>
     <section class="section-website-our-projects">

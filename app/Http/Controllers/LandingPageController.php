@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\LandingPageResource;
 use App\Models\LandingPage;
+use Inertia\Inertia;
 use Inertia\Response;
 
 class LandingPageController extends Controller
@@ -13,7 +14,7 @@ class LandingPageController extends Controller
         $landingPage->loadMissing('projects.client');
 
         return (new HomeController)->render([
-            'landingPage' => LandingPageResource::make($landingPage),
+            'landingPage' => Inertia::defer(fn () => LandingPageResource::make($landingPage)),
         ]);
     }
 }

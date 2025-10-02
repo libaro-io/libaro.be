@@ -27,7 +27,7 @@ class HomeController extends Controller
         return Inertia::render('website/home',
             array_merge([
                 'clients' => Inertia::defer(fn () => $this->getClients()),
-                'projects' => $this->getProjects(),
+                'projects' => Inertia::defer(fn () => $this->getProjects()),
             ], $props)
         );
     }

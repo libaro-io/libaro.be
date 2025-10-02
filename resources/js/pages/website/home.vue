@@ -7,9 +7,8 @@ import { ClientInterface } from "@interfaces/ClientInterface";
 import TextBlockImageComponent from "@components/text-block-image-component.vue";
 import { TextBlockImageInterface } from "@interfaces/TextBlockImageInterface";
 import defaultHomeImage from "@assets/images/strategy_1_584.webp";
-
 import OurProjects from "@pages/website/sections/our-projects.vue";
-import { ProjectInterface } from "@interfaces/ProjectInterface";
+import {placeholderProject, ProjectInterface} from "@interfaces/ProjectInterface";
 import { getTrans } from "@composables/UseTranslationHelper";
 import { LandingPageInterface } from "@interfaces/LandingPageInterface";
 import { computed } from "vue";
@@ -17,7 +16,7 @@ import {getLandingPageImage} from "@composables/UseLandingPageImage";
 
 const props = defineProps<{
     clients?: PaginationInterface<ClientInterface[]>;
-    projects: ProjectInterface[];
+    projects?: ProjectInterface[];
     landingPage?: LandingPageInterface;
 }>();
 
@@ -55,7 +54,8 @@ const pageTitle = computed(
 
 const pageDescription = computed(() => getTrans("pages.home.header.description"));
 
-const projects = computed(() => props.landingPage?.projects ?? props.projects);
+const projectPlaceholder = [placeholderProject, placeholderProject, placeholderProject]
+const projects = computed(() => props.landingPage?.projects ?? props.projects ?? projectPlaceholder);
 </script>
 <template>
     <website

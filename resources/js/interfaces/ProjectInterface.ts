@@ -1,4 +1,4 @@
-import {ClientInterface} from "@interfaces/ClientInterface";
+import {ClientInterface, placeholderClient} from "@interfaces/ClientInterface";
 import {BlockInterface} from "@interfaces/BlockInterface";
 
 export interface ProjectInterface {
@@ -12,4 +12,16 @@ export interface ProjectInterface {
     client_url: string | null;
     blocks?: BlockInterface[];
     tags: string[];
+}
+
+export const placeholderProject: ProjectInterface = {
+    slug: '',
+    name: '',
+    description: null,
+    type: '',
+    is_product: false,
+    image: null,
+    client: placeholderClient,
+    client_url: null,
+    tags: [],
 }

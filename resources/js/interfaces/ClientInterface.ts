@@ -3,3 +3,9 @@ export interface ClientInterface {
     image: string | null;
     id: number;
 }
+
+export const placeholderClient: ClientInterface = {
+    name: '',
+    image: null,
+    id: 0
+}
