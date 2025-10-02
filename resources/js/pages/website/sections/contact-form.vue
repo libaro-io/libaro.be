@@ -23,12 +23,11 @@ const contactForm = useForm< {
         captcha_token: '',
 });
 
-const submitContactForm = async () => {
+const submitContactForm = async (): Promise<void> => {
     if (contactForm.processing) {
         return;
     }
     if (!recaptcha) {
-        console.error('ReCaptcha is not available');
         return;
     }
     await recaptcha.recaptchaLoaded();

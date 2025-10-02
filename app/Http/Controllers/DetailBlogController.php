@@ -8,7 +8,7 @@ use Inertia\Inertia;
 
 class DetailBlogController extends Controller
 {
-    public function __invoke(string $locale, Blog $blog)
+    public function __invoke(string $locale, Blog $blog): Response
     {
         $blog->loadMissing('blocks');
 

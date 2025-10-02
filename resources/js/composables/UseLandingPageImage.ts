@@ -13,7 +13,7 @@ import landingPageHomeImage12 from "@assets/images/libaro-team_12.webp";
 import landingPageHomeImage13 from "@assets/images/libaro-team_13.webp";
 import landingPageHomeImage14 from "@assets/images/libaro-team_14.webp";
 
-export const getLandingPageImage = (image_index: number | null) => {
+export const getLandingPageImage = (image_index: number | null): string => {
     if(image_index === null) {
         return landingPageHomeImage1;
     }

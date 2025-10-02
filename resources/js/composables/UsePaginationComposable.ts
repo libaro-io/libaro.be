@@ -2,7 +2,7 @@ import {router} from "@inertiajs/vue3";
 import {computed, ComputedRef} from "vue";
 import {PaginationInterface} from "@interfaces/PaginationInterface";
 
-interface UsePaginationReturn<T> {
+interface UsePaginationReturn {
     goToNextPage: () => void;
     goToPreviousPage: () => void;
     canGoToNextPage: ComputedRef<boolean>;
@@ -13,7 +13,7 @@ interface UsePaginationReturn<T> {
 export function usePagination<T = unknown>(
     getPagination: () => PaginationInterface<T[]> | null | undefined,
     only: string[] = []
-): UsePaginationReturn<T> {
+): UsePaginationReturn {
     const canGoToNextPage = computed<boolean>(() => {
         const pagination = getPagination();
         return !!pagination?.next_page_url;
@@ -24,7 +24,7 @@ export function usePagination<T = unknown>(
         return !!pagination?.prev_page_url;
     });
 
-    const goToUrl = (url: string | null) => {
+    const goToUrl = (url: string | null):void => {
         if (!url) return;
 
         router.visit(url, {
@@ -35,12 +35,12 @@ export function usePagination<T = unknown>(
         });
     };
 
-    const goToNextPage = () => {
+    const goToNextPage = ():void => {
         const pagination = getPagination();
         goToUrl(pagination?.next_page_url || null);
     };
 
-    const goToPreviousPage = () => {
+    const goToPreviousPage = ():void => {
         const pagination = getPagination();
         goToUrl(pagination?.prev_page_url || null);
     };

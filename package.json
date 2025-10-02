@@ -4,7 +4,10 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "lint": "eslint \"resources/js/**/*.{ts,tsx,vue}\"",
+        "lint:fix": "eslint  \"resources/js/**/*.{ts,tsx,vue}\" --fix",
+        "prepare": "husky"
     },
     "devDependencies": {
         "@laravel/vite-plugin-wayfinder": "0.1.3",
@@ -17,15 +20,23 @@
         "vite": "^7.0.4"
     },
     "dependencies": {
+        "@eslint/js": "9.36.0",
         "@inertiajs/vue3": "2.1.6",
         "@libaro-io/laravel-frontend-conventions": "5.0.13",
         "@vitejs/plugin-vue": "6.0.1",
+        "@vue/eslint-config-typescript": "14.6.0",
+        "eslint": "9.36.0",
+        "eslint-config-prettier": "10.1.8",
+        "eslint-plugin-vue": "10.5.0",
+        "husky": "9.1.7",
         "laravel-vue-i18n": "2.8.0",
+        "lint-staged": "16.2.3",
         "luxon": "3.7.2",
         "vite-plugin-run": "0.6.1",
         "vue": "3.5.21",
         "vue-i18n": "11.1.12",
         "vue-recaptcha-v3": "2.0.1",
+        "vue-tsc": "3.1.0",
         "vue3-toastify": "0.2.8"
     }
 }

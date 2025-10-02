@@ -7,7 +7,6 @@ import {getTrans} from "@composables/UseTranslationHelper";
 import BlogItemLink from "@pages/website/sections/blog-item-link.vue";
 import {computed} from "vue";
 import {useS3Image} from "@composables/useS3Image";
-import {Link} from "@inertiajs/vue3";
 
 const props = defineProps<{
     blog: BlogInterface

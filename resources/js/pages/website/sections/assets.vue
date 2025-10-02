@@ -25,7 +25,7 @@ const assets: AssetsInterface[] = [
     }
 ];
 
-const downloadAsset = async (imageUrl: string, name: string) => {
+const downloadAsset = async (imageUrl: string, name: string): Promise<void> => {
     try {
         const response = await fetch(imageUrl);
         const blob = await response.blob();
@@ -41,7 +41,7 @@ const downloadAsset = async (imageUrl: string, name: string) => {
             window.URL.revokeObjectURL(blobUrl);
         }, 100);
     } catch (error) {
-        console.error('Error downloading file:', error);
+        alert(error);
     }
 }
 

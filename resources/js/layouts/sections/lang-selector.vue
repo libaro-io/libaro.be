@@ -4,13 +4,12 @@ import {getActiveLanguage, loadLanguageAsync} from "laravel-vue-i18n";
 import {Ref, ref} from "vue";
 import {router} from "@inertiajs/vue3";
 import UpdateLangController from "@actions/App/Http/Controllers/UpdateLangController";
-import {setUrlDefaults} from "../../wayfinder";
 
 const languages: string[] = ['nl', 'en'];
 
 const currentLanguage: Ref<string> = ref(getActiveLanguage());
 
-const setLanguage = (language: string) => {
+const setLanguage = (language: string):void => {
     const oldLanguage = getActiveLanguage();
     router.visit(UpdateLangController().url, {
         method: UpdateLangController().method,

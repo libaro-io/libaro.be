@@ -1,7 +1,6 @@
 <script setup lang="ts">
 
 import {TextBlockImageInterface} from "@interfaces/TextBlockImageInterface";
-import {getTrans} from "@composables/UseTranslationHelper";
 import LargeImageComponent from "@components/large-image-component.vue";
 import TitleComponent from "@components/title-component.vue";
 import SubTitleComponent from "@components/sub-title-component.vue";

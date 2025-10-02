@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import TitleComponent from "@components/title-component.vue";
-import {ref, onMounted, nextTick, onUnmounted, computed} from "vue";
+import {ref, onMounted, onUnmounted} from "vue";
 import LargeImageComponent from "@components/large-image-component.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
 import BadgeComponent from "@components/badge-component.vue";
@@ -17,7 +17,7 @@ const activeList = ref(0);
 const indicatorRef = ref<HTMLElement>();
 const listRef = ref<HTMLElement>();
 
-const setActive = (index: number) => {
+const setActive = (index: number):void => {
     if (!props.isClickable) {
         return;
     }
@@ -33,7 +33,7 @@ const getAlt = (): string => {
     return getTrans(props.listWithImage.listItems[activeList.value].title);
 }
 
-const updateIndicatorPosition = (index: number) => {
+const updateIndicatorPosition = (index: number):void => {
     if (!indicatorRef.value || !listRef.value) return;
 
     const listItems = listRef.value.querySelectorAll('li');
@@ -50,15 +50,15 @@ const updateIndicatorPosition = (index: number) => {
     }
 }
 
-const handleMouseEnter = (index: number) => {
+const handleMouseEnter = (index: number):void=> {
     updateIndicatorPosition(index);
 }
 
-const handleMouseLeave = () => {
+const handleMouseLeave = ():void => {
     updateIndicatorPosition(activeList.value);
 }
 
-const handleResize = () => {
+const handleResize = ():void => {
     updateIndicatorPosition(activeList.value);
 }
 
@@ -90,7 +90,10 @@ const listClasses = (index: number): string[] => {
                 {{ getTrans(listWithImage.title) }}
             </title-component>
             <div class="texts" v-if="listWithImage.descriptions">
-                <p v-for="description in listWithImage.descriptions">
+                <p
+                    :key="index"
+                    v-for="(description, index) in listWithImage.descriptions"
+                >
                     {{ getTrans(description) }}
                 </p>
             </div>
@@ -103,7 +106,7 @@ const listClasses = (index: number): string[] => {
                     </div>
                     <ul ref="listRef">
                         <li
-                            key="index"
+                            :key="index"
                             @click="setActive(index)"
                             @mouseenter="handleMouseEnter(index)"
                             @mouseleave="handleMouseLeave"
@@ -115,7 +118,10 @@ const listClasses = (index: number): string[] => {
                             <div
                                 v-if="listItem.badges"
                                 class="badges">
-                                <badge-component v-for="badge in listItem.badges">
+                                <badge-component
+                                    :key="index"
+                                    v-for="(badge, index) in listItem.badges"
+                                >
                                     {{ getTrans(badge) }}
                                 </badge-component>
                             </div>

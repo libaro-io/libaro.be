@@ -37,7 +37,7 @@ const options = computed((): HeaderOptions => {
 
 const menuOpen: Ref<boolean> = ref(false);
 
-const toggleMenu = () => {
+const toggleMenu = ():void => {
     menuOpen.value = !menuOpen.value;
     if (menuOpen.value) {
         document.body.classList.add('overflow-hidden');

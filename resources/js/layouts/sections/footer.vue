@@ -4,7 +4,6 @@ import { computed, ref, Ref } from "vue";
 import { Link, usePage } from "@inertiajs/vue3";
 import PageInterface from "@interfaces/PageInterface";
 import { getTrans } from "@composables/UseTranslationHelper";
-import HomeController from "../../actions/App/Http/Controllers/HomeController";
 import { TranslationKey } from "../../translations/lang-keys";
 import ProfileIconComponent from "@components/profile-icon-component.vue";
 import bert from "@assets/images/bert.webp";

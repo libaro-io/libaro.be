@@ -23,6 +23,7 @@ const props = defineProps<{
             <div class="inner-container">
                 <Link
                     v-for="landingPage in props.landingPages"
+                    :key="landingPage.slug"
                     :href="LandingPageController({landingPage: { slug: landingPage.slug } })">
                     <cta-block-component
                         :title="landingPage.title"

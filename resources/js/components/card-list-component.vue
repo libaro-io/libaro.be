@@ -3,7 +3,7 @@ import { onMounted, onUnmounted, ref } from "vue";
 
 const scrolled = ref(false);
 
-const handleScroll = () => {
+const handleScroll = ():void => {
     scrolled.value = window.scrollY > 150;
 };
 

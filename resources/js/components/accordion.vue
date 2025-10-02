@@ -9,7 +9,7 @@ const activeItem = ref<number | null>(null);
 </script>
 <template>
     <section class="component-accordion">
-        <div class="accordion" v-for="(item, index) in items" :key="index">
+        <div class="accordion" v-for="(item, index) in props.items" :key="index">
             <label @click="activeItem = index">
                 {{ item.title }}
 

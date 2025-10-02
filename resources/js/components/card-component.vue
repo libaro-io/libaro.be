@@ -36,11 +36,15 @@ const hasTagsOrCategory = computed(() => {
                         v-if="props.category"
                         class="tag"
                     >{{ props.category }}</span>
-                        <span
+                        <template
                             v-if="props.tags"
-                            v-for="(tag, index) in props.tags" :key="index"
-                            class="tag"
-                        >{{ tag }}</span>
+                        >
+                             <span
+                                 v-for="(tag, index) in props.tags" :key="index"
+                                 class="tag"
+                             >{{ tag }}</span>
+                        </template>
+
                     </div>
                     <h2>{{ props.title }}</h2>
                     <h3 v-if="props.subTitle">{{ props.subTitle }}</h3>

@@ -5,7 +5,6 @@ import {Link} from "@inertiajs/vue3";
 import {getTrans} from "@composables/UseTranslationHelper";
 import {ref} from "vue";
 import {MenuInterface} from "@interfaces/MenuInterface";
-import HomeController from "../../actions/App/Http/Controllers/HomeController";
 import BlogController from "@actions/App/Http/Controllers/BlogController";
 import ProductController from "@actions/App/Http/Controllers/ProductController";
 

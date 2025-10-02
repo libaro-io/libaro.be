@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import Website from "@layouts/website.vue";
 import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
-import iotHeader from "@assets/images/iot/header.png";
 import {getTrans} from "@composables/UseTranslationHelper";
 import ListWithImageComponent from "@components/list-with-image-component.vue";
-
 import Integrations from "@pages/website/expertise/sections/integrations.vue";
 import {conceptToAppsBlock, integrationsList} from "@composables/expertises/useIOTComposable";
+import iotHeader from "@assets/images/iot/header.png";
 
 </script>
 <template>

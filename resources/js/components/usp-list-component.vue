@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import TitleComponent from "@components/title-component.vue";
 import {UspListInterface} from "@interfaces/UspListInterface";
 import {getTrans} from "@composables/UseTranslationHelper";
 
@@ -24,7 +23,8 @@ const props = defineProps<{
        </header>
         <div class="items">
             <div
-                v-for="item in props.uspList.listItems"
+                :key="index"
+                v-for="(item, index) in props.uspList.listItems"
             >
                 <h3>{{ getTrans(item.title) }}</h3>
                 <p>{{ getTrans(item.description) }}</p>

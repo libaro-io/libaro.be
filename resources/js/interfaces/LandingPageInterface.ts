@@ -1,5 +1,3 @@
-import {ClientInterface} from "@interfaces/ClientInterface";
-import {BlockInterface} from "@interfaces/BlockInterface";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
 
 export interface LandingPageInterface {

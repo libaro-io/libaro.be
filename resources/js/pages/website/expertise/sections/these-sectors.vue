@@ -2,7 +2,6 @@
 import TitleComponent from "@components/title-component.vue";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
 import CardComponent from "@components/card-component.vue";
-import ProjectController from "@actions/App/Http/Controllers/ProjectController";
 import DetailProjectController from "@actions/App/Http/Controllers/DetailProjectController";
 import {useS3Image} from "@composables/useS3Image";
 import SliderComponent from "@components/slider-component.vue";
@@ -28,6 +27,7 @@ const props = defineProps<{
                 <slider-component>
                     <card-component
                         v-for="project in props.projects"
+                        :key="project.slug"
                         :title="project.name"
                         :image="useS3Image(project.image)"
                         :sub-title="project.client.name"

@@ -19,7 +19,7 @@ const props = defineProps<{
             <template v-if="props.block.type === BlockTypeEnum.IMAGE">
                 <large-image-component
                     v-if="props.block.data.image"
-                    :image="useS3Image(props.block.data.image)"
+                    :image="useS3Image(props.block.data.image) ?? ''"
                     :alt="props.alt"
                 />
             </template>
@@ -28,7 +28,7 @@ const props = defineProps<{
                 <div class="grid-layout">
                     <large-image-component
                         v-if="props.block.data.image"
-                        :image="useS3Image(props.block.data.image)"
+                        :image="useS3Image(props.block.data.image) ?? ''"
                         :alt="props.alt"
                         :class="{'order-2': props.block.data.layout == 'text_image'}"
                     />

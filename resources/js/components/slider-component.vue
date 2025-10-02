@@ -5,7 +5,7 @@ import RoundedButton from "@components/buttons/rounded-button.vue";
 const sliderRef = ref<HTMLElement | null>(null);
 const scrollPosition = ref(0);
 
-const updateScrollPosition = () => {
+const updateScrollPosition = ():void => {
     if (sliderRef.value) {
         scrollPosition.value = sliderRef.value.scrollLeft;
     }

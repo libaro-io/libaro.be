@@ -1,5 +1,3 @@
-import {TranslationKey} from "../translations/lang-keys";
-
 export interface TextBlockImageInterface{
     subTitle?: string;
     title: string;
