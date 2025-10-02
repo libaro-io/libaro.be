@@ -47,6 +47,10 @@ const toggleMenu = () => {
     }
 }
 
+const hasTags = computed(() => {
+    return options.value.tags && options.value.tags.length > 0;
+})
+
 router.on('navigate', () => {
     menuOpen.value = false;
     document.body.classList.remove('overflow-hidden');
@@ -119,7 +123,7 @@ document.head.appendChild(preloadLink);
                         >{{ props.pageDescription }}</p>
 
                         <div class="tags"
-                             v-if="options.tags">
+                             v-if="hasTags">
                         <span
                             v-for="(tag, index) in options.tags" :key="index"
                             class="tag"
