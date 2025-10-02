@@ -9,6 +9,7 @@ return [
         'ai_integrations' => 'AI Integraties',
         'iot' => 'IoT',
         'odoo' => 'Odoo',
+        'robaws' => 'Robaws',
         'apps' => 'Apps',
         'contact' => 'Contact',
         'projects' => 'Onze realisaties',

@@ -74,5 +74,9 @@ return [
             'title' => 'Odoo Implementatie - ERP Software op Maat',
             'description' => 'Odoo is ERP-software die al je bedrijfsprocessen samenbrengt in één krachtig platform. Van CRM, boekhouding en voorraadbeheer tot online marketing, projectmanagement en HR: voor elke behoefte is er een slimme Odoo-app.',
         ],
+        'robaws' => [
+            'title' => 'robaws - Slimme Robotstofzuigers voor Professioneel Gebruik',
+            'description' => 'Ontdek robaws, de professionele robotstofzuiger die uw schoonmaakproces automatiseert. Ideaal voor kantoren, winkels en bedrijfspanden. Bespaar tijd en kosten met slimme schoonmaaktechnologie.',
+        ],
     ],
 ];

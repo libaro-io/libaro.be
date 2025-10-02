@@ -36,6 +36,9 @@
                         .badges{
                             @apply flex flex-wrap gap-3 mt-4;
                         }
+                        a{
+                            @apply font-gilroy underline mt-4 inline-block;
+                        }
                     }
                 }
             }

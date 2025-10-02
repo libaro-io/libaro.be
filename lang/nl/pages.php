@@ -422,5 +422,44 @@ return [
                 ]
             ]
         ]
+    ],
+    'robaws' => [
+        'header' => [
+            'title' => 'Wij integreren uw tools met Robaws',
+            'description' => [
+                'Robaws is de slimme ERP-software speciaal ontwikkeld voor bouw- en installatiebedrijven. Het helpt je offertes op te maken, projecten op te volgen en kosten onder controle te houden in één overzichtelijk systeem.',
+                'Bij Libaro ontwikkelen we maatwerksoftware en programmeren we integraties met Robaws, zodat jouw processen perfect aansluiten op zowel bestaande tools als nieuwe toepassingen.'
+            ]
+        ],
+        'how_we_make_robaws_better' => [
+            'title' => 'Hoe we Robaws beter maken',
+            'description' => 'Digitaliseer je werfbeheer met de apps van Libaro. Van opdrachten en dagrapporten tot tijdsregistratie: onze oplossingen integreren naadloos met Robaws en maken het werk eenvoudiger, sneller en transparanter voor zowel onderaannemers, teamleaders als beheerders.',
+            'list_items' => [
+                'mobile_app' => [
+                    'title' => 'Mobiele App voor onderaannemers',
+                    'description' => 'Maak je werkdag eenvoudiger met realtime opdrachtbeheer, automatische check-in-at-work en naadloze Robaws-integratie. Efficiënt, transparant en volledig juridisch correct.',
+                    'link' => 'Bekijk het project'
+                ],
+                'daily_reports' => [
+                    'title' => 'Dagrapporten voor teamleaders',
+                    'description' => 'De Dagrapporten App is dé tool om materialen en mankracht eenvoudig te registreren en dagelijkse rapportages te stroomlijnen. Met een gebruiksvriendelijke interface hebben projectmanagers en teams altijd alle gegevens direct bij de hand.',
+                    'link' => 'Bekijk het project'
+                ],
+                'time_registration' => [
+                    'title' => 'App voor tijdsregistratie',
+                    'description' => 'Eenvoudig, nauwkeurig en mobiel – de ideale oplossing voor tijdbeheer op de werf. Speciaal ontwikkeld voor de bouwsector, combineert de app automatische incheck, materiaalregistratie en toegang tot cruciële werfinformatie in één gebruiksvriendelijke tool. Zo beheer je werkuren, materiaal en kosten foutloos en efficiënt.',
+                    'badges' => [
+                        'Mobiel inchecken – Automatische tijdsregistratie bij aankomst op de werf',
+                        'Materiaalregistratie – Registreer eenvoudig gebruikte materialen per project',
+                        'Werfinformatie – Altijd toegang tot actuele veiligheidsvoorschriften en contactgegevens'
+                    ],
+                    'link' => 'Bekijk het project'
+                ]
+            ]
+        ],
+        'api_integration' => [
+            'title' => 'Libaro maakt de koppeling met de Robaws API',
+            'text' => 'Soms kan je bepaalde programma\'s niet zomaar uitfaseren, of lijkt Robaws nét dat tikkeltje tekort te schieten om volledig de overstap te maken. In dat geval zorgt Libaro voor de perfecte oplossing: wij koppelen Robaws via de API met jouw bestaande of nieuwe software, zodat je processen naadloos blijven doorlopen en je toch maximaal rendement haalt uit Robaws.'
+        ]
     ]
 ];

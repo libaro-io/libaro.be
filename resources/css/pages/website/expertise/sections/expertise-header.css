@@ -9,6 +9,9 @@
             p{
                 @apply font-grotesk text-xl xl:text-2xl text-white xl:text-primary-darkest;
             }
+            .descriptions{
+                @apply flex flex-col gap-6;
+            }
         }
 
         .image {

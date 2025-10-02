@@ -422,6 +422,45 @@ return [
                 ]
             ]
         ]
+    ],
+    'robaws' => [
+        'header' => [
+            'title' => 'We integrate your tools with Robaws',
+            'description' => [
+                'Robaws is the smart ERP software specially developed for construction and installation companies. It helps you create quotes, track projects and keep costs under control in one clear system.',
+                'At Libaro, we develop custom software and program integrations with Robaws, so that your processes perfectly align with both existing tools and new applications.'
+            ]
+        ],
+        'how_we_make_robaws_better' => [
+            'title' => 'How we make Robaws better',
+            'description' => 'Digitize your site management with Libaro\'s apps. From assignments and daily reports to time registration: our solutions integrate seamlessly with Robaws and make work easier, faster and more transparent for subcontractors, team leaders and administrators.',
+            'list_items' => [
+                'mobile_app' => [
+                    'title' => 'Mobile App for Subcontractors',
+                    'description' => 'Make your workday easier with real-time assignment management, automatic check-in-at-work and seamless Robaws integration. Efficient, transparent and fully legally compliant.',
+                    'link' => 'View the project'
+                ],
+                'daily_reports' => [
+                    'title' => 'Daily Reports for Team Leaders',
+                    'description' => 'The Daily Reports App is the tool to easily register materials and manpower and streamline daily reporting. With a user-friendly interface, project managers and teams always have all data at their fingertips.',
+                    'link' => 'View the project'
+                ],
+                'time_registration' => [
+                    'title' => 'Time Registration App',
+                    'description' => 'Simple, accurate and mobile – the ideal solution for time management on site. Specially developed for the construction sector, the app combines automatic check-in, material registration and access to crucial site information in one user-friendly tool. Manage working hours, materials and costs flawlessly and efficiently.',
+                    'badges' => [
+                        'Mobile check-in – Automatic time registration upon arrival at the site',
+                        'Material registration – Easily register used materials per project',
+                        'Site information – Always access to current safety regulations and contact details'
+                    ],
+                    'link' => 'View the project'
+                ]
+            ]
+        ],
+        'api_integration' => [
+            'title' => 'Libaro makes the connection with the Robaws API',
+            'text' => 'Sometimes you can\'t just phase out certain programs, or Robaws seems to fall just short of making the complete switch. In that case, Libaro provides the perfect solution: we connect Robaws via the API with your existing or new software, so that your processes continue to run seamlessly and you still get maximum return from Robaws.'
+        ]
     ]
 
 ];

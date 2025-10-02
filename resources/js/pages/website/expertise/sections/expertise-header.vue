@@ -7,7 +7,7 @@ import {DateTime} from "luxon";
 
 const props = defineProps<{
     title: TranslationKey;
-    description: TranslationKey;
+    description: TranslationKey | TranslationKey[];
     image: string;
 }>();
 
@@ -25,7 +25,14 @@ const getImageUrl = computed(():string => {
         <div class="container">
             <div class="text">
                 <h1>{{getTrans(props.title)}}</h1>
-                <p>{{ getTrans(props.description)}}</p>
+                <div class="descriptions" v-if="Array.isArray(props.description)">
+                    <p v-for="description in props.description" :key="description">
+                        {{getTrans(description)}}
+                    </p>
+                </div>
+                <p v-else>
+                    {{getTrans(props.description)}}
+                </p>
             </div>
             <div class="image">
                 <img

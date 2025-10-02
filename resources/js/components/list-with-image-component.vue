@@ -5,6 +5,7 @@ import {ref, onMounted, onUnmounted} from "vue";
 import LargeImageComponent from "@components/large-image-component.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
 import BadgeComponent from "@components/badge-component.vue";
+import {Link} from "@inertiajs/vue3";
 
 const props = withDefaults(defineProps<{
     listWithImage: ListWithImageInterface;
@@ -125,6 +126,11 @@ const listClasses = (index: number): string[] => {
                                     {{ getTrans(badge) }}
                                 </badge-component>
                             </div>
+                            <Link
+                                v-if="listItem.link"
+                                :href="listItem.link.url">
+                                {{getTrans(listItem.link.title)}}
+                            </Link>
                         </li>
                     </ul>
                 </div>
