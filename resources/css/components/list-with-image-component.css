@@ -25,10 +25,11 @@
                             &:hover{
                                 @apply cursor-pointer;
                             }
+                            &.active{
+                                @apply bg-slate-50;
+                            }
                         }
-                        &.active{
-                            @apply bg-slate-50;
-                        }
+
                         h3{
                             @apply font-gilroy text-primary font-bold text-xl mb-2;
                         }

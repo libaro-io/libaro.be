@@ -8,6 +8,6 @@
     }
 
     .client-wrapper{
-        @apply grid grid-cols-2 xl:grid-cols-5 gap-6 xl:gap-10;
+        @apply grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-10;
     }
 }
