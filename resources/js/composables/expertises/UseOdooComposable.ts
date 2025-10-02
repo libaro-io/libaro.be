@@ -1,4 +1,4 @@
-import OdooForYou from "@assets/images/odoo/odoo_for_you.jpg";
+import OdooForYou from "@assets/images/odoo/odoo_for_you.png";
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import {IntegrationInterface} from "@interfaces/IntegrationInterface";
 import FinanceIcon from "@assets/images/odoo/icons/finance.png";
