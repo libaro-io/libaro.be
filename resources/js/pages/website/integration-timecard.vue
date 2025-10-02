@@ -19,7 +19,7 @@ import {Link} from "@inertiajs/vue3";
             fullWidthDescription: true,
         }"
         :page-title="getTrans('timecard.integration.title')"
-        :meta-title="getTrans('timecard.integration.title')"
+        meta-key="timecard_integration"
     >
         <div id="page-website-integration-timecard">
             <text-page>

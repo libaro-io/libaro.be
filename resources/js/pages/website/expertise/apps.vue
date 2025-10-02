@@ -114,10 +114,10 @@ const ourToolsBlocks: ToolInterface[] = [
 
 </script>
 <template>
-
     <website
         :margin-bottom="false"
         :meta-title="getTrans('pages.apps.meta_title')"
+        meta-key="apps_expertise"
     >
     <div id="page-website-expertise-apps" class="page-grid">
         <expertise-header

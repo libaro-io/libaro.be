@@ -6,7 +6,7 @@ import Website from "@layouts/website.vue";
 <template>
     <website
         :page-title="getTrans('terms.page_title')"
-        :meta-title="getTrans('terms.meta_title')"
+        meta-key="terms"
         :marginBottom="false"
     >
         <div id="page-website-terms">

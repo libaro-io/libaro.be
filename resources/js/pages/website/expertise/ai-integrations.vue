@@ -2,7 +2,7 @@
 import Website from "@layouts/website.vue";
 </script>
 <template>
-    <website>
+    <website meta-key="ai_integrations_expertise">
         <div id="page-website-expertise-ai-integrations">
             page ai-integrations
         </div>

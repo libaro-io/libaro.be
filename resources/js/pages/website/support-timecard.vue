@@ -60,7 +60,7 @@ const accordionItems = computed(() => [
             fullWidthDescription: true,
         }"
         :page-title="getTrans('timecard.support.title')"
-        :meta-title="getTrans('timecard.support.title')"
+        meta-key="timecard_support"
     >
         <div id="page-website-support-timecard">
             <text-page>

@@ -26,7 +26,9 @@ const hero = computed(() => {
             tags: props.blog.tags,
             background: hero
         }"
-        :meta-title="props.blog.title"
+        meta-key="blogs"
+        :meta-title-override="props.blog.title"
+        :meta-description-override="props.blog.description"
         :marginBottom="false">
         <div id="page-website-blog-item">
             <content-block

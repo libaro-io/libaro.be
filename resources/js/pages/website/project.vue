@@ -30,7 +30,9 @@ const hero = computed(() => {
             background: hero,
             tags: props.project.tags
         }"
-        :meta-title="props.project.name"
+        meta-key="projects"
+        :meta-title-override="props.project.name"
+        :meta-description-override="props.project.description"
         :marginBottom="false">
         <div id="page-website-project">
             <content-block

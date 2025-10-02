@@ -2,7 +2,6 @@
 
 return [
     'page_title' => 'Cookiebeleid',
-    'meta_title' => 'Cookiebeleid',
 
     'intro' => [
         'heading' => 'Algemeen',

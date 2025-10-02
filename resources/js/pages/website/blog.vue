@@ -15,7 +15,7 @@ const props = defineProps<{
     <website
         :page-title="getTrans('blogs.page_title')"
         :page-description="getTrans('blogs.page_description')"
-        :meta-title="getTrans('blogs.meta_title')"
+        meta-key="blogs"
         :marginBottom="false">
         <div id="page-website-blog">
             <card-list-component>

@@ -20,7 +20,7 @@ const props = defineProps<{
 <template>
     <website
         :margin-bottom="false"
-        :meta-title="getTrans('pages.iot.meta_title')"
+        meta-key="iot_expertise"
     >
         <div id="page-website-expertise-iot" class="page-grid">
             <expertise-header

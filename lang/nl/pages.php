@@ -218,7 +218,6 @@ return [
         ]
     ],
     'apps' => [
-        'meta_title' => 'Mobiele Apps op Maat - iOS & Android Ontwikkeling',
         'header' => [
             'title' => 'Een mobiele app op maat van uw noden',
             'description' => 'Digitale maatwerkoplossingen die uw processen automatiseren. Het resultaat? U bespaart tijd én geld.'
@@ -298,7 +297,6 @@ return [
         ]
     ],
     'iot' => [
-        'meta_title' => 'IoT Integraties - Slimme Kantooroplossingen',
         'header' => [
             'title' => 'Slimme IoT integraties voor moderne kantoren',
             'description' => 'Automatiseer en optimaliseer uw kantooromgeving met onze IoT oplossingen. Van slimme verlichting tot parkeermanagement - maak uw bedrijf efficiënter, veiliger en kostenbesparender.'

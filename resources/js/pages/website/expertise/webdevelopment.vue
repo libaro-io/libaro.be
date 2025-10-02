@@ -120,7 +120,7 @@ const ourToolsBlocks: ToolInterface[] = [
     <website
         :page-title="getTrans('pages.webdevelopment.header.title')"
         :page-description="getTrans('pages.webdevelopment.header.description')"
-        :meta-title="getTrans('pages.webdevelopment.meta_title')"
+        meta-key="webdevelopment_expertise"
     >
         <div id="page-website-expertise-webdevelopment" class="page-grid">
             <list-with-image-component

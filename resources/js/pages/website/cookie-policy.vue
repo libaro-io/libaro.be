@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import TextPage from "@pages/website/sections/text-page.vue";
-import { getTrans } from "@composables/UseTranslationHelper";
+import {getTrans} from "@composables/UseTranslationHelper";
 import Website from "@layouts/website.vue";
 </script>
 <template>
     <website
         :page-title="getTrans('cookie.page_title')"
-        :meta-title="getTrans('cookie.meta_title')"
+        meta-key="cookies"
         :marginBottom="false"
     >
         <div id="page-website-cookie-policy">

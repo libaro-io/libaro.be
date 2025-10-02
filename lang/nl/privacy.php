@@ -2,7 +2,6 @@
 
 return [
     'page_title' => 'Privacybeleid',
-    'meta_title' => 'Privacybeleid',
 
     'intro' => [
         'heading' => 'Algemeen',

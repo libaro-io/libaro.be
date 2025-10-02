@@ -2,7 +2,6 @@
 
 return [
     'page_title' => 'Algemene Voorwaarden',
-    'meta_title' => 'Algemene Voorwaarden',
 
     'intro' => [
         'heading' => 'Algemeen',

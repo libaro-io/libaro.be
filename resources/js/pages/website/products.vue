@@ -16,7 +16,7 @@ const props = defineProps<{
         :page-title="getTrans('products.page_title')"
         :page-sub-title="getTrans('products.page_sub_title')"
         :page-description="getTrans('products.page_description')"
-        :meta-title="getTrans('products.meta_title')"
+        meta-key="products"
         :marginBottom="false">
         <div id="page-website-products">
             <card-list-component>

@@ -6,7 +6,7 @@ import Website from "@layouts/website.vue";
 <template>
     <website
         :page-title="getTrans('privacy.page_title')"
-        :meta-title="getTrans('privacy.meta_title')"
+        meta-key="privacy"
         :marginBottom="false"
     >
         <div id="page-website-privacy-policy">

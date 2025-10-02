@@ -2,7 +2,6 @@
 
 return [
     'page_title' => 'Terms and Conditions',
-    'meta_title' => 'Terms and Conditions',
 
     'intro' => [
         'heading' => 'General',

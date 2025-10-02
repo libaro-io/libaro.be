@@ -16,6 +16,7 @@ class BlogResource extends JsonResource
     {
         return [
             'title' => $this->title,
+            'description' => $this->description,
             'slug' => $this->slug,
             'date' => $this->publish_date->translatedFormat('j F, Y'),
             'tags' => $this->tags,

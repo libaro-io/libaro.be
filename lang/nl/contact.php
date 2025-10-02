@@ -3,7 +3,6 @@
 return [
     'page_title' => 'Vragen? Opmerkingen?',
     'page_sub_title' => 'Contacteer Ons',
-    'meta_title' => 'Contact',
     'meet_us' => 'Laat ons afspreken! Kom naar ons of wij komen naar jou. Stel ons de moeilijke vragen waar je geen antwoorden op hebt.',
     'cta' => [
         'title' => 'Benieuwd naar de digitale mogelijkheden?',

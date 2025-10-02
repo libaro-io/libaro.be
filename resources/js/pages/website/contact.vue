@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Website from "@layouts/website.vue";
-import {getTrans} from "@composables/UseTranslationHelper";
+import { getTrans } from "@composables/UseTranslationHelper";
 import ContactInformation from "@pages/website/sections/contact-information.vue";
 import ContactForm from "@pages/website/sections/contact-form.vue";
 import LargeImageSubtitleComponent from "@components/large-image-subtitle-component.vue";
@@ -10,7 +10,8 @@ import strategy2 from "@assets/images/strategy_2.webp";
     <Website
         :page-title="getTrans('contact.page_title')"
         :page-sub-title="getTrans('contact.page_sub_title')"
-        :meta-title="getTrans('contact.meta_title')">
+        meta-key="contact"
+    >
         <div id="page-website-contact" class="page-grid">
             <div class="grid container">
                 <div>

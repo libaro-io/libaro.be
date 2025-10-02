@@ -2,7 +2,6 @@
 
 return [
     'page_title' => 'Privacy Policy',
-    'meta_title' => 'Privacy Policy',
 
     'intro' => [
         'heading' => 'General',

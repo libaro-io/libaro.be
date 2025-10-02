@@ -2,7 +2,6 @@
 
 return [
     'page_title' => 'Cookie Policy',
-    'meta_title' => 'Cookie Policy',
 
     'intro' => [
         'heading' => 'General',

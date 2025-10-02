@@ -9,10 +9,9 @@ import {getTrans} from "@composables/UseTranslationHelper";
             fullWidthDescription: true,
         }"
         :page-title="getTrans('pages.assets.title')"
-        :meta-title="getTrans('pages.assets.title')"
         :page-sub-title="getTrans('pages.assets.subtitle')"
         :page-description="getTrans('pages.assets.description')"
-
+        meta-key="assets"
     >
         <div id="page-website-assets">
             <assets-section></assets-section>

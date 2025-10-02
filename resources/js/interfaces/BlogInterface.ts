@@ -2,6 +2,7 @@ import {BlockInterface} from "@interfaces/BlockInterface";
 
 export interface BlogInterface {
     title: string;
+    description: string | null;
     slug: string;
     date: string;
     tags: string[];

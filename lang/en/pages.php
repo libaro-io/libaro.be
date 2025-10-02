@@ -22,7 +22,6 @@ return [
         'description' => 'Below you\'ll find all the assets you need to apply the Libaro branding in your own project.',
     ],
     'webdevelopment' => [
-        'meta_title' => 'Web Development - Custom Web Applications | Libaro',
         'header' => [
             'title' => 'A custom web application tailored to your needs',
             'description' => 'Custom digital solutions that automate your processes. The result? You save both time and money.'
@@ -218,7 +217,6 @@ return [
         ]
     ],
     'apps' => [
-        'meta_title' => 'Custom Mobile Apps - iOS & Android Development',
         'header' => [
             'title' => 'A mobile app tailored to your needs',
             'description' => 'Custom digital solutions that automate your processes. The result? You save time and money.'

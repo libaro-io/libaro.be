@@ -52,9 +52,8 @@ const textBlockImage = computed<TextBlockImageInterface>(() => {
 const pageTitle = computed(
     () => props.landingPage?.title ?? getTrans("pages.home.header.title")
 );
-const metaTitle = computed(
-    () => props.landingPage?.title ?? getTrans("pages.home.title")
-);
+
+const pageDescription = computed(() => getTrans("pages.home.header.description"));
 
 const projects = computed(() => props.landingPage?.projects ?? props.projects);
 </script>
@@ -66,8 +65,10 @@ const projects = computed(() => props.landingPage?.projects ?? props.projects);
             fullWidthDescription: true,
         }"
         :page-title="pageTitle"
-        :page-description="getTrans('pages.home.header.description')"
-        :meta-title="metaTitle"
+        :page-description="pageDescription"
+        meta-key="home"
+        :meta-title-override=" props.landingPage?.title"
+        :meta-description-override=" props.landingPage?.block.text"
     >
         <div id="page-website-home" class="page-grid">
             <our-projects :projects="projects"></our-projects>
