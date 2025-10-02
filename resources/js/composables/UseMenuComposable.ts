@@ -1,8 +1,15 @@
 import {MenuInterface} from "@interfaces/MenuInterface";
 
-
 export const getFilteredMenu = (menu: MenuInterface[]): MenuInterface[] => {
-    return menu.sort((a, b) => a.weight - b.weight)
+    return menu
+        .filter((item) => item.visible);
+}
+
+export const getFilteredChildren = (menu: MenuInterface): MenuInterface[] => {
+    if(!menu.children){
+        return [];
+    }
+    return menu.children
         .filter((item) => item.visible);
 }
 

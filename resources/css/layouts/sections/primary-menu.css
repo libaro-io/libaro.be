@@ -47,7 +47,7 @@
                 }
                 &:hover{
                     .children{
-                        @apply max-h-[200px]  xl:shadow-xl ;
+                        @apply xl:max-h-[400px]  xl:shadow-xl ;
                     }
                 }
             }

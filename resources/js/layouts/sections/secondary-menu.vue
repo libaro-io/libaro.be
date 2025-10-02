@@ -15,13 +15,11 @@ const props = defineProps<{
 
 const secondaryMenu = ref<MenuInterface[]>([
     {
-        weight: 1,
         text: 'menu.secondary.blog',
         url: BlogController(),
         visible: true,
     },
     {
-        weight: 3,
         text: 'menu.secondary.products',
         url: ProductController(),
         visible: true,
@@ -40,7 +38,7 @@ const secondaryMenu = ref<MenuInterface[]>([
                 <li v-for="item in getFilteredMenu(secondaryMenu)" :key="item.text">
                     <Link prefetch
                           :class="checkIfMenuItemIsActive(item) ? 'active' : ''"
-                          :href="item.url.url"> {{ getTrans(item.text) }}
+                          :href="item.url?.url"> {{ getTrans(item.text) }}
                     </Link>
                 </li>
             </ul>

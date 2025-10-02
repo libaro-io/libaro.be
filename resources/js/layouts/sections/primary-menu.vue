@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import {checkIfMenuItemIsActive, getFilteredMenu} from "@composables/UseMenuComposable";
+import {checkIfMenuItemIsActive, getFilteredChildren, getFilteredMenu} from "@composables/UseMenuComposable";
 import {Link} from "@inertiajs/vue3";
 import {getTrans} from "@composables/UseTranslationHelper";
 import {ref} from "vue";
@@ -15,6 +15,7 @@ import AiIntegrationsExpertiseController
     from "@actions/App/Http/Controllers/Expertises/AiIntegrationsExpertiseController";
 import AppsExpertiseController from "@actions/App/Http/Controllers/Expertises/AppsExpertiseController";
 import OdooExpertiseController from "@actions/App/Http/Controllers/Expertises/OdooExpertiseController";
+import IOTExpertiseController from "@actions/App/Http/Controllers/Expertises/IOTExpertiseController";
 
 const props = defineProps<{
     type: 'header' | 'footer'
@@ -22,36 +23,35 @@ const props = defineProps<{
 
 const primaryMenu = ref<MenuInterface[]>([
     {
-        weight: 1,
         text: 'menu.primary.home',
         url: HomeController(),
         visible: true,
     },
     {
-        weight: 2,
         text: 'menu.primary.our-expertises',
         visible: true,
         children: [
             {
-                weight: 1,
                 text: 'menu.primary.web_development',
                 url: WebDevelopmentExpertiseController(),
                 visible: true,
             },
             {
-                weight: 2,
                 text: 'menu.primary.ai_integrations',
                 url: AiIntegrationsExpertiseController(),
-                visible: true,
+                visible: false,
             },
             {
-                weight: 3,
                 text: 'menu.primary.apps',
                 url: AppsExpertiseController(),
                 visible: true,
             },
             {
-                weight: 3,
+                text: 'menu.primary.iot',
+                url: IOTExpertiseController(),
+                visible: false,
+            },
+            {
                 text: 'menu.primary.odoo',
                 url: OdooExpertiseController(),
                 visible: true,
@@ -59,25 +59,21 @@ const primaryMenu = ref<MenuInterface[]>([
         ]
     },
     {
-        weight: 2,
         text: 'menu.primary.projects',
         url: ProjectController(),
         visible: true,
     },
     {
-        weight: 3,
         text: 'menu.primary.about_us',
         url: AboutUsController(),
         visible: true,
     },
     {
-        weight: 4,
         text: 'menu.primary.contact',
         url: ContactController(),
         visible: true,
     },
 ]);
-
 </script>
 <template>
     <section
@@ -106,7 +102,7 @@ const primaryMenu = ref<MenuInterface[]>([
                         v-if="item.children"
                         class="children">
                         <ul v-if="item.children">
-                            <li v-for="child in item.children" :key="child.text">
+                            <li v-for="child in getFilteredChildren(item)" :key="child.text">
                                 <Link
                                     v-if="child.url"
                                     prefetch

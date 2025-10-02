@@ -7,6 +7,7 @@ return [
         'our-expertises' => 'Our Expertises',
         'web_development' => 'Web Development',
         'ai_integrations' => 'AI Integrations',
+        'iot' => 'IoT',
         'odoo' => 'Odoo',
         'apps' => 'Apps',
         'contact' => 'Contact',
