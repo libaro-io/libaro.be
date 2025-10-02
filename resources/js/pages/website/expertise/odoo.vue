@@ -2,7 +2,6 @@
 import Website from "@layouts/website.vue";
 import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
 import odooHeader from "@assets/images/odoo/header.gif";
-import {getTrans} from "@composables/UseTranslationHelper";
 import OurClients from "@pages/website/sections/our-clients.vue";
 import {ClientInterface} from "@interfaces/ClientInterface";
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
@@ -26,7 +25,6 @@ const integrationsList: IntegrationInterface[] = getIntegrations();
 <template>
     <website
         :margin-bottom="false"
-        :meta-title="getTrans('pages.odoo.meta_title')"
         meta-key="odoo_expertise"
     >
         <div id="page-website-expertise-odoo" class="page-grid">
