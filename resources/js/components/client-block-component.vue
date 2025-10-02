@@ -16,7 +16,7 @@ const image = computed(() => {
 <template>
     <section class="component-client-block-component">
         <Link prefetch :href="ClientRandomProjectController({client:props.client})">
-            <img v-if="image" :src="image" :alt="props.client.name"/>
+            <img v-if="image" :src="image" :alt="props.client.name" loading="lazy"/>
         </Link>
     </section>
 </template>

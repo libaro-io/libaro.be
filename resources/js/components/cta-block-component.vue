@@ -18,6 +18,7 @@ const props = defineProps<{
                v-if="props.backgroundImage"
                :src="props.backgroundImage"
                :alt="props.title"
+               loading="lazy"
            >
            <div class="gradient"></div>
            <div class="inner">
