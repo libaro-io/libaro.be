@@ -37,6 +37,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('images/favicon/favicon-96x96.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon/favicon-16x16.png') }}">
+
     <meta name="msapplication-TileColor" content="#0091ff">
     <meta name="msapplication-TileImage" content="{{ asset('images/favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#0091ff">
@@ -55,11 +56,13 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="fb:app_id" content="337068846453413">
 
+    <link rel="stylesheet" href="https://kit.fontawesome.com/0ec3ed4413.css" crossorigin="anonymous">
+
     @vite(['resources/js/app.ts'])
+    
     @inertiaHead
 </head>
 <body class="font-sans antialiased">
 @inertia
-<script defer async src="https://kit.fontawesome.com/0ec3ed4413.js" crossorigin="anonymous"></script>
 </body>
 </html>
