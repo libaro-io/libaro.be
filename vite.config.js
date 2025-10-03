@@ -38,18 +38,20 @@ export default defineConfig({
         },
     },
     plugins: [
-        // run([
-        //     {
-        //         name: "wayfinder",
-        //         run: [...phpPrefix, "php", "artisan", "wayfinder:generate"],
-        //         pattern: ["routes/**/*.php", "app/**/Http/**/*.php"],
-        //     },
-        //     {
-        //         name: "translations-js",
-        //         run: [...phpPrefix, "php", "artisan", "vte:export"],
-        //         pattern: ["lang/**/*.php"],
-        //     },
-        // ]),
+        run([
+            {
+                name: "wayfinder",
+                run: [...phpPrefix, "php", "artisan", "wayfinder:generate"],
+                pattern: ["routes/**/*.php", "app/**/Http/**/*.php"],
+                build: false,
+            },
+            {
+                name: "translations-js",
+                run: [...phpPrefix, "php", "artisan", "vte:export"],
+                pattern: ["lang/**/*.php"],
+                build: false,
+            },
+        ]),
         tailwindReferencePlugin(),
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
