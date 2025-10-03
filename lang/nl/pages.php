@@ -79,7 +79,7 @@ return [
             ],
         ],
         'these_sectors' => [
-            'title' => 'Voor deze sectoren bouwden we al webapplicaties',
+            'title' => 'Voor deze bedrijven bouwden we al webapplicaties',
         ],
         'our_tools' => [
             'title' => 'Verbind uw tools met onze webapplicatie',
@@ -244,7 +244,7 @@ return [
             ],
         ],
         'these_sectors' => [
-            'title' => 'Voor deze sectoren bouwden we al mobiele apps',
+            'title' => 'Voor deze bedrijven bouwden we al mobiele apps',
         ],
         'strategic_advantages' => [
             'title' => 'De strategische voordelen van een app voor je bedrijf',
