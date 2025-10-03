@@ -8,6 +8,7 @@
 @import '@css/layouts/sections/lang-selector.css';
 @import "@css/pages/website/expertise/sections/expertise-header.css";
 @import "@css/components/text-block-image-component.css";
+@import "@css/pages/website/expertise/webdevelopment.css";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
