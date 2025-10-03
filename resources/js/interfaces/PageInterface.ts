@@ -27,6 +27,12 @@ export default interface PageInterface {
                 prefix: string
             }
         },
+        url: {
+            search: string;
+            origin: string;
+            pathname: string;
+            href: string;
+        },
     }
 
     [key: string]: string | number | object | boolean;

@@ -2,9 +2,7 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use Inertia\Middleware;
 
 class HandleInertiaRequests extends Middleware
@@ -63,10 +61,16 @@ class HandleInertiaRequests extends Middleware
                 ],
                 'assets' => [
                     's3' => [
-                        'prefix' => "https://" . config('filesystems.disks.s3.bucket') . ".s3.eu-west-1.amazonaws.com/",
-                    ]
-                ]
-            ]
+                        'prefix' => 'https://' . config('filesystems.disks.s3.bucket') . '.s3.eu-west-1.amazonaws.com/',
+                    ],
+                ],
+                'url' => [
+                    'search' => $request->getQueryString() ? '?' . $request->getQueryString() : '',
+                    'origin' => $request->getSchemeAndHttpHost(),
+                    'pathname' => $request->getPathInfo(),
+                    'href' => $request->fullUrl(),
+                ],
+            ],
         ];
     }
 }

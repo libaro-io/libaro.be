@@ -30,16 +30,19 @@ const downloadAsset = async (imageUrl: string, name: string): Promise<void> => {
         const response = await fetch(imageUrl);
         const blob = await response.blob();
         const blobUrl = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = blobUrl;
-        const extension = imageUrl.split('.').pop()?.split('?')[0] || 'png';
-        link.download = `libaro-${name.toLowerCase().replace(/\s+/g, '-')}.${extension}`;
-        document.body.appendChild(link);
-        link.click();
-        setTimeout(() => {
-            document.body.removeChild(link);
-            window.URL.revokeObjectURL(blobUrl);
-        }, 100);
+
+        if (typeof document !== 'undefined') {
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            const extension = imageUrl.split('.').pop()?.split('?')[0] || 'png';
+            link.download = `libaro-${name.toLowerCase().replace(/\s+/g, '-')}.${extension}`;
+            document.body.appendChild(link);
+            link.click();
+            setTimeout(() => {
+                document.body.removeChild(link);
+                window.URL.revokeObjectURL(blobUrl);
+            }, 100);
+        }
     } catch (error) {
         alert(error);
     }
@@ -48,16 +51,16 @@ const downloadAsset = async (imageUrl: string, name: string): Promise<void> => {
 </script>
 <template>
     <section class="section-website-assets container">
-       <div
-           v-for="asset in assets"
-           :key="asset.name"
-           class="logo">
-           <img :src="asset.image" :alt="asset.name">
-           <button-component
-               @click="downloadAsset(asset.image, asset.name)"
-               :text="getTrans('sections.assets.download_button')"
-               class="download-button"></button-component>
-       </div>
+        <div
+            v-for="asset in assets"
+            :key="asset.name"
+            class="logo">
+            <img :src="asset.image" :alt="asset.name">
+            <button-component
+                @click="downloadAsset(asset.image, asset.name)"
+                :text="getTrans('sections.assets.download_button')"
+                class="download-button"></button-component>
+        </div>
     </section>
 </template>
 <style scoped>

@@ -1,4 +1,8 @@
-import {MenuInterface} from "@interfaces/MenuInterface";
+import { MenuInterface } from "@interfaces/MenuInterface";
+import { usePage } from "@inertiajs/vue3";
+import PageInterface from "@interfaces/PageInterface";
+
+const page = usePage<PageInterface>();
 
 export const getFilteredMenu = (menu: MenuInterface[]): MenuInterface[] => {
     return menu
@@ -6,7 +10,7 @@ export const getFilteredMenu = (menu: MenuInterface[]): MenuInterface[] => {
 }
 
 export const getFilteredChildren = (menu: MenuInterface): MenuInterface[] => {
-    if(!menu.children){
+    if (!menu.children) {
         return [];
     }
     return menu.children
@@ -26,7 +30,7 @@ const normalizePath = (path: string): string => {
 export const checkIfMenuItemIsActive = (item: MenuInterface): boolean => {
     if (!item?.url?.url) return false;
 
-    const normalizedCurrent = normalizePath(window.location.pathname);
+    const normalizedCurrent = normalizePath(page.props.pageProps.url.pathname);
     const normalizedItem = normalizePath(item.url.url);
 
     // Handle home page
@@ -36,5 +40,5 @@ export const checkIfMenuItemIsActive = (item: MenuInterface): boolean => {
 
     // For other pages, check exact match or nested routes
     return normalizedCurrent === normalizedItem ||
-           normalizedCurrent.startsWith(`${normalizedItem}/`);
+        normalizedCurrent.startsWith(`${normalizedItem}/`);
 };

@@ -37,13 +37,15 @@ const options = computed((): HeaderOptions => {
 
 const menuOpen: Ref<boolean> = ref(false);
 
-const toggleMenu = ():void => {
+const toggleMenu = (): void => {
     menuOpen.value = !menuOpen.value;
-    if (menuOpen.value) {
-        document.body.classList.add('overflow-hidden');
-    }
-    if (!menuOpen.value) {
-        document.body.classList.remove('overflow-hidden');
+    if (typeof document !== 'undefined') {
+        if (menuOpen.value) {
+            document.body.classList.add('overflow-hidden');
+        }
+        if (!menuOpen.value) {
+            document.body.classList.remove('overflow-hidden');
+        }
     }
 }
 
@@ -53,16 +55,20 @@ const hasTags = computed(() => {
 
 router.on('navigate', () => {
     menuOpen.value = false;
-    document.body.classList.remove('overflow-hidden');
+    if (typeof document !== 'undefined') {
+        document.body.classList.remove('overflow-hidden');
+    }
 });
 
+if (typeof document !== 'undefined') {
 // Add preload for the background image
-const preloadLink = document.createElement('link');
-preloadLink.rel = 'preload';
-preloadLink.as = 'image';
-preloadLink.href = options.value.background?.startsWith('/') ? options.value.background : `/${options.value.background}`;
-preloadLink.setAttribute('fetchpriority', 'high');
-document.head.appendChild(preloadLink);
+    const preloadLink = document.createElement('link');
+    preloadLink.rel = 'preload';
+    preloadLink.as = 'image';
+    preloadLink.href = options.value.background?.startsWith('/') ? options.value.background : `/${options.value.background}`;
+    preloadLink.setAttribute('fetchpriority', 'high');
+    document.head.appendChild(preloadLink);
+}
 </script>
 <template>
     <section
