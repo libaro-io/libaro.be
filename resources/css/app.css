@@ -1,5 +1,9 @@
 @import 'tailwindcss';
 @import './fonts.css';
+@import '../css/layouts/sections/header.css';
+@import '../css/layouts/sections/primary-menu.css';
+@import '../css/layouts/sections/secondary-menu.css';
+@import '../css/layouts/sections/lang-selector.css';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
@@ -102,3 +106,4 @@ button{
 .page-grid{
     @apply grid grid-cols-1 gap-page;
 }
+
