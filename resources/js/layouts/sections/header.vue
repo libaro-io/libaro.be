@@ -102,7 +102,9 @@ if (typeof document !== 'undefined') {
                        menuOpen ? 'open' : ''
                    ]"
                 >
-                    <button class="close-button" @click="toggleMenu()">
+                    <button
+                        aria-label="Close menu"
+                        class="close-button" @click="toggleMenu()">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
                     <div class="top">
