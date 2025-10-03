@@ -16,6 +16,9 @@ return Application::configure(basePath: dirname(__DIR__))
             \App\Http\Middleware\Locale::class,
             HandleInertiaRequests::class,
         ]);
+        $middleware->alias([
+            'cacheResponse' => \Spatie\ResponseCache\Middlewares\CacheResponse::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
