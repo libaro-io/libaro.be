@@ -4,9 +4,6 @@ import {renderToString} from '@vue/server-renderer'
 import {createSSRApp, DefineComponent, h} from 'vue'
 import {resolvePageComponent} from "laravel-vite-plugin/inertia-helpers";
 import {i18nVue} from "laravel-vue-i18n";
-import {VueReCaptcha} from "vue-recaptcha-v3";
-import PageInterface from "@interfaces/PageInterface";
-
 // Language files get loaded eagerly.
 const langs: Record<
     string,
@@ -30,15 +27,9 @@ createServer(page =>
             resolve: (name) => resolvePageComponent(`./pages/${name}.vue`, import.meta.glob<DefineComponent>('./pages/**/*.vue')),
 
             setup({App, props, plugin}) {
-                const pageProps = props.initialPage.props as unknown as PageInterface;
-                const captcheKey = pageProps.pageProps.recaptcha_site_key as string;
                 return createSSRApp({render: () => h(App, props)})
                     .use(i18nVue, {
                         resolve: langResolver,
-                    })
-                    .use(VueReCaptcha, {
-                        siteKey: captcheKey,
-                        loaderOptions: {}
                     })
                     .use(plugin)
             },
