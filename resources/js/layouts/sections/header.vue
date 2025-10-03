@@ -141,7 +141,11 @@ if (typeof document !== 'undefined') {
 
                     </div>
                 </div>
+                <div
+                    v-if="options.isHome"
+                    class="clock">
 
+                </div>
             </div>
         </div>
     </section>
