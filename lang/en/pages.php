@@ -462,5 +462,62 @@ return [
             'text' => 'Sometimes you can\'t just phase out certain programs, or Robaws seems to fall just short of making the complete switch. In that case, Libaro provides the perfect solution: we connect Robaws via the API with your existing or new software, so that your processes continue to run seamlessly and you still get maximum return from Robaws.',
         ],
     ],
+    'ai' => [
+        'header' => [
+            'title' => 'Boost your business with AI',
+            'description' => [
+                'We help make your business processes more efficient and future-proof by integrating AI into your daily operations.',
+                'From automation and data processing to smart predictions: we develop custom solutions that make your organization work faster and smarter.',
+            ],
+        ],
+        'what_is_ai_for_you' => [
+            'title' => 'AI superpowers for your employees',
+            'description' => 'We translate the power of artificial intelligence into practical applications that align with your business operations. From automation and data analysis to smart decision-making: with custom AI solutions, you get more out of your processes and create a competitive advantage.',
+            'list_items' => [
+                'consultancy_training' => [
+                    'title' => 'AI Consultancy & Training',
+                    'description' => 'We familiarize your team with the possibilities of AI and provide hands-on training to concretely deploy the technology within your organization.',
+                ],
+                'product_development' => [
+                    'title' => 'Custom AI Product Development',
+                    'description' => 'We build intelligent AI solutions that truly align with your organization. Our experts integrate GPT models with your own data and processes, so your applications are not only smart but also relevant and reliable. From devising the right strategy to full implementation and integration: we ensure that AI creates tangible added value within your business operations.',
+                ],
+                'gpt_integrations' => [
+                    'title' => 'GPT Integrations',
+                    'description' => 'Integrate powerful language models into your systems for chatbots, automations and content creation that take your workflows to the next level.',
+                ],
+                'workflow_automation' => [
+                    'title' => 'Workflow Automation & AI Marketing',
+                    'description' => 'We streamline repetitive processes and create smart, AI-driven marketing content that saves time and increases impact.',
+                ],
+            ],
+        ],
+        'strategic_advantages' => [
+            'title' => 'The strategic advantages of AI in your business',
+            'description' => 'We develop intelligent solutions that make your business smarter, more efficient and future-proof. With custom AI integrations, you get more value from your data, simplify your processes and create a sustainable competitive advantage.',
+            'list_items' => [
+                'customer_service' => [
+                    'title' => 'AI for customer service',
+                    'description' => 'Help your customers faster and better with context-sensitive chatbots. They understand the question, give the right answer immediately and automatically convert requests – such as address changes or invoice retrieval – into structured data that is processed in your internal systems after approval.',
+                ],
+                'human_resources' => [
+                    'title' => 'AI for Human Resources',
+                    'description' => 'Increase the efficiency of your HR department with AI chatbots that give employees immediate answers. From leave requests to pay slips: all information directly from your internal knowledge base.',
+                ],
+                'internal_knowledge' => [
+                    'title' => 'AI for your internal knowledge',
+                    'description' => 'AI converts unstructured text, documents and spreadsheets into structured data. This shortens the time to insights, increases agility and makes data usable for the entire company – not just the IT department.',
+                ],
+                'sales' => [
+                    'title' => 'AI for sales',
+                    'description' => 'Boost your sales with AI-driven personalization. Our technology allows bots to compose personalized emails and messages based on LinkedIn profiles and website interactions, significantly increasing your conversion chances.',
+                ],
+                'data_analysis' => [
+                    'title' => 'AI for data analysis',
+                    'description' => 'Make data accessible to everyone, without technical barriers. Thanks to AI and natural language processing, every team member can perform analyses without SQL or programming knowledge.',
+                ],
+            ],
+        ],
+    ],
 
 ];

@@ -462,4 +462,61 @@ return [
             'text' => 'Soms kan je bepaalde programma\'s niet zomaar uitfaseren, of lijkt Robaws nét dat tikkeltje tekort te schieten om volledig de overstap te maken. In dat geval zorgt Libaro voor de perfecte oplossing: wij koppelen Robaws via de API met jouw bestaande of nieuwe software, zodat je processen naadloos blijven doorlopen en je toch maximaal rendement haalt uit Robaws.',
         ],
     ],
+    'ai' => [
+        'header' => [
+            'title' => 'Boost je business met AI',
+            'description' => [
+                'Wij helpen je bedrijfsprocessen efficiënter en toekomstgericht maken door AI te integreren in je dagelijkse werking.',
+                'Van automatisering en dataverwerking tot slimme voorspellingen: wij ontwikkelen oplossingen op maat die je organisatie sneller en slimmer laten werken.',
+            ],
+        ],
+        'what_is_ai_for_you' => [
+            'title' => 'AI-superkrachten voor jouw medewerkers',
+            'description' => 'Wij vertalen de kracht van artificiële intelligentie naar praktische toepassingen die aansluiten bij uw bedrijfsvoering. Van automatisering en data-analyse tot slimme besluitvorming: met AI-oplossingen op maat haalt u meer uit uw processen en creëert u een concurrentievoordeel.',
+            'list_items' => [
+                'consultancy_training' => [
+                    'title' => 'AI Consultancy & Training',
+                    'description' => 'We maken je team wegwijs in de mogelijkheden van AI en geven hands-on trainingen om de technologie concreet in te zetten binnen je organisatie.',
+                ],
+                'product_development' => [
+                    'title' => 'AI-productontwikkeling op maat',
+                    'description' => 'Wij bouwen intelligente AI-oplossingen die écht aansluiten bij jouw organisatie. Onze experts integreren GPT-modellen met je eigen data en processen, zodat je toepassingen niet alleen slim maar ook relevant en betrouwbaar zijn. Van het uitdenken van de juiste strategie tot de volledige implementatie en integratie: we zorgen ervoor dat AI tastbare meerwaarde creëert binnen jouw bedrijfsvoering.',
+                ],
+                'gpt_integrations' => [
+                    'title' => 'GPT-integraties',
+                    'description' => 'Integreer krachtige taalmodellen in je systemen voor o.a. chatbots, automatiseringen en contentcreatie die je workflows naar een hoger niveau tillen.',
+                ],
+                'workflow_automation' => [
+                    'title' => 'Workflow-automatisering & AI-marketing',
+                    'description' => 'We stroomlijnen repetitieve processen en creëren slimme, AI-gedreven marketingcontent die tijd bespaart én impact vergroot.',
+                ],
+            ],
+        ],
+        'strategic_advantages' => [
+            'title' => 'De strategische voordelen van AI in je bedrijf',
+            'description' => 'Wij ontwikkelen intelligente oplossingen die je bedrijf slimmer, efficiënter en toekomstbestendig maken. Met op maat gemaakte AI-integraties haal je meer waarde uit je data, vereenvoudig je processen en creëer je een duurzaam concurrentievoordeel.',
+            'list_items' => [
+                'customer_service' => [
+                    'title' => 'AI voor klantenservice',
+                    'description' => 'Help je klanten sneller en beter met contextgevoelige chatbots. Ze begrijpen de vraag, geven direct het juiste antwoord en zetten verzoeken – zoals adreswijzigingen of factuurophalen – automatisch om in gestructureerde data die na goedkeuring verwerkt wordt in je interne systemen.',
+                ],
+                'human_resources' => [
+                    'title' => 'AI voor Human resources',
+                    'description' => 'Verhoog de efficiëntie van je HR-afdeling met AI-chatbots die medewerkers meteen antwoorden geven. Van verlofaanvragen tot loonstroken: alle info rechtstreeks uit je interne kennisbank.',
+                ],
+                'internal_knowledge' => [
+                    'title' => 'AI voor je interne kennis',
+                    'description' => 'AI zet ongestructureerde tekst, documenten en spreadsheets om in gestructureerde data. Zo verkort je de tijd tot inzichten, vergroot je wendbaarheid en maak je data bruikbaar voor het hele bedrijf – niet enkel de IT-afdeling.',
+                ],
+                'sales' => [
+                    'title' => 'AI voor sales',
+                    'description' => 'Boost je sales met AI-gedreven personalisatie. Onze technologie laat bots gepersonaliseerde e-mails en berichten opstellen op basis van o.a. LinkedIn-profielen en website-interacties, waardoor je conversiekansen aanzienlijk stijgen.',
+                ],
+                'data_analysis' => [
+                    'title' => 'AI voor data analyses',
+                    'description' => 'Maak data toegankelijk voor iedereen, zonder technische drempels. Dankzij AI en natuurlijke taalverwerking kan elk teamlid analyses uitvoeren zonder SQL of programmeerkennis.',
+                ],
+            ],
+        ],
+    ],
 ];

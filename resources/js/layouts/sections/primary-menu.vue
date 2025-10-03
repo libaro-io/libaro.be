@@ -40,7 +40,7 @@ const primaryMenu = ref<MenuInterface[]>([
             {
                 text: 'menu.primary.ai_integrations',
                 url: AiIntegrationsExpertiseController(),
-                visible: false,
+                visible: true,
             },
             {
                 text: 'menu.primary.apps',
@@ -61,7 +61,7 @@ const primaryMenu = ref<MenuInterface[]>([
                 text: 'menu.primary.robaws',
                 url: RobawsExpertiseController(),
                 visible: true,
-            }
+            },
         ]
     },
     {

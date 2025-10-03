@@ -1,10 +1,101 @@
 <script setup lang="ts">
 import Website from "@layouts/website.vue";
+import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
+import aiHeader from "@assets/images/ai/header.jpg";
+import OurClients from "@pages/website/sections/our-clients.vue";
+import {ClientInterface} from "@interfaces/ClientInterface";
+import ListWithImageComponent from "@components/list-with-image-component.vue";
+import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
+import ChooseAI from "@assets/images/ai/choose_ai.png"
+import UspListComponent from "@components/usp-list-component.vue";
+import {UspListInterface} from "@interfaces/UspListInterface";
+
+const props = defineProps<{
+    clients?: ClientInterface[];
+}>();
+
+const WhatIsAIForYou: ListWithImageInterface = {
+    title: 'pages.ai.what_is_ai_for_you.title',
+    descriptions: [
+        'pages.ai.what_is_ai_for_you.description'
+    ],
+    listItems: [
+        {
+            title: 'pages.ai.what_is_ai_for_you.list_items.consultancy_training.title',
+            description: 'pages.ai.what_is_ai_for_you.list_items.consultancy_training.description',
+            image: ChooseAI
+        },
+        {
+            title: 'pages.ai.what_is_ai_for_you.list_items.product_development.title',
+            description: 'pages.ai.what_is_ai_for_you.list_items.product_development.description',
+            image: ChooseAI
+        },
+        {
+            title: 'pages.ai.what_is_ai_for_you.list_items.gpt_integrations.title',
+            description: 'pages.ai.what_is_ai_for_you.list_items.gpt_integrations.description',
+            image: ChooseAI
+        },
+        {
+            title: 'pages.ai.what_is_ai_for_you.list_items.workflow_automation.title',
+            description: 'pages.ai.what_is_ai_for_you.list_items.workflow_automation.description',
+            image: ChooseAI
+        }
+    ]
+};
+
+const uspListBlock: UspListInterface = {
+    title: 'pages.ai.strategic_advantages.title',
+    description: 'pages.ai.strategic_advantages.description',
+    listItems: [
+        {
+            title: 'pages.ai.strategic_advantages.list_items.customer_service.title',
+            description: 'pages.ai.strategic_advantages.list_items.customer_service.description',
+        },
+        {
+            title: 'pages.ai.strategic_advantages.list_items.human_resources.title',
+            description: 'pages.ai.strategic_advantages.list_items.human_resources.description',
+        },
+        {
+            title: 'pages.ai.strategic_advantages.list_items.internal_knowledge.title',
+            description: 'pages.ai.strategic_advantages.list_items.internal_knowledge.description',
+        },
+        {
+            title: 'pages.ai.strategic_advantages.list_items.sales.title',
+            description: 'pages.ai.strategic_advantages.list_items.sales.description',
+        },
+        {
+            title: 'pages.ai.strategic_advantages.list_items.data_analysis.title',
+            description: 'pages.ai.strategic_advantages.list_items.data_analysis.description',
+        },
+    ],
+};
+
 </script>
 <template>
-    <website meta-key="ai_integrations_expertise">
-        <div id="page-website-expertise-ai-integrations">
-            page ai-integrations
+    <website
+        :margin-bottom="false"
+        meta-key="ai_integrations_expertise">
+        <div id="page-website-expertise-ai-integrations" class="page-grid">
+            <expertise-header
+                title="pages.ai.header.title"
+                :description="[
+                    'pages.ai.header.description.0',
+                    'pages.ai.header.description.1'
+                ]"
+                :image="aiHeader"
+            ></expertise-header>
+            <list-with-image-component
+                :list-with-image="WhatIsAIForYou"
+                class="container"
+                :is-clickable="false"
+            ></list-with-image-component>
+            <usp-list-component
+                :usp-list="uspListBlock"
+                class="container"
+            ></usp-list-component>
+            <our-clients
+                :clients="props.clients"
+            ></our-clients>
         </div>
     </website>
 </template>
