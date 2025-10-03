@@ -129,15 +129,14 @@ const ourToolsBlocks: ToolInterface[] = [
                 :is-clickable="false"
             ></list-with-image-component>
             <large-image-component class="container" :image="WebDevelopmentHeader"></large-image-component>
-
-            <these-sectors
-                :title="getTrans('pages.webdevelopment.these_sectors.title')"
-                :projects="props.projects"
-            ></these-sectors>
             <usp-list-component
                 :usp-list="uspListBlock"
                 class="container"
             ></usp-list-component>
+            <these-sectors
+                :title="getTrans('pages.webdevelopment.these_sectors.title')"
+                :projects="props.projects"
+            ></these-sectors>
             <our-tools
                 title="pages.webdevelopment.our_tools.title"
                 :our-tools="ourToolsBlocks"
