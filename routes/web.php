@@ -13,7 +13,7 @@ use App\Http\Controllers\Expertises\AiIntegrationsExpertiseController;
 use App\Http\Controllers\Expertises\AppsExpertiseController;
 use App\Http\Controllers\Expertises\IOTExpertiseController;
 use App\Http\Controllers\Expertises\OdooExpertiseController;
-use App\Http\Controllers\Expertises\robawsExpertiseController;
+use App\Http\Controllers\Expertises\RobawsExpertiseController;
 use App\Http\Controllers\Expertises\WebDevelopmentExpertiseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IntegrationTimecardController;
@@ -58,7 +58,7 @@ Route::prefix('{locale?}')->group(function () {
     Route::get('expertise/ai-integrations', AiIntegrationsExpertiseController::class);
     Route::get('expertise/iot', IOTExpertiseController::class);
     Route::get('expertise/odoo', OdooExpertiseController::class);
-    Route::get('expertise/robaws', robawsExpertiseController::class);
+    Route::get('expertise/robaws', RobawsExpertiseController::class);
 
     Route::get('clients/{client}', ClientRandomProjectController::class);
 

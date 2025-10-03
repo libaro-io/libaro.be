@@ -28,3 +28,4 @@ resources/js/routes
 lang/php_en.json
 lang/php_nl.json
 resources/js/translations/lang-keys.ts
+bootstrap/ssr
