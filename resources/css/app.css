@@ -1,9 +1,13 @@
 @import 'tailwindcss';
 @import './fonts.css';
-@import '../css/layouts/sections/header.css';
-@import '../css/layouts/sections/primary-menu.css';
-@import '../css/layouts/sections/secondary-menu.css';
-@import '../css/layouts/sections/lang-selector.css';
+
+/* these imports are to prevent shifting of the sections */
+@import '@css/layouts/sections/header.css';
+@import '@css/layouts/sections/primary-menu.css';
+@import '@css/layouts/sections/secondary-menu.css';
+@import '@css/layouts/sections/lang-selector.css';
+@import "@css/pages/website/expertise/sections/expertise-header.css";
+@import "@css/components/text-block-image-component.css";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
