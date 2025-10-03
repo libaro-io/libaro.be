@@ -129,13 +129,13 @@ const footerPrivacyUrls: Ref<
             </div>
             <div class="section">
                 <h2 class="footer-title">{{ getTrans("footer.assets") }}</h2>
-                <Link :href="AssetsController()">
+                <Link prefetch :href="AssetsController()">
                     {{ getTrans("urls.branding") }}
                 </Link>
             </div>
             <div class="section md:col-span-2">
                 <div class="odoo-logo">
-                    <img class="image" src="@assets/logos/odoo_ready_partners_rgb.svg" alt="">
+                    <img loading="lazy" class="image" src="@assets/logos/odoo_ready_partners_rgb.svg" alt="">
                 </div>
             </div>
         </div>

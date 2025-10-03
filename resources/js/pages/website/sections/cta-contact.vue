@@ -10,7 +10,7 @@ import ButtonComponent from "@components/button-component.vue";
        <div class="container">
            <div class="grid">
                <div class="img">
-                   <img alt="clock" src="@assets/images/clock_front.webp">
+                   <img alt="clock" loading="lazy" src="@assets/images/clock_front.webp">
                </div>
                <div class="content">
                    <h2>
