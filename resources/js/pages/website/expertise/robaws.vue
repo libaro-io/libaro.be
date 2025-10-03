@@ -21,7 +21,7 @@ const howWeMakerobawsBetter: ListWithImageInterface = {
             image: BryonImage,
             link: {
                 title: 'pages.robaws.how_we_make_robaws_better.list_items.mobile_app.link',
-                url: DetailProjectController({project: 'bryon-dagrapporten-app-teamleaders'}),
+                url: DetailProjectController({project: 'onderaannemers-app'}),
             }
         },
         {
@@ -44,7 +44,7 @@ const howWeMakerobawsBetter: ListWithImageInterface = {
             image: BryonImage,
             link: {
                 title: 'pages.robaws.how_we_make_robaws_better.list_items.time_registration.link',
-                url: DetailProjectController({project: 'bryon-dagrapporten-app-teamleaders'}),
+                url: DetailProjectController({project: 'verhelst-group-tijdsregistratie-app'}),
             }
         }
     ]
