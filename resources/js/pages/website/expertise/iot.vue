@@ -27,17 +27,18 @@ const props = defineProps<{
                 description="pages.iot.header.description"
                 :image="iotHeader"
             ></expertise-header>
-            <list-with-image-component
-                :list-with-image="conceptToAppsBlock"
-                class="container"
-                :is-clickable="false"
-            ></list-with-image-component>
             <integrations
                 :integrations-list="integrationsList"
                 title="pages.iot.integrations.title"
                 description="pages.iot.integrations.description"
                 icon-size="small"
             ></integrations>
+            <list-with-image-component
+                :list-with-image="conceptToAppsBlock"
+                class="container"
+                :is-clickable="false"
+            ></list-with-image-component>
+
             <large-image-with-text-component
                 class="container"
                 :image="ChooseIOT"
