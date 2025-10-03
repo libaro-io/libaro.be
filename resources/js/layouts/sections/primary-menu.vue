@@ -16,7 +16,7 @@ import AiIntegrationsExpertiseController
 import AppsExpertiseController from "@actions/App/Http/Controllers/Expertises/AppsExpertiseController";
 import OdooExpertiseController from "@actions/App/Http/Controllers/Expertises/OdooExpertiseController";
 import IOTExpertiseController from "@actions/App/Http/Controllers/Expertises/IOTExpertiseController";
-import robawsExpertiseController from "@actions/App/Http/Controllers/Expertises/robawsExpertiseController";
+import RobawsExpertiseController from "@actions/App/Http/Controllers/Expertises/RobawsExpertiseController";
 
 const props = defineProps<{
     type: 'header' | 'footer'
@@ -59,7 +59,7 @@ const primaryMenu = ref<MenuInterface[]>([
             },
             {
                 text: 'menu.primary.robaws',
-                url: robawsExpertiseController(),
+                url: RobawsExpertiseController(),
                 visible: true,
             }
         ]
