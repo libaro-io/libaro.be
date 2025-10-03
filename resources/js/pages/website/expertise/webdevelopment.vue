@@ -18,7 +18,7 @@ import Sharepoint from "@assets/tools/sharepoint.webp";
 import TheseSectors from "@pages/website/expertise/sections/these-sectors.vue";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
 import LargeImageComponent from "@components/large-image-component.vue";
-import WebDevelopmentHeader from "@assets/images/webapplication/header.jpg";
+import WebDevelopmentHeader from "@assets/images/webapplication/header.gif";
 import conceptToApplicationImage from "@assets/images/webapplication/concept_to_application.png";
 
 const props = defineProps<{

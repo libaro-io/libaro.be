@@ -2,6 +2,7 @@
 import {usePage} from "@inertiajs/vue3";
 import PageInterface from "@interfaces/PageInterface";
 import {computed} from "vue";
+import {getGifImage} from "@composables/UseGif";
 
 const page = usePage<PageInterface>()
 
@@ -12,12 +13,16 @@ const props = defineProps<{
 }>()
 
 const alt = computed(() => props.alt ?? page.props.pageProps.company.name)
+
+const getImageUrl = computed(():string => {
+    return getGifImage(props.image);
+});
 </script>
 <template>
     <section class="component-large-image-component">
         <div class="image-container">
-            <img 
-                :src="props.image" 
+            <img
+                :src="getImageUrl"
                 :alt="alt"
                 :fetchpriority="props.fetchPriority || 'auto'"
             >

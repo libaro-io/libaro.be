@@ -3,7 +3,7 @@
 import {TranslationKey} from "../../../../translations/lang-keys";
 import {getTrans} from "@composables/UseTranslationHelper";
 import {computed} from "vue";
-import {DateTime} from "luxon";
+import {getGifImage} from "@composables/UseGif";
 
 const props = defineProps<{
     title: TranslationKey;
@@ -12,11 +12,7 @@ const props = defineProps<{
 }>();
 
 const getImageUrl = computed(():string => {
-    let imageUrl = props.image;
-    if(props.image.endsWith('.gif')){
-        imageUrl += '?v='+DateTime.now().toSeconds();
-    }
-    return imageUrl;
+    return getGifImage(props.image);
 });
 
 </script>
