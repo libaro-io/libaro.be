@@ -141,11 +141,7 @@ if (typeof document !== 'undefined') {
 
                     </div>
                 </div>
-                <div
-                    v-if="options.isHome"
-                    class="clock">
-                    <img src="@assets/images/clock_side.webp" alt="clock" width="648" height="511">
-                </div>
+
             </div>
         </div>
     </section>
