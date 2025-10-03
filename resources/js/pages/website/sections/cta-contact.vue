@@ -21,7 +21,7 @@ import ButtonComponent from "@components/button-component.vue";
                    </p>
                    <Link :href="ContactController()">
                        <button-component
-                           :text="getTrans('projects.visit_application')"
+                           :text="getTrans('sections.cta-contact.button')"
                            color="tertiary"
                            size="large"
                            icon="fa-solid fa-chevron-right"
