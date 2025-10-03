@@ -76,6 +76,7 @@ if (typeof document !== 'undefined') {
             'background-image': 'url(' + options.background + ')',
         }"
         :class="[
+            'bg-primary-dark',
             'section-header',
             props.marginBottom ? 'margin-bottom' : '',
             options.isHome ? 'is-home' : '',
