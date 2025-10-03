@@ -52,12 +52,14 @@ const {
                     <rounded-button
                         :disabled="!canGoToPreviousPage"
                         @click="goToPreviousPage"
+                        :aria-label="getTrans('sections.clients.previous_page')"
                     >
                         <i class="fa-solid fa-chevron-left"></i>
                     </rounded-button>
                     <rounded-button
                         :disabled="!canGoToNextPage"
                         @click="goToNextPage"
+                        :aria-label="getTrans('sections.clients.next_page')"
                         >
                                             <i class="fa-solid fa-chevron-right"></i>
                     </rounded-button>

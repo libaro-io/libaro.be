@@ -2,12 +2,14 @@
 
 const props = defineProps<{
     disabled?: boolean;
+    ariaLabel?: string;
 }>();
 
 </script>
 <template>
     <section class="component-buttons-rounded-button">
         <button
+            :aria-label="props.ariaLabel"
             :disabled="props.disabled"
         >
             <slot></slot>
