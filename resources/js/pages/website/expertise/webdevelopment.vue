@@ -128,7 +128,11 @@ const ourToolsBlocks: ToolInterface[] = [
                 class="container"
                 :is-clickable="false"
             ></list-with-image-component>
-            <large-image-component class="container" :image="WebDevelopmentHeader"></large-image-component>
+            <large-image-component class="container"
+                                   :image="WebDevelopmentHeader"
+                                   :load-when-visible="true"
+                                   :aspect-ratio="'aspect-video'"
+            ></large-image-component>
             <usp-list-component
                 :usp-list="uspListBlock"
                 class="container"
