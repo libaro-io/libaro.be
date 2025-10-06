@@ -85,7 +85,11 @@ if (typeof document !== 'undefined') {
             <header>
                 <div class="logo">
                     <Link prefetch :href="HomeController()">
-                        <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg" alt="logo" width="210" height="74">
+                        <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg"
+                             fetchpriority="high"
+                             alt="logo"
+                             width="210"
+                             height="74">
                     </Link>
                 </div>
                 <button aria-label="Toggle menu" class="menu-button" @click="toggleMenu()">
@@ -144,7 +148,11 @@ if (typeof document !== 'undefined') {
                 <div
                     v-if="options.isHome"
                     class="clock">
-                    <img src="@assets/images/clock_side.webp" alt="clock" width="511" height="468">
+                    <img src="@assets/images/clock_side.webp"
+                         alt="clock"
+                         width="511"
+                         height="468"
+                         fetchpriority="high">
                 </div>
             </div>
         </div>
