@@ -73,7 +73,7 @@ if (typeof document !== 'undefined') {
 <template>
     <section
         :style="{
-            'background-image': 'url(' + options.background + ')',
+            // 'background-image': 'url(' + options.background + ')',
         }"
         :class="[
             'bg-primary-dark',
