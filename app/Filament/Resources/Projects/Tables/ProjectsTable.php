@@ -5,10 +5,9 @@ namespace App\Filament\Resources\Projects\Tables;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Tables\Columns\CheckboxColumn;
-use Filament\Tables\Table;
-use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
 
 class ProjectsTable
 {
@@ -16,7 +15,7 @@ class ProjectsTable
     {
         return $table
             ->columns([
-                TextColumn::make('name'),
+                TextColumn::make('name')->searchable(),
                 IconColumn::make('visible')->boolean(),
                 IconColumn::make('is_product')->boolean(),
             ])
