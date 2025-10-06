@@ -59,28 +59,20 @@ router.on('navigate', () => {
         document.body.classList.remove('overflow-hidden');
     }
 });
-
-if (typeof document !== 'undefined') {
-// Add preload for the background image
-    const preloadLink = document.createElement('link');
-    preloadLink.rel = 'preload';
-    preloadLink.as = 'image';
-    preloadLink.href = options.value.background?.startsWith('/') ? options.value.background : `/${options.value.background}`;
-    preloadLink.setAttribute('fetchpriority', 'high');
-    document.head.appendChild(preloadLink);
-}
 </script>
 <template>
     <section
-        :style="{
-            'background-image': 'url(' + options.background + ')',
-        }"
         :class="[
             'bg-primary-dark',
             'section-header',
             props.marginBottom ? 'margin-bottom' : '',
             options.isHome ? 'is-home' : '',
         ]">
+        <img v-if="options.background"
+             :src="options.background"
+             fetchpriority="high"
+             class="striped-bg"
+             alt="header">
         <div class="container">
             <header>
                 <div class="logo">

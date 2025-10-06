@@ -3,6 +3,6 @@
     position: relative;
 
     .content {
-        @apply flex-grow;
+        @apply flex-grow relative;
     }
 }
