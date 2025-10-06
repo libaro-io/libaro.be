@@ -22,12 +22,15 @@ const props = defineProps<{
            >
            <div class="gradient"></div>
            <div class="inner">
-               <sub-title-component
-                   :has-margin="false"
-               >
-                   <h3>{{ props.subtitle }}</h3>
-               </sub-title-component>
-               <h2>{{ props.title }}</h2>
+               <div class="titles">
+                   <h2>{{ props.title }}</h2>
+                   <sub-title-component
+                       :has-margin="false"
+                   >
+                       <h3>{{ props.subtitle }}</h3>
+                   </sub-title-component>
+               </div>
+
                <p v-if="props.description">{{ props.description }}</p>
            </div>
        </div>

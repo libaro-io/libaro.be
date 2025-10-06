@@ -15,8 +15,11 @@
         .inner {
             @apply mt-80 xl:mt-120 relative z-40;
 
-            h2 {
-                @apply text-white font-gilroy font-bold text-4xl;
+            .titles{
+                @apply flex flex-col-reverse;
+                h2 {
+                    @apply text-white font-gilroy font-bold text-4xl;
+                }
             }
 
             p {
