@@ -56,6 +56,8 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="fb:app_id" content="337068846453413">
 
+    <link rel="preconnect" href="https://{{ config('filesystems.disks.s3.bucket') }}.s3.{{ config('filesystems.disks.s3.region') }}.amazonaws.com/">
+
     <link rel="preload" href="https://kit.fontawesome.com/0ec3ed4413.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://kit.fontawesome.com/0ec3ed4413.css"></noscript>
 
