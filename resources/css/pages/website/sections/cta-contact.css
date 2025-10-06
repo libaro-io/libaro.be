@@ -1,9 +1,12 @@
 .section-website-cta-contact {
-    background-image: url("@assets/images/header_striped.webp");
-    @apply bg-center bg-cover;
+    @apply bg-center bg-cover relative;
+
+    .bg-image {
+        @apply absolute top-0 w-full h-full object-cover object-top;
+    }
 
     .container {
-        @apply py-10 md:py-14;
+        @apply py-10 md:py-14 relative;
 
         .grid {
             @apply grid-cols-1 md:grid-cols-2 gap-x-page gap-y-4 items-center;

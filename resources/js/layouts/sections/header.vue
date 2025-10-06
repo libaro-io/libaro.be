@@ -72,7 +72,7 @@ router.on('navigate', () => {
              :src="options.background"
              fetchpriority="high"
              class="striped-bg"
-             alt="header">
+             alt="header background">
         <div class="container">
             <header>
                 <div class="logo">

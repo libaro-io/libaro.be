@@ -7,6 +7,9 @@ import ButtonComponent from "@components/button-component.vue";
 </script>
 <template>
     <section class="section-website-cta-contact">
+        <img src="/images/header_striped.webp"
+             class="bg-image"
+             alt="contact background">
        <div class="container">
            <div class="grid">
                <div class="img">
