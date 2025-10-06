@@ -62,6 +62,9 @@ router.on('navigate', () => {
 </script>
 <template>
     <section
+        :style="{
+             'background-image': 'url(' + options.background + ')',
+        }"
         :class="[
             'bg-primary-dark',
             'section-header',
@@ -149,8 +152,8 @@ router.on('navigate', () => {
                     class="clock">
                     <img src="@assets/images/clock_side.webp"
                          alt="clock"
-                         width="511"
-                         height="468"
+                         width="468"
+                         height="511"
                          fetchpriority="high">
                 </div>
             </div>

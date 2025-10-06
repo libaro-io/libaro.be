@@ -13,7 +13,7 @@ const props = defineProps<{
 <template>
     <section class="section-website-our-projects">
         <div class="container">
-            <div class="inner-container">
+            <div class="inner-container-our-projects">
                 <Link
                     v-for="project in props.projects"
                     :key="project.slug"
