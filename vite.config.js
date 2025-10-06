@@ -9,7 +9,7 @@ import i18n from "laravel-vue-i18n/vite";
 
 const env = loadEnv("", "");
 
-const getPHPPrefix = (): string[] => {
+const getPHPPrefix = () => {
     if (env.VITE_DOCKERIZED) {
         return ["docker", "compose", "exec", "php"];
     }
