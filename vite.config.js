@@ -1,15 +1,15 @@
-import {tailwindReferencePlugin} from '@libaro-io/libaro-utilities';
-import {defineConfig, loadEnv} from 'vite';
+import { tailwindReferencePlugin } from '@libaro-io/libaro-utilities';
+import { defineConfig, loadEnv } from 'vite';
 import * as path from "node:path";
 import laravel from "laravel-vite-plugin";
 import vue from "@vitejs/plugin-vue";
-import {run} from "vite-plugin-run";
+import { run } from "vite-plugin-run";
 import tailwindcss from "@tailwindcss/vite";
 import i18n from "laravel-vue-i18n/vite";
 
 const env = loadEnv("", "");
 
-const getPHPPrefix = () => {
+const getPHPPrefix = (): string[] => {
     if (env.VITE_DOCKERIZED) {
         return ["docker", "compose", "exec", "php"];
     }
@@ -36,6 +36,27 @@ export default defineConfig({
             '@enums': path.resolve(__dirname, 'resources/js/enums'),
             '@interfaces': path.resolve(__dirname, 'resources/js/interfaces'),
         },
+    },
+    build: {
+        rollupOptions: {
+            output: {
+                manualChunks: (id) => {
+                    // Only chunk for client-side builds, not SSR
+                    if (id.includes('node_modules')) {
+                        if (id.includes('vue-i18n') || id.includes('laravel-vue-i18n')) {
+                            return 'i18n';
+                        }
+                        if (id.includes('vue-recaptcha-v3')) {
+                            return 'recaptcha';
+                        }
+                        if (id.includes('vue3-toastify')) {
+                            return 'toastify';
+                        }
+                        return 'vendor';
+                    }
+                }
+            }
+        }
     },
     plugins: [
         run([
