@@ -4,6 +4,7 @@ import {renderToString} from '@vue/server-renderer'
 import {createSSRApp, DefineComponent, h} from 'vue'
 import {resolvePageComponent} from "laravel-vite-plugin/inertia-helpers";
 import {i18nVue} from "laravel-vue-i18n";
+import PageInterface from "@interfaces/PageInterface";
 // Language files get loaded eagerly.
 const langs: Record<
     string,
@@ -17,7 +18,9 @@ const langs: Record<
 });
 const langResolver: (lang: string) => { [key: string]: string } | undefined = (
     lang: string,
-) => langs[`../../lang/${lang}.json`].default;
+) => {
+    return langs[`../../lang/${lang}.json`].default
+};
 
 
 createServer(page =>
@@ -27,9 +30,12 @@ createServer(page =>
             resolve: (name) => resolvePageComponent(`./pages/${name}.vue`, import.meta.glob<DefineComponent>('./pages/**/*.vue')),
 
             setup({App, props, plugin}) {
+                const pageProps = props.initialPage.props.pageProps as unknown as PageInterface;
+                const locale = pageProps.locale || 'en';
                 return createSSRApp({render: () => h(App, props)})
                     .use(i18nVue, {
                         resolve: langResolver,
+                        lang: locale,
                     })
                     .use(plugin)
             },

@@ -59,21 +59,11 @@ router.on('navigate', () => {
         document.body.classList.remove('overflow-hidden');
     }
 });
-
-if (typeof document !== 'undefined') {
-// Add preload for the background image
-    const preloadLink = document.createElement('link');
-    preloadLink.rel = 'preload';
-    preloadLink.as = 'image';
-    preloadLink.href = options.value.background?.startsWith('/') ? options.value.background : `/${options.value.background}`;
-    preloadLink.setAttribute('fetchpriority', 'high');
-    document.head.appendChild(preloadLink);
-}
 </script>
 <template>
     <section
         :style="{
-            // 'background-image': 'url(' + options.background + ')',
+             'background-image': 'url(' + options.background + ')',
         }"
         :class="[
             'bg-primary-dark',
@@ -81,11 +71,20 @@ if (typeof document !== 'undefined') {
             props.marginBottom ? 'margin-bottom' : '',
             options.isHome ? 'is-home' : '',
         ]">
+        <img v-if="options.background"
+             :src="options.background"
+             fetchpriority="high"
+             class="striped-bg"
+             alt="header background">
         <div class="container">
             <header>
                 <div class="logo">
                     <Link prefetch :href="HomeController()">
-                        <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg" alt="logo" width="210" height="74">
+                        <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg"
+                             fetchpriority="high"
+                             alt="logo"
+                             width="210"
+                             height="74">
                     </Link>
                 </div>
                 <button aria-label="Toggle menu" class="menu-button" @click="toggleMenu()">
@@ -144,7 +143,11 @@ if (typeof document !== 'undefined') {
                 <div
                     v-if="options.isHome"
                     class="clock">
-                    <img src="@assets/images/clock_side.webp" alt="clock" width="511" height="468">
+                    <img src="@assets/images/clock_side.webp"
+                         alt="clock"
+                         width="468"
+                         height="511"
+                         fetchpriority="high">
                 </div>
             </div>
         </div>

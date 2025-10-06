@@ -1,21 +1,32 @@
 .section-header {
-    @apply py-5 xl:py-14 border-b-4 xl:border-b-8 border-b-secondary bg-top bg-cover ;
+    @apply relative py-5 xl:py-14 border-b-4 xl:border-b-8 border-b-secondary;
+
     &.margin-bottom {
         @apply mb-16;
     }
 
     &.is-home {
-        .page-title-container{
+        .page-title-container {
             @apply flex flex-col xl:flex-row gap-10 xl:pt-14;
-            .clock{
+
+            .clock {
                 @apply w-48 xl:w-[60rem] mx-auto;
             }
-            .text-tags{
-                p{
+
+            .text-tags {
+                p {
                     @apply md:text-2xl font-bold;
                 }
             }
         }
+    }
+
+    .striped-bg {
+        @apply absolute top-0 w-full h-full object-cover object-top;
+    }
+
+    .container {
+        @apply relative;
     }
 
     header {
@@ -63,7 +74,7 @@
             @apply font-bold leading-snug text-3xl md:text-5xl lg:text-7xl text-white text-pretty;
         }
 
-        .text-tags{
+        .text-tags {
             @apply flex flex-col gap-4 xl:gap-0 xl:flex-row xl:items-end justify-between;
 
             p {

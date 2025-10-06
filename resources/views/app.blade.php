@@ -56,8 +56,27 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="fb:app_id" content="337068846453413">
 
+    <link rel="preconnect" href="https://{{ config('filesystems.disks.s3.bucket') }}.s3.{{ config('filesystems.disks.s3.region') }}.amazonaws.com">
+
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/gilroy/gilroy_bold.otf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/gilroy/gilroy_extrabold.otf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_light.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_light_italic.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_regular.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_regular_italic.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_medium.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_medium_italic.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_semibold.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_semibold_italic.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_bold.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_bold_italic.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_extrabold.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_black.ttf">
+
     <link rel="preload" href="https://kit.fontawesome.com/0ec3ed4413.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://kit.fontawesome.com/0ec3ed4413.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="https://kit.fontawesome.com/0ec3ed4413.css">
+    </noscript>
 
     @vite(['resources/js/app.ts'])
 
