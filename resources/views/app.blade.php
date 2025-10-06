@@ -65,6 +65,5 @@
 </head>
 <body class="font-sans antialiased">
 @inertia
-<div style="font-size: 600px">Test</div>
 </body>
 </html>
