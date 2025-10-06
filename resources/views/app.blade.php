@@ -58,40 +58,25 @@
 
     <link rel="preconnect" href="https://{{ config('filesystems.disks.s3.bucket') }}.s3.{{ config('filesystems.disks.s3.region') }}.amazonaws.com">
 
-    {{-- Only preload critical fonts for above-the-fold content --}}
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_regular.ttf">
     <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/gilroy/gilroy_bold.otf">
-
-    {{-- Load other fonts asynchronously --}}
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_medium.ttf" media="print" onload="this.media='all'">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_semibold.ttf" media="print" onload="this.media='all'">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_bold.ttf" media="print" onload="this.media='all'">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/gilroy/gilroy_extrabold.otf" media="print" onload="this.media='all'">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/gilroy/gilroy_extrabold.otf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_light.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_light_italic.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_regular.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_regular_italic.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_medium.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_medium_italic.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_semibold.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_semibold_italic.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_bold.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_bold_italic.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_extrabold.ttf">
+    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_black.ttf">
 
     <link rel="preload" href="https://kit.fontawesome.com/0ec3ed4413.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://kit.fontawesome.com/0ec3ed4413.css">
     </noscript>
-
-    {{-- Inline critical CSS for above-the-fold content --}}
-    <style>
-        /* Critical CSS for above-the-fold content */
-        body { font-family: 'grotesk', ui-sans-serif, system-ui, sans-serif; }
-        .font-sans { font-family: 'grotesk', ui-sans-serif, system-ui, sans-serif; }
-        .font-gilroy { font-family: 'gilroy', ui-sans-serif, system-ui, sans-serif; }
-        .font-grotesk { font-family: 'grotesk', ui-sans-serif, system-ui, sans-serif; }
-
-        /* Prevent layout shift */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-        .page-grid { display: grid; grid-template-columns: 1fr; gap: 6rem; }
-
-        /* Critical button styles */
-        button { cursor: pointer; }
-
-        /* Critical layout styles */
-        * { box-sizing: border-box; }
-        body { margin: 0; padding: 0; }
-    </style>
 
     @vite(['resources/js/app.ts'])
 
