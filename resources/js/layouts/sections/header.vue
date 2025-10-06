@@ -29,7 +29,7 @@ const props = withDefaults(defineProps<{
 const options = computed((): HeaderOptions => {
     return {
         fullWidthDescription: props.options?.fullWidthDescription ?? false,
-        background: props.options?.background ?? "/images/header_striped.webp",
+        background: props.options?.background,
         tags: props.options?.tags ?? [],
         isHome: props.options?.isHome ?? false,
     }
@@ -70,6 +70,13 @@ router.on('navigate', () => {
         ]">
         <img v-if="options.background"
              :src="options.background"
+             fetchpriority="high"
+             class="striped-bg"
+             alt="header background">
+        <img v-else
+             srcset="/images/header_striped-small.webp 864w, /images/header_striped.webp 1920w"
+             sizes="(width < 768px) 864px,
+                     1920px"
              fetchpriority="high"
              class="striped-bg"
              alt="header background">
