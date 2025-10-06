@@ -36,6 +36,9 @@
             }
             .bert-info{
                 @apply flex flex-col gap-0.5;
+                a{
+                    @apply py-0.5;
+                }
             }
         }
 
