@@ -20,12 +20,15 @@ class ClientForm
                     ->numeric()
                     ->default(0),
                 FileUpload::make('image')
-                    ->label('Image (webp only)')
+                    ->label('Image (300px width and webp only)')
                     ->acceptedFileTypes(['image/webp'])
                     ->disk('s3')
                     ->directory('clients')
                     ->visibility('public')
                     ->preserveFilenames()
+                    ->rules([
+                        'dimensions:width=300',
+                    ])
                     ->columnSpanFull(),
                 Toggle::make('visible')
                     ->required(),
