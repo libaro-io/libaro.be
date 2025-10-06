@@ -62,9 +62,6 @@ router.on('navigate', () => {
 </script>
 <template>
     <section
-        :style="{
-             'background-image': 'url(' + options.background + ')',
-        }"
         :class="[
             'bg-primary-dark',
             'section-header',
