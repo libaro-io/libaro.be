@@ -56,7 +56,7 @@
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="fb:app_id" content="337068846453413">
 
-    <link rel="preconnect" href="https://{{ config('filesystems.disks.s3.bucket') }}.s3.{{ config('filesystems.disks.s3.region') }}.amazonaws.com/">
+    <link rel="preconnect" href="https://{{ config('filesystems.disks.s3.bucket') }}.s3.{{ config('filesystems.disks.s3.region') }}.amazonaws.com">
 
     <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/gilroy/gilroy_bold.otf">
     <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/gilroy/gilroy_extrabold.otf">
