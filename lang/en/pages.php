@@ -296,20 +296,19 @@ return [
         ],
     ],
     'iot' => [
-        'meta_title' => 'IoT Integrations - Smart Office Solutions',
         'header' => [
-            'title' => 'Smart IoT integrations for modern offices',
-            'description' => 'Automate and optimize your office environment with our IoT solutions. From smart lighting to parking management - make your business more efficient, safer and more cost-effective.',
+            'title' => 'Transform your environment with IoT solutions',
+            'description' => 'Automate and optimize your environment with our smart IoT solutions. From intelligent lighting to advanced access control – make your organization more efficient, secure, and cost-effective.',
         ],
         'how_it_works' => [
             'title' => 'How does it work?',
             'descriptions' => [
-                'From analysis to implementation - our proven process ensures a successful IoT transformation of your office.',
+                'From analysis to implementation - our proven process ensures a successful IoT transformation of your environment.',
             ],
             'list_items' => [
                 'strategy_analysis' => [
                     'title' => 'Strategy & Analysis',
-                    'description' => 'Thorough analysis of your office environment and needs. We advise the best IoT solutions for your specific situation.',
+                    'description' => 'Thorough analysis of your environment and needs. We advise the best IoT solutions for your specific situation.',
                     'badges' => [
                         'Site survey and inventory',
                         'Needs analysis and objectives',
@@ -341,8 +340,8 @@ return [
             ],
         ],
         'integrations' => [
-            'title' => 'IoT Solutions for your office',
-            'description' => 'Discover our smart IoT integrations that transform your office environment into an efficient, safe and cost-effective workplace.',
+            'title' => 'IoT Solutions',
+            'description' => 'Discover our smart IoT integrations that transform your environment into an efficient, safe and cost-effective workplace.',
             'smart_lighting' => [
                 'title' => 'Smart Lighting',
                 'description' => 'Automatic lighting based on presence, daylight and schedules. Up to 60% energy savings.',
@@ -355,7 +354,7 @@ return [
             ],
             'tv_display' => [
                 'title' => 'TV & Display Management',
-                'description' => 'Centralized management of all displays, digital signage and presentation screens in your office.',
+                'description' => 'Centralized management of all displays, digital signage and presentation screens in your environment.',
                 'badges' => [
                     'Content scheduling',
                     'Remote control',

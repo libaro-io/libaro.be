@@ -298,18 +298,18 @@ return [
     ],
     'iot' => [
         'header' => [
-            'title' => 'Slimme IoT integraties voor moderne kantoren',
-            'description' => 'Automatiseer en optimaliseer uw kantooromgeving met onze IoT oplossingen. Van slimme verlichting tot parkeermanagement - maak uw bedrijf efficiënter, veiliger en kostenbesparender.',
+            'title' => 'Transformeer uw omgeving met IoT oplossingen',
+            'description' => 'Automatiseer en optimaliseer uw omgeving met onze slimme IoT-oplossingen. Van intelligente verlichting tot geavanceerd toegangsbeheer – maak uw organisatie efficiënter, veiliger en kostenbesparender.',
         ],
         'how_it_works' => [
             'title' => 'Hoe werkt het?',
             'descriptions' => [
-                'Van analyse tot implementatie - ons bewezen proces zorgt voor een succesvolle IoT transformatie van uw kantoor.',
+                'Van analyse tot implementatie - ons bewezen proces zorgt voor een succesvolle IoT transformatie van uw omgeving.',
             ],
             'list_items' => [
                 'strategy_analysis' => [
                     'title' => 'Strategie & Analyse',
-                    'description' => 'Grondige analyse van uw kantooromgeving en behoeften. Wij adviseren de beste IoT oplossingen voor uw specifieke situatie.',
+                    'description' => 'Grondige analyse van uw omgeving en behoeften. Wij adviseren de beste IoT oplossingen voor uw specifieke situatie.',
                     'badges' => [
                         'Site survey en inventarisatie',
                         'Behoefteanalyse en doelstellingen',
@@ -341,8 +341,8 @@ return [
             ],
         ],
         'integrations' => [
-            'title' => 'IoT Oplossingen voor uw kantoor',
-            'description' => 'Ontdek onze slimme IoT integraties die uw kantooromgeving transformeren naar een efficiënte, veilige en kostenbesparende werkplek.',
+            'title' => 'IoT Oplossingen',
+            'description' => 'Ontdek onze slimme IoT-integraties die uw omgeving transformeren naar een efficiënte, veilige en duurzame locatie.',
             'smart_lighting' => [
                 'title' => 'Slimme Verlichting',
                 'description' => 'Automatische verlichting gebaseerd op aanwezigheid, daglicht en tijdschema\'s. Tot 60% energiebesparing.',
@@ -355,7 +355,7 @@ return [
             ],
             'tv_display' => [
                 'title' => 'TV & Display Management',
-                'description' => 'Centraal beheer van alle displays, digitale signage en presentatieschermen in uw kantoor.',
+                'description' => 'Centraal beheer van alle displays, digitale signage en presentatieschermen.',
                 'badges' => [
                     'Content scheduling',
                     'Remote control',
