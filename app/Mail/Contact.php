@@ -5,48 +5,34 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Content;
+use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
 class Contact extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-    /**
-     * @var string
-     */
-    public $name;
-    /**
-     * @var string
-     */
-    public $email;
-    /**
-     * @var string
-     */
-    public $message;
+    public function __construct(public string $name, public string $email, public string $message) {}
 
     /**
-     * Create a new message instance.
-     *
-     * @return void
+     * Get the message envelope.
      */
-    public function __construct(string $name, string $email, string $message)
+    public function envelope(): Envelope
     {
-        $this->name = $name;
-        $this->email = $email;
-        $this->message = $message;
+        return new Envelope(
+            from: $this->email,
+            subject: 'Nieuw bericht via het contactformulier - libaro.be',
+        );
     }
 
     /**
-     * Build the message.
-     *
-     * @return $this
+     * Get the message content definition.
      */
-    public function build()
+    public function content(): Content
     {
-        return
-            $this
-                ->to(config('mail.info.address'))
-                ->from(config('mail.info.address'), 'Nieuw bericht via het contactformulier op libaro.be')
-                ->markdown('emails.contact');
+        return new Content(
+            markdown: 'emails.contact',
+        );
     }
 }
