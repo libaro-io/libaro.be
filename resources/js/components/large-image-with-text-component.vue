@@ -15,16 +15,14 @@ const props = defineProps<{
 <template>
     <section class="component-large-image-with-text-component">
         <div class="text-container">
-            <title-component :has-margin="false">
-                <h2 class="title">
-                    {{getTrans( props.title) }}
-                </h2>
+            <title-component :has-margin="false" class="mb-4">
+                {{ getTrans(props.title) }}
             </title-component>
             <p class="text">
                 {{ getTrans(props.text) }}
             </p>
         </div>
-       <large-image-component :image="props.image"></large-image-component>
+        <large-image-component :image="props.image"></large-image-component>
     </section>
 </template>
 <style scoped>

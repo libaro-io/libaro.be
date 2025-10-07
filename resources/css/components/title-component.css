@@ -1,6 +1,7 @@
 .component-title-component {
-    @apply font-gilroy font-bold text-3xl md:text-6xl xl:text-7xl text-primary-darkest ;
-    &.has-margin{
-        @apply  mb-8 xl:mb-10;
+    @apply font-gilroy font-bold text-3xl md:text-6xl text-primary-darkest ;
+
+    &.has-margin {
+        @apply mb-8 xl:mb-10;
     }
 }

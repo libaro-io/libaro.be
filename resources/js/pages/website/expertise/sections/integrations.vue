@@ -16,13 +16,13 @@ const props = defineProps<{
 </script>
 <template>
     <section class="section-website-expertise-integrations"
-    :class="[{'colored-bg': props.coloredBackground}]">
+             :class="[{'colored-bg': props.coloredBackground}]">
         <div class="container">
             <header
                 v-if="props.title && props.description"
             >
                 <title-component v-if="props.title">
-                    <h2>{{ getTrans(props.title) }}</h2>
+                    {{ getTrans(props.title) }}
                 </title-component>
                 <p
                     v-if="props.description"

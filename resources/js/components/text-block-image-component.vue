@@ -9,7 +9,7 @@ const props = withDefaults(defineProps<{
     textBlockImage: TextBlockImageInterface;
     imageSide?: 'left' | 'right';
     fetchPriority?: 'high' | 'low' | 'auto';
-}>(),{
+}>(), {
     imageSide: 'left',
     fetchPriority: 'auto',
     title: '',
@@ -32,9 +32,7 @@ const props = withDefaults(defineProps<{
                     </h3>
                 </sub-title-component>
                 <title-component>
-                    <h2 class="title">
-                        {{ props.textBlockImage.title }}
-                    </h2>
+                    {{ props.textBlockImage.title }}
                 </title-component>
 
                 <div class="text">

@@ -8,14 +8,14 @@ const props = withDefaults(defineProps<{
 
 </script>
 <template>
-    <section
+    <h2
         :class="[
             props.hasMargin ? 'has-margin' : '',
             'component-title-component'
         ]"
        >
         <slot></slot>
-    </section>
+    </h2>
 </template>
 <style scoped>
 @import "@css/components/title-component.css";

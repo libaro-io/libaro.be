@@ -29,7 +29,7 @@
             ul{
                 li{
                     a{
-                        @apply text-primary-dark uppercase;
+                        @apply text-primary-dark;
                         &:hover, &.active{
                             @apply bg-primary-light;
                         }

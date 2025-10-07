@@ -1,10 +1,8 @@
 .component-large-image-with-text-component {
-    .text-container{
+    .text-container {
         @apply mb-10;
-        .title{
-            @apply mb-4;
-        }
-        .text{
+
+        .text {
             @apply md:w-3/4 xl:w-1/2 text-xl text-pretty;
         }
     }
