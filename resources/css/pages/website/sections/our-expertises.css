@@ -1,7 +1,7 @@
 .section-website-our-expertises {
     .container{
         .inner-container{
-            @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:-mt-28 xl:p-6 rounded-3xl xl:shadow-xl auto-rows-auto border-3  border-primary-medium/25 bg-gray-100/25;
+            @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:-mt-28 xl:p-6 rounded-3xl xl:shadow-xl auto-rows-fr border-3  border-primary-medium/25 bg-gray-100/25;
             .expertise-item{
                 @apply bg-primary-light p-7 rounded-2xl flex flex-col items-center gap-4 transition-all duration-300 ease-in-out;
                 .icon{
