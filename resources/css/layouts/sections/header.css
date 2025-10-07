@@ -10,10 +10,10 @@
             @apply relative flex flex-col xl:flex-row gap-10 xl:pt-14;
 
             .clock {
-                @apply w-48 md:w-82 xl:w-[60rem] mx-auto xl:min-h-[430px] hover:scale-105 hover:rotate-5 transition-transform duration-300 z-20;
+                @apply w-48 md:w-82 xl:w-[60rem] mx-auto xl:min-h-[430px] z-20;
 
                 img {
-                    @apply xl:absolute right-0 -bottom-20 rotate-10;
+                    @apply xl:absolute right-0 -bottom-20 rotate-10 hover:scale-105 hover:rotate-15 transition-transform duration-300;
                 }
             }
 
