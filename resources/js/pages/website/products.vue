@@ -19,7 +19,7 @@ const props = defineProps<{
         meta-key="products"
         :marginBottom="false">
         <div id="page-website-products">
-            <card-list-component>
+            <card-list-component :columns="2">
                 <card-component
                     v-for="(product, index) in props.products" :key="index"
                     :title="product.name"

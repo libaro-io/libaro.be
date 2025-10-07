@@ -1,5 +1,11 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from "vue";
+import {computed, onMounted, onUnmounted, ref} from "vue";
+
+const props = withDefaults(defineProps<{
+    columns?: number
+}>(),{
+    columns: 3
+});
 
 const scrolled = ref(false);
 
@@ -14,16 +20,21 @@ onMounted(() => {
 onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll);
 });
+
+const classObject = computed(() => ({
+    scrolled: scrolled.value,
+    [`columns-${props.columns}`]: true
+}))
 </script>
 <template>
     <section class="component-card-list-component">
         <div class="container">
-            <div class="inner" :class="{ scrolled: scrolled }">
+            <div class="inner" :class="classObject">
                 <slot></slot>
             </div>
         </div>
     </section>
 </template>
-<style scoped>
+<style>
 @import "@css/components/card-list-component.css";
 </style>

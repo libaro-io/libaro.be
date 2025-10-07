@@ -18,6 +18,7 @@ import {ProjectInterface} from "@interfaces/ProjectInterface";
 import WebDevelopmentHeader from "@assets/images/webapplication/header.gif";
 import conceptToApplicationImage from "@assets/images/webapplication/concept_to_application.png";
 import ContactForm from "@pages/website/sections/contact-form.vue";
+import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
 
 const props = defineProps<{
     projects?: ProjectInterface[];
