@@ -10,7 +10,6 @@ import ChooseAI from "@assets/images/ai/choose_ai.png"
 import UspListComponent from "@components/usp-list-component.vue";
 import {UspListInterface} from "@interfaces/UspListInterface";
 
-
 const WhatIsAIForYou: ListWithImageInterface = {
     title: 'pages.ai.what_is_ai_for_you.title',
     descriptions: [
@@ -81,15 +80,18 @@ const uspListBlock: UspListInterface = {
                 ]"
                 :image="aiHeader"
             ></expertise-header>
+
             <list-with-image-component
                 :list-with-image="WhatIsAIForYou"
                 class="container"
                 :is-clickable="false"
             ></list-with-image-component>
+
             <usp-list-component
                 :usp-list="uspListBlock"
-                class="container"
+                :colored-background="true"
             ></usp-list-component>
+
             <contact-form
                 :title="getTrans('pages.ai.contact_form.title')"
                 class="container">

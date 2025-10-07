@@ -10,7 +10,8 @@ import {Link} from "@inertiajs/vue3";
 const props = withDefaults(defineProps<{
     listWithImage: ListWithImageInterface;
     isClickable?: boolean;
-}>(),{
+    coloredBackground?: boolean;
+}>(), {
     isClickable: true
 });
 
@@ -18,7 +19,7 @@ const activeList = ref(0);
 const indicatorRef = ref<HTMLElement>();
 const listRef = ref<HTMLElement>();
 
-const setActive = (index: number):void => {
+const setActive = (index: number): void => {
     if (!props.isClickable) {
         return;
     }
@@ -34,7 +35,7 @@ const getAlt = (): string => {
     return getTrans(props.listWithImage.listItems[activeList.value].title);
 }
 
-const updateIndicatorPosition = (index: number):void => {
+const updateIndicatorPosition = (index: number): void => {
     if (!indicatorRef.value || !listRef.value) return;
 
     const listItems = listRef.value.querySelectorAll('li');
@@ -51,15 +52,15 @@ const updateIndicatorPosition = (index: number):void => {
     }
 }
 
-const handleMouseEnter = (index: number):void=> {
+const handleMouseEnter = (index: number): void => {
     updateIndicatorPosition(index);
 }
 
-const handleMouseLeave = ():void => {
+const handleMouseLeave = (): void => {
     updateIndicatorPosition(activeList.value);
 }
 
-const handleResize = ():void => {
+const handleResize = (): void => {
     updateIndicatorPosition(activeList.value);
 }
 
@@ -85,62 +86,65 @@ const listClasses = (index: number): string[] => {
 
 </script>
 <template>
-    <section class="component-list-with-image-component">
-        <header v-if="listWithImage.title || listWithImage.descriptions">
-            <title-component v-if="listWithImage.title">
-                {{ getTrans(listWithImage.title) }}
-            </title-component>
-            <div class="texts" v-if="listWithImage.descriptions">
-                <p
-                    :key="index"
-                    v-for="(description, index) in listWithImage.descriptions"
-                >
-                    {{ getTrans(description) }}
-                </p>
-            </div>
-        </header>
-        <div class="list-image">
-            <div class="list">
-                <div class="inner-list">
-                    <div class="indicator">
-                        <div class="inner-indicator"  ref="indicatorRef"></div>
-                    </div>
-                    <ul ref="listRef">
-                        <li
-                            :key="index"
-                            @click="setActive(index)"
-                            @mouseenter="handleMouseEnter(index)"
-                            @mouseleave="handleMouseLeave"
-                            :class="listClasses(index)"
-                            :data-indicator-position="index"
-                            v-for="(listItem, index) in listWithImage.listItems">
-                            <h3>{{ getTrans(listItem.title) }}</h3>
-                            <p>{{ getTrans(listItem.description) }}</p>
-                            <div
-                                v-if="listItem.badges"
-                                class="badges">
-                                <badge-component
-                                    :key="index"
-                                    v-for="(badge, index) in listItem.badges"
-                                >
-                                    {{ getTrans(badge) }}
-                                </badge-component>
-                            </div>
-                            <Link
-                                v-if="listItem.link"
-                                :href="listItem.link.url">
-                                {{getTrans(listItem.link.title)}}
-                            </Link>
-                        </li>
-                    </ul>
+    <section class="component-list-with-image-component"
+             :class="[{'colored-bg': props.coloredBackground}]">
+        <div class="container">
+            <header v-if="listWithImage.title || listWithImage.descriptions">
+                <title-component v-if="listWithImage.title">
+                    {{ getTrans(listWithImage.title) }}
+                </title-component>
+                <div class="texts" v-if="listWithImage.descriptions">
+                    <p
+                        :key="index"
+                        v-for="(description, index) in listWithImage.descriptions"
+                    >
+                        {{ getTrans(description) }}
+                    </p>
                 </div>
-            </div>
-            <div class="image-container">
-                <div class="inner-image-container">
-                    <large-image-component
-                        :image="getImage()"
-                        :alt="getAlt()"
-                    ></large-image-component>
+            </header>
+            <div class="list-image">
+                <div class="list">
+                    <div class="inner-list">
+                        <div class="indicator">
+                            <div class="inner-indicator" ref="indicatorRef"></div>
+                        </div>
+                        <ul ref="listRef">
+                            <li
+                                :key="index"
+                                @click="setActive(index)"
+                                @mouseenter="handleMouseEnter(index)"
+                                @mouseleave="handleMouseLeave"
+                                :class="listClasses(index)"
+                                :data-indicator-position="index"
+                                v-for="(listItem, index) in listWithImage.listItems">
+                                <h3>{{ getTrans(listItem.title) }}</h3>
+                                <p>{{ getTrans(listItem.description) }}</p>
+                                <div
+                                    v-if="listItem.badges"
+                                    class="badges">
+                                    <badge-component
+                                        :key="index"
+                                        v-for="(badge, index) in listItem.badges"
+                                    >
+                                        {{ getTrans(badge) }}
+                                    </badge-component>
+                                </div>
+                                <Link
+                                    v-if="listItem.link"
+                                    :href="listItem.link.url">
+                                    {{ getTrans(listItem.link.title) }}
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <div class="inner-image-container">
+                        <large-image-component
+                            :image="getImage()"
+                            :alt="getAlt()"
+                        ></large-image-component>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,11 +1,22 @@
 .section-website-expertise-integrations {
-    header{
+
+    &.colored-bg {
+        @apply bg-primary-light py-20;
+
+        :deep(h3) {
+            @apply text-primary;
+        }
+    }
+
+    header {
         @apply mb-10 xl:mb-16;
-        p{
+
+        p {
             @apply xl:w-3/4 text-xl;
         }
     }
-    .integrations{
+
+    .integrations {
         @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-16;
     }
 }

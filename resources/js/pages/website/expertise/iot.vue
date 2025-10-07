@@ -22,16 +22,18 @@ import {getTrans} from "@composables/UseTranslationHelper";
                 description="pages.iot.header.description"
                 :image="iotHeader"
             ></expertise-header>
+
             <integrations
                 :integrations-list="integrationsList"
                 title="pages.iot.integrations.title"
                 description="pages.iot.integrations.description"
                 icon-size="small"
             ></integrations>
+
             <list-with-image-component
                 :list-with-image="conceptToAppsBlock"
-                class="container"
                 :is-clickable="false"
+                :colored-background="true"
             ></list-with-image-component>
 
             <large-image-with-text-component
@@ -40,10 +42,13 @@ import {getTrans} from "@composables/UseTranslationHelper";
                 title="pages.iot.why_choose_iot.title"
                 text="pages.iot.why_choose_iot.text"
             ></large-image-with-text-component>
+
             <integrations
                 :integrations-list="whyIOTList"
                 icon-size="small"
+                :colored-background="true"
             ></integrations>
+
             <contact-form
                 :title="getTrans('pages.iot.contact_form.title')"
                 class="container">

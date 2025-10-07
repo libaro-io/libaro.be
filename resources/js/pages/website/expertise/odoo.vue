@@ -30,22 +30,27 @@ const integrationsList: IntegrationInterface[] = getIntegrations();
                 description="pages.odoo.header.description"
                 :image="odooHeader"
             ></expertise-header>
+
             <list-with-image-component
                 :list-with-image="WhatIsOdooForYou"
                 class="container"
                 :is-clickable="false"
             ></list-with-image-component>
+
             <integrations
                 :integrations-list="integrationsList"
                 title="pages.odoo.integrations.title"
                 description="pages.odoo.integrations.description"
+                :colored-background="true"
             ></integrations>
+
             <large-image-with-text-component
                 class="container"
                 :image="ChooseOdoo"
                 title="pages.odoo.why_choose_odoo.title"
                 text="pages.odoo.why_choose_odoo.text"
             ></large-image-with-text-component>
+
             <contact-form
                 :title="getTrans('pages.odoo.contact_form.title')"
                 class="container">

@@ -10,30 +10,34 @@ const props = defineProps<{
     title?: TranslationKey;
     description?: TranslationKey;
     iconSize?: 'small' | 'large';
+    coloredBackground?: boolean;
 }>();
 
 </script>
 <template>
-    <section class="section-website-expertise-integrations container">
-       <header
-           v-if="props.title && props.description"
-       >
-           <title-component v-if="props.title">
-               <h2>{{getTrans(props.title)}}</h2>
-           </title-component>
-            <p
-                v-if="props.description"
+    <section class="section-website-expertise-integrations"
+    :class="[{'colored-bg': props.coloredBackground}]">
+        <div class="container">
+            <header
+                v-if="props.title && props.description"
             >
-                {{getTrans(props.description)}}
-            </p>
-       </header>
-        <div class="integrations">
-            <integration-component
-                v-for="integration in props.integrationsList"
-                :key="integration.title"
-                :integration="integration"
-                :icon-size="props.iconSize"
-            ></integration-component>
+                <title-component v-if="props.title">
+                    <h2>{{ getTrans(props.title) }}</h2>
+                </title-component>
+                <p
+                    v-if="props.description"
+                >
+                    {{ getTrans(props.description) }}
+                </p>
+            </header>
+            <div class="integrations">
+                <integration-component
+                    v-for="integration in props.integrationsList"
+                    :key="integration.title"
+                    :integration="integration"
+                    :icon-size="props.iconSize"
+                ></integration-component>
+            </div>
         </div>
     </section>
 </template>

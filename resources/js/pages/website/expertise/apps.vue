@@ -131,7 +131,7 @@ const ourToolsBlocks: ToolInterface[] = [
 
         <usp-list-component
             :usp-list="uspListBlock"
-            class="container"
+            :colored-background="true"
         ></usp-list-component>
 
         <these-sectors
@@ -142,6 +142,7 @@ const ourToolsBlocks: ToolInterface[] = [
         <our-tools
             title="pages.apps.our_tools.title"
             :our-tools="ourToolsBlocks"
+            :colored-background="true"
         ></our-tools>
 
         <contact-form

@@ -48,7 +48,7 @@
     --color-gradient: var(--gradient);
     --color-dark: var(--dark);
 
-    --gap-page: 6rem;
+    --gap-page: 7.5rem;
     --gap-form: 2rem;
     --margin-page: var(--gap-page);
 }

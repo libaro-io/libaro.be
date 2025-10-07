@@ -15,7 +15,6 @@ import Robaws from "@assets/tools/robaws.png";
 import Sharepoint from "@assets/tools/sharepoint.webp";
 import TheseSectors from "@pages/website/expertise/sections/these-sectors.vue";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
-import LargeImageComponent from "@components/large-image-component.vue";
 import WebDevelopmentHeader from "@assets/images/webapplication/header.gif";
 import conceptToApplicationImage from "@assets/images/webapplication/concept_to_application.png";
 import ContactForm from "@pages/website/sections/contact-form.vue";
@@ -116,33 +115,38 @@ const ourToolsBlocks: ToolInterface[] = [
 </script>
 <template>
     <website
-        :page-title="getTrans('pages.webdevelopment.header.title')"
-        :page-description="getTrans('pages.webdevelopment.header.description')"
         meta-key="webdevelopment_expertise"
+        :margin-bottom="false"
     >
         <div id="page-website-expertise-webdevelopment" class="page-grid">
+            <expertise-header
+                title="pages.webdevelopment.header.title"
+                description="pages.webdevelopment.header.description"
+                :image="WebDevelopmentHeader"
+            ></expertise-header>
+
             <list-with-image-component
                 :list-with-image="conceptToWebApplicationBlock"
                 class="container"
                 :is-clickable="false"
             ></list-with-image-component>
-            <large-image-component class="container"
-                                   :image="WebDevelopmentHeader"
-                                   :load-when-visible="true"
-                                   :aspect-ratio="'aspect-video'"
-            ></large-image-component>
+
             <usp-list-component
                 :usp-list="uspListBlock"
-                class="container"
+                :colored-background="true"
             ></usp-list-component>
+
             <these-sectors
                 :title="getTrans('pages.webdevelopment.these_sectors.title')"
                 :projects="props.projects"
             ></these-sectors>
+
             <our-tools
                 title="pages.webdevelopment.our_tools.title"
                 :our-tools="ourToolsBlocks"
+                :colored-background="true"
             ></our-tools>
+
             <contact-form
                 :title="getTrans('pages.webdevelopment.contact_form.title')"
                 class="container">

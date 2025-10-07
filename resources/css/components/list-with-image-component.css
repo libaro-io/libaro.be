@@ -1,53 +1,72 @@
 .component-list-with-image-component {
-    header{
+
+    &.colored-bg {
+        @apply bg-primary-light py-20;
+    }
+
+    header {
         @apply mb-8 xl:mb-16;
-        .texts{
+
+        .texts {
             @apply flex flex-col gap-4 xl:max-w-3/4 text-xl;
         }
     }
-    .list-image{
+
+    .list-image {
         @apply grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-page items-start;
-        .list{
-            .inner-list{
+
+        .list {
+            .inner-list {
                 @apply relative;
-                .indicator{
+
+                .indicator {
                     @apply absolute top-0 left-0 w-1 h-full rounded-full bg-primary-light;
-                    .inner-indicator{
+
+                    .inner-indicator {
                         @apply w-1 rounded-full bg-primary-dark h-0;
                         transition: transform 0.3s ease, height 0.3s ease;
                     }
                 }
-                ul{
+
+                ul {
                     @apply pl-5 flex flex-col gap-4;
-                    li{
+
+                    li {
                         @apply py-4 px-4 rounded-xl;
-                        &.clickable{
-                            &:hover{
+
+                        &.clickable {
+                            &:hover {
                                 @apply cursor-pointer;
                             }
-                            &.active{
+
+                            &.active {
                                 @apply bg-slate-50;
                             }
                         }
 
-                        h3{
+                        h3 {
                             @apply font-gilroy text-primary font-bold text-xl mb-2;
                         }
-                        .badges{
+
+                        .badges {
                             @apply flex flex-wrap gap-3 mt-4;
                         }
-                        a{
+
+                        a {
                             @apply font-gilroy underline mt-4 inline-block;
                         }
                     }
                 }
             }
         }
-        .image-container{
+
+        .image-container {
             @apply flex items-start max-h-full relative overflow-hidden h-full;
-            .inner-image-container{
+
+            .inner-image-container {
                 @apply xl:absolute max-h-96 xl:max-h-full top-0 left-0 w-full h-full;
-                .component-large-image-component{
+
+                .component-large-image-component {
                     @apply w-full h-full;
                 }
             }

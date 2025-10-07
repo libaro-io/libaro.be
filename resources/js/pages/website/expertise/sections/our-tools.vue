@@ -8,11 +8,13 @@ import {TranslationKey} from "../../../../translations/lang-keys";
 const props = defineProps<{
     title: TranslationKey;
     ourTools: ToolInterface[];
+    coloredBackground?: boolean;
 }>();
 
 </script>
 <template>
-    <section class="section-website-expertise-our-tools">
+    <section class="section-website-expertise-our-tools"
+    :class="{'colored-background': props.coloredBackground}">
        <div class="container">
            <header>
                <title-component

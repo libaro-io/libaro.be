@@ -1,8 +1,10 @@
 .section-website-expertise-expertise-header {
+    @apply bg-primary-light;
+
     @apply relative;
     .container{
         .text {
-            @apply py-20 xl:py-56 relative z-20 xl:max-w-[50%] pr-16;
+            @apply py-20 xl:py-46 relative z-20 xl:max-w-[50%] pr-16;
             h1{
                 @apply font-gilroy font-bold text-5xl xl:text-6xl mb-10 text-white  xl:text-primary-darkest;
             }
