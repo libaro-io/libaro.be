@@ -13,6 +13,7 @@ import { getTrans } from "@composables/UseTranslationHelper";
 import { LandingPageInterface } from "@interfaces/LandingPageInterface";
 import { computed } from "vue";
 import {getLandingPageImage} from "@composables/UseLandingPageImage";
+import OurExpertises from "@pages/website/sections/our-expertises.vue";
 
 const props = defineProps<{
     clients?: PaginationInterface<ClientInterface[]>;
@@ -59,7 +60,6 @@ const projects = computed(() => props.landingPage?.projects ?? props.projects ??
 </script>
 <template>
     <website
-        :margin-bottom="false"
         :header-options="{
             isHome: true,
             fullWidthDescription: true,
@@ -71,6 +71,7 @@ const projects = computed(() => props.landingPage?.projects ?? props.projects ??
         :meta-description-override=" props.landingPage?.block.text"
     >
         <div id="page-website-home" class="page-grid">
+            <our-expertises></our-expertises>
             <our-projects :projects="projects"></our-projects>
             <text-block-image-component
                 class="container"

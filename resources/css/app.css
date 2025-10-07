@@ -48,6 +48,7 @@
 
     --gap-page: 6rem;
     --gap-form: 2rem;
+    --margin-page: var(--gap-page);
 }
 
 @layer base {

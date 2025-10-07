@@ -99,11 +99,6 @@
                     }
                 }
             }
-            &:hover{
-                .children{
-                    @apply max-h-[200px]  xl:shadow-xl ;
-                }
-            }
         }
     }
 }
