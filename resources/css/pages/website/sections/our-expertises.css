@@ -1,4 +1,5 @@
 .section-website-our-expertises {
+    @apply relative z-10;
     .container{
         .inner-container{
             @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:-mt-28 xl:p-6 xl:rounded-3xl xl:shadow-xl xl:border-3 border-primary-medium/25 xl:bg-gray-100/25;
