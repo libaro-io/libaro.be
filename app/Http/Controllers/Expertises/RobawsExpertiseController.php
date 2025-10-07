@@ -9,8 +9,6 @@ class RobawsExpertiseController extends BaseExpertiseController
 {
     public function __invoke(): Response
     {
-        return Inertia::render('website/expertise/robaws', [
-            'clients' => Inertia::defer(fn () => $this->getClients()),
-        ]);
+        return Inertia::render('website/expertise/robaws');
     }
 }

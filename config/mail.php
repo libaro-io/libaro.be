@@ -115,4 +115,15 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Contact Form Recipient
+    |--------------------------------------------------------------------------
+    |
+    | This is the email address where contact form submissions will be sent.
+    |
+    */
+
+    'contact_to' => env('MAIL_CONTACT_TO', 'info@libaro.be'),
+
 ];

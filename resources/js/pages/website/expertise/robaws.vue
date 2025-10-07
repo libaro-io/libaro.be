@@ -10,12 +10,8 @@ import LargeImageWithTextComponent from "@components/large-image-with-text-compo
 import LaptopRobawsImage from "@assets/images/robaws/laptop.png";
 import {onMounted} from "vue";
 import {LinkBuilderInterface} from "@interfaces/LinkBuilderInterface";
-import {ClientInterface} from "@interfaces/ClientInterface";
-import OurClients from "@pages/website/sections/our-clients.vue";
-
-const props = defineProps<{
-    clients?: ClientInterface[];
-}>();
+import ContactForm from "@pages/website/sections/contact-form.vue";
+import {getTrans} from "@composables/UseTranslationHelper";
 
 const getUrl = (slug: 'onderaannemers-app' | 'bryon-dagrapporten-app-teamleaders' | 'verhelst-group-tijdsregistratie-app'): LinkBuilderInterface => {
     return DetailProjectController({project: slug});
@@ -94,9 +90,10 @@ onMounted(() => {
                 title="pages.robaws.api_integration.title"
                 text="pages.robaws.api_integration.text"
             ></large-image-with-text-component>
-            <our-clients
-                :clients="props.clients"
-            ></our-clients>
+            <contact-form
+                :title="getTrans('pages.robaws.contact_form.title')"
+                class="container">
+            </contact-form>
         </div>
     </website>
 </template>

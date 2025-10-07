@@ -18,12 +18,10 @@ import Odoo from "@assets/tools/odoo.png";
 import Officient from "@assets/tools/officient.png";
 import Robaws from "@assets/tools/robaws.png";
 import Sharepoint from "@assets/tools/sharepoint.webp";
-import OurClients from "@pages/website/sections/our-clients.vue";
-import {ClientInterface} from "@interfaces/ClientInterface";
+import ContactForm from "@pages/website/sections/contact-form.vue";
 
 const props = defineProps<{
     projects?: ProjectInterface[];
-    clients?: ClientInterface[];
 }>();
 
 const conceptToAppsBlock: ListWithImageInterface = {
@@ -146,9 +144,10 @@ const ourToolsBlocks: ToolInterface[] = [
             :our-tools="ourToolsBlocks"
         ></our-tools>
 
-        <our-clients
-            :clients="props.clients"
-        ></our-clients>
+        <contact-form
+            :title="getTrans('pages.apps.contact_form.title')"
+            class="container">
+        </contact-form>
     </div>
     </website>
 </template>

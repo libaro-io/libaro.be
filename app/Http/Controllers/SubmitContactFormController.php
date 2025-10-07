@@ -19,7 +19,7 @@ class SubmitContactFormController extends Controller
         info('Has cookie: ' . request()->hasCookie('laravel_cookie_consent'));
         info('----------');
 
-        Mail::to('libaro@libaro.be')->send(new Contact($request->get('name'), $request->get('email'), $request->get('message')));
+        Mail::to(config('mail.contact_to'))->send(new Contact($request->get('name'), $request->get('email'), $request->get('message')));
 
         return back()->with('success', 'Uw bericht werd succesvol verzonden!');
     }

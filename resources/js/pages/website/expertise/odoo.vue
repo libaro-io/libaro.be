@@ -2,8 +2,8 @@
 import Website from "@layouts/website.vue";
 import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
 import odooHeader from "@assets/images/odoo/header.gif";
-import OurClients from "@pages/website/sections/our-clients.vue";
-import {ClientInterface} from "@interfaces/ClientInterface";
+import ContactForm from "@pages/website/sections/contact-form.vue";
+import {getTrans} from "@composables/UseTranslationHelper";
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import ListWithImageComponent from "@components/list-with-image-component.vue";
 
@@ -13,9 +13,6 @@ import Integrations from "@pages/website/expertise/sections/integrations.vue";
 import {IntegrationInterface} from "@interfaces/IntegrationInterface";
 import {getIntegrations, getWhatIsOdooYou} from "@composables/expertises/UseOdooComposable";
 
-const props = defineProps<{
-    clients?: ClientInterface[];
-}>();
 
 const WhatIsOdooForYou: ListWithImageInterface = getWhatIsOdooYou();
 
@@ -49,9 +46,10 @@ const integrationsList: IntegrationInterface[] = getIntegrations();
                 title="pages.odoo.why_choose_odoo.title"
                 text="pages.odoo.why_choose_odoo.text"
             ></large-image-with-text-component>
-            <our-clients
-                :clients="props.clients"
-            ></our-clients>
+            <contact-form
+                :title="getTrans('pages.odoo.contact_form.title')"
+                class="container">
+            </contact-form>
         </div>
     </website>
 </template>

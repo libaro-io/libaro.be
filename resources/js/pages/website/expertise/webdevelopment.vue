@@ -4,8 +4,6 @@ import ListWithImageComponent from "@components/list-with-image-component.vue";
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import UspListComponent from "@components/usp-list-component.vue";
 import {UspListInterface} from "@interfaces/UspListInterface";
-import {ClientInterface} from "@interfaces/ClientInterface";
-import OurClients from "@pages/website/sections/our-clients.vue";
 import OurTools from "@pages/website/expertise/sections/our-tools.vue";
 import {ToolInterface} from "@interfaces/ToolInterface";
 import {getTrans} from "@composables/UseTranslationHelper";
@@ -20,9 +18,9 @@ import {ProjectInterface} from "@interfaces/ProjectInterface";
 import LargeImageComponent from "@components/large-image-component.vue";
 import WebDevelopmentHeader from "@assets/images/webapplication/header.gif";
 import conceptToApplicationImage from "@assets/images/webapplication/concept_to_application.png";
+import ContactForm from "@pages/website/sections/contact-form.vue";
 
 const props = defineProps<{
-    clients?: ClientInterface[];
     projects?: ProjectInterface[];
 }>();
 
@@ -145,9 +143,10 @@ const ourToolsBlocks: ToolInterface[] = [
                 title="pages.webdevelopment.our_tools.title"
                 :our-tools="ourToolsBlocks"
             ></our-tools>
-            <our-clients
-                :clients="props.clients"
-            ></our-clients>
+            <contact-form
+                :title="getTrans('pages.webdevelopment.contact_form.title')"
+                class="container">
+            </contact-form>
         </div>
     </website>
 </template>

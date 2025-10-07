@@ -104,6 +104,9 @@ return [
                 ],
             ],
         ],
+        'contact_form' => [
+            'title' => 'Zin om je idee om te zetten in een webapplicatie?',
+        ],
     ],
     'odoo' => [
         'meta_title' => 'Odoo Implementatie - ERP Software op Maat',
@@ -216,6 +219,9 @@ return [
                 ],
             ],
         ],
+        'contact_form' => [
+            'title' => 'Klaar om Odoo te implementeren in uw bedrijf?',
+        ],
     ],
     'apps' => [
         'header' => [
@@ -294,6 +300,9 @@ return [
                     'description' => 'Integreer Microsoft SharePoint voor documentbeheer en samenwerking. Benader, deel en beheer bestanden rechtstreeks vanuit uw webapplicatie met volledige versiebeheer.',
                 ],
             ],
+        ],
+        'contact_form' => [
+            'title' => 'Klaar om je idee om te zetten in een mobiele app?',
         ],
     ],
     'iot' => [
@@ -422,6 +431,9 @@ return [
                 ],
             ],
         ],
+        'contact_form' => [
+            'title' => 'Klaar om je kantoor slimmer te maken met IoT?',
+        ],
     ],
     'robaws' => [
         'header' => [
@@ -460,6 +472,9 @@ return [
         'api_integration' => [
             'title' => 'Libaro maakt de koppeling met de Robaws API',
             'text' => 'Soms kan je bepaalde programma\'s niet zomaar uitfaseren, of lijkt Robaws nét dat tikkeltje tekort te schieten om volledig de overstap te maken. In dat geval zorgt Libaro voor de perfecte oplossing: wij koppelen Robaws via de API met jouw bestaande of nieuwe software, zodat je processen naadloos blijven doorlopen en je toch maximaal rendement haalt uit Robaws.',
+        ],
+        'contact_form' => [
+            'title' => 'Klaar om je tools te integreren met Robaws?',
         ],
     ],
     'ai' => [
@@ -517,6 +532,9 @@ return [
                     'description' => 'Maak data toegankelijk voor iedereen, zonder technische drempels. Dankzij AI en natuurlijke taalverwerking kan elk teamlid analyses uitvoeren zonder SQL of programmeerkennis.',
                 ],
             ],
+        ],
+        'contact_form' => [
+            'title' => 'Klaar om je business te boosten met AI?',
         ],
     ],
 ];

@@ -7,13 +7,8 @@ import {conceptToAppsBlock, integrationsList, whyIOTList} from "@composables/exp
 import iotHeader from "@assets/images/iot/header.png";
 import LargeImageWithTextComponent from "@components/large-image-with-text-component.vue";
 import ChooseIOT from "@assets/images/iot/choose_iot.png";
-import OurClients from "@pages/website/sections/our-clients.vue";
-import {ClientInterface} from "@interfaces/ClientInterface";
-
-
-const props = defineProps<{
-    clients?: ClientInterface[];
-}>();
+import ContactForm from "@pages/website/sections/contact-form.vue";
+import {getTrans} from "@composables/UseTranslationHelper";
 
 </script>
 <template>
@@ -49,9 +44,10 @@ const props = defineProps<{
                 :integrations-list="whyIOTList"
                 icon-size="small"
             ></integrations>
-            <our-clients
-                :clients="props.clients"
-            ></our-clients>
+            <contact-form
+                :title="getTrans('pages.iot.contact_form.title')"
+                class="container">
+            </contact-form>
         </div>
     </website>
 </template>

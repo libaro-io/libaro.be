@@ -103,6 +103,9 @@ return [
                 ],
             ],
         ],
+        'contact_form' => [
+            'title' => 'Ready to turn your idea into a web application?',
+        ],
     ],
     'odoo' => [
         'meta_title' => 'Odoo Implementation - Custom ERP Software',
@@ -215,6 +218,9 @@ return [
                 ],
             ],
         ],
+        'contact_form' => [
+            'title' => 'Ready to implement Odoo in your business?',
+        ],
     ],
     'apps' => [
         'header' => [
@@ -293,6 +299,9 @@ return [
                     'description' => 'Integrate Microsoft SharePoint for document management and collaboration. Access, share, and manage files directly from your web application with full version control.',
                 ],
             ],
+        ],
+        'contact_form' => [
+            'title' => 'Ready to turn your idea into a mobile app?',
         ],
     ],
     'iot' => [
@@ -421,6 +430,9 @@ return [
                 ],
             ],
         ],
+        'contact_form' => [
+            'title' => 'Ready to make your office smarter with IoT?',
+        ],
     ],
     'robaws' => [
         'header' => [
@@ -459,6 +471,9 @@ return [
         'api_integration' => [
             'title' => 'Libaro makes the connection with the Robaws API',
             'text' => 'Sometimes you can\'t just phase out certain programs, or Robaws seems to fall just short of making the complete switch. In that case, Libaro provides the perfect solution: we connect Robaws via the API with your existing or new software, so that your processes continue to run seamlessly and you still get maximum return from Robaws.',
+        ],
+        'contact_form' => [
+            'title' => 'Ready to integrate your tools with Robaws?',
         ],
     ],
     'ai' => [
@@ -516,6 +531,9 @@ return [
                     'description' => 'Make data accessible to everyone, without technical barriers. Thanks to AI and natural language processing, every team member can perform analyses without SQL or programming knowledge.',
                 ],
             ],
+        ],
+        'contact_form' => [
+            'title' => 'Ready to boost your business with AI?',
         ],
     ],
 

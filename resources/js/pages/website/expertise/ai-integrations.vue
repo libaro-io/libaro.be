@@ -2,17 +2,14 @@
 import Website from "@layouts/website.vue";
 import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
 import aiHeader from "@assets/images/ai/header.jpg";
-import OurClients from "@pages/website/sections/our-clients.vue";
-import {ClientInterface} from "@interfaces/ClientInterface";
+import ContactForm from "@pages/website/sections/contact-form.vue";
+import {getTrans} from "@composables/UseTranslationHelper";
 import ListWithImageComponent from "@components/list-with-image-component.vue";
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import ChooseAI from "@assets/images/ai/choose_ai.png"
 import UspListComponent from "@components/usp-list-component.vue";
 import {UspListInterface} from "@interfaces/UspListInterface";
 
-const props = defineProps<{
-    clients?: ClientInterface[];
-}>();
 
 const WhatIsAIForYou: ListWithImageInterface = {
     title: 'pages.ai.what_is_ai_for_you.title',
@@ -93,9 +90,10 @@ const uspListBlock: UspListInterface = {
                 :usp-list="uspListBlock"
                 class="container"
             ></usp-list-component>
-            <our-clients
-                :clients="props.clients"
-            ></our-clients>
+            <contact-form
+                :title="getTrans('pages.ai.contact_form.title')"
+                class="container">
+            </contact-form>
         </div>
     </website>
 </template>

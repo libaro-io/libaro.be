@@ -9,8 +9,6 @@ class AiIntegrationsExpertiseController extends BaseExpertiseController
 {
     public function __invoke(): Response
     {
-        return Inertia::render('website/expertise/ai-integrations', [
-            'clients' => Inertia::defer(fn () => $this->getClients()),
-        ]);
+        return Inertia::render('website/expertise/ai-integrations');
     }
 }

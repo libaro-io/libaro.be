@@ -9,6 +9,11 @@ import { getTrans } from "@composables/UseTranslationHelper";
 import {showToast} from "@composables/UseToastComposable";
 import {onMounted, ref} from "vue";
 import {usePage} from "@inertiajs/vue3";
+import TitleComponent from "@components/title-component.vue";
+
+const props = defineProps<{
+    title?: string;
+}>();
 
 // Extend Window interface for reCAPTCHA
 declare global {
@@ -108,6 +113,11 @@ const submitContactForm = async (): Promise<void> => {
 </script>
 <template>
     <section class="section-website-contact-form">
+        <title-component
+            v-if="props.title"
+        >
+            {{props.title}}
+        </title-component>
         <form @submit.prevent="submitContactForm">
             <input-component
                 v-model="contactForm.name"
