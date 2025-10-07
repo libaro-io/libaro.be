@@ -9,7 +9,7 @@
 @import "@css/pages/website/expertise/sections/expertise-header.css";
 @import "@css/components/text-block-image-component.css";
 @import "@css/pages/website/expertise/webdevelopment.css";
-@import "@css/pages/website/sections/our-projects.css";
+@import "@css/pages/website/sections/our-expertises.css";
 @import "@css/components/cta-block-component.css";
 @import "@css/pages/website/sections/contact-information.css";
 @import "@css/components/forms/input-component.css";
@@ -38,6 +38,7 @@
 
     --color-primary: var(--primary);
     --color-primary-light: var(--primary-light);
+    --color-primary-hover: var(--primary-hover);
     --color-primary-medium: var(--primary-medium);
     --color-primary-dark: var(--primary-dark);
     --color-primary-darkest: var(--primary-darkest);
@@ -75,6 +76,7 @@
     --primary: hsl(206, 100%, 50%);
     --border: #ebf4f7;
     --primary-light: hsl(195, 44%, 96%);
+    --primary-hover: hsl(200, 27%, 94%);
     --primary-medium: hsl(206, 59%, 71%);
     --primary-dark: hsl(206, 100%, 50%);
     --primary-darkest: hsl(228, 47%, 46%);

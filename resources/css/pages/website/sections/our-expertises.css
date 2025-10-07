@@ -1,9 +1,9 @@
 .section-website-our-expertises {
     .container{
         .inner-container{
-            @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:-mt-28 xl:bg-white xl:p-6 rounded-2xl  xl:shadow-md auto-rows-auto;
+            @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:-mt-28 xl:p-6 rounded-3xl xl:shadow-xl auto-rows-auto border-3  border-primary-medium/25 bg-gray-100/25;
             .expertise-item{
-                @apply bg-primary-light p-7 rounded-2xl flex flex-col items-center gap-4;
+                @apply bg-primary-light p-7 rounded-2xl flex flex-col items-center gap-4 transition-all duration-300 ease-in-out;
                 .icon{
                     @apply bg-white p-3 rounded-xl shadow-md size-13 flex items-center justify-center;
                     i{
@@ -20,7 +20,7 @@
                     }
                 }
                 &:hover{
-                    @apply opacity-75;
+                    @apply bg-primary-hover;
                     i{
                         @apply translate-y-[-4px];
                     }
