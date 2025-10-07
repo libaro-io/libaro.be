@@ -57,12 +57,16 @@ class ProjectForm
                     ->label('Description')
                     ->required(),
                 FileUpload::make('image')
-                    ->label('Image (webp only)')
+                    ->label('Image (1000px height and webp only)')
+                    ->required()
                     ->acceptedFileTypes(['image/webp'])
                     ->disk('s3')
                     ->directory('projects')
                     ->visibility('public')
                     ->preserveFilenames()
+                    ->rules([
+                        'dimensions:height=1000',
+                    ])
                     ->columnSpanFull(),
                 TagsInput::make('tags')
                     ->separator(',')

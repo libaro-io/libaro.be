@@ -11,7 +11,7 @@ class DetailProductController extends Controller
 {
     public function __invoke(string $locale, Project $product): Response
     {
-        $product->loadMissing('blocks');
+        $product->loadMissing(['blocks', 'client']);
 
         return Inertia::render('website/project', [
             'project' => ProjectResource::make($product),

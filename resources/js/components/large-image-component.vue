@@ -12,12 +12,16 @@ const props = withDefaults(defineProps<{
     fetchPriority?: 'high' | 'low' | 'auto';
     loadWhenVisible?: boolean;
     aspectRatio?: 'aspect-auto' | 'aspect-video' | 'aspect-4/3';
+    containImage?: boolean;
 }>(), {
     loadWhenVisible: false,
-    aspectRatio: 'aspect-auto'
+    aspectRatio: 'aspect-auto',
+    containImage: false
 })
 
 const alt = computed(() => props.alt ?? page.props.pageProps.company.name)
+
+const containImageClass = computed(() => props.containImage ? 'contain-image' : 'cover-image');
 
 const getImageUrl = computed((): string => {
     return getGifImage(props.image);
@@ -25,7 +29,7 @@ const getImageUrl = computed((): string => {
 </script>
 <template>
     <section class="component-large-image-component">
-        <div class="image-container" :class="[props.aspectRatio]">
+        <div class="image-container" :class="[props.aspectRatio, containImageClass]">
             <img
                 :src="getImageUrl"
                 :alt="alt"

@@ -21,6 +21,7 @@ class ClientForm
                     ->default(0),
                 FileUpload::make('image')
                     ->label('Image (300px width and webp only)')
+                    ->required()
                     ->acceptedFileTypes(['image/webp'])
                     ->disk('s3')
                     ->directory('clients')

@@ -1,0 +1,23 @@
+.section-website-project-intro {
+    @apply py-10 lg:py-14;
+
+    * {
+        @apply text-dark;
+    }
+
+    p {
+        @apply text-lg leading-loose;
+    }
+
+    .grid-layout {
+        @apply relative grid grid-cols-1 lg:grid-cols-6 gap-14 xl:gap-24 items-center;
+    }
+
+    .img-wrapper {
+        @apply lg:col-span-2 max-w-[300px] mx-auto;
+    }
+
+    .text {
+        @apply lg:col-span-4;
+    }
+}

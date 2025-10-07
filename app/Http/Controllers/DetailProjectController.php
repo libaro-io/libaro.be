@@ -13,7 +13,7 @@ class DetailProjectController extends Controller
 {
     public function __invoke(string $locale, Project $project): Response
     {
-        $project->loadMissing('blocks');
+        $project->loadMissing(['blocks', 'client']);
 
         $landingPages = LandingPage::query()
             ->where('active', '=', true)

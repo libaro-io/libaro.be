@@ -1,9 +1,29 @@
 .component-large-image-component {
+    @apply text-center;
+
     .image-container {
-        @apply rounded-3xl overflow-hidden h-full w-full object-cover object-top xl:p-6 xl:border-2 border-border overflow-hidden bg-gray-100/25;
+        @apply rounded-3xl overflow-hidden inline-block xl:p-6 xl:border-2 border-border overflow-hidden bg-gray-100/25;
 
         img {
-            @apply xl:max-h-[850px] w-full h-full object-cover object-center rounded-2xl;
+            @apply rounded-2xl;
+        }
+
+        &.contain-image {
+            img {
+                @apply max-h-[600px];
+            }
+
+            /*img {*/
+            /*    @apply xl:max-h-[850px] w-full h-full object-cover object-center rounded-2xl;*/
+            /*}*/
+        }
+
+        &.cover-image {
+            @apply h-full w-full object-cover object-top;
+
+            img {
+                @apply xl:max-h-[850px] w-full h-full object-cover object-center;
+            }
         }
     }
 }

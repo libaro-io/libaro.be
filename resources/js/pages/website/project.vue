@@ -2,6 +2,7 @@
 import Website from "@layouts/website.vue";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
 import ContentBlock from "@pages/website/sections/content-block.vue";
+import ProjectIntro from "@pages/website/sections/project-intro.vue";
 import {useS3Image} from "@composables/useS3Image";
 import {computed} from "vue";
 import {getTrans} from "@composables/UseTranslationHelper";
@@ -19,15 +20,16 @@ const hero = computed(() => {
     return props.project.image ? useS3Image(props.project.image) : null
 })
 
+const curiousAboutResultTitle = computed(() => {
+    return props.project.client_url ? getTrans('projects.curious_result') : ''
+});
 </script>
 <template>
     <website
         :page-title="props.project.name"
         :page-sub-title="props.project.type"
-        :page-description="props.project.description"
+        :page-description="props.project.client?.name"
         :header-options="{
-            fullWidthDescription: true,
-            background: hero,
             tags: props.project.tags
         }"
         meta-key="projects"
@@ -35,21 +37,26 @@ const hero = computed(() => {
         :meta-description-override="props.project.description"
         :marginBottom="false">
         <div id="page-website-project">
+            <project-intro
+                :project="props.project"/>
+
             <content-block
                 v-for="(block, index) in project.blocks" :key="index"
                 :alt="project.name"
                 :block="block"/>
 
             <large-image-subtitle-component
-                v-if="props.project.client_url"
                 class="mt-10"
                 :image="hero"
-                :title="getTrans('projects.curious_result')"
+                :contain-image="true"
+                :title="curiousAboutResultTitle"
                 align="center"
             >
-                <a :href="props.project.client_url" target="_blank">
+                <a
+                    v-if="props.project.client_url"
+                    :href="props.project.client_url"
+                    target="_blank">
                     <button-component
-                        v-if="props.project.client_url"
                         :text="getTrans('projects.visit_application')"
                         color="tertiary"
                         size="large"
