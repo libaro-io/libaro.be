@@ -30,6 +30,7 @@
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
     --radius-sm: calc(var(--radius) - 4px);
+    --text-base: 1.1rem;
     --text-7xl: 4rem;
 
     --color-background: var(--background);
@@ -65,7 +66,7 @@
 @layer utilities {
     body,
     html {
-        font-size: 15px;
+        font-size: 14px;
         --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     }
 }
@@ -98,7 +99,7 @@
     }
 
     p, li {
-        @apply font-grotesk font-medium text-primary-darkest;
+        @apply font-grotesk font-medium text-primary-darkest text-base;
     }
 
     a {
