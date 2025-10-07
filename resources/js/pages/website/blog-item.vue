@@ -4,9 +4,9 @@ import ContentBlock from "@pages/website/sections/content-block.vue";
 import Website from "@layouts/website.vue";
 import ButtonComponent from "@components/button-component.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
-import BlogItemLink from "@pages/website/sections/blog-item-link.vue";
 import {computed} from "vue";
 import {useS3Image} from "@composables/useS3Image";
+import LargeImageSubtitleComponent from "@components/large-image-subtitle-component.vue";
 
 const props = defineProps<{
     blog: BlogInterface
@@ -24,7 +24,6 @@ const hero = computed(() => {
         :header-options="{
             fullWidthDescription: true,
             tags: props.blog.tags,
-            background: hero
         }"
         meta-key="blogs"
         :meta-title-override="props.blog.title"
@@ -36,8 +35,16 @@ const hero = computed(() => {
                 :alt="props.blog.title"
                 :block="block"/>
 
-            <blog-item-link v-if="props.blog.link">
-                <a :href="props.blog.link" target="_blank">
+            <large-image-subtitle-component
+                class="mt-10"
+                :image="hero"
+                :contain-image="true"
+                align="center"
+            >
+                <a
+                    v-if="props.blog.link"
+                    :href="props.blog.link"
+                    target="_blank">
                     <button-component
                         :text="getTrans('blog.read_more')"
                         color="tertiary"
@@ -45,7 +52,7 @@ const hero = computed(() => {
                         icon="fa-solid fa-chevron-right"
                     ></button-component>
                 </a>
-            </blog-item-link>
+            </large-image-subtitle-component>
         </div>
     </website>
 </template>
