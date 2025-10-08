@@ -61,21 +61,6 @@
     <link rel="preload" as="image" crossorigin="anonymous" href="/images/header_striped.webp">
     <link rel="preload" as="image" crossorigin="anonymous" href="/images/clock_side.webp">
 
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/gilroy/gilroy_bold.otf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/gilroy/gilroy_extrabold.otf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_light.ttf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_light_italic.ttf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_regular.ttf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_regular_italic.ttf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_medium.ttf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_medium_italic.ttf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_semibold.ttf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_semibold_italic.ttf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_bold.ttf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_bold_italic.ttf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_extrabold.ttf">
-    <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_black.ttf">
-
     <link rel="preload" href="https://kit.fontawesome.com/0ec3ed4413.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://kit.fontawesome.com/0ec3ed4413.css">
