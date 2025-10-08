@@ -61,7 +61,66 @@
     <link rel="preload" as="image" crossorigin="anonymous" href="/images/header_striped.webp">
     <link rel="preload" as="image" crossorigin="anonymous" href="/images/clock_side.webp">
 
-    <link rel="preload" href="https://kit.fontawesome.com/0ec3ed4413.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="font" href="/fonts/gilroy/gilroy_bold.woff2" crossorigin>
+    <link rel="preload" as="font" href="/fonts/gilroy/gilroy_extrabold.woff2" crossorigin>
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_regular.woff2" crossorigin>
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_medium.woff2" crossorigin>
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_semibold.woff2" crossorigin>
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_bold.woff2" crossorigin>
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_extrabold.woff2" crossorigin>
+
+    <style>
+        @font-face {
+            font-family: 'gilroy';
+            font-display: swap;
+            font-weight: 700;
+            src: url('/fonts/gilroy/gilroy_bold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'gilroy';
+            font-display: swap;
+            font-weight: 800;
+            src: url('/fonts/gilroy/gilroy_extrabold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'grotesk';
+            font-display: swap;
+            font-weight: 400;
+            src: url('/fonts/grotesk/grotesk_regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'grotesk';
+            font-display: swap;
+            font-weight: 500;
+            src: url('/fonts/grotesk/grotesk_medium.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'grotesk';
+            font-display: swap;
+            font-weight: 600;
+            src: url('/fonts/grotesk/grotesk_semibold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'grotesk';
+            font-display: swap;
+            font-weight: 700;
+            src: url('/fonts/grotesk/grotesk_bold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'grotesk';
+            font-display: swap;
+            font-weight: 800;
+            src: url('/fonts/grotesk/grotesk_extrabold.woff2') format('woff2');
+        }
+    </style>
+
+    <link rel="preload" href="//kit.fontawesome.com/0ec3ed4413.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://kit.fontawesome.com/0ec3ed4413.css">
     </noscript>
