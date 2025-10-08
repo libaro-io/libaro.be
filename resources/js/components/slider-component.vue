@@ -67,12 +67,14 @@ const canScrollRight = computed(():boolean => {
             <rounded-button
                 @click="scrollLeft"
                 :disabled="!canScrollLeft"
+                aria-label="scroll left"
             >
                 <i class="fa-solid fa-chevron-left"></i>
             </rounded-button>
             <rounded-button
                 @click="scrollRight"
                 :disabled="!canScrollRight"
+                aria-label="Scroll right"
             >
                 <i class="fa-solid fa-chevron-right"></i>
             </rounded-button>
