@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import './fonts.css';
 
 /* these imports are to prevent shifting of the sections */
 @import '@css/layouts/sections/header.css';
