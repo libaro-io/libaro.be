@@ -7,6 +7,8 @@ import {useS3Image} from "@composables/useS3Image";
 import TitleComponent from "@components/title-component.vue";
 import SubTitleComponent from "@components/sub-title-component.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
+import ButtonComponent from "@components/button-component.vue";
+import ProjectController from "@actions/App/Http/Controllers/ProjectController";
 
 const props = defineProps<{
     projects: ProjectInterface[],
@@ -41,6 +43,16 @@ const props = defineProps<{
                         :description="project.client.name"
                         :background-image="useS3Image(project.image) ?? ''"
                     ></cta-block-component>
+                </Link>
+            </div>
+            <div class="button">
+                <Link :href="ProjectController()">
+                    <button-component
+                        :text="getTrans('sections.our-projects.button')"
+                        color="tertiary"
+                        size="large"
+                        icon="fa-solid fa-chevron-right"
+                    ></button-component>
                 </Link>
             </div>
         </div>

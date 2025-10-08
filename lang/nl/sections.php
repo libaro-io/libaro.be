@@ -36,5 +36,6 @@ return [
     'our-projects' => [
         'title' => 'Succesverhalen uit de Praktijk',
         'subtitle' => 'Ontdek hoe we voor deze drie klanten hun digitale ambities hebben waargemaakt.',
+        'button' => 'Alle projecten',
     ],
 ];

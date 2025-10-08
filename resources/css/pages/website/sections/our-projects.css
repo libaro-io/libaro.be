@@ -1,23 +1,29 @@
 .section-website-our-projects {
     @apply py-(--margin-page) border-b-20 border-b-border  bg-primary-light;
 
-    .titles{
-        @apply mb-14 flex flex-col-reverse gap-4;
-    }
+    .container{
+        @apply flex flex-col gap-10;
+        .titles{
+            @apply mb-14 flex flex-col-reverse gap-4;
+        }
 
-    .inner-container-our-projects {
-        @apply bg-white rounded-2xl shadow-xl p-6 relative grid grid-cols-1 xl:grid-cols-3 gap-6 overflow-hidden;
+        .inner-container-our-projects {
+            @apply bg-white rounded-2xl shadow-xl p-6 relative grid grid-cols-1 xl:grid-cols-3 gap-6 overflow-hidden;
 
-        a {
-            @apply transition-all duration-300 ease-in-out flex;
+            a {
+                @apply transition-all duration-300 ease-in-out flex;
 
-            &:hover {
-                @apply scale-[1.02];
+                &:hover {
+                    @apply scale-[1.02];
+                }
+
+                .component-cta-block-component {
+                    @apply flex-1;
+                }
             }
-
-            .component-cta-block-component {
-                @apply flex-1;
-            }
+        }
+        .button{
+            @apply flex justify-end;
         }
     }
 }
