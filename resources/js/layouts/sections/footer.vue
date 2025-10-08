@@ -134,8 +134,13 @@ const footerPrivacyUrls: Ref<
                 </Link>
             </div>
             <div class="section md:col-span-2">
-                <div class="odoo-logo">
-                    <img loading="lazy" class="image" src="@assets/logos/odoo_ready_partners_rgb.svg" alt="">
+                <div class="logos">
+                    <div class="trends-gazellen-logo">
+                        <img loading="lazy" class="image" src="@assets/logos/trends_gazellen.png" alt="">
+                    </div>
+                    <div class="odoo-logo">
+                        <img loading="lazy" class="image" src="@assets/logos/odoo_ready_partners_rgb.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>

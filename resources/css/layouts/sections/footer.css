@@ -56,8 +56,11 @@
             @apply flex gap-2 flex-col;
         }
 
-        .odoo-logo{
-            @apply flex justify-center md:justify-end items-center gap-2;
+        .logos{
+            @apply flex justify-center md:justify-end items-center gap-5;
+            img{
+                @apply h-20 w-auto;
+            }
         }
 
         .image{
