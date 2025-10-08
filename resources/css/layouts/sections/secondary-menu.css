@@ -4,7 +4,7 @@
             @apply flex flex-col xl:flex-row items-center xl:items-start gap-2 xl:-mr-4;
             li{
                 a{
-                    @apply py-1 px-4  cursor-pointer rounded-md transition-all duration-200;
+                    @apply py-1 px-4  cursor-pointer rounded-md transition-all duration-200 font-['Arial'];
                 }
             }
         }
