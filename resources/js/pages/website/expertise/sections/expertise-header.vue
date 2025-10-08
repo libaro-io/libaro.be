@@ -2,7 +2,6 @@
 
 import {TranslationKey} from "../../../../translations/lang-keys";
 import {getTrans} from "@composables/UseTranslationHelper";
-import {computed} from "vue";
 import {getGifImage} from "@composables/UseGif";
 
 const props = defineProps<{
@@ -11,9 +10,8 @@ const props = defineProps<{
     image: string;
 }>();
 
-const getImageUrl = computed(():string => {
-    return getGifImage(props.image);
-});
+// Generate the URL once when the component is created, not as a computed property
+const getImageUrl = getGifImage(props.image);
 
 </script>
 <template>
@@ -32,13 +30,12 @@ const getImageUrl = computed(():string => {
             </div>
             <div class="image">
                 <img
+                    v-if="getImageUrl"
                     :src="getImageUrl"
-                    alt=""
+                    :alt="getTrans(props.title)"
+                    fetchpriority="high"
                 >
             </div>
         </div>
     </section>
 </template>
-<style scoped>
-@import "@css/pages/website/expertise/sections/expertise-header.css";
-</style>
