@@ -1,11 +1,17 @@
 .component-forms-textarea-component {
-    label{
-        @apply text-primary-dark font-grotesk font-extrabold text-lg mb-2 block;
-    }
     .textarea-container{
-        @apply p-4 border-1 border-primary-dark rounded-md;
+        @apply relative;
+
+        label{
+            @apply bg-white px-2 absolute  left-1 top-4 -translate-y-1/2 text-primary-dark font-grotesk font-semibold text-lg pointer-events-none transition-all duration-300 ease-out;
+
+            &.floating {
+                @apply -top-2 translate-y-0 text-sm;
+            }
+        }
+
         textarea{
-            @apply w-full bg-transparent resize-none h-24;
+            @apply w-full bg-transparent resize-none h-24 px-4 py-3  border-1 border-border;
         }
     }
     .error{

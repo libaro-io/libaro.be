@@ -9,6 +9,7 @@ import LargeImageWithTextComponent from "@components/large-image-with-text-compo
 import ChooseIOT from "@assets/images/iot/choose_iot.png";
 import ContactForm from "@pages/website/sections/contact-form.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
+import TitleComponent from "@components/title-component.vue";
 
 </script>
 <template>
@@ -50,13 +51,17 @@ import {getTrans} from "@composables/UseTranslationHelper";
                 :colored-background="true"
             ></integrations>
 
-            <contact-form
-                :title="getTrans('pages.iot.contact_form.title')"
-                class="container">
-            </contact-form>
+            <div class="contact-block container">
+                <title-component>
+                    <h2> {{ getTrans('pages.iot.contact_form.title') }}</h2>
+                </title-component>
+                <contact-form>
+                </contact-form>
+            </div>
         </div>
     </website>
 </template>
 <style scoped>
 @import "@css/pages/website/expertise/iot.css";
 </style>
+

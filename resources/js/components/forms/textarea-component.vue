@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import {ref, computed} from "vue";
 
 const model = defineModel<string>();
+const isFocused = ref(false);
 
 const props = withDefaults(defineProps<{
     label?: string,
@@ -12,12 +14,35 @@ const props = withDefaults(defineProps<{
     required: false,
 });
 
+const isLabelFloating = computed(() => {
+    return isFocused.value || (model.value && model.value.length > 0);
+});
+
+const handleFocus = (): void => {
+    isFocused.value = true;
+}
+
+const handleBlur = (): void => {
+    isFocused.value = false;
+}
+
 </script>
 <template>
     <section class="component-forms-textarea-component">
-        <label v-if="props.label">{{ props.label }}</label>
         <div class="textarea-container">
-            <textarea v-model="model" :name="props.name" :placeholder="props.placeholder" :required="props.required"></textarea>
+            <label 
+                v-if="props.label"
+                :class="{'floating': isLabelFloating}"
+            >
+                {{ props.label }} <span v-if="props.required" class="required">*</span>
+            </label>
+            <textarea 
+                v-model="model" 
+                :name="props.name" 
+                :required="props.required"
+                @focus="handleFocus"
+                @blur="handleBlur"
+            ></textarea>
         </div>
         <p v-if="props.error" class="error">{{ props.error }}</p>
     </section>

@@ -19,6 +19,7 @@ import Officient from "@assets/tools/officient.png";
 import Robaws from "@assets/tools/robaws.png";
 import Sharepoint from "@assets/tools/sharepoint.webp";
 import ContactForm from "@pages/website/sections/contact-form.vue";
+import TitleComponent from "@components/title-component.vue";
 
 const props = defineProps<{
     projects?: ProjectInterface[];
@@ -146,10 +147,13 @@ const ourToolsBlocks: ToolInterface[] = [
             :colored-background="true"
         ></our-tools>
 
-        <contact-form
-            :title="getTrans('pages.apps.contact_form.title')"
-            class="container">
-        </contact-form>
+        <div class="contact-block container">
+            <title-component>
+                <h2> {{ getTrans('pages.apps.contact_form.title') }}</h2>
+            </title-component>
+            <contact-form>
+            </contact-form>
+        </div>
     </div>
     </website>
 </template>

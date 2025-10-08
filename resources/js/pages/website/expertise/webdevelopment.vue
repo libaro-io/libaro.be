@@ -19,7 +19,7 @@ import WebDevelopmentHeader from "@assets/images/webapplication/header.gif";
 import conceptToApplicationImage from "@assets/images/webapplication/concept_to_application.png";
 import ContactForm from "@pages/website/sections/contact-form.vue";
 import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
-import {WhenVisible} from "@inertiajs/vue3";
+import TitleComponent from "@components/title-component.vue";
 
 const props = defineProps<{
     projects?: ProjectInterface[];
@@ -149,13 +149,12 @@ const ourToolsBlocks: ToolInterface[] = [
                 :our-tools="ourToolsBlocks"
                 :colored-background="true"
             ></our-tools>
-            <div>
-                <WhenVisible :data="[]" :buffer="400" always as="section">
-                    <contact-form
-                        :title="getTrans('pages.webdevelopment.contact_form.title')"
-                        class="container">
-                    </contact-form>
-                </WhenVisible>
+            <div class="contact-block container">
+                <title-component>
+                    <h2> {{ getTrans('pages.webdevelopment.contact_form.title') }}</h2>
+                </title-component>
+                <contact-form>
+                </contact-form>
             </div>
 
         </div>

@@ -12,6 +12,7 @@ import ChooseOdoo from "@assets/images/odoo/choose_odoo.webp";
 import Integrations from "@pages/website/expertise/sections/integrations.vue";
 import {IntegrationInterface} from "@interfaces/IntegrationInterface";
 import {getIntegrations, getWhatIsOdooYou} from "@composables/expertises/UseOdooComposable";
+import TitleComponent from "@components/title-component.vue";
 
 
 const WhatIsOdooForYou: ListWithImageInterface = getWhatIsOdooYou();
@@ -52,13 +53,17 @@ const integrationsList: IntegrationInterface[] = getIntegrations();
                 text="pages.odoo.why_choose_odoo.text"
             ></large-image-with-text-component>
 
-            <contact-form
-                :title="getTrans('pages.odoo.contact_form.title')"
-                class="container">
-            </contact-form>
+            <div class="contact-block container">
+                <title-component>
+                    <h2> {{ getTrans('pages.odoo.contact_form.title') }}</h2>
+                </title-component>
+                <contact-form>
+                </contact-form>
+            </div>
         </div>
     </website>
 </template>
 <style scoped>
 @import "@css/pages/website/expertise/odoo.css";
 </style>
+
