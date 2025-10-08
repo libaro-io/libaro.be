@@ -1,7 +1,5 @@
 .section-website-expertise-expertise-header {
-    @apply bg-primary-light;
-
-    @apply relative;
+    @apply bg-primary-light relative;
     .container{
         .text {
             @apply py-20 xl:py-46 relative z-20 xl:max-w-[50%] pr-16;
@@ -17,7 +15,7 @@
         }
 
         .image {
-            @apply absolute top-0 right-0 h-full w-full xl:w-1/2 rounded-bl-3xl overflow-hidden;
+            @apply absolute top-0 right-0 h-full w-full xl:w-1/2 overflow-hidden;
 
             @media (min-width: 1800px) {
                 @apply max-w-[700px];
