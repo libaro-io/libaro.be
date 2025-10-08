@@ -45,6 +45,7 @@ const props = withDefaults(defineProps<{
             </div>
             <large-image-component
                 class="image"
+                :lazy-load="true"
                 :image="props.textBlockImage.image"
                 :fetch-priority="props.fetchPriority"
             ></large-image-component>

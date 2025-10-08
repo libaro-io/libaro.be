@@ -9,11 +9,13 @@ const page = usePage<PageInterface>()
 const props = withDefaults(defineProps<{
     image: string;
     alt?: string;
+    lazyLoad?: boolean
     fetchPriority?: 'high' | 'low' | 'auto';
     loadWhenVisible?: boolean;
     aspectRatio?: 'aspect-auto' | 'aspect-video' | 'aspect-4/3';
     containImage?: boolean;
 }>(), {
+    lazyLoad: false,
     loadWhenVisible: false,
     aspectRatio: 'aspect-auto',
     containImage: false
@@ -33,6 +35,7 @@ const getImageUrl = computed((): string => {
             <img
                 :src="getImageUrl"
                 :alt="alt"
+                :loading="props.lazyLoad ? 'lazy' : 'eager'"
                 :fetchpriority="props.fetchPriority || 'auto'"
                 v-if="!props.loadWhenVisible"
             >
@@ -42,6 +45,7 @@ const getImageUrl = computed((): string => {
                 <img
                     :src="getImageUrl"
                     :alt="alt"
+                    :loading="props.lazyLoad ? 'lazy' : 'eager'"
                     :fetchpriority="props.fetchPriority || 'auto'"
                 >
             </WhenVisible>
