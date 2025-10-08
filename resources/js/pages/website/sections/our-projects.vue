@@ -46,7 +46,9 @@ const props = defineProps<{
                 </Link>
             </div>
             <div class="button">
-                <Link :href="ProjectController()">
+                <Link
+                    prefetch
+                    :href="ProjectController()">
                     <button-component
                         :text="getTrans('sections.our-projects.button')"
                         color="tertiary"
