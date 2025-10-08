@@ -33,4 +33,8 @@ return [
         'previous_page' => 'Vorige pagina',
         'next_page' => 'Volgende pagina',
     ],
+    'our-projects' => [
+        'title' => 'Succesverhalen uit de Praktijk',
+        'subtitle' => 'Ontdek hoe we voor deze drie klanten hun digitale ambities hebben waargemaakt.',
+    ],
 ];

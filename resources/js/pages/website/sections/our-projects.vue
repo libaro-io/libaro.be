@@ -4,6 +4,9 @@ import {Link} from "@inertiajs/vue3";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
 import DetailProjectController from "@actions/App/Http/Controllers/DetailProjectController";
 import {useS3Image} from "@composables/useS3Image";
+import TitleComponent from "@components/title-component.vue";
+import SubTitleComponent from "@components/sub-title-component.vue";
+import {getTrans} from "@composables/UseTranslationHelper";
 
 const props = defineProps<{
     projects: ProjectInterface[],
@@ -13,6 +16,18 @@ const props = defineProps<{
 <template>
     <section class="section-website-our-projects">
         <div class="container">
+            <div class="titles">
+                <title-component :has-margin="false">
+                    <h2>
+                        {{ getTrans('sections.our-projects.title') }}
+                    </h2>
+                </title-component>
+                <sub-title-component :has-margin="false">
+                    <h3>
+                        {{ getTrans('sections.our-projects.subtitle') }}
+                    </h3>
+                </sub-title-component>
+            </div>
             <div class="inner-container-our-projects">
                 <Link
                     v-for="project in props.projects"
