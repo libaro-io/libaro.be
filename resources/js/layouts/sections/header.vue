@@ -70,7 +70,7 @@ router.on('navigate', () => {
         ]">
         <img v-if="options.background"
              :src="options.background"
-             fetchpriority="high"
+             fetchpriority=high
              class="striped-bg"
              alt="header background">
         <div class="container">
@@ -78,7 +78,7 @@ router.on('navigate', () => {
                 <div class="logo">
                     <Link prefetch :href="HomeController()">
                         <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg"
-                             fetchpriority="high"
+                             fetchpriority=high
                              alt="logo"
                              width="210"
                              height="74">
@@ -144,7 +144,7 @@ router.on('navigate', () => {
                          alt="clock"
                          width="468"
                          height="511"
-                         fetchpriority="high">
+                         fetchpriority=high>
                 </div>
             </div>
         </div>
