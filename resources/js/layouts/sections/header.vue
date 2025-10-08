@@ -140,7 +140,7 @@ router.on('navigate', () => {
                 <div
                     v-if="options.isHome"
                     class="clock">
-                    <img src="@assets/images/clock_side.webp"
+                    <img src="/images/clock_side.webp"
                          alt="clock"
                          width="468"
                          height="511"

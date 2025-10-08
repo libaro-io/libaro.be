@@ -58,6 +58,9 @@
 
     <link rel="preconnect" href="https://{{ config('filesystems.disks.s3.bucket') }}.s3.{{ config('filesystems.disks.s3.region') }}.amazonaws.com">
 
+    <link rel="preload" as="image" crossorigin="anonymous" href="/images/header_striped.webp">
+    <link rel="preload" as="image" crossorigin="anonymous" href="/images/clock_side.webp">
+
     <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/gilroy/gilroy_bold.otf">
     <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/gilroy/gilroy_extrabold.otf">
     <link rel="preload" as="font" crossorigin="anonymous" href="/fonts/grotesk/grotesk_light.ttf">
