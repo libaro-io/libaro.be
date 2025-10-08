@@ -12,10 +12,8 @@
             @apply grid-cols-1 md:grid-cols-2 gap-x-page gap-y-4 items-center;
 
             .img {
-                @apply transition-all duration-300 ease-in-out;
-
-                &:hover {
-                    @apply rotate-45
+                img {
+                    @apply transition-transform duration-500 ease-out;
                 }
             }
 
