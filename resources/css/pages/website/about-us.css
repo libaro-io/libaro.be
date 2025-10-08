@@ -1,5 +1,17 @@
 #page-website-about-us {
-    .large-images{
-        @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4;
+
+    .large-images {
+        @apply pb-20 grid gap-6 md:gap-10 grid-cols-2 xl:grid-cols-3 grid-flow-row auto-rows-fr;
+    }
+
+    .quote {
+        @apply relative bg-primary-light rounded-3xl p-4 md:p-8 flex items-end text-3xl
+        lg:text-4xl xl:text-5xl font-bold font-gilroy text-dark
+        border-2 border-border;
+
+        &:before {
+            content: '"';
+            @apply text-secondary absolute top-5 md:top-10 text-7xl md:text-9xl;
+        }
     }
 }

@@ -44,15 +44,6 @@ const textBlockImageComponents = computed<TextBlockImageInterface[]>(() => [
     }
 ]);
 
-const largeImageComponents: string[] = [
-    aboutImage5,
-    aboutImage6,
-    aboutImage7,
-    aboutImage8,
-    aboutImage9,
-    aboutImage10,
-    ];
-
 </script>
 <template>
     <website
@@ -71,10 +62,34 @@ const largeImageComponents: string[] = [
                     :image-side="index % 2 === 0 ? 'right' : 'left'"
                     :fetch-priority="index === 0 ? 'high' : 'auto'"
                 ></text-block-image-component>
+
                 <div class="large-images">
                     <large-image-component
-                        v-for="(largeImage, index) in largeImageComponents" :key="index"
-                        :image="largeImage"
+                        class="col-span-2 row-span-2"
+                        :image="aboutImage5"
+                    ></large-image-component>
+                    <large-image-component
+                        class="col-span-1 row-span-1"
+                        :image="aboutImage6"
+                    ></large-image-component>
+                    <div class="quote row-span-1">
+                        <h3>We build your digital advantage</h3>
+                    </div>
+                    <div class="quote">
+                        <h3>We deliver beyond our promise</h3>
+                    </div>
+                    <large-image-component
+                        :image="aboutImage7"
+                    ></large-image-component>
+                    <large-image-component
+                        class="row-span-2"
+                        :image="aboutImage8"
+                    ></large-image-component>
+                    <large-image-component
+                        :image="aboutImage9"
+                    ></large-image-component>
+                    <large-image-component
+                        :image="aboutImage10"
                     ></large-image-component>
                 </div>
             </div>
