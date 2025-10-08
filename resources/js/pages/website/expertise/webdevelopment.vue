@@ -19,6 +19,7 @@ import WebDevelopmentHeader from "@assets/images/webapplication/header.gif";
 import conceptToApplicationImage from "@assets/images/webapplication/concept_to_application.png";
 import ContactForm from "@pages/website/sections/contact-form.vue";
 import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
+import {WhenVisible} from "@inertiajs/vue3";
 
 const props = defineProps<{
     projects?: ProjectInterface[];
@@ -147,11 +148,15 @@ const ourToolsBlocks: ToolInterface[] = [
                 :our-tools="ourToolsBlocks"
                 :colored-background="true"
             ></our-tools>
+            <div>
+                <WhenVisible :data="[]" :buffer="400" always as="section">
+                    <contact-form
+                        :title="getTrans('pages.webdevelopment.contact_form.title')"
+                        class="container">
+                    </contact-form>
+                </WhenVisible>
+            </div>
 
-            <contact-form
-                :title="getTrans('pages.webdevelopment.contact_form.title')"
-                class="container">
-            </contact-form>
         </div>
     </website>
 </template>
