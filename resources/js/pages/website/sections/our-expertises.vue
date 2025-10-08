@@ -76,7 +76,7 @@ const ourExpertises: ourExpertise[] = [
                        <i :class="item.icon"></i>
                    </div>
                    <div class="texts">
-                       <h3 class="title">{{ getTrans(item.title) }}</h3>
+                       <h2 class="title">{{ getTrans(item.title) }}</h2>
                        <p class="description">{{ getTrans(item.description) }}</p>
                    </div>
                </Link>
