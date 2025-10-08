@@ -35,6 +35,7 @@ const integrationsList: IntegrationInterface[] = getIntegrations();
                 :list-with-image="WhatIsOdooForYou"
                 class="container"
                 :is-clickable="false"
+                :enable3d-effect="true"
             ></list-with-image-component>
 
             <integrations

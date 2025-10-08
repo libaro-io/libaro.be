@@ -11,13 +11,18 @@ const props = withDefaults(defineProps<{
     listWithImage: ListWithImageInterface;
     isClickable?: boolean;
     coloredBackground?: boolean;
+    enable3dEffect?: boolean;
 }>(), {
-    isClickable: true
+    isClickable: true,
+    enable3dEffect: false
 });
 
 const activeList = ref(0);
 const indicatorRef = ref<HTMLElement>();
 const listRef = ref<HTMLElement>();
+const imageContainerRef = ref<HTMLElement>();
+const tiltX = ref(0);
+const tiltY = ref(0);
 
 const setActive = (index: number): void => {
     if (!props.isClickable) {
@@ -58,6 +63,29 @@ const handleMouseEnter = (index: number): void => {
 
 const handleMouseLeave = (): void => {
     updateIndicatorPosition(activeList.value);
+    // Reset tilt when leaving list item
+    tiltX.value = 0;
+    tiltY.value = 0;
+}
+
+const handleListItemMouseMove = (e: MouseEvent): void => {
+    if (!imageContainerRef.value || !props.enable3dEffect){
+        return;
+    }
+
+    const rect = imageContainerRef.value.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    // Calculate rotation based on mouse position (-15 to 15 degrees)
+    const rotateY = ((x - centerX) / centerX) * 10;
+    const rotateX = ((centerY - y) / centerY) * 10;
+
+    tiltX.value = rotateX;
+    tiltY.value = rotateY;
 }
 
 const handleResize = (): void => {
@@ -108,7 +136,9 @@ const listClasses = (index: number): string[] => {
                         <div class="indicator">
                             <div class="inner-indicator" ref="indicatorRef"></div>
                         </div>
-                        <ul ref="listRef">
+                        <ul
+                            @mousemove="handleListItemMouseMove"
+                            ref="listRef">
                             <li
                                 :key="index"
                                 @click="setActive(index)"
@@ -138,9 +168,19 @@ const listClasses = (index: number): string[] => {
                         </ul>
                     </div>
                 </div>
-                <div class="image-container">
-                    <div class="inner-image-container">
+                <div
+                    class="image-container"
+                    ref="imageContainerRef"
+                >
+                    <div
+                        class="inner-image-container"
+
+                    >
                         <large-image-component
+                            :style="{
+                            transform: `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.05, 1.05, 1.05)`,
+                            transition: tiltX === 0 && tiltY === 0 ? 'transform 0.5s ease-out' : 'none'
+                        }"
                             :image="getImage()"
                             :alt="getAlt()"
                         ></large-image-component>

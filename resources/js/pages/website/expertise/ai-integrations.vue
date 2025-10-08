@@ -85,6 +85,7 @@ const uspListBlock: UspListInterface = {
                 :list-with-image="WhatIsAIForYou"
                 class="container"
                 :is-clickable="false"
+                :enable3d-effect="true"
             ></list-with-image-component>
 
             <usp-list-component

@@ -84,6 +84,7 @@ onMounted(() => {
                 :list-with-image="howWeMakerobawsBetter"
                 class="container"
                 :is-clickable="false"
+                :enable3d-effect="true"
             ></list-with-image-component>
 
             <large-image-with-text-component

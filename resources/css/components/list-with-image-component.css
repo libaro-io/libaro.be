@@ -61,7 +61,7 @@
         }
 
         .image-container {
-            @apply flex items-start max-h-full relative overflow-hidden h-full;
+            @apply flex items-start max-h-full relative h-full;
 
             .inner-image-container {
                 @apply xl:absolute max-h-96 xl:max-h-full top-0 left-0 w-full h-full;

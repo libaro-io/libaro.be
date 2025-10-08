@@ -34,6 +34,7 @@ import {getTrans} from "@composables/UseTranslationHelper";
                 :list-with-image="conceptToAppsBlock"
                 :is-clickable="false"
                 :colored-background="true"
+                :enable3d-effect="true"
             ></list-with-image-component>
 
             <large-image-with-text-component

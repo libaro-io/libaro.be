@@ -131,6 +131,7 @@ const ourToolsBlocks: ToolInterface[] = [
                 :list-with-image="conceptToWebApplicationBlock"
                 class="container"
                 :is-clickable="false"
+                :enable3d-effect="true"
             ></list-with-image-component>
 
             <usp-list-component
