@@ -29,7 +29,7 @@ const props = withDefaults(defineProps<{
 const options = computed((): HeaderOptions => {
     return {
         fullWidthDescription: props.options?.fullWidthDescription ?? false,
-        background: props.options?.background ?? "/images/header_striped.svg",
+        background: props.options?.background ?? "/images/header_striped.webp",
         tags: props.options?.tags ?? [],
         isHome: props.options?.isHome ?? false,
     }
