@@ -137,15 +137,15 @@ router.on('navigate', () => {
 
                     </div>
                 </div>
-                <div
-                    v-if="options.isHome"
-                    class="clock">
-                    <img src="/images/clock_side.webp"
-                         alt="clock"
-                         width="468"
-                         height="511"
-                         fetchpriority=high>
-                </div>
+<!--                <div-->
+<!--                    v-if="options.isHome"-->
+<!--                    class="clock">-->
+<!--                    <img src="/images/clock_side.webp"-->
+<!--                         alt="clock"-->
+<!--                         width="468"-->
+<!--                         height="511"-->
+<!--                         fetchpriority=high>-->
+<!--                </div>-->
             </div>
         </div>
     </section>
