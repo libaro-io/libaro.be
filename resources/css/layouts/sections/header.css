@@ -63,7 +63,7 @@
         }
 
         .overlay {
-            @apply fixed top-0 left-0 w-full h-full bg-black/50 z-10 xl:hidden;
+            @apply fixed top-0 left-0 w-full h-full bg-black/50 z-40 xl:hidden;
         }
     }
 
