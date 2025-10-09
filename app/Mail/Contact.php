@@ -22,7 +22,8 @@ class Contact extends Mailable implements ShouldQueue
     {
         return new Envelope(
             from: config('mail.from.address'),
-            subject: 'Nieuw bericht via het contactformulier - libaro.be',
+            replyTo: [$this->email],
+            subject: 'Nieuw bericht via het contactformulier - libaro.be'
         );
     }
 
