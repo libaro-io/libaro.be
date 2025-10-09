@@ -26,6 +26,7 @@ return [
         'header' => [
             'title' => 'Een webapplicatie op maat van uw noden',
             'description' => 'Digitale maatwerkoplossingen die uw processen automatiseren. Het resultaat? U bespaart tijd én geld.',
+            'expertise' => 'Digitale maatwerkoplossingen die uw processen automatiseren. Het resultaat? U bespaart tijd én geld.',
         ],
         'concept_to_web_application' => [
             'title' => 'Van concept tot webapplicatie',
@@ -113,6 +114,7 @@ return [
         'header' => [
             'title' => 'Professionele Odoo implementatie voor uw bedrijf',
             'description' => 'Odoo is ERP-software die al je bedrijfsprocessen samenbrengt in één krachtig platform. Van CRM, boekhouding en voorraadbeheer tot online marketing, projectmanagement en HR: voor elke behoefte is er een slimme Odoo-app.',
+            'expertise' => 'Odoo is ERP-software die al je bedrijfsprocessen samenbrengt in één krachtig platform.',
         ],
         'what_is_odoo_for_you' => [
             'title' => 'Wat kan Odoo voor je doen',
@@ -227,6 +229,7 @@ return [
         'header' => [
             'title' => 'Een mobiele app op maat van uw noden',
             'description' => 'Digitale maatwerkoplossingen die uw processen automatiseren. Het resultaat? U bespaart tijd én geld.',
+            'expertise' => 'We bouwen krachtige mobiele apps voor Android en iPhone, volledig afgestemd op jouw bedrijfsprocessen.',
         ],
         'concept_to_apps' => [
             'title' => 'Van concept tot een mobiele app',
@@ -309,6 +312,7 @@ return [
         'header' => [
             'title' => 'Transformeer uw omgeving met IoT oplossingen',
             'description' => 'Automatiseer en optimaliseer uw omgeving met onze slimme IoT-oplossingen. Van intelligente verlichting tot geavanceerd toegangsbeheer – maak uw organisatie efficiënter, veiliger en kostenbesparender.',
+            'expertise' => 'Automatiseer en optimaliseer uw omgeving met onze slimme IoT-oplossingen.',
         ],
         'how_it_works' => [
             'title' => 'Hoe werkt het?',
@@ -442,6 +446,7 @@ return [
                 'Robaws is de slimme ERP-software speciaal ontwikkeld voor bouw- en installatiebedrijven. Het helpt je offertes op te maken, projecten op te volgen en kosten onder controle te houden in één overzichtelijk systeem.',
                 'Bij Libaro ontwikkelen we maatwerksoftware en programmeren we integraties met Robaws, zodat jouw processen perfect aansluiten op zowel bestaande tools als nieuwe toepassingen.',
             ],
+            'expertise' => 'Robaws is de slimme ERP-software speciaal ontwikkeld voor bouw- en installatiebedrijven.',
         ],
         'how_we_make_robaws_better' => [
             'title' => 'Hoe we Robaws beter maken',
@@ -484,6 +489,7 @@ return [
                 'Wij helpen je bedrijfsprocessen efficiënter en toekomstgericht maken door AI te integreren in je dagelijkse werking.',
                 'Van automatisering en dataverwerking tot slimme voorspellingen: wij ontwikkelen oplossingen op maat die je organisatie sneller en slimmer laten werken.',
             ],
+            'expertise' => 'Wij helpen je bedrijfsprocessen efficiënter te maken door AI te integreren in je dagelijkse werking.',
         ],
         'what_is_ai_for_you' => [
             'title' => 'AI-superkrachten voor jouw medewerkers',

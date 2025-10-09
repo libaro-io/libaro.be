@@ -25,6 +25,7 @@ return [
         'header' => [
             'title' => 'A custom web application tailored to your needs',
             'description' => 'Custom digital solutions that automate your processes. The result? You save both time and money.',
+            'expertise' => 'Custom digital solutions that automate your processes. The result? You save both time and money.',
         ],
         'concept_to_web_application' => [
             'title' => 'From concept to web application',
@@ -112,6 +113,7 @@ return [
         'header' => [
             'title' => 'Professional Odoo implementation for your business',
             'description' => 'Odoo is ERP software that brings all your business processes together in one powerful platform. From CRM, accounting and inventory management to online marketing, project management and HR: there is a smart Odoo app for every need.',
+            'expertise' => 'Odoo is ERP software that brings all your business processes together in one powerful platform.',
         ],
         'what_is_odoo_for_you' => [
             'title' => 'What can Odoo do for you',
@@ -226,6 +228,7 @@ return [
         'header' => [
             'title' => 'A mobile app tailored to your needs',
             'description' => 'Custom digital solutions that automate your processes. The result? You save time and money.',
+            'expertise' => 'We build powerful mobile apps for Android and iPhone, fully tailored to your business processes.',
         ],
         'concept_to_apps' => [
             'title' => 'From concept to mobile app',
@@ -308,6 +311,7 @@ return [
         'header' => [
             'title' => 'Transform your environment with IoT solutions',
             'description' => 'Automate and optimize your environment with our smart IoT solutions. From intelligent lighting to advanced access control – make your organization more efficient, secure, and cost-effective.',
+            'expertise' => 'Automate and optimize your environment with our smart IoT solutions.',
         ],
         'how_it_works' => [
             'title' => 'How does it work?',
@@ -441,6 +445,7 @@ return [
                 'Robaws is the smart ERP software specially developed for construction and installation companies. It helps you create quotes, track projects and keep costs under control in one clear system.',
                 'At Libaro, we develop custom software and program integrations with Robaws, so that your processes perfectly align with both existing tools and new applications.',
             ],
+            'expertise' => 'Robaws is the smart ERP software specially developed for construction and installation companies.',
         ],
         'how_we_make_robaws_better' => [
             'title' => 'How we make Robaws better',
@@ -483,6 +488,7 @@ return [
                 'We help make your business processes more efficient and future-proof by integrating AI into your daily operations.',
                 'From automation and data processing to smart predictions: we develop custom solutions that make your organization work faster and smarter.',
             ],
+            'expertise' => 'We help make your business processes more efficient by integrating AI into your daily operations.',
         ],
         'what_is_ai_for_you' => [
             'title' => 'AI superpowers for your employees',

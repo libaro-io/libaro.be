@@ -24,37 +24,37 @@ const ourExpertises: ourExpertise[] = [
     {
         link: WebDevelopmentExpertiseController(),
         title: 'menu.primary.web_development',
-        description: 'pages.webdevelopment.header.description',
+        description: 'pages.webdevelopment.header.expertise',
         icon: 'fa-solid fa-code'
     },
     {
         link: AiIntegrationsExpertiseController(),
         title: 'menu.primary.ai_integrations',
-        description: 'pages.ai.header.description.0',
+        description: 'pages.ai.header.expertise',
         icon: 'fa-solid fa-wand-magic-sparkles'
     },
     {
         link: AppsExpertiseController(),
         title: 'menu.primary.apps',
-        description: 'pages.apps.header.description',
+        description: 'pages.apps.header.expertise',
         icon: 'fa-solid fa-mobile-screen'
     },
     {
         link: IOTExpertiseController(),
         title: 'menu.primary.iot',
-        description: 'pages.iot.header.description',
+        description: 'pages.iot.header.expertise',
         icon: 'fa-solid fa-microchip'
     },
     {
         link: OdooExpertiseController(),
         title: 'menu.primary.odoo',
-        description: 'pages.odoo.header.description',
+        description: 'pages.odoo.header.expertise',
         icon: 'fa-kit fa-odoo'
     },
     {
         link: RobawsExpertiseController(),
         title: 'menu.primary.robaws',
-        description: 'pages.robaws.header.description.0',
+        description: 'pages.robaws.header.expertise',
         icon: 'fa-kit fa-robaws'
     }
 ]

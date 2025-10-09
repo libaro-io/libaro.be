@@ -1,28 +1,37 @@
 .section-website-our-expertises {
     @apply relative z-10;
-    .container{
-        .inner-container{
+
+    .container {
+        .inner-container {
             @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:-mt-28 xl:p-6 xl:rounded-3xl xl:shadow-xl xl:border-3 border-primary-medium/25 xl:bg-gray-100/25;
-            .expertise-item{
+
+            .expertise-item {
                 @apply bg-primary-light p-7 rounded-2xl flex flex-col items-center gap-4 transition-all duration-300 ease-in-out;
-                .icon{
+
+                .icon {
                     @apply bg-white p-3 rounded-xl shadow-md size-13 flex items-center justify-center;
-                    i{
+
+                    i {
                         @apply transition-all duration-300 ease-in-out text-xl text-secondary;
                     }
                 }
-                .texts{
+
+                .texts {
                     @apply flex-1 flex justify-start flex-col;
-                    .title{
+
+                    .title {
                         @apply font-bold text-primary-darkest text-2xl text-center mb-2;
                     }
-                    .description{
-                        @apply text-center;
+
+                    .description {
+                        @apply text-center text-pretty;
                     }
                 }
-                &:hover{
+
+                &:hover {
                     @apply bg-primary-hover;
-                    i{
+
+                    i {
                         @apply translate-y-[-4px];
                     }
                 }
