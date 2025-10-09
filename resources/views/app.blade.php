@@ -22,7 +22,7 @@
     <title inertia>{{ config('app.name', 'Libaro') }}</title>
 
     <link rel="manifest" href="{{ asset('images/favicon/manifest.json') }}">
-    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
 
     <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('images/favicon/apple-icon-57x57.png') }}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{ asset('images/favicon/apple-icon-60x60.png') }}">
@@ -66,16 +66,16 @@
 
     <link rel="preconnect" href="https://{{ config('filesystems.disks.s3.bucket') }}.s3.{{ config('filesystems.disks.s3.region') }}.amazonaws.com">
 
-    <link rel="preload" as="image" crossorigin="anonymous" href="/images/header_striped.webp">
-    <link rel="preload" as="image" crossorigin="anonymous" href="/images/clock_side.webp">
+    <link rel="preload" as="image" href="/images/header_striped.webp">
+    <link rel="preload" as="image" href="/images/clock_side.webp">
 
-    <link rel="preload" as="font" href="/fonts/gilroy/gilroy_bold.woff2" crossorigin>
-    <link rel="preload" as="font" href="/fonts/gilroy/gilroy_extrabold.woff2" crossorigin>
-    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_regular.woff2" crossorigin>
-    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_medium.woff2" crossorigin>
-    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_semibold.woff2" crossorigin>
-    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_bold.woff2" crossorigin>
-    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_extrabold.woff2" crossorigin>
+    <link rel="preload" as="font" href="/fonts/gilroy/gilroy_bold.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/gilroy/gilroy_extrabold.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_medium.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_semibold.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_bold.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_extrabold.woff2" type="font/woff2" crossorigin="anonymous">
 
     <style>
         @font-face {
