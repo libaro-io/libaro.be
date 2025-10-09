@@ -69,13 +69,13 @@
     <link rel="preload" as="image" href="/images/header_striped.webp">
     <link rel="preload" as="image" href="/images/clock_side.webp">
 
-    <link rel="preload" as="font" href="/fonts/gilroy/gilroy_bold.woff2">
-    <link rel="preload" as="font" href="/fonts/gilroy/gilroy_extrabold.woff2">
-    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_regular.woff2">
-    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_medium.woff2">
-    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_semibold.woff2">
-    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_bold.woff2">
-    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_extrabold.woff2">
+    <link rel="preload" as="font" href="/fonts/gilroy/gilroy_bold.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/gilroy/gilroy_extrabold.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_medium.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_semibold.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_bold.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/grotesk/grotesk_extrabold.woff2" type="font/woff2" crossorigin="anonymous">
 
     <style>
         @font-face {
