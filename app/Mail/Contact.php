@@ -21,7 +21,7 @@ class Contact extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: $this->email,
+            from: config('mail.from.address'),
             subject: 'Nieuw bericht via het contactformulier - libaro.be',
         );
     }
