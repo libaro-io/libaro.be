@@ -5,7 +5,7 @@
     }
 
     .quote {
-        @apply relative bg-primary-light rounded-3xl p-4 md:p-8 flex items-end text-3xl
+        @apply relative bg-primary-light rounded-3xl p-4 md:p-8 flex items-end text-xl md:text-3xl
         lg:text-4xl xl:text-5xl font-bold font-gilroy text-dark
         border-2 border-border;
 
