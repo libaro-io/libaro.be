@@ -1,73 +1,80 @@
-@php use App\Http\Controllers\AboutUsController;use App\Http\Controllers\AssetsController;use App\Http\Controllers\BlogController;use App\Http\Controllers\ContactController;use App\Http\Controllers\CookiePolicyController;use App\Http\Controllers\DetailProductController;use App\Http\Controllers\DetailProjectController;use App\Http\Controllers\Expertises\AiIntegrationsExpertiseController;use App\Http\Controllers\Expertises\AppsExpertiseController;use App\Http\Controllers\Expertises\IOTExpertiseController;use App\Http\Controllers\Expertises\OdooExpertiseController;use App\Http\Controllers\Expertises\RobawsExpertiseController;use App\Http\Controllers\Expertises\WebDevelopmentExpertiseController;use App\Http\Controllers\HomeController;use App\Http\Controllers\IntegrationTimecardController;use App\Http\Controllers\LandingPageController;use App\Http\Controllers\PrivacyPolicyController;use App\Http\Controllers\SupportTimecardController;use App\Http\Controllers\TermsController; @endphp
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+@php use App\Http\Controllers\AboutUsController;use App\Http\Controllers\AssetsController;use App\Http\Controllers\BlogController;use App\Http\Controllers\ContactController;use App\Http\Controllers\CookiePolicyController;use App\Http\Controllers\DetailBlogController;use App\Http\Controllers\DetailProductController;use App\Http\Controllers\DetailProjectController;use App\Http\Controllers\Expertises\AiIntegrationsExpertiseController;use App\Http\Controllers\Expertises\AppsExpertiseController;use App\Http\Controllers\Expertises\IOTExpertiseController;use App\Http\Controllers\Expertises\OdooExpertiseController;use App\Http\Controllers\Expertises\RobawsExpertiseController;use App\Http\Controllers\Expertises\WebDevelopmentExpertiseController;use App\Http\Controllers\HomeController;use App\Http\Controllers\IntegrationTimecardController;use App\Http\Controllers\LandingPageController;use App\Http\Controllers\PrivacyPolicyController;use App\Http\Controllers\SupportTimecardController;use App\Http\Controllers\TermsController; @endphp
+<urlset xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     @foreach(config('app.supported_locales') as $locale)
-        <url>
-            <loc>{{ action(HomeController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(ContactController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(AboutUsController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(AboutUsController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(WebDevelopmentExpertiseController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(AppsExpertiseController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(AiIntegrationsExpertiseController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(IOTExpertiseController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(OdooExpertiseController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(RobawsExpertiseController::class, ['locale' => $locale]) }}</loc>
-        </url>
+        @foreach([
+            HomeController::class,
+            ContactController::class,
+            AboutUsController::class,
+            WebDevelopmentExpertiseController::class,
+            AppsExpertiseController::class,
+            AiIntegrationsExpertiseController::class,
+            IOTExpertiseController::class,
+            OdooExpertiseController::class,
+            RobawsExpertiseController::class,
+            IntegrationTimecardController::class,
+            SupportTimecardController::class,
+            PrivacyPolicyController::class,
+            CookiePolicyController::class,
+            TermsController::class,
+            AssetsController::class
+        ] as $page)
+            <url>
+                <loc>{{ action($page, ['locale' => $locale]) }}</loc>
+                @foreach(alternative_locales($locale) as $altLocale)
+                    <xhtml:link rel="alternate" hreflang="{{ $altLocale }}" href="{{ action($page, ['locale' => $altLocale]) }}"/>
+                @endforeach
+                <lastmod>{{ $lastModGeneralPages->toDateString() }}</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>1.0</priority>
+            </url>
+        @endforeach
+
         @foreach($blogs as $blog)
             <url>
-                <loc>{{ action(BlogController::class, [ 'locale' => $locale, 'blog' => $blog ]) }}</loc>
+                <loc>{{ action(DetailBlogController::class, [ 'locale' => $locale, 'blog' => $blog ]) }}</loc>
+                @foreach(alternative_locales($locale) as $altLocale)
+                    <xhtml:link rel="alternate" hreflang="{{ $altLocale }}" href="{{ action(DetailBlogController::class, [ 'locale' => $altLocale, 'blog' => $blog ]) }}"/>
+                @endforeach
+                <lastmod>{{ $blog->updated_at->toDateString() }}</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>1.0</priority>
             </url>
         @endforeach
+
         @foreach($landingPages as $landingPage)
             <url>
-                <loc>{{ action(LandingPageController::class, [ 'locale' => $locale, 'landingPage' => $landingPage ]) }}</loc>
+                <loc>{{ action(LandingPageController::class, [ 'locale' => $locale,  'landingPage' => $landingPage ]) }}</loc>
+                @foreach(alternative_locales($locale) as $altLocale)
+                    <xhtml:link rel="alternate" hreflang="{{ $altLocale }}" href="{{ action(LandingPageController::class, [ 'locale' => $altLocale,  'landingPage' => $landingPage ]) }}"/>
+                @endforeach
+                <lastmod>{{ $landingPage->updated_at->toDateString() }}</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>1.0</priority>
             </url>
         @endforeach
+
         @foreach($projects as $project)
             <url>
-                <loc>{{ action(DetailProjectController::class, [ 'locale' => $locale, 'project' => $project ]) }}</loc>
+                <loc>{{ action(DetailProjectController::class, [ 'locale' => $locale,  'project' => $project ]) }}</loc>
+                @foreach(alternative_locales($locale) as $altLocale)
+                    <xhtml:link rel="alternate" hreflang="{{ $altLocale }}" href="{{ action(DetailProjectController::class, [ 'locale' => $altLocale,  'project' => $project ]) }}"/>
+                @endforeach
+                <lastmod>{{ $project->updated_at->toDateString() }}</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>1.0</priority>
             </url>
         @endforeach
+
         @foreach($products as $product)
             <url>
-                <loc>{{ action(DetailProductController::class, [ 'locale' => $locale, 'product' => $product ]) }}</loc>
+                <loc>{{ action(DetailProductController::class, [ 'locale' => $locale,  'product' => $product ]) }}</loc>
+                @foreach(alternative_locales($locale) as $altLocale)
+                    <xhtml:link rel="alternate" hreflang="{{ $altLocale }}" href="{{ action(DetailProductController::class, [ 'locale' => $altLocale,  'product' => $product ]) }}"/>
+                @endforeach
+                <lastmod>{{ $product->updated_at->toDateString() }}</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>1.0</priority>
             </url>
         @endforeach
-        <url>
-            <loc>{{ action(IntegrationTimecardController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(SupportTimecardController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(PrivacyPolicyController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(CookiePolicyController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(TermsController::class, ['locale' => $locale]) }}</loc>
-        </url>
-        <url>
-            <loc>{{ action(AssetsController::class, ['locale' => $locale]) }}</loc>
-        </url>
     @endforeach
 </urlset>

@@ -26,6 +26,7 @@ class Blog extends Model
         return [
             'visible' => 'boolean',
             'publish_date' => 'date',
+            'updated_at' => 'datetime',
             'tags' => AsTags::class,
         ];
     }

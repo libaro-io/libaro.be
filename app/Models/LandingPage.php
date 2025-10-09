@@ -29,6 +29,7 @@ class LandingPage extends Model
     {
         return [
             'active' => 'boolean',
+            'updated_at' => 'datetime',
         ];
     }
 }

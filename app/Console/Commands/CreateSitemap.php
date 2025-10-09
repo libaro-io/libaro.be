@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Blog;
 use App\Models\LandingPage;
 use App\Models\Project;
+use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\View;
@@ -52,20 +53,23 @@ class CreateSitemap extends Command
         $landingPages = LandingPage::query()
             ->get();
 
-        $fs = new Filesystem();
+        $fs = new Filesystem;
         $pathPrefix = public_path();
 
-        if (!$fs->exists($pathPrefix)) {
+        if (! $fs->exists($pathPrefix)) {
             $fs->makeDirectory($pathPrefix, 0755, true);
         }
 
+        $lastModGeneralPages = Carbon::parse('2025-10-09');
+
         $output = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" . View::make('sitemap',
-                [
-                    'projects' => $projects,
-                    'products' => $products,
-                    'blogs' => $blogs,
-                    'landingPages' => $landingPages,
-                ])->render();
-        $fs->put("$pathPrefix/sitemap.xml", $output);
+            [
+                'projects' => $projects,
+                'products' => $products,
+                'blogs' => $blogs,
+                'landingPages' => $landingPages,
+                'lastModGeneralPages' => $lastModGeneralPages,
+            ])->render();
+        $fs->put("{$pathPrefix}/sitemap.xml", $output);
     }
 }

@@ -47,6 +47,7 @@ class Project extends Model
         return [
             'visible' => 'boolean',
             'is_product' => 'boolean',
+            'updated_at' => 'datetime',
             'tags' => AsTags::class,
         ];
     }
