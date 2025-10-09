@@ -17,6 +17,8 @@
 @import "@css/pages/website/sections/contact-form.css";
 @import "@css/components/forms/textarea-component.css";
 @import "@css/components/button-component.css";
+@import "@css/components/title-component.css";
+@import "@css/components/sub-title-component.css";
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
