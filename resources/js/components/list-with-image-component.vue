@@ -6,6 +6,7 @@ import LargeImageComponent from "@components/large-image-component.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
 import BadgeComponent from "@components/badge-component.vue";
 import {Link} from "@inertiajs/vue3";
+import {isMobileOrTablet} from "@composables/UseDeviceAgent";
 
 const props = withDefaults(defineProps<{
     listWithImage: ListWithImageInterface;
@@ -69,6 +70,10 @@ const handleMouseLeave = (): void => {
 }
 
 const handleListItemMouseMove = (e: MouseEvent): void => {
+    if(isMobileOrTablet()){
+        return;
+    }
+
     if (!imageContainerRef.value || !props.enable3dEffect){
         return;
     }
