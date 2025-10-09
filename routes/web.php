@@ -66,4 +66,19 @@ Route::prefix('{locale?}')->group(function () {
 
     Route::get('timecard/integration', IntegrationTimecardController::class);
     Route::get('timecard/support', SupportTimecardController::class);
+
+    Route::get('diensten', fn () => Redirect::action(HomeController::class, ['locale' => 'nl'], 301));
+    Route::get('services', fn () => Redirect::action(HomeController::class, ['locale' => 'en'], 301));
+
+    Route::get('diensten/web-ontwikkeling', fn () => Redirect::action(WebDevelopmentExpertiseController::class, ['locale' => 'nl'], 301));
+    Route::get('services/web', fn () => Redirect::action(WebDevelopmentExpertiseController::class, ['locale' => 'en'], 301));
+
+    Route::get('diensten/artificiële-intelligentie', fn () => Redirect::action(AiIntegrationsExpertiseController::class, ['locale' => 'nl'], 301));
+    Route::get('services/artificial-intelligence', fn () => Redirect::action(AiIntegrationsExpertiseController::class, ['locale' => 'en'], 301));
+
+    Route::get('diensten/apps', fn () => Redirect::action(AppsExpertiseController::class, ['locale' => 'nl'], 301));
+    Route::get('services/apps', fn () => Redirect::action(AppsExpertiseController::class, ['locale' => 'en'], 301));
+
+    Route::get('diensten/internet-of-things', fn () => Redirect::action(IOTExpertiseController::class, ['locale' => 'nl'], 301));
+    Route::get('services/internet-of-things', fn () => Redirect::action(IOTExpertiseController::class, ['locale' => 'en'], 301));
 });
