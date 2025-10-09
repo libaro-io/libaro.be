@@ -65,10 +65,6 @@
         })(window,document,'script','dataLayer','GTM-PZW6PW');</script>
     <!-- End Google Tag Manager -->
 
-    <!-- Start cookieyes banner -->
-    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/02b5939db9a0977fb1a1c15e/script.js"></script>
-    <!-- End cookieyes banner -->
-
     <link rel="preconnect" href="https://{{ config('filesystems.disks.s3.bucket') }}.s3.{{ config('filesystems.disks.s3.region') }}.amazonaws.com">
 
     <link rel="preload" as="image" crossorigin="anonymous" href="/images/header_striped.webp">
