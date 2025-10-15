@@ -69,7 +69,7 @@ const getCanonical = computed(() => {
 <template>
     <Head :title="getTitle">
         <meta name="description" :content="getDescription" />
-        <meta name="canonical" :content="getCanonical" />
+        <link rel="canonical" :href="getCanonical" />
 
         <meta property="og:title" :content="getTitle" />
         <meta property="og:description" :content="getDescription" />

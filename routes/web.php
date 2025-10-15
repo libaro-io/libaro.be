@@ -81,4 +81,7 @@ Route::prefix('{locale?}')->group(function () {
 
     Route::get('diensten/internet-of-things', fn () => Redirect::action(IOTExpertiseController::class, ['locale' => 'nl'], 301));
     Route::get('services/internet-of-things', fn () => Redirect::action(IOTExpertiseController::class, ['locale' => 'en'], 301));
+
+    Route::get('docs/{param1?}/{param2?}/{param3?}', fn () => abort(410));
+    Route::get('cms', fn () => abort(410));
 });
