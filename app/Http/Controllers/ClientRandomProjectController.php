@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Redirect;
 
 class ClientRandomProjectController extends Controller
 {
@@ -11,6 +12,6 @@ class ClientRandomProjectController extends Controller
     {
         $project = $client->projects()->inRandomOrder()->first();
 
-        return redirect()->action(DetailProjectController::class, ['locale' => $locale, 'project' => $project]);
+        return Redirect::action(DetailProjectController::class, ['locale' => $locale, 'project' => $project], 301);
     }
 }
