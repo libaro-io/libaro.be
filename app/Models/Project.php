@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use App\Casts\AsTags;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Str;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
 /**
@@ -40,6 +42,17 @@ class Project extends Model
     public function blocks(): HasMany
     {
         return $this->hasMany(ProjectBlock::class)->orderBy('sort');
+    }
+
+    /**
+     * @return Attribute<string, string>
+     */
+    protected function slug(): Attribute
+    {
+        return Attribute::make(
+            get: fn (string $value) => Str::lower($value),
+            set: fn (string $value) => $value,
+        );
     }
 
     protected function casts(): array
