@@ -75,8 +75,8 @@ return [
             'description' => 'Odoo is ERP software that brings all your business processes together in one powerful platform. From CRM, accounting, and inventory management to online marketing, project management, and HR: for every need there is a smart Odoo app.',
         ],
         'robaws' => [
-            'title' => 'robaws - Smart Robot Vacuums for Professional Use',
-            'description' => 'Discover robaws, the professional robot vacuum that automates your cleaning process. Ideal for offices, shops and commercial buildings. Save time and costs with smart cleaning technology.',
+            'title' => 'Robaws - Smart ERP software',
+            'description' => 'Robaws is the smart ERP software specially developed for construction and installation companies. It helps you create quotes, track projects and keep costs under control in one clear system.',
         ],
     ],
 ];
