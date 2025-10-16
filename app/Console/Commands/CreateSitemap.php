@@ -60,7 +60,7 @@ class CreateSitemap extends Command
             $fs->makeDirectory($pathPrefix, 0755, true);
         }
 
-        $lastModGeneralPages = Carbon::parse('2025-10-09');
+        $lastModGeneralPages = Carbon::parse('2025-10-16');
 
         $output = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" . View::make('sitemap',
             [

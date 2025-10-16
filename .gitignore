@@ -29,5 +29,4 @@ lang/php_en.json
 lang/php_nl.json
 resources/js/translations/lang-keys.ts
 bootstrap/ssr
-public/robots.txt
 public/sitemap.xml
