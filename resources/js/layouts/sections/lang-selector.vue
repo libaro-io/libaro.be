@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { getActiveLanguage, loadLanguageAsync } from "laravel-vue-i18n";
-import { Ref, ref } from "vue";
+import {Ref, ref} from "vue";
 import {router, usePage} from "@inertiajs/vue3";
 import UpdateLangController from "@actions/App/Http/Controllers/UpdateLangController";
 import PageInterface from "@interfaces/PageInterface";
@@ -23,7 +23,7 @@ const setLanguage = (language: string): void => {
     });
 
     const currentUrl = page.props.pageProps.url.href;
-    const newUrl = currentUrl.replace(oldLanguage, language);
+    const newUrl = currentUrl.replace(`/${oldLanguage}`, `/${language}`);
     router.visit(newUrl, {
         preserveScroll: true,
     });
