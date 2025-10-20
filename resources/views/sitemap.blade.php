@@ -41,18 +41,6 @@
             </url>
         @endforeach
 
-        @foreach($landingPages as $landingPage)
-            <url>
-                <loc>{{ action(LandingPageController::class, [ 'locale' => $locale,  'landingPage' => $landingPage ]) }}</loc>
-                @foreach(alternative_locales($locale) as $altLocale)
-                    <xhtml:link rel="alternate" hreflang="{{ $altLocale }}" href="{{ action(LandingPageController::class, [ 'locale' => $altLocale,  'landingPage' => $landingPage ]) }}"/>
-                @endforeach
-                <lastmod>{{ $landingPage->updated_at->toDateString() }}</lastmod>
-                <changefreq>weekly</changefreq>
-                <priority>1.0</priority>
-            </url>
-        @endforeach
-
         @foreach($projects as $project)
             <url>
                 <loc>{{ action(DetailProjectController::class, [ 'locale' => $locale,  'project' => $project ]) }}</loc>
@@ -76,5 +64,14 @@
                 <priority>1.0</priority>
             </url>
         @endforeach
+    @endforeach
+
+    @foreach($landingPages as $landingPage)
+    <url>
+        <loc>{{ action(LandingPageController::class, [ 'locale' => 'nl',  'landingPage' => $landingPage ]) }}</loc>
+        <lastmod>{{ $landingPage->updated_at->toDateString() }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
     @endforeach
 </urlset>
