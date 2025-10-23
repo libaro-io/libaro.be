@@ -1,3 +1,6 @@
 #page-website-project {
-    @apply bg-primary-light;
+    .section-website-project-intro{
+        @apply bg-primary-light;
+
+    }
 }
