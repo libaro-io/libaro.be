@@ -136,10 +136,13 @@ const footerPrivacyUrls: Ref<
             <div class="section md:col-span-2">
                 <div class="logos">
                     <div class="trends-gazellen-logo">
-                        <img loading="lazy" class="image" src="@assets/logos/trends_gazellen.png" alt="">
+                        <img loading="lazy" class="image" src="@assets/logos/trends_gazellen.png" alt="Trends Gazellen 2025">
                     </div>
                     <div class="odoo-logo">
-                        <img loading="lazy" class="image" src="@assets/logos/odoo_ready_partners_rgb.svg" alt="">
+                        <img loading="lazy" class="image" src="@assets/logos/odoo_ready_partners_rgb.svg" alt="Odoo Ready Partner">
+                    </div> 
+                    <div class="robaws-logo">
+                        <img loading="lazy" class="image" src="@assets/logos/robaws_partner.svg" alt="Robaws Partner">
                     </div>
                 </div>
             </div>
