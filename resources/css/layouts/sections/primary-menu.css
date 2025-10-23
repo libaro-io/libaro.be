@@ -101,4 +101,16 @@
             }
         }
     }
+
+    .white-variant & {
+        nav {
+            ul {
+                li {
+                    .primary-menu-item {
+                        @apply xl:!text-primary;
+                    }
+                }
+            }
+        }
+    }
 }

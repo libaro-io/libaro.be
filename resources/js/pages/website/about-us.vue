@@ -50,7 +50,6 @@ const textBlockImageComponents = computed<TextBlockImageInterface[]>(() => [
         :page-title="getTrans('about.page_title')"
         :page-description="getTrans('about.description')"
         :header-options="{
-            fullWidthDescription: true,
         }"
         meta-key="about_us">
         <div id="page-website-about-us">

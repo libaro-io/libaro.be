@@ -17,7 +17,10 @@ const props = defineProps<{
         :page-sub-title="getTrans('products.page_sub_title')"
         :page-description="getTrans('products.page_description')"
         meta-key="products"
-        :marginBottom="false">
+        :marginBottom="false"
+        :header-options="{
+            whiteVariant: true,
+        }">
         <div id="page-website-products">
             <card-list-component :columns="2">
                 <card-component

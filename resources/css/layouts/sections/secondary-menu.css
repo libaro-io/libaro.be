@@ -38,4 +38,19 @@
             }
         }
     }
+
+    .white-variant & {
+        nav {
+            ul {
+                li {
+                    a {
+                        @apply xl:!text-primary;
+                        &:hover, &.active {
+                            @apply xl:!bg-primary/20;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

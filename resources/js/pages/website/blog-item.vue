@@ -22,7 +22,7 @@ const hero = computed(() => {
         :page-sub-title="props.blog.author"
         :page-description="blog.date"
         :header-options="{
-            fullWidthDescription: true,
+            whiteVariant: true,
             tags: props.blog.tags,
         }"
         meta-key="blogs"

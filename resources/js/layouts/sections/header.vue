@@ -13,6 +13,7 @@ export interface HeaderOptions {
     background?: string | null;
     tags?: string[];
     isHome?: boolean;
+    whiteVariant?: boolean;
 }
 
 const props = withDefaults(defineProps<{
@@ -32,6 +33,7 @@ const options = computed((): HeaderOptions => {
         background: props.options?.background ?? "/images/header_striped.webp",
         tags: props.options?.tags ?? [],
         isHome: props.options?.isHome ?? false,
+        whiteVariant: props.options?.whiteVariant ?? false,
     }
 })
 
@@ -63,12 +65,13 @@ router.on('navigate', () => {
 <template>
     <section
         :class="[
-            'bg-primary-dark',
+            options.whiteVariant ? 'bg-white' : 'bg-primary-dark',
             'section-header',
             props.marginBottom ? 'margin-bottom' : '',
             options.isHome ? 'is-home' : '',
+            options.whiteVariant ? 'white-variant' : '',
         ]">
-        <img v-if="options.background"
+        <img v-if="options.background && !options.whiteVariant"
              :src="options.background"
              fetchpriority=high
              class="striped-bg"
@@ -77,7 +80,12 @@ router.on('navigate', () => {
             <header>
                 <div class="logo">
                     <Link prefetch :href="HomeController()">
-                        <img src="@assets/logos/libaro_logo_full_white_without_tagline.svg"
+                        <img v-if="!options.whiteVariant" src="@assets/logos/libaro_logo_full_white_without_tagline.svg"
+                             fetchpriority=high
+                             alt="logo"
+                                 width="210"
+                                 height="74">
+                        <img v-else src="@assets/logos/libaro_logo_full_blue_without_tagline.svg"
                              fetchpriority=high
                              alt="logo"
                              width="210"

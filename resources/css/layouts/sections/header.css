@@ -98,4 +98,37 @@
             }
         }
     }
+
+    &.white-variant {
+        @apply border-b-0;
+
+        .menu-button {
+            @apply text-primary;
+        }
+
+        .close-button {
+            @apply text-primary;
+        }
+
+        .page-title {
+            h1 {
+                @apply text-gradient;
+            }
+
+            .text-tags {
+                p {
+                    @apply text-primary;
+                }
+            }
+        }
+
+        .section-lang-selector {
+            button {
+                @apply xl:!text-primary;
+                &:after {
+                    @apply xl:!border-r-primary;
+                }
+            }
+        }
+    }
 }

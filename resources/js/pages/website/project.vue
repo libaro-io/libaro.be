@@ -30,7 +30,8 @@ const curiousAboutResultTitle = computed(() => {
         :page-sub-title="props.project.type"
         :page-description="props.project.client?.name"
         :header-options="{
-            tags: props.project.tags
+            tags: props.project.tags,
+            whiteVariant: true,
         }"
         meta-key="projects"
         :meta-title-override="props.project.name"
