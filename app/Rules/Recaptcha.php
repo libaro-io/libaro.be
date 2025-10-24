@@ -2,8 +2,8 @@
 
 namespace App\Rules;
 
-use Illuminate\Support\Facades\Http;
 use Illuminate\Contracts\Validation\Rule;
+use Illuminate\Support\Facades\Http;
 
 class Recaptcha implements Rule
 {
@@ -33,7 +33,7 @@ class Recaptcha implements Rule
             'response' => $value,
         ])->json();
 
-        if(  $response['success'] && $response['score'] > 0.5) {
+        if ($response['success'] && $response['score'] > 0.6) {
             return true;
         }
 

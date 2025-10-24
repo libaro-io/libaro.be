@@ -110,6 +110,16 @@ const submitContactForm = async (): Promise<void> => {
     });
 }
 
+const showRecaptchaMessage = ref(false);
+
+const handleMouseEnter = (): void => {
+    showRecaptchaMessage.value = true;
+}
+
+const handleMouseLeave = (): void => {
+    showRecaptchaMessage.value = false;
+}
+
 </script>
 <template>
     <section class="section-website-contact-form">
@@ -145,12 +155,17 @@ const submitContactForm = async (): Promise<void> => {
                 :required="true"
                 :error="contactForm.errors.message"
             ></textarea-component>
-            <p class="recaptcha" v-html="getTrans('contact.form.recaptcha')"></p>
             <div class="button">
                 <button-component
+                    color="tertiary"
+                    size="large"
+                     icon="fa-solid fa-chevron-right"
                     :disabled="contactForm.processing"
                     :text="getTrans('contact.form.submit')"
+                    @mouseenter="handleMouseEnter"
+                    @mouseleave="handleMouseLeave"
                 ></button-component>
+                <p class="recaptcha" :class="{ hidden: !showRecaptchaMessage }" v-html="getTrans('contact.form.recaptcha')"></p>
             </div>
         </form>
     </section>

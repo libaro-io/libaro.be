@@ -2,10 +2,16 @@
     form{
         @apply grid grid-cols-1 gap-form;
         .button{
-            @apply flex justify-end xl:justify-start;
+            @apply flex justify-end relative;
         }
         .recaptcha{
-            @apply text-footer-text text-sm;
+            @apply absolute top-full right-0 mt-2 px-3 py-2 bg-primary-light text-primary-darkest text-xs rounded-3xl whitespace-nowrap z-10;
+            &.hidden {
+                @apply opacity-0 pointer-events-none transition-opacity duration-200;
+            }
+            &:not(.hidden) {
+                @apply opacity-100;
+            }
         }
     }
 }

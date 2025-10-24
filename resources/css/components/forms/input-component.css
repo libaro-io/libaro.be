@@ -3,7 +3,7 @@
         @apply relative;
 
         label{
-            @apply bg-white px-2 absolute left-1 top-1/2 -translate-y-1/2 text-primary-dark font-grotesk font-semibold text-lg pointer-events-none transition-all duration-300 ease-out;
+            @apply bg-white px-3 absolute left-1 top-1/2 -translate-y-1/2 text-primary-dark font-grotesk font-semibold text-lg pointer-events-none transition-all duration-300 ease-out;
 
             &.floating {
                 @apply -top-2 translate-y-0 text-sm;
@@ -11,7 +11,7 @@
         }
 
         input{
-            @apply w-full bg-transparent  px-4 py-3  border-1 border-border;
+            @apply w-full bg-transparent  px-4 py-3  border-1 border-border rounded-3xl;
         }
     }
 }
