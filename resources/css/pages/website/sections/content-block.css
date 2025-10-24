@@ -80,11 +80,11 @@
 
         &.number_text {
             .title {
-                @apply col-span-2 flex;
+                @apply col-span-2 grid grid-cols-4;
             }
 
             .number-wrapper {
-                @apply w-24 mt-1;
+                @apply col-span-1;
             }
 
             h4 {
@@ -92,7 +92,7 @@
             }
 
             h2 {
-                @apply font-gilroy font-bold text-4xl;
+                @apply col-span-3 font-gilroy font-bold text-4xl;
             }
         }
 

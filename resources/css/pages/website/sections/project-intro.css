@@ -20,4 +20,11 @@
     .text {
         @apply lg:col-span-4;
     }
+
+    p.text strong,
+    p.text strong *,
+    p.text strong p,
+    p.text strong div {
+        @apply text-xl;
+    }
 }

@@ -8,12 +8,11 @@ import {computed} from "vue";
 import {getTrans} from "@composables/UseTranslationHelper";
 import LargeImageSubtitleComponent from "@components/large-image-subtitle-component.vue";
 import ButtonComponent from "@components/button-component.vue";
-import InterestingForYou from "@pages/website/sections/interesting-for-you.vue";
-import {LandingPageInterface} from "@interfaces/LandingPageInterface";
+import TheseSectors from "@pages/website/expertise/sections/these-sectors.vue";
 
 const props = defineProps<{
     project: ProjectInterface,
-    landingPages: LandingPageInterface[]
+    projects: ProjectInterface[]
 }>()
 
 const hero = computed(() => {
@@ -66,9 +65,10 @@ const curiousAboutResultTitle = computed(() => {
                 </a>
             </large-image-subtitle-component>
 
-            <interesting-for-you
-                :landing-pages="props.landingPages"
-            ></interesting-for-you>
+            <these-sectors class="mt-10"
+                :title="getTrans('projects.interesting_for_you')"
+                :projects="props.projects"
+            ></these-sectors>
         </div>
     </website>
 </template>

@@ -22,8 +22,17 @@ class DetailProductController extends Controller
 
         $product->loadMissing(['blocks', 'client']);
 
+        $projects = Project::query()
+            ->with('client')
+            ->where('visible', '=', true)
+            ->where('is_product', '=', false)
+            ->inRandomOrder()
+            ->get()
+            ->map(fn (Project $project) => ProjectResource::make($project));
+
         return Inertia::render('website/project', [
             'project' => ProjectResource::make($product),
+            'projects' => $projects,
         ]);
     }
 }

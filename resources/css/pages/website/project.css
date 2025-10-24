@@ -1,5 +1,11 @@
 #page-website-project {
     .section-website-project-intro{
         @apply bg-primary-light;
+
+    }
+
+    .section-website-expertise-these-sectors
+    {
+        @apply my-20;
     }
 }
