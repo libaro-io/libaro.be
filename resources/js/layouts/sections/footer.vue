@@ -11,6 +11,7 @@ import PrivacyPolicyController from "@actions/App/Http/Controllers/PrivacyPolicy
 import CookiePolicyController from "@actions/App/Http/Controllers/CookiePolicyController";
 import TermsController from "@actions/App/Http/Controllers/TermsController";
 import AssetsController from "@actions/App/Http/Controllers/AssetsController";
+import CalendarButtonComponent from "@components/calendar-button-component.vue";
 
 const page = usePage<PageInterface>();
 
@@ -72,6 +73,9 @@ const footerPrivacyUrls: Ref<
                         {{ page.props.pageProps.company.address.city }}
                     </p>
                 </address>
+                <div class="mt-4">
+            <calendar-button-component />
+                </div>
             </div>
             <div class="section">
                 <h2 class="footer-title">{{ getTrans("footer.financial") }}</h2>

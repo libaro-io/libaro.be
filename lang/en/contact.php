@@ -8,8 +8,9 @@ return [
     'cta' => [
         'title' => 'Curious about the digital possibilities?',
         'description' => 'Pick up the phone. Call us. Ask us the difficult questions you don\'t have answers to.',
-        'button' => 'Contact us'
+        'button' => 'Contact us',
     ],
+    'calendar' => 'Book an appointment',
     'form' => [
         'name' => [
             'label' => 'Name',

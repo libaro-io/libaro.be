@@ -3,6 +3,7 @@ import ProfileIconComponent from "@components/profile-icon-component.vue";
 import bert from "@assets/images/bert.webp";
 import {usePage} from "@inertiajs/vue3";
 import PageInterface from "@interfaces/PageInterface";
+import CalendarButtonComponent from "@components/calendar-button-component.vue";
 
 const page = usePage<PageInterface>();
 
@@ -21,6 +22,9 @@ const page = usePage<PageInterface>();
             <p> {{ page.props.pageProps.company.address.street }} {{ page.props.pageProps.company.address.number }} </p>
             <p> {{ page.props.pageProps.company.address.zip }} {{ page.props.pageProps.company.address.city }} </p>
         </address>
+        <div class="mt-4">
+            <calendar-button-component />
+        </div>
     </section>
 </template>
 <style scoped>
