@@ -15,6 +15,10 @@ import Website from "@layouts/website.vue";
                     <h2>{{ getTrans("cookie.intro.heading") }}</h2>
                     <p v-html="getTrans('cookie.intro.paragraph')"></p>
                 </section>
+                <section>
+                    <h2>{{ getTrans("cookie.google_analytics.heading") }}</h2>
+                    <p v-html="getTrans('cookie.google_analytics.paragraph')"></p>
+                </section>
 
                 <section>
                     <h2>{{ getTrans("cookie.what_are_cookies.heading") }}</h2>
