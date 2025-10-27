@@ -22,7 +22,7 @@ const props = defineProps<{
             whiteVariant: true,
         }">
         <div id="page-website-products">
-            <card-list-component :columns="2">
+            <card-list-component :columns="3">
                 <card-component
                     v-for="(product, index) in props.products" :key="index"
                     :title="product.name"

@@ -10,6 +10,12 @@ import ChooseIOT from "@assets/images/iot/choose_iot.png";
 import ContactForm from "@pages/website/sections/contact-form.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
 import TitleComponent from "@components/title-component.vue";
+import TheseSectors from "@pages/website/expertise/sections/these-sectors.vue";
+import {ProjectInterface} from "@interfaces/ProjectInterface";
+
+const props = defineProps<{
+    projects?: ProjectInterface[];
+}>();
 
 </script>
 <template>
@@ -29,7 +35,13 @@ import TitleComponent from "@components/title-component.vue";
                 title="pages.iot.integrations.title"
                 description="pages.iot.integrations.description"
                 icon-size="small"
-            ></integrations>
+            ></integrations>``
+
+            <these-sectors
+            :title="getTrans('pages.iot.these_sectors.title')"
+            :projects="props.projects"
+        ></these-sectors>
+
 
             <list-with-image-component
                 :list-with-image="conceptToAppsBlock"

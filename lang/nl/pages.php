@@ -417,6 +417,9 @@ return [
                 ],
             ],
         ],
+        'these_sectors' => [
+            'title' => 'Voor deze bedrijven bouwden we al IoT oplossingen',
+        ],
         'why_choose_iot' => [
             'title' => 'Waarom kiezen voor onze IoT oplossingen?',
             'text' => 'Onze IoT integraties zijn niet alleen technologische upgrades, maar strategische investeringen die uw bedrijfsvoering fundamenteel verbeteren. We focussen op praktische voordelen die direct impact hebben op uw dagelijkse operaties, medewerkers en bedrijfsresultaten.',

@@ -416,6 +416,9 @@ return [
                 ],
             ],
         ],
+        'these_sectors' => [
+            'title' => 'We have built IoT solutions for these sectors',
+        ],
         'why_choose_iot' => [
             'title' => 'Why choose our IoT solutions?',
             'text' => 'Our IoT integrations are not just technological upgrades, but strategic investments that fundamentally improve your business operations. We focus on practical benefits that have a direct impact on your daily operations, employees and business results.',

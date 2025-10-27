@@ -22,4 +22,18 @@ class BaseExpertiseController extends Controller
             ->get()
             ->map(fn (Project $project) => ProjectResource::make($project));
     }
+
+    /**
+     * @return Collection<int, ProjectResource>
+     */
+    protected function getProjectsByTags(string $tag): Collection
+    {
+        return Project::query()
+            ->with('client')
+            ->where('visible', '=', true)
+            ->where('is_product', '=', false)
+            ->where('tags', 'like', '%' . $tag . '%')
+            ->get()
+            ->map(fn (Project $project) => ProjectResource::make($project));
+    }
 }
