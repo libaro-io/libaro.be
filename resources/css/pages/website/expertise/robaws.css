@@ -1,7 +1,2 @@
 #page-website-expertise-robaws {
-    .contact-block{
-        .section-website-contact-form{
-            @apply xl:w-1/2;
-        }
-    }
 }
