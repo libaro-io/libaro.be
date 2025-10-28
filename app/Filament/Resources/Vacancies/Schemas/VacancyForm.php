@@ -2,15 +2,17 @@
 
 namespace App\Filament\Resources\Vacancies\Schemas;
 
-use Filament\Schemas\Schema;
-use Filament\Forms\Components\Toggle;
-use Filament\Forms\Components\Repeater;
+use App\Filament\Traits\HasFilamentBlocks;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\Toggle;
+use Filament\Schemas\Schema;
 
 class VacancyForm
 {
+    use HasFilamentBlocks;
+
     public static function configure(Schema $schema): Schema
     {
         return $schema
@@ -24,30 +26,19 @@ class VacancyForm
                     ->columnSpanFull(),
                 Toggle::make('visible')
                     ->required(),
-                Repeater::make('competencies')
-                    ->relationship('competencies')
-                    ->schema([
-                        TextInput::make('title')
-                            ->required()
-                            ->columnSpan(1)
-                            ->maxLength(255),
-                        TextInput::make('number')
-                            ->numeric()
-                            ->label('Number')
-                            ->columnSpan(1)
-                            ->required(),
-                        RichEditor::make('body')
-                            ->maxLength(1000)
-                            ->columnSpanFull(),
-                        Toggle::make('visible')
-                            ->label('Visible')
-                            ->required(),
+                FileUpload::make('image')
+                    ->label('Image (1000px height and webp only)')
+                    ->required()
+                    ->acceptedFileTypes(['image/webp'])
+                    ->disk('s3')
+                    ->directory('jobs')
+                    ->visibility('public')
+                    ->preserveFilenames()
+                    ->rules([
+                        'dimensions:height=1000',
                     ])
-                    ->columnSpanFull()
-                    ->columns(2)
-                    ->addActionLabel('Add Competence')
-                    ->collapsible()
-                    ->itemLabel(fn(array $state): ?string => $state['title'] ?? null),
+                    ->columnSpanFull(),
+                self::getBlocksRepeater(),
             ]);
     }
 }

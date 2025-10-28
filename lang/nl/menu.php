@@ -18,5 +18,6 @@ return [
         'blog' => 'Blog',
         'docs' => 'Documentatie',
         'products' => 'Producten',
+        'vacancies' => 'Jobs',
     ],
 ];

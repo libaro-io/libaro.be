@@ -7,6 +7,7 @@ import {ref} from "vue";
 import {MenuInterface} from "@interfaces/MenuInterface";
 import BlogController from "@actions/App/Http/Controllers/BlogController";
 import ProductController from "@actions/App/Http/Controllers/ProductController";
+import VacancyController from "@actions/App/Http/Controllers/VacancyController";
 
 const props = defineProps<{
     type: 'header' | 'footer'
@@ -22,7 +23,12 @@ const secondaryMenu = ref<MenuInterface[]>([
         text: 'menu.secondary.products',
         url: ProductController(),
         visible: true,
-    }
+    },
+    {
+        text: 'menu.secondary.vacancies',
+        url: VacancyController(),
+        visible: true,
+    },
 ]);
 
 </script>

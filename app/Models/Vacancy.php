@@ -13,10 +13,10 @@ class Vacancy extends Model
     protected $guarded = [];
 
     /**
-     * @return HasMany<Competence, $this>
+     * @return HasMany<VacancyBlock, $this>
      */
-    public function competencies(): HasMany
+    public function blocks(): HasMany
     {
-        return $this->hasMany(Competence::class);
+        return $this->hasMany(VacancyBlock::class)->orderBy('sort');
     }
 }

@@ -30,6 +30,10 @@ return [
             'title' => 'Onze producten',
             'description' => 'Op deze pagina vind je producten die ontstaan zijn uit onze eigen ideeën en experimenten.',
         ],
+        'vacancies' => [
+            'title' => 'Jobs',
+            'description' => 'Wij zoeken naar gepassioneerde kandidaten die ambitie hebben om ons team te versterken.',
+        ],
         'privacy' => [
             'title' => 'Privacybeleid',
             'description' => 'Lees ons privacybeleid om te begrijpen hoe we uw gegevens verzamelen, gebruiken en beschermen.',

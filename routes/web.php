@@ -9,6 +9,7 @@ use App\Http\Controllers\CookiePolicyController;
 use App\Http\Controllers\DetailBlogController;
 use App\Http\Controllers\DetailProductController;
 use App\Http\Controllers\DetailProjectController;
+use App\Http\Controllers\DetailVacancyController;
 use App\Http\Controllers\Expertises\AiIntegrationsExpertiseController;
 use App\Http\Controllers\Expertises\AppsExpertiseController;
 use App\Http\Controllers\Expertises\IOTExpertiseController;
@@ -25,6 +26,7 @@ use App\Http\Controllers\SubmitContactFormController;
 use App\Http\Controllers\SupportTimecardController;
 use App\Http\Controllers\TermsController;
 use App\Http\Controllers\UpdateLangController;
+use App\Http\Controllers\VacancyController;
 use Illuminate\Support\Facades\Route;
 
 // Don't forget to add new routes to the sitemap.blade.php!
@@ -48,6 +50,9 @@ Route::prefix('{locale?}')->group(function () {
 
     Route::get('producten', ProductController::class);
     Route::get('producten/{product:slug}', DetailProductController::class);
+
+    Route::get('jobs', VacancyController::class);
+    Route::get('jobs/{vacancy:slug}', DetailVacancyController::class);
 
     Route::get('privacy', PrivacyPolicyController::class);
     Route::get('cookies', CookiePolicyController::class);

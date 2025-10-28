@@ -5,7 +5,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 12.31.1.
+ * Generated for Laravel 12.35.1.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -3869,7 +3869,6 @@ namespace Illuminate\Support\Facades {
         /**
          * Attempt to find the batch with the given ID.
          *
-         * @param string $batchId
          * @return \Illuminate\Bus\Batch|null
          * @static
          */
@@ -3962,7 +3961,6 @@ namespace Illuminate\Support\Facades {
         /**
          * Set the pipes through which commands should be piped before dispatching.
          *
-         * @param array $pipes
          * @return \Illuminate\Bus\Dispatcher
          * @static
          */
@@ -3975,7 +3973,6 @@ namespace Illuminate\Support\Facades {
         /**
          * Map a command to a handler.
          *
-         * @param array $map
          * @return \Illuminate\Bus\Dispatcher
          * @static
          */
@@ -6726,6 +6723,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param array $keys
          * @return \Illuminate\Encryption\Encrypter
+         * @throws \RuntimeException
          * @static
          */
         public static function previousKeys($keys)
@@ -7723,6 +7721,7 @@ namespace Illuminate\Support\Facades {
          * @param string|float|int|bool|null $value
          * @param bool $binary
          * @return string
+         * @throws \RuntimeException
          * @static
          */
         public static function escape($value, $binary = false)
@@ -8367,6 +8366,21 @@ namespace Illuminate\Support\Facades {
             //Method inherited from \Illuminate\Database\Connection 
             /** @var \Illuminate\Database\MySqlConnection $instance */
             $instance->afterCommit($callback);
+        }
+
+        /**
+         * Execute the callback after a transaction rolls back.
+         *
+         * @param callable $callback
+         * @return void
+         * @throws \RuntimeException
+         * @static
+         */
+        public static function afterRollBack($callback)
+        {
+            //Method inherited from \Illuminate\Database\Connection 
+            /** @var \Illuminate\Database\MySqlConnection $instance */
+            $instance->afterRollBack($callback);
         }
 
             }
@@ -10152,6 +10166,7 @@ namespace Illuminate\Support\Facades {
      * @method static \Illuminate\Http\Client\Response put(string $url, array|\JsonSerializable|\Illuminate\Contracts\Support\Arrayable $data = [])
      * @method static \Illuminate\Http\Client\Response delete(string $url, array|\JsonSerializable|\Illuminate\Contracts\Support\Arrayable $data = [])
      * @method static array pool(callable $callback)
+     * @method static \Illuminate\Http\Client\Batch batch(callable $callback)
      * @method static \Illuminate\Http\Client\Response send(string $method, string $url, array $options = [])
      * @method static \GuzzleHttp\Client buildClient()
      * @method static \GuzzleHttp\Client createClient(\GuzzleHttp\HandlerStack $handlerStack)
@@ -13221,89 +13236,6 @@ namespace Illuminate\Support\Facades {
         }
 
         /**
-         * Release a reserved job back onto the queue after (n) seconds.
-         *
-         * @param string $queue
-         * @param \Illuminate\Queue\Jobs\DatabaseJobRecord $job
-         * @param int $delay
-         * @return mixed
-         * @static
-         */
-        public static function release($queue, $job, $delay)
-        {
-            /** @var \Illuminate\Queue\DatabaseQueue $instance */
-            return $instance->release($queue, $job, $delay);
-        }
-
-        /**
-         * Delete a reserved job from the queue.
-         *
-         * @param string $queue
-         * @param string $id
-         * @return void
-         * @throws \Throwable
-         * @static
-         */
-        public static function deleteReserved($queue, $id)
-        {
-            /** @var \Illuminate\Queue\DatabaseQueue $instance */
-            $instance->deleteReserved($queue, $id);
-        }
-
-        /**
-         * Delete a reserved job from the reserved queue and release it.
-         *
-         * @param string $queue
-         * @param \Illuminate\Queue\Jobs\DatabaseJob $job
-         * @param int $delay
-         * @return void
-         * @static
-         */
-        public static function deleteAndRelease($queue, $job, $delay)
-        {
-            /** @var \Illuminate\Queue\DatabaseQueue $instance */
-            $instance->deleteAndRelease($queue, $job, $delay);
-        }
-
-        /**
-         * Delete all of the jobs from the queue.
-         *
-         * @param string $queue
-         * @return int
-         * @static
-         */
-        public static function clear($queue)
-        {
-            /** @var \Illuminate\Queue\DatabaseQueue $instance */
-            return $instance->clear($queue);
-        }
-
-        /**
-         * Get the queue or return the default.
-         *
-         * @param string|null $queue
-         * @return string
-         * @static
-         */
-        public static function getQueue($queue)
-        {
-            /** @var \Illuminate\Queue\DatabaseQueue $instance */
-            return $instance->getQueue($queue);
-        }
-
-        /**
-         * Get the underlying database instance.
-         *
-         * @return \Illuminate\Database\Connection
-         * @static
-         */
-        public static function getDatabase()
-        {
-            /** @var \Illuminate\Queue\DatabaseQueue $instance */
-            return $instance->getDatabase();
-        }
-
-        /**
          * Get the maximum number of attempts for an object-based queue handler.
          *
          * @param mixed $job
@@ -13313,7 +13245,7 @@ namespace Illuminate\Support\Facades {
         public static function getJobTries($job)
         {
             //Method inherited from \Illuminate\Queue\Queue 
-            /** @var \Illuminate\Queue\DatabaseQueue $instance */
+            /** @var \Illuminate\Queue\SyncQueue $instance */
             return $instance->getJobTries($job);
         }
 
@@ -13327,7 +13259,7 @@ namespace Illuminate\Support\Facades {
         public static function getJobBackoff($job)
         {
             //Method inherited from \Illuminate\Queue\Queue 
-            /** @var \Illuminate\Queue\DatabaseQueue $instance */
+            /** @var \Illuminate\Queue\SyncQueue $instance */
             return $instance->getJobBackoff($job);
         }
 
@@ -13341,7 +13273,7 @@ namespace Illuminate\Support\Facades {
         public static function getJobExpiration($job)
         {
             //Method inherited from \Illuminate\Queue\Queue 
-            /** @var \Illuminate\Queue\DatabaseQueue $instance */
+            /** @var \Illuminate\Queue\SyncQueue $instance */
             return $instance->getJobExpiration($job);
         }
 
@@ -13355,7 +13287,34 @@ namespace Illuminate\Support\Facades {
         public static function createPayloadUsing($callback)
         {
             //Method inherited from \Illuminate\Queue\Queue 
-            \Illuminate\Queue\DatabaseQueue::createPayloadUsing($callback);
+            \Illuminate\Queue\SyncQueue::createPayloadUsing($callback);
+        }
+
+        /**
+         * Get the queue configuration array.
+         *
+         * @return array
+         * @static
+         */
+        public static function getConfig()
+        {
+            //Method inherited from \Illuminate\Queue\Queue 
+            /** @var \Illuminate\Queue\SyncQueue $instance */
+            return $instance->getConfig();
+        }
+
+        /**
+         * Set the queue configuration array.
+         *
+         * @param array $config
+         * @return \Illuminate\Queue\SyncQueue
+         * @static
+         */
+        public static function setConfig($config)
+        {
+            //Method inherited from \Illuminate\Queue\Queue 
+            /** @var \Illuminate\Queue\SyncQueue $instance */
+            return $instance->setConfig($config);
         }
 
         /**
@@ -13367,7 +13326,7 @@ namespace Illuminate\Support\Facades {
         public static function getContainer()
         {
             //Method inherited from \Illuminate\Queue\Queue 
-            /** @var \Illuminate\Queue\DatabaseQueue $instance */
+            /** @var \Illuminate\Queue\SyncQueue $instance */
             return $instance->getContainer();
         }
 
@@ -13381,7 +13340,7 @@ namespace Illuminate\Support\Facades {
         public static function setContainer($container)
         {
             //Method inherited from \Illuminate\Queue\Queue 
-            /** @var \Illuminate\Queue\DatabaseQueue $instance */
+            /** @var \Illuminate\Queue\SyncQueue $instance */
             $instance->setContainer($container);
         }
 
@@ -18049,7 +18008,7 @@ namespace Illuminate\Support\Facades {
         /**
          * Specify the cache store that should be used to store mutexes.
          *
-         * @param string $store
+         * @param \UnitEnum|string $store
          * @return \Illuminate\Console\Scheduling\Schedule
          * @static
          */
@@ -19533,6 +19492,31 @@ namespace Illuminate\Support\Facades {
         {
             /** @var \Illuminate\Session\Store $instance */
             $instance->setPreviousUrl($url);
+        }
+
+        /**
+         * Get the previous route name from the session.
+         *
+         * @return string|null
+         * @static
+         */
+        public static function previousRoute()
+        {
+            /** @var \Illuminate\Session\Store $instance */
+            return $instance->previousRoute();
+        }
+
+        /**
+         * Set the "previous" route name in the session.
+         *
+         * @param string|null $route
+         * @return void
+         * @static
+         */
+        public static function setPreviousRoute($route)
+        {
+            /** @var \Illuminate\Session\Store $instance */
+            $instance->setPreviousRoute($route);
         }
 
         /**
@@ -24817,6 +24801,48 @@ namespace Livewire\Features\SupportTesting {
         }
 
         /**
+         * @see \Filament\Actions\Testing\TestsActions::assertMountedActionModalSee()
+         * @param array|string $values
+         * @param mixed $escape
+         * @static
+         */
+        public static function assertMountedActionModalSee($values, $escape = true)
+        {
+            return \Livewire\Features\SupportTesting\Testable::assertMountedActionModalSee($values, $escape);
+        }
+
+        /**
+         * @see \Filament\Actions\Testing\TestsActions::assertMountedActionModalDontSee()
+         * @param array|string $values
+         * @param bool $escape
+         * @static
+         */
+        public static function assertMountedActionModalDontSee($values, $escape = true)
+        {
+            return \Livewire\Features\SupportTesting\Testable::assertMountedActionModalDontSee($values, $escape);
+        }
+
+        /**
+         * @see \Filament\Actions\Testing\TestsActions::assertMountedActionModalSeeHtml()
+         * @param array|string $values
+         * @static
+         */
+        public static function assertMountedActionModalSeeHtml($values)
+        {
+            return \Livewire\Features\SupportTesting\Testable::assertMountedActionModalSeeHtml($values);
+        }
+
+        /**
+         * @see \Filament\Actions\Testing\TestsActions::assertMountedActionModalDontSeeHtml()
+         * @param array|string $values
+         * @static
+         */
+        public static function assertMountedActionModalDontSeeHtml($values)
+        {
+            return \Livewire\Features\SupportTesting\Testable::assertMountedActionModalDontSeeHtml($values);
+        }
+
+        /**
          * @see \Filament\Actions\Testing\TestsActions::assertActionMounted()
          * @param \Filament\Actions\Testing\TestAction|array|string $actions
          * @return static
@@ -24885,6 +24911,16 @@ namespace Livewire\Features\SupportTesting {
         public static function parseNestedActions($actions, $arguments = [], $areRelativeToMountedActions = true)
         {
             return \Livewire\Features\SupportTesting\Testable::parseNestedActions($actions, $arguments, $areRelativeToMountedActions);
+        }
+
+        /**
+         * @see \Filament\Actions\Testing\TestsActions::getMountedActionModalHtml()
+         * @return string
+         * @static
+         */
+        public static function getMountedActionModalHtml()
+        {
+            return \Livewire\Features\SupportTesting\Testable::getMountedActionModalHtml();
         }
 
         /**
@@ -26928,6 +26964,17 @@ namespace Livewire\Features\SupportTesting {
         public static function searchTableColumns($searches)
         {
             return \Livewire\Features\SupportTesting\Testable::searchTableColumns($searches);
+        }
+
+        /**
+         * @see \Filament\Tables\Testing\TestsColumns::toggleAllTableColumns()
+         * @param bool $condition
+         * @return static
+         * @static
+         */
+        public static function toggleAllTableColumns($condition = true)
+        {
+            return \Livewire\Features\SupportTesting\Testable::toggleAllTableColumns($condition);
         }
 
         /**

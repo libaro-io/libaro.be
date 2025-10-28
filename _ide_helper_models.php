@@ -329,8 +329,8 @@ namespace App\Models{
  * @property string $description
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Competence> $competencies
- * @property-read int|null $competencies_count
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\VacancyBlock> $blocks
+ * @property-read int|null $blocks_count
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Vacancy newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Vacancy newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Vacancy query()
@@ -345,5 +345,31 @@ namespace App\Models{
  */
 	#[\AllowDynamicProperties]
 	class IdeHelperVacancy {}
+}
+
+namespace App\Models{
+/**
+ * @property int $id
+ * @property int $vacancy_id
+ * @property string $type
+ * @property array<array-key, mixed> $content
+ * @property int $sort
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Vacancy|null $blog
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VacancyBlock newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VacancyBlock newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VacancyBlock query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VacancyBlock whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VacancyBlock whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VacancyBlock whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VacancyBlock whereSort($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VacancyBlock whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VacancyBlock whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|VacancyBlock whereVacancyId($value)
+ * @mixin \Eloquent
+ */
+	#[\AllowDynamicProperties]
+	class IdeHelperVacancyBlock {}
 }
 

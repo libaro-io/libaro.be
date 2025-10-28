@@ -30,6 +30,10 @@ return [
             'title' => 'Our products',
             'description' => 'On this page you will find products that have arisen from our own ideas and experiments.',
         ],
+        'vacancies' => [
+            'title' => 'Jobs',
+            'description' => 'We are looking for passionate candidates who are ambitious to strengthen our team.',
+        ],
         'privacy' => [
             'title' => 'Privacy Policy',
             'description' => 'Read our privacy policy to understand how we collect, use, and protect your data.',
