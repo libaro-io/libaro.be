@@ -1,4 +1,4 @@
-@php use App\Http\Controllers\AboutUsController;use App\Http\Controllers\AssetsController;use App\Http\Controllers\BlogController;use App\Http\Controllers\ContactController;use App\Http\Controllers\CookiePolicyController;use App\Http\Controllers\DetailBlogController;use App\Http\Controllers\DetailProductController;use App\Http\Controllers\DetailProjectController;use App\Http\Controllers\Expertises\AiIntegrationsExpertiseController;use App\Http\Controllers\Expertises\AppsExpertiseController;use App\Http\Controllers\Expertises\IOTExpertiseController;use App\Http\Controllers\Expertises\OdooExpertiseController;use App\Http\Controllers\Expertises\RobawsExpertiseController;use App\Http\Controllers\Expertises\WebDevelopmentExpertiseController;use App\Http\Controllers\HomeController;use App\Http\Controllers\IntegrationTimecardController;use App\Http\Controllers\LandingPageController;use App\Http\Controllers\PrivacyPolicyController;use App\Http\Controllers\SupportTimecardController;use App\Http\Controllers\TermsController; @endphp
+@php use App\Http\Controllers\AboutUsController;use App\Http\Controllers\AssetsController;use App\Http\Controllers\BlogController;use App\Http\Controllers\ContactController;use App\Http\Controllers\CookiePolicyController;use App\Http\Controllers\DetailBlogController;use App\Http\Controllers\DetailProductController;use App\Http\Controllers\DetailProjectController;use App\Http\Controllers\DetailVacancyController;use App\Http\Controllers\Expertises\AiIntegrationsExpertiseController;use App\Http\Controllers\Expertises\AppsExpertiseController;use App\Http\Controllers\Expertises\IOTExpertiseController;use App\Http\Controllers\Expertises\OdooExpertiseController;use App\Http\Controllers\Expertises\RobawsExpertiseController;use App\Http\Controllers\Expertises\WebDevelopmentExpertiseController;use App\Http\Controllers\HomeController;use App\Http\Controllers\IntegrationTimecardController;use App\Http\Controllers\LandingPageController;use App\Http\Controllers\PrivacyPolicyController;use App\Http\Controllers\SupportTimecardController;use App\Http\Controllers\TermsController;use App\Http\Controllers\VacancyController; @endphp
 <urlset xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     @foreach(config('app.supported_locales') as $locale)
         @foreach([
@@ -16,7 +16,8 @@
             PrivacyPolicyController::class,
             CookiePolicyController::class,
             TermsController::class,
-            AssetsController::class
+            AssetsController::class,
+            VacancyController::class
         ] as $page)
             <url>
                 <loc>{{ action($page, ['locale' => $locale]) }}</loc>
@@ -67,11 +68,20 @@
     @endforeach
 
     @foreach($landingPages as $landingPage)
-    <url>
-        <loc>{{ action(LandingPageController::class, [ 'locale' => 'nl',  'landingPage' => $landingPage ]) }}</loc>
-        <lastmod>{{ $landingPage->updated_at->toDateString() }}</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+        <url>
+            <loc>{{ action(LandingPageController::class, [ 'locale' => 'nl',  'landingPage' => $landingPage ]) }}</loc>
+            <lastmod>{{ $landingPage->updated_at->toDateString() }}</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>1.0</priority>
+        </url>
+    @endforeach
+
+    @foreach($vacancies as $vacancy)
+        <url>
+            <loc>{{ action(DetailVacancyController::class, [ 'locale' => 'nl',  'vacancy' => $vacancy ]) }}</loc>
+            <lastmod>{{ $landingPage->updated_at->toDateString() }}</lastmod>
+            <changefreq>weekly</changefreq>
+            <priority>1.0</priority>
+        </url>
     @endforeach
 </urlset>

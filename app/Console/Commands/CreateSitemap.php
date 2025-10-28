@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Blog;
 use App\Models\LandingPage;
 use App\Models\Project;
+use App\Models\Vacancy;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -53,6 +54,8 @@ class CreateSitemap extends Command
         $landingPages = LandingPage::query()
             ->get();
 
+        $vacancies = Vacancy::query()->get();
+
         $fs = new Filesystem;
         $pathPrefix = public_path();
 
@@ -69,6 +72,7 @@ class CreateSitemap extends Command
                 'blogs' => $blogs,
                 'landingPages' => $landingPages,
                 'lastModGeneralPages' => $lastModGeneralPages,
+                'vacancies' => $vacancies,
             ])->render();
         $fs->put("{$pathPrefix}/sitemap.xml", $output);
     }
