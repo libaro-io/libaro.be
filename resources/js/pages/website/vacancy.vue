@@ -21,6 +21,7 @@ const hero = computed(() => {
         :page-description="vacancy.description"
         :header-options="{
             whiteVariant: true,
+            fullWidthDescription: true
         }"
         meta-key="vacancies"
         :meta-title-override="props.vacancy.title"
