@@ -42,8 +42,8 @@ class HandleInertiaRequests extends Middleware
                 'locale' => app()->getLocale(),
                 'company' => [
                     'name' => 'Libaro',
-                    'email' => 'bert@libaro.be',
-                    'phone' => '+32 (0)494 207025',
+                    'email' => 'jennis@libaro.be',
+                    'phone' => '+32 (0)478 27 94 83',
                     'address' => [
                         'street' => 'Vaardijkstraat',
                         'number' => '19',

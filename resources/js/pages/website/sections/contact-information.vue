@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ProfileIconComponent from "@components/profile-icon-component.vue";
-import bert from "@assets/images/bert.webp";
+import jennis from "@assets/images/jennis.webp";
 import {usePage} from "@inertiajs/vue3";
 import PageInterface from "@interfaces/PageInterface";
 import CalendarButtonComponent from "@components/calendar-button-component.vue";
@@ -11,9 +11,9 @@ const page = usePage<PageInterface>();
 <template>
     <section class="section-website-contact-information">
         <div class="information">
-            <profile-icon-component class="image" :image-src="bert"></profile-icon-component>
+            <profile-icon-component class="image" :image-src="jennis"></profile-icon-component>
             <div class="text">
-                <p class="name">Bert Clybouw</p>
+                <p class="name">Jennis Vanhaeke</p>
                 <a :href="'mailto:'+ page.props.pageProps.company.email"> {{ page.props.pageProps.company.email }} </a>
                 <a :href="'tel:'+ page.props.pageProps.company.phone"> {{ page.props.pageProps.company.phone }} </a>
             </div>

@@ -10,9 +10,8 @@ import LargeImageWithTextComponent from "@components/large-image-with-text-compo
 import LaptopRobawsImage from "@assets/images/robaws/laptop.png";
 import {onMounted} from "vue";
 import {LinkBuilderInterface} from "@interfaces/LinkBuilderInterface";
-import ContactForm from "@pages/website/sections/contact-form.vue";
-import {getTrans} from "@composables/UseTranslationHelper";
-import TitleComponent from "@components/title-component.vue";
+import CtaContact from "@pages/website/sections/cta-contact.vue";
+
 
 const getUrl = (slug: 'onderaannemers-app' | 'bryon-dagrapporten-app-teamleaders' | 'verhelst-group-tijdsregistratie-app'): LinkBuilderInterface => {
     return DetailProjectController({project: slug});
@@ -94,13 +93,10 @@ onMounted(() => {
                 title="pages.robaws.api_integration.title"
                 text="pages.robaws.api_integration.text"
             ></large-image-with-text-component>
-            <div class="contact-block container">
-                <title-component>
-                    <h2> {{ getTrans('pages.robaws.contact_form.title') }}</h2>
-                </title-component>
-                <contact-form>
-                </contact-form>
-            </div>
+           
+            <cta-contact
+                title="pages.robaws.contact_form.title"
+            ></cta-contact>
         </div>
     </website>
 </template>

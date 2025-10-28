@@ -6,7 +6,7 @@ import PageInterface from "@interfaces/PageInterface";
 import { getTrans } from "@composables/UseTranslationHelper";
 import { TranslationKey } from "../../translations/lang-keys";
 import ProfileIconComponent from "@components/profile-icon-component.vue";
-import bert from "@assets/images/bert.webp";
+import jennis from "@assets/images/jennis.webp";
 import PrivacyPolicyController from "@actions/App/Http/Controllers/PrivacyPolicyController";
 import CookiePolicyController from "@actions/App/Http/Controllers/CookiePolicyController";
 import TermsController from "@actions/App/Http/Controllers/TermsController";
@@ -45,12 +45,12 @@ const footerPrivacyUrls: Ref<
             </div>
             <div class="section">
                 <h2 class="footer-title">{{ getTrans("footer.contact") }}</h2>
-                <div class="bert">
+                <div class="contact">
                     <profile-icon-component
                         class="image"
-                        :image-src="bert"
+                        :image-src="jennis"
                     ></profile-icon-component>
-                    <div class="bert-info">
+                    <div class="contact-info">
                         <a
                             :href="
                                 'mailto:' + page.props.pageProps.company.email

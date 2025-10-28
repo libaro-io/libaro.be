@@ -7,11 +7,10 @@ import {conceptToAppsBlock, integrationsList, whyIOTList} from "@composables/exp
 import iotHeader from "@assets/images/iot/header.png";
 import LargeImageWithTextComponent from "@components/large-image-with-text-component.vue";
 import ChooseIOT from "@assets/images/iot/choose_iot.png";
-import ContactForm from "@pages/website/sections/contact-form.vue";
 import {getTrans} from "@composables/UseTranslationHelper";
-import TitleComponent from "@components/title-component.vue";
 import TheseSectors from "@pages/website/expertise/sections/these-sectors.vue";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
+import CtaContact from "@pages/website/sections/cta-contact.vue";
 
 const props = defineProps<{
     projects?: ProjectInterface[];
@@ -37,12 +36,6 @@ const props = defineProps<{
                 icon-size="small"
             ></integrations>``
 
-            <these-sectors
-            :title="getTrans('pages.iot.these_sectors.title')"
-            :projects="props.projects"
-        ></these-sectors>
-
-
             <list-with-image-component
                 :list-with-image="conceptToAppsBlock"
                 :is-clickable="false"
@@ -63,13 +56,14 @@ const props = defineProps<{
                 :colored-background="true"
             ></integrations>
 
-            <div class="contact-block container">
-                <title-component>
-                    <h2> {{ getTrans('pages.iot.contact_form.title') }}</h2>
-                </title-component>
-                <contact-form>
-                </contact-form>
-            </div>
+            <these-sectors
+            :title="getTrans('pages.iot.these_sectors.title')"
+            :projects="props.projects"
+            ></these-sectors>
+
+            <cta-contact
+                title="pages.iot.contact_form.title"
+            ></cta-contact>
         </div>
     </website>
 </template>

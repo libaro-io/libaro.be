@@ -18,8 +18,7 @@ import Odoo from "@assets/tools/odoo.png";
 import Officient from "@assets/tools/officient.png";
 import Robaws from "@assets/tools/robaws.png";
 import Sharepoint from "@assets/tools/sharepoint.webp";
-import ContactForm from "@pages/website/sections/contact-form.vue";
-import TitleComponent from "@components/title-component.vue";
+import CtaContact from "@pages/website/sections/cta-contact.vue";
 
 const props = defineProps<{
     projects?: ProjectInterface[];
@@ -147,13 +146,10 @@ const ourToolsBlocks: ToolInterface[] = [
             :colored-background="true"
         ></our-tools>
 
-        <div class="contact-block container">
-            <title-component>
-                <h2> {{ getTrans('pages.apps.contact_form.title') }}</h2>
-            </title-component>
-            <contact-form>
-            </contact-form>
-        </div>
+        <cta-contact
+                title="pages.apps.contact_form.title"
+                :negative-margin="true"
+            ></cta-contact>
     </div>
     </website>
 </template>

@@ -17,9 +17,8 @@ import TheseSectors from "@pages/website/expertise/sections/these-sectors.vue";
 import {ProjectInterface} from "@interfaces/ProjectInterface";
 import WebDevelopmentHeader from "@assets/images/webapplication/header.gif";
 import conceptToApplicationImage from "@assets/images/webapplication/concept_to_application.png";
-import ContactForm from "@pages/website/sections/contact-form.vue";
 import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
-import TitleComponent from "@components/title-component.vue";
+import CtaContact from "@pages/website/sections/cta-contact.vue";
 
 const props = defineProps<{
     projects?: ProjectInterface[];
@@ -149,14 +148,11 @@ const ourToolsBlocks: ToolInterface[] = [
                 :our-tools="ourToolsBlocks"
                 :colored-background="true"
             ></our-tools>
-            <div class="contact-block container">
-                <title-component>
-                    <h2> {{ getTrans('pages.webdevelopment.contact_form.title') }}</h2>
-                </title-component>
-                <contact-form>
-                </contact-form>
-            </div>
 
+            <cta-contact
+                title="pages.webdevelopment.contact_form.title"
+                :negative-margin="true"
+            ></cta-contact>
         </div>
     </website>
 </template>

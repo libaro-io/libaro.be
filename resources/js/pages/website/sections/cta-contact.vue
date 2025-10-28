@@ -4,6 +4,15 @@ import {Link} from "@inertiajs/vue3";
 import {getTrans} from "@composables/UseTranslationHelper";
 import ButtonComponent from "@components/button-component.vue";
 import {ref, Ref} from "vue";
+import {TranslationKey} from "../../../translations/lang-keys";
+
+const props = withDefaults(defineProps<{
+    title?: TranslationKey;
+    negativeMargin?: boolean;
+}>(), {
+    title: 'sections.cta-contact.title',
+    negativeMargin: false,
+});
 
 const clockRef: Ref<HTMLImageElement | null> = ref(null);
 let animationInterval: number | null = null;
@@ -39,7 +48,7 @@ const handleMouseLeave = (): void => {
 
 </script>
 <template>
-    <section class="section-website-cta-contact">
+    <section class="section-website-cta-contact" :class="{'negative-margin': props.negativeMargin}">
         <img src="/images/header_striped.webp"
              class="bg-image"
              alt="header">
@@ -50,7 +59,7 @@ const handleMouseLeave = (): void => {
                </div>
                <div class="content">
                    <h2>
-                       {{ getTrans('sections.cta-contact.title') }}
+                       {{ getTrans(props.title) }}
                    </h2>
                    <p>
                        {{ getTrans('sections.cta-contact.description') }}

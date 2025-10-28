@@ -2,14 +2,12 @@
 import Website from "@layouts/website.vue";
 import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
 import aiHeader from "@assets/images/ai/header.jpg";
-import ContactForm from "@pages/website/sections/contact-form.vue";
-import {getTrans} from "@composables/UseTranslationHelper";
 import ListWithImageComponent from "@components/list-with-image-component.vue";
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import ChooseAI from "@assets/images/ai/choose_ai.png"
 import UspListComponent from "@components/usp-list-component.vue";
 import {UspListInterface} from "@interfaces/UspListInterface";
-import TitleComponent from "@components/title-component.vue";
+import CtaContact from "@pages/website/sections/cta-contact.vue";
 
 const WhatIsAIForYou: ListWithImageInterface = {
     title: 'pages.ai.what_is_ai_for_you.title',
@@ -94,13 +92,10 @@ const uspListBlock: UspListInterface = {
                 :colored-background="true"
             ></usp-list-component>
 
-            <div class="contact-block container">
-                <title-component>
-                    <h2> {{ getTrans('pages.ai.contact_form.title') }}</h2>
-                </title-component>
-                <contact-form>
-                </contact-form>
-            </div>
+            <cta-contact
+                title="pages.ai.contact_form.title"
+                :negative-margin="true"
+            ></cta-contact>
         </div>
     </website>
 </template>

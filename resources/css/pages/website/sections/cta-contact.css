@@ -1,5 +1,8 @@
 .section-website-cta-contact {
     @apply bg-center bg-cover relative;
+    &.negative-margin {
+        @apply -mt-30
+    }
 
     .bg-image {
         @apply absolute top-0 w-full h-full object-cover object-top;

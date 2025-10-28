@@ -2,8 +2,6 @@
 import Website from "@layouts/website.vue";
 import ExpertiseHeader from "@pages/website/expertise/sections/expertise-header.vue";
 import odooHeader from "@assets/images/odoo/header.gif";
-import ContactForm from "@pages/website/sections/contact-form.vue";
-import {getTrans} from "@composables/UseTranslationHelper";
 import {ListWithImageInterface} from "@interfaces/ListWithImageInterface";
 import ListWithImageComponent from "@components/list-with-image-component.vue";
 
@@ -12,7 +10,7 @@ import ChooseOdoo from "@assets/images/odoo/choose_odoo.webp";
 import Integrations from "@pages/website/expertise/sections/integrations.vue";
 import {IntegrationInterface} from "@interfaces/IntegrationInterface";
 import {getIntegrations, getWhatIsOdooYou} from "@composables/expertises/UseOdooComposable";
-import TitleComponent from "@components/title-component.vue";
+import CtaContact from "@pages/website/sections/cta-contact.vue";
 
 
 const WhatIsOdooForYou: ListWithImageInterface = getWhatIsOdooYou();
@@ -53,13 +51,9 @@ const integrationsList: IntegrationInterface[] = getIntegrations();
                 text="pages.odoo.why_choose_odoo.text"
             ></large-image-with-text-component>
 
-            <div class="contact-block container">
-                <title-component>
-                    <h2> {{ getTrans('pages.odoo.contact_form.title') }}</h2>
-                </title-component>
-                <contact-form>
-                </contact-form>
-            </div>
+            <cta-contact
+                title="pages.odoo.contact_form.title"
+            ></cta-contact>
         </div>
     </website>
 </template>

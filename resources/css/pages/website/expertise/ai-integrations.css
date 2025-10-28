@@ -1,7 +1,2 @@
 #page-website-expertise-ai-integrations {
-    .contact-block{
-        .section-website-contact-form{
-            @apply xl:w-1/2;
-        }
-    }
 }

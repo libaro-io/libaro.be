@@ -8,7 +8,7 @@ const props = defineProps<{
 <template>
     <section class="component-profile-icon-component">
             <div class="image-container">
-                <img loading="lazy" :src="props.imageSrc" alt="bert">
+                <img loading="lazy" :src="props.imageSrc" alt="jennis">
             </div>
     </section>
 </template>
