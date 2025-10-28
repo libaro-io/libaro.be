@@ -24,6 +24,7 @@ const hero = computed(() => {
         :header-options="{
             whiteVariant: true,
             tags: props.blog.tags,
+            fullWidthDescription: true
         }"
         meta-key="blogs"
         :meta-title-override="props.blog.title"
