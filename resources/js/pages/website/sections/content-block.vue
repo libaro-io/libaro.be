@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import {BlockInterface} from "@interfaces/BlockInterface";
-import {BlockTypeEnum} from "@enums/BlockTypeEnum";
+import { BlockInterface } from "@interfaces/BlockInterface";
+import { BlockTypeEnum } from "@enums/BlockTypeEnum";
 import LargeImageComponent from "@components/large-image-component.vue";
-import {useS3Image} from "@composables/useS3Image";
+import { useS3Image } from "@composables/useS3Image";
 
 const props = defineProps<{
     alt: string;
@@ -30,11 +30,11 @@ const props = defineProps<{
                         v-if="props.block.data.image"
                         :image="useS3Image(props.block.data.image) ?? ''"
                         :alt="props.alt"
-                        :class="{'order-2': props.block.data.layout == 'text_image'}"
+                        :class="{
+                            'order-2': props.block.data.layout == 'text_image',
+                        }"
                     />
-                    <div class="text"
-                         v-html="props.block.data.text"
-                    ></div>
+                    <div class="text" v-html="props.block.data.text"></div>
                 </div>
             </template>
 
@@ -46,9 +46,7 @@ const props = defineProps<{
                         </div>
                         <h2>{{ props.block.data.title }}</h2>
                     </div>
-                    <div class="text"
-                         v-html="props.block.data.text"
-                    ></div>
+                    <div class="text" v-html="props.block.data.text"></div>
                 </div>
             </template>
 
@@ -62,9 +60,27 @@ const props = defineProps<{
                             class="logo"
                         />
                     </div>
-                    <div class="text"
-                         v-html="props.block.data.text"
-                    ></div>
+                    <div class="text" v-html="props.block.data.text"></div>
+                </div>
+            </template>
+            <template v-if="props.block.type === BlockTypeEnum.CARDS">
+                <div class="grid-layout">
+                    <template
+                        v-for="(card, index) in props.block.data.cards"
+                        :key="index"
+                    >
+                        <div class="card">
+                            <div class="img-wrapper" v-if="card.image">
+                                <img
+                                    :src="useS3Image(card.image) ?? ''"
+                                    :alt="props.alt"
+                                    class="logo"
+                                />
+                            </div>
+                            <h3>{{ card.title }}</h3>
+                            <div class="text" v-html="card.text"></div>
+                        </div>
+                    </template>
                 </div>
             </template>
         </div>

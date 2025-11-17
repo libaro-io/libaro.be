@@ -1,4 +1,4 @@
-import {BlockTypeEnum} from "@enums/BlockTypeEnum";
+import { BlockTypeEnum } from "@enums/BlockTypeEnum";
 
 export interface BlockInterface {
     type: BlockTypeEnum;
@@ -8,5 +8,10 @@ export interface BlockInterface {
         text?: string;
         image?: string;
         layout?: 'image_text' | 'text_image';
+        cards?: {
+            image?: string;
+            title?: string;
+            text?: string;
+        }[];
     }
 }

@@ -9,6 +9,7 @@ enum FilamentBlockType: string
     case ImageText = 'image_text';
     case NumberText = 'number_text';
     case LogoText = 'logo_text';
+    case Cards = 'cards';
 
     /**
      * @return array<string, string>
@@ -21,6 +22,7 @@ enum FilamentBlockType: string
             self::ImageText->value => 'Image and Text',
             self::NumberText->value => 'Number and Text',
             self::LogoText->value => 'Logo and Text',
+            self::Cards->value => 'Cards',
         ];
     }
 }

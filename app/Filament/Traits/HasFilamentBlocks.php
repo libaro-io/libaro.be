@@ -67,7 +67,29 @@ trait HasFilamentBlocks
                     ->required()
                     ->columnSpanFull()
                     ->visible(fn ($state, $get): bool => $get('type') === FilamentBlockType::ImageText->value),
-
+                Repeater::make('content.cards')
+                    ->label('Cards')
+                    ->schema([
+                        FileUpload::make('image')
+                            ->label('Icon')
+                            ->acceptedFileTypes(['image/webp', 'image/png', 'image/svg+xml'])
+                            ->disk('s3')
+                            ->directory($s3Directory)
+                            ->visibility('public')
+                            ->preserveFilenames()
+                            ->columnSpanFull(),
+                        TextInput::make('title')
+                            ->label('Title')
+                            ->columnSpanFull(),
+                        RichEditor::make('text')
+                            ->label('Text')
+                            ->columnSpanFull(),
+                    ])
+                    ->columnSpanFull()
+                    ->addActionLabel('Add Card')
+                    ->reorderable()
+                    ->collapsible()
+                    ->visible(fn ($state, $get): bool => $get('type') === FilamentBlockType::Cards->value),
             ])
             ->columnSpanFull()
             ->columns(6)
