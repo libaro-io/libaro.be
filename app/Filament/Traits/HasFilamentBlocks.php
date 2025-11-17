@@ -90,6 +90,21 @@ trait HasFilamentBlocks
                     ->reorderable()
                     ->collapsible()
                     ->visible(fn ($state, $get): bool => $get('type') === FilamentBlockType::Cards->value),
+                Repeater::make('content.accordion')
+                    ->label('Accordion')
+                    ->schema([
+                        TextInput::make('title')
+                            ->label('Title')
+                            ->columnSpanFull(),
+                        RichEditor::make('description')
+                            ->label('Description')
+                            ->columnSpanFull(),
+                    ])
+                    ->columnSpanFull()
+                    ->addActionLabel('Add Item')
+                    ->reorderable()
+                    ->collapsible()
+                    ->visible(fn ($state, $get): bool => $get('type') === FilamentBlockType::Accordion->value),
             ])
             ->columnSpanFull()
             ->columns(6)

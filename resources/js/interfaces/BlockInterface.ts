@@ -13,5 +13,9 @@ export interface BlockInterface {
             title?: string;
             text?: string;
         }[];
+        accordion?: {
+            title?: string;
+            description?: string;
+        }[];
     }
 }

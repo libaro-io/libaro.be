@@ -145,4 +145,12 @@
             @apply bg-primary-light;
         }
     }
+
+    .component-accordion .accordion {
+        @apply border border-background;
+
+        label {
+            @apply bg-background;
+        }
+    }
 }

@@ -6,4 +6,5 @@ export enum BlockTypeEnum {
     NUMBER_TEXT = 'number_text',
     LOGO_TEXT = 'logo_text',
     CARDS = 'cards',
+    ACCORDION = 'accordion',
 }

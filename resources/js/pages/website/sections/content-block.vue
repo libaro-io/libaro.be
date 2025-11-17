@@ -3,11 +3,22 @@ import { BlockInterface } from "@interfaces/BlockInterface";
 import { BlockTypeEnum } from "@enums/BlockTypeEnum";
 import LargeImageComponent from "@components/large-image-component.vue";
 import { useS3Image } from "@composables/useS3Image";
+import Accordion from "@components/accordion.vue";
+import { computed } from "vue";
 
 const props = defineProps<{
     alt: string;
     block: BlockInterface;
 }>();
+
+const accordionItems = computed(() => {
+    return (
+        props.block.data.accordion?.map((item) => ({
+            title: item.title ?? "",
+            description: item.description ?? "",
+        })) ?? []
+    );
+});
 </script>
 <template>
     <section class="section-website-content-block">
@@ -82,6 +93,9 @@ const props = defineProps<{
                         </div>
                     </template>
                 </div>
+            </template>
+            <template v-if="props.block.type === BlockTypeEnum.ACCORDION">
+                <accordion :items="accordionItems"></accordion>
             </template>
         </div>
     </section>
