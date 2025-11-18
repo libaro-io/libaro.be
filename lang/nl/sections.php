@@ -38,4 +38,9 @@ return [
         'subtitle' => 'Ontdek hoe we voor deze drie klanten hun digitale ambities hebben waargemaakt.',
         'button' => 'Alle projecten',
     ],
+    'our-blogs' => [
+        'title' => 'Libaro blog',
+        'subtitle' => 'Leuke nieuwtjes',
+        'button' => 'Alle blogs',
+    ],
 ];

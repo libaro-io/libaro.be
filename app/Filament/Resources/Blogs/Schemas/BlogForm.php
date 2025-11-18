@@ -51,6 +51,8 @@ class BlogForm
                     ->columnSpanFull(),
                 Toggle::make('visible')
                     ->required(),
+                Toggle::make('pin_on_homepage')
+                    ->required(),
                 self::getBlocksRepeater(),
             ])->columns(6);
     }

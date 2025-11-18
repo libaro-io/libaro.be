@@ -8,22 +8,28 @@ import TextBlockImageComponent from "@components/text-block-image-component.vue"
 import { TextBlockImageInterface } from "@interfaces/TextBlockImageInterface";
 import defaultHomeImage from "@assets/images/strategy_1_584.webp";
 import OurProjects from "@pages/website/sections/our-projects.vue";
-import {placeholderProject, ProjectInterface} from "@interfaces/ProjectInterface";
+import {
+    placeholderProject,
+    ProjectInterface,
+} from "@interfaces/ProjectInterface";
 import { getTrans } from "@composables/UseTranslationHelper";
 import { LandingPageInterface } from "@interfaces/LandingPageInterface";
 import { computed } from "vue";
-import {getLandingPageImage} from "@composables/UseLandingPageImage";
+import { getLandingPageImage } from "@composables/UseLandingPageImage";
 import OurExpertises from "@pages/website/sections/our-expertises.vue";
+import OurBlogs from "@pages/website/sections/our-blogs.vue";
+import { BlogInterface } from "@interfaces/BlogInterface";
 
 const props = defineProps<{
     clients?: PaginationInterface<ClientInterface[]>;
     projects?: ProjectInterface[];
     landingPage?: LandingPageInterface;
+    blogs?: BlogInterface[];
 }>();
 
 const homeImage = computed(() => {
     if (props.landingPage) {
-       return getLandingPageImage(props.landingPage?.block?.image_index)
+        return getLandingPageImage(props.landingPage?.block?.image_index);
     }
     return defaultHomeImage;
 });
@@ -53,10 +59,18 @@ const pageTitle = computed(
     () => props.landingPage?.title ?? getTrans("pages.home.header.title")
 );
 
-const pageDescription = computed(() => getTrans("pages.home.header.description"));
+const pageDescription = computed(() =>
+    getTrans("pages.home.header.description")
+);
 
-const projectPlaceholder = [placeholderProject, placeholderProject, placeholderProject]
-const projects = computed(() => props.landingPage?.projects ?? props.projects ?? projectPlaceholder);
+const projectPlaceholder = [
+    placeholderProject,
+    placeholderProject,
+    placeholderProject,
+];
+const projects = computed(
+    () => props.landingPage?.projects ?? props.projects ?? projectPlaceholder
+);
 </script>
 <template>
     <website
@@ -67,8 +81,8 @@ const projects = computed(() => props.landingPage?.projects ?? props.projects ??
         :page-title="pageTitle"
         :page-description="pageDescription"
         meta-key="home"
-        :meta-title-override=" props.landingPage?.title"
-        :meta-description-override=" props.landingPage?.block.text"
+        :meta-title-override="props.landingPage?.title"
+        :meta-description-override="props.landingPage?.block.text"
     >
         <div id="page-website-home" class="page-grid">
             <our-expertises></our-expertises>
@@ -78,6 +92,7 @@ const projects = computed(() => props.landingPage?.projects ?? props.projects ??
                 :text-block-image="textBlockImage"
                 image-side="right"
             ></text-block-image-component>
+            <our-blogs :blogs="blogs ?? []"></our-blogs>
             <our-clients :clients="props.clients"></our-clients>
             <cta-contact></cta-contact>
         </div>

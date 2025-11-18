@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\BlogResource;
 use App\Http\Resources\ClientResource;
 use App\Http\Resources\ProjectResource;
+use App\Models\Blog;
 use App\Models\Client;
 use App\Models\Project;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
@@ -24,10 +26,12 @@ class HomeController extends Controller
      */
     public function render(array $props = []): Response
     {
-        return Inertia::render('website/home',
+        return Inertia::render(
+            'website/home',
             array_merge([
                 'clients' => Inertia::defer(fn () => $this->getClients()),
                 'projects' => Inertia::defer(fn () => $this->getProjects()),
+                'blogs' => Inertia::defer(fn () => $this->getBlogs()),
             ], $props)
         );
     }
@@ -61,5 +65,17 @@ class HomeController extends Controller
             ->get();
 
         return ProjectResource::collection($projects);
+    }
+
+    protected function getBlogs(): AnonymousResourceCollection
+    {
+        $blogs = Blog::query()
+            ->where('visible', '=', true)
+            ->orderByDesc('pin_on_homepage')
+            ->orderByDesc('publish_date')
+            ->limit(3)
+            ->get();
+
+        return BlogResource::collection($blogs);
     }
 }
