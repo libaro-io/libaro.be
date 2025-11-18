@@ -8,6 +8,8 @@ export interface BlockInterface {
         text?: string;
         image?: string;
         layout?: 'image_text' | 'text_image';
+        button_text?: string;
+        button_url?: string;
         cards?: {
             image?: string;
             title?: string;

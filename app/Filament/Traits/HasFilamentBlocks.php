@@ -48,6 +48,7 @@ trait HasFilamentBlocks
                     ->columnSpanFull()
                     ->visible(fn ($state, $get): bool => in_array($get('type'), [
                         FilamentBlockType::NumberText->value,
+                        FilamentBlockType::CtaBlock->value,
                     ])),
                 RichEditor::make('content.text')
                     ->label('Text')
@@ -57,6 +58,20 @@ trait HasFilamentBlocks
                         FilamentBlockType::ImageText->value,
                         FilamentBlockType::NumberText->value,
                         FilamentBlockType::LogoText->value,
+                        FilamentBlockType::CtaBlock->value,
+                    ])),
+                TextInput::make('content.button_text')
+                    ->label('Button Text')
+                    ->columnSpanFull()
+                    ->visible(fn ($state, $get): bool => in_array($get('type'), [
+                        FilamentBlockType::CtaBlock->value,
+                    ])),
+                TextInput::make('content.button_url')
+                    ->label('Button URL')
+                    ->url()
+                    ->columnSpanFull()
+                    ->visible(fn ($state, $get): bool => in_array($get('type'), [
+                        FilamentBlockType::CtaBlock->value,
                     ])),
                 Select::make('content.layout')
                     ->label('Layout')

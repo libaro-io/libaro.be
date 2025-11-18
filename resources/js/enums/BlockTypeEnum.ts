@@ -7,4 +7,5 @@ export enum BlockTypeEnum {
     LOGO_TEXT = 'logo_text',
     CARDS = 'cards',
     ACCORDION = 'accordion',
+    CTABLOCK = 'ctablock',
 }

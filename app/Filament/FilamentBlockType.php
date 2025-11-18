@@ -11,6 +11,7 @@ enum FilamentBlockType: string
     case LogoText = 'logo_text';
     case Cards = 'cards';
     case Accordion = 'accordion';
+    case CtaBlock = 'ctablock';
 
     /**
      * @return array<string, string>
@@ -25,6 +26,7 @@ enum FilamentBlockType: string
             self::LogoText->value => 'Logo and Text',
             self::Cards->value => 'Cards',
             self::Accordion->value => 'Accordion',
+            self::CtaBlock->value => 'CTA Block',
         ];
     }
 }

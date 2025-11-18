@@ -5,6 +5,7 @@ import LargeImageComponent from "@components/large-image-component.vue";
 import { useS3Image } from "@composables/useS3Image";
 import Accordion from "@components/accordion.vue";
 import { computed } from "vue";
+import ButtonComponent from "@components/button-component.vue";
 
 const props = defineProps<{
     alt: string;
@@ -96,6 +97,24 @@ const accordionItems = computed(() => {
             </template>
             <template v-if="props.block.type === BlockTypeEnum.ACCORDION">
                 <accordion :items="accordionItems"></accordion>
+            </template>
+            <template v-if="props.block.type === BlockTypeEnum.CTABLOCK">
+                <div class="ctablock-content">
+                    <h2>{{ props.block.data.title }}</h2>
+                    <p v-html="props.block.data.text"></p>
+                    <a
+                        v-if="props.block.data.button_url"
+                        :href="props.block.data.button_url"
+                        target="_blank"
+                    >
+                        <button-component
+                            :text="props.block.data.button_text ?? ''"
+                            color="tertiary"
+                            size="large"
+                            icon="fa-solid fa-chevron-right"
+                        ></button-component>
+                    </a>
+                </div>
             </template>
         </div>
     </section>
