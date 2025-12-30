@@ -26,6 +26,7 @@ class Locale
         $isSupportedLocale = in_array($currentLocale, $supportedLocales);
         $isAnAdminRoute = str_starts_with($request->path(), config('filament.path'));
         $isALivewireRoute = str_starts_with($request->path(), 'livewire');
+        $isBannerRoute = $request->path() === 'banner';
 
         if ($isSupportedLocale) {
             app()->setLocale(is_string($currentLocale) ? $currentLocale : config('app.locale'));
@@ -38,6 +39,10 @@ class Locale
         }
 
         if ($isALivewireRoute) {
+            return $next($request);
+        }
+
+        if ($isBannerRoute) {
             return $next($request);
         }
 
