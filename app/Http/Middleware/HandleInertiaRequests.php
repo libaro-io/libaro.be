@@ -45,7 +45,7 @@ class HandleInertiaRequests extends Middleware
                     'email' => 'jennis@libaro.be',
                     'phone' => '+32 (0)478 27 94 83',
                     'address' => [
-                        'street' => 'Vaardijkstraat',
+                        'street' => 'Vaartdijkstraat',
                         'number' => '19',
                         'zip' => '8200',
                         'city' => 'Brugge',
