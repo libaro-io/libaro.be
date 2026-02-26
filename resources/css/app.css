@@ -10,6 +10,7 @@
 @import "@css/pages/website/expertise/webdevelopment.css";
 @import "@css/pages/website/sections/our-expertises.css";
 @import "@css/pages/website/sections/our-projects.css";
+@import "@css/pages/website/sections/experience-chat.css";
 @import "@css/components/cta-block-component.css";
 @import "@css/pages/website/sections/contact-information.css";
 @import "@css/components/forms/input-component.css";
@@ -34,6 +35,18 @@
     --radius-sm: calc(var(--radius) - 4px);
     --text-base: 1.1rem;
     --text-7xl: 4rem;
+
+    --animate-ref-pop-in: ref-pop-in 0.35s ease-out forwards;
+    @keyframes ref-pop-in {
+        0% { opacity: 0; transform: translateY(10px) scale(0.97); }
+        100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    --animate-typing-bounce: typing-bounce 1.2s infinite;
+    @keyframes typing-bounce {
+        0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+        30% { transform: translateY(-4px); opacity: 1; }
+    }
 
     --color-background: var(--background);
     --color-foreground: var(--foreground);

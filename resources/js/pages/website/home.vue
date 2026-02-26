@@ -18,6 +18,7 @@ import { computed } from "vue";
 import { getLandingPageImage } from "@composables/UseLandingPageImage";
 import OurExpertises from "@pages/website/sections/our-expertises.vue";
 import OurBlogs from "@pages/website/sections/our-blogs.vue";
+import ExperienceChat from "@pages/website/sections/experience-chat.vue";
 import { BlogInterface } from "@interfaces/BlogInterface";
 
 const props = defineProps<{
@@ -92,6 +93,7 @@ const projects = computed(
                 :text-block-image="textBlockImage"
                 image-side="right"
             ></text-block-image-component>
+            <experience-chat></experience-chat>
             <our-blogs :blogs="blogs ?? []"></our-blogs>
             <our-clients :clients="props.clients"></our-clients>
             <cta-contact></cta-contact>
