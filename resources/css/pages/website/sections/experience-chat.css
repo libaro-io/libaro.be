@@ -1,5 +1,6 @@
 .section-website-experience-chat {
     @apply bg-center bg-cover relative;
+    margin-bottom: var(--remove-gap-page);
 
     .bg-image {
         @apply absolute top-0 w-full h-full object-cover object-top;
