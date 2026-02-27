@@ -27,6 +27,7 @@ class ExperienceChatService
 
         $result['follow_up'] = null;
         $result = $this->ensureLocaleInReferences($result, $locale);
+        $result = $this->ensureExpertisePageReferenced($message, $result, $locale);
         $result = $this->enrichReferencesWithImage($result, $evidence);
 
         if (empty($result['references'])) {
@@ -164,16 +165,69 @@ class ExperienceChatService
     }
 
     /**
+     * When the question or answer is about an expertise, ensure the expertise page is in references.
+     *
+     * @param  array{answer: string, references: array<int, array{project_name: string, why_relevant: string, link: string, image?: string|null}>, confidence: string, follow_up: string|null}  $result
+     * @return array{answer: string, references: array<int, array{project_name: string, why_relevant: string, link: string, image?: string|null}>, confidence: string, follow_up: string|null, contact_link?: string}
+     */
+    private function ensureExpertisePageReferenced(string $message, array $result, string $locale): array
+    {
+        /** @var array<int, array{label: string, slug: string, keywords: string}> $expertises */
+        $expertises = config('experience-chat.expertises', []);
+        $messageLower = mb_strtolower($message);
+
+        foreach ($expertises as $e) {
+            $label = $e['label'];
+            $slug = $e['slug'];
+            $keywords = array_map('trim', explode(',', $e['keywords']));
+            $matches = str_contains($messageLower, mb_strtolower($label))
+                || collect($keywords)->contains(fn (string $kw) => $kw !== '' && str_contains($messageLower, mb_strtolower($kw)));
+
+            if (! $matches) {
+                continue;
+            }
+
+            $hasExpertiseLink = collect($result['references'])->contains(
+                fn (array $ref) => str_contains($ref['link'], "/expertise/{$slug}")
+            );
+            if ($hasExpertiseLink) {
+                return $result;
+            }
+
+            $expertiseRef = [
+                'project_name' => $label,
+                'why_relevant' => "Libaro's expertise in this area.",
+                'link' => "/{$locale}/expertise/{$slug}",
+            ];
+            $result['references'] = array_slice(
+                array_merge([$expertiseRef], $result['references']),
+                0,
+                3
+            );
+
+            return $result;
+        }
+
+        return $result;
+    }
+
+    /**
      * @param  array<int, ChatHistoryTurn>  $history
      * @return array{answer: string, references: array<int, array{project_name: string, why_relevant: string, link: string, image?: string|null}>, confidence: string, follow_up: string|null, contact_link?: string}
      */
     private function callOpenAI(string $message, string $evidence, string $locale = 'en', array $history = []): array
     {
-        /** @var array<string, string> $expertises */
+        /** @var array<int, array{label: string, slug: string, keywords: string}> $expertises */
         $expertises = config('experience-chat.expertises', []);
         $expertiseLinks = collect($expertises)
-            ->map(fn (string $label, string $slug) => "{$label} (/{$locale}/expertise/{$slug})")
-            ->implode(', ');
+            ->map(fn (array $e) => sprintf(
+                '%s (%s): /%s/expertise/%s',
+                $e['label'],
+                $e['keywords'],
+                $locale,
+                $e['slug']
+            ))
+            ->implode("\n");
         $partnerships = implode(' ', config('experience-chat.partnerships', []));
         $systemPrompt = config('experience-chat.system_prompt');
         $systemPrompt = str_replace('{{ partnerships }}', $partnerships, $systemPrompt);

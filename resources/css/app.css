@@ -64,6 +64,7 @@
     --color-dark: var(--dark);
 
     --gap-page: 7.5rem;
+    --remove-gap-page: calc(-1 * var(--gap-page));
     --gap-form: 1.5rem;
     --margin-page: var(--gap-page);
 }
