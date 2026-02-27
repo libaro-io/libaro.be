@@ -39,11 +39,6 @@ const displayedProjects = computed(() => {
 });
 
 const hasActiveFilter = computed(() => filteredSlugs.value !== null);
-
-const hasFilteredResults = computed(
-    () => (filteredSlugs.value?.length ?? 0) > 0
-);
-
 const fabWrapperRef = ref<HTMLElement | null>(null);
 
 function handleClickOutside(event: MouseEvent): void {
@@ -104,7 +99,6 @@ function handleSubmit(): void {
                 <div v-if="hasActiveFilter" class="smart-filter-bar-above">
                     <p class="smart-filter-summary">{{ filterSummary }}</p>
                     <button
-                        v-if="hasFilteredResults"
                         type="button"
                         class="smart-filter-clear"
                         @click="clearFilter"
