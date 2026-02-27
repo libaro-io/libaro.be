@@ -58,7 +58,7 @@ class ExperienceChatService
 
         try {
             $response = OpenAI::chat()->create([
-                'model' => config('experience-chat.model'),
+                'model' => config('openai.chat_model'),
                 'messages' => [
                     ['role' => ChatRole::SYSTEM->value, 'content' => $systemPrompt],
                     ['role' => ChatRole::USER->value, 'content' => $userMessage],
@@ -78,6 +78,37 @@ class ExperienceChatService
 
             return '';
         }
+    }
+
+    /**
+     * @return Collection<int, Project>
+     */
+    public function getProjectsForContext(): Collection
+    {
+        return Cache::remember('experience_chat_projects', 3600, function () {
+            return Project::query()
+                ->with('client')
+                ->where('visible', true)
+                ->orderByDesc('date')
+                ->get();
+        });
+    }
+
+    /**
+     * @param  Collection<int, Project>  $projects
+     */
+    public function formatEvidence(Collection $projects, string $locale = 'en'): string
+    {
+        if ($projects->isEmpty()) {
+            return 'No matching projects found in the database.';
+        }
+
+        return $projects->map(function (Project $project) use ($locale) {
+            $tags = implode(', ', $project->tags ?? []);
+            $desc = mb_substr(strip_tags($project->description ?? ''), 0, 120);
+
+            return "{$project->name}|{$tags}|{$desc}|/{$locale}/realisaties/{$project->slug}";
+        })->implode("\n");
     }
 
     /**
@@ -110,37 +141,6 @@ class ExperienceChatService
         }
 
         return $result;
-    }
-
-    /**
-     * @return Collection<int, Project>
-     */
-    private function getProjectsForContext(): Collection
-    {
-        return Cache::remember('experience_chat_projects', 3600, function () {
-            return Project::query()
-                ->with('client')
-                ->where('visible', true)
-                ->orderByDesc('date')
-                ->get();
-        });
-    }
-
-    /**
-     * @param  Collection<int, Project>  $projects
-     */
-    private function formatEvidence(Collection $projects, string $locale = 'en'): string
-    {
-        if ($projects->isEmpty()) {
-            return 'No matching projects found in the database.';
-        }
-
-        return $projects->map(function (Project $project) use ($locale) {
-            $tags = implode(', ', $project->tags ?? []);
-            $desc = mb_substr(strip_tags($project->description ?? ''), 0, 120);
-
-            return "{$project->name}|{$tags}|{$desc}|/{$locale}/realisaties/{$project->slug}";
-        })->implode("\n");
     }
 
     /**
@@ -245,7 +245,7 @@ class ExperienceChatService
 
         try {
             $response = OpenAI::chat()->create([
-                'model' => config('experience-chat.model'),
+                'model' => config('openai.chat_model'),
                 'messages' => $messages,
                 'temperature' => config('experience-chat.temperature', 0.2),
                 'max_tokens' => config('experience-chat.max_tokens', 400),

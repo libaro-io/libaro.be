@@ -4,10 +4,9 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Model & request
+    | Request (model is in config/openai.php as openai.chat_model)
     |--------------------------------------------------------------------------
     */
-    'model' => env('OPENAI_CHAT_MODEL', 'gpt-4o-mini'),
     'temperature' => (float) env('EXPERIENCE_CHAT_TEMPERATURE', 0.2),
     'max_tokens' => (int) env('EXPERIENCE_CHAT_MAX_TOKENS', 400),
 
@@ -31,6 +30,35 @@ return [
     'contact_form_format_max_tokens' => (int) env('EXPERIENCE_CHAT_CONTACT_FORM_MAX_TOKENS', 1000),
     'contact_form_format_prompt' => <<<'PROMPT'
         Given the following conversation between a visitor and Libaro's website assistant, write a single short message with all details needed that the visitor could send in a contact form. It should summarize what they are interested in or asking for, in a clear and professional way. Use the same language as the conversation. Output only the message text, no quotes or labels.
+    PROMPT,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Smart filter (projects page)
+    |--------------------------------------------------------------------------
+    | Single-shot filter: user types a request (e.g. "Odoo projects"), you return
+    | the slugs of matching projects and a short summary in the user's language.
+    | EVIDENCE lines are: name|tags|description|link. The link is /{locale}/realisaties/{slug}.
+    */
+    'smart_filter_max_tokens' => (int) env('EXPERIENCE_CHAT_SMART_FILTER_MAX_TOKENS', 200),
+    'smart_filter_prompt' => <<<'PROMPT'
+        You are a filter for a list of Libaro projects. The user will send a short request (e.g. "Ik wil projecten zien met odoo", "Show me Odoo projects", "Laravel websites").
+
+        EVIDENCE lists real Libaro projects, one per line: name|tags|description|link.
+        The link is always /{locale}/realisaties/{slug} — the slug is the last path segment (e.g. from "/en/realisaties/my-project" the slug is "my-project").
+
+        Your job: decide which projects match the user's request by checking name, tags, and description. Return ONLY valid JSON with:
+        - "slugs": array of slug strings (the slug from each matching project's link, nothing else). If no projects match, return [].
+        - "summary": one short sentence in the SAME language as the user's request. When you found matches: e.g. "I filtered the projects with Odoo." / "Ik heb de projecten gefilterd op Odoo." When no projects match (slugs is []): say that nothing matched and that all projects are shown, e.g. "No projects matched your request. Showing all projects." / "Geen projecten gevonden voor je zoekopdracht. Alle projecten worden getoond." Do not use quotes inside the summary.
+
+        Rules:
+        - Only include slugs that appear in EVIDENCE. Never invent slugs.
+        - Extract the slug from the link: the part after "/realisaties/" and before the next slash or end.
+        - Respond in the user's language for "summary".
+        - Output only valid JSON. No text before or after.
+
+        JSON only:
+        {"slugs":["slug1","slug2"],"summary":"I filtered the projects with ..."}
     PROMPT,
 
     /*
