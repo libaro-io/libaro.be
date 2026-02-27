@@ -81,6 +81,41 @@ class ExperienceChatService
     }
 
     /**
+     * @return Collection<int, Project>
+     */
+    public function getProjectsForContext(): Collection
+    {
+        return Cache::remember('experience_chat_projects', 3600, function () {
+            return Project::query()
+                ->with('client')
+                ->where('visible', true)
+                ->orderByDesc('date')
+                ->get();
+        });
+    }
+
+    /**
+     * @param  Collection<int, Project>  $projects
+     * @param  int|null  $descriptionMaxLength  Max characters for description (default 120). Use a larger value (e.g. 600) for smart filter so the AI can do full-text relevance matching.
+     */
+    public function formatEvidence(Collection $projects, string $locale = 'en', ?int $descriptionMaxLength = null): string
+    {
+        if ($projects->isEmpty()) {
+            return 'No matching projects found in the database.';
+        }
+
+        $maxLen = $descriptionMaxLength ?? 120;
+
+        return $projects->map(function (Project $project) use ($locale, $maxLen) {
+            $tags = implode(', ', $project->tags ?? []);
+            $raw = strip_tags($project->description ?? '');
+            $desc = $maxLen > 0 ? mb_substr($raw, 0, $maxLen) : $raw;
+
+            return "{$project->name}|{$tags}|{$desc}|/{$locale}/realisaties/{$project->slug}";
+        })->implode("\n");
+    }
+
+    /**
      * Add project image key to each reference (same as project listing/detail).
      * Frontend uses useS3Image(image) with page props S3 prefix.
      *
@@ -110,37 +145,6 @@ class ExperienceChatService
         }
 
         return $result;
-    }
-
-    /**
-     * @return Collection<int, Project>
-     */
-    private function getProjectsForContext(): Collection
-    {
-        return Cache::remember('experience_chat_projects', 3600, function () {
-            return Project::query()
-                ->with('client')
-                ->where('visible', true)
-                ->orderByDesc('date')
-                ->get();
-        });
-    }
-
-    /**
-     * @param  Collection<int, Project>  $projects
-     */
-    private function formatEvidence(Collection $projects, string $locale = 'en'): string
-    {
-        if ($projects->isEmpty()) {
-            return 'No matching projects found in the database.';
-        }
-
-        return $projects->map(function (Project $project) use ($locale) {
-            $tags = implode(', ', $project->tags ?? []);
-            $desc = mb_substr(strip_tags($project->description ?? ''), 0, 120);
-
-            return "{$project->name}|{$tags}|{$desc}|/{$locale}/realisaties/{$project->slug}";
-        })->implode("\n");
     }
 
     /**
