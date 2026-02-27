@@ -58,12 +58,12 @@ return [
         'contact_cta_title' => 'Contacteer ons team',
         'contact_cta_subtitle' => 'We helpen je graag verder met je project.',
         'demo' => [
-            'user_1' => 'Hebben jullie ervaring met Laravel bij Libaro?',
-            'assistant_1' => 'Absoluut! Laravel is een van onze kerntechnologieën. We hebben tal van webapplicaties en platformen gebouwd met Laravel, van klantportalen tot e-commercie-oplossingen en maatwerktools.',
+            'user_1' => 'Hebben jullie ervaring met apps en webapps?',
+            'assistant_1' => 'Ja, Libaro heeft uitgebreide ervaring met zowel mobiele apps als webapplicaties. We hebben verschillende projecten gerealiseerd die gebruik maken van deze technologieën, zoals DECA Time voor werfbeheer en de Immotracker webapplicatie voor vastgoedinvesteringen.',
             'assistant_1_ref_1_name' => 'DECA Time - Slim werfbeheer',
-            'assistant_1_ref_1_why' => 'Volledige Laravel-applicatie met Robaws-integratie',
-            'assistant_1_ref_2_name' => 'Ticketing platform',
-            'assistant_1_ref_2_why' => 'Maatwerk Laravel webapplicatie voor Royal Antwerp FC',
+            'assistant_1_ref_1_why' => 'Een digitale oplossing voor tijd- en werfbeheer in de bouwsector.',
+            'assistant_1_ref_2_name' => 'Immotracker - sneller naar de juiste investering',
+            'assistant_1_ref_2_why' => 'Een webapplicatie die vastgoedkeuzes vereenvoudigt.',
         ],
     ],
 ];
