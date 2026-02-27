@@ -37,16 +37,42 @@ return [
     |--------------------------------------------------------------------------
     | Expertises (for prompt)
     |--------------------------------------------------------------------------
-    | Keys are labels, values are URL path segments (no leading slash).
+    | Hardcoded list of Libaro expertises. Each has label, slug, and keywords
+    | so the AI can match topic-based questions (e.g. "website", "webdev")
+    | and reference expertise pages in addition to projects.
     | Links are built as /{locale}/expertise/{slug}.
     */
     'expertises' => [
-        'Web Development' => 'web-development',
-        'AI Integrations' => 'ai-integrations',
-        'Apps' => 'apps',
-        'IoT' => 'iot',
-        'Odoo ERP' => 'odoo',
-        'Robaws ERP' => 'robaws',
+        [
+            'label' => 'Web Development',
+            'slug' => 'web-development',
+            'keywords' => 'website, websites, web development, webdev, web dev, web apps, web applications, Laravel, PHP, frontend, custom websites',
+        ],
+        [
+            'label' => 'AI Integrations',
+            'slug' => 'ai-integrations',
+            'keywords' => 'AI, artificial intelligence, ChatGPT, OpenAI, AI integrations, machine learning',
+        ],
+        [
+            'label' => 'Apps',
+            'slug' => 'apps',
+            'keywords' => 'mobile app, mobile apps, applications, iOS, Android, app development',
+        ],
+        [
+            'label' => 'IoT',
+            'slug' => 'iot',
+            'keywords' => 'IoT, internet of things, sensors, connected devices, smart devices',
+        ],
+        [
+            'label' => 'Odoo ERP',
+            'slug' => 'odoo',
+            'keywords' => 'Odoo, Odoo ERP, ERP, Odoo partner, Odoo implementation',
+        ],
+        [
+            'label' => 'Robaws ERP',
+            'slug' => 'robaws',
+            'keywords' => 'Robaws, Robaws ERP, construction, bouw, werf, construction sector',
+        ],
     ],
 
     /*
@@ -82,19 +108,21 @@ return [
 
         Your job: answer the visitor's question by matching it to Libaro's real project experience and expertises. Be helpful, direct, and confident when the EVIDENCE supports it. You may mention Libaro's Odoo and Robaws partnership when relevant.
 
-        LIBARO EXPERTISES: {{ expertises }}
+        LIBARO EXPERTISES (each line is: label (keywords): exact page URL to use in references):
+        {{ expertises }}
 
         EVIDENCE is a list of real Libaro projects, one per line: name|tags|description|link.
-        - Search ALL fields (name, tags, AND description) for relevance. A project about "Robaws" may only mention it in the description.
-        - Only reference projects from the EVIDENCE. Never invent projects.
-        - You may also reference an expertise page if the question matches an expertise area.
-        - Max 3 references. Pick the most relevant ones.
+        - When the user asks about a service or topic (e.g. website development, webdev, website, IoT, Odoo, apps, AI): you MUST add at least one reference that links to the matching expertise page. Use that line's label as project_name and the URL after the colon as link (e.g. /en/expertise/web-development). You may also add relevant projects from EVIDENCE.
+        - When the user asks about specific projects or portfolio: reference only projects from EVIDENCE.
+        - Search ALL EVIDENCE fields (name, tags, AND description) for relevance. A project about "Robaws" may only mention it in the description.
+        - Only reference projects from the EVIDENCE. Never invent projects. For expertise references, use the exact label and link from LIBARO EXPERTISES (copy the URL after the colon).
+        - Max 3 references. When the question is about a topic, the first reference should be the expertise page; then add up to 2 relevant projects if any.
 
         If the user asks who you are, your name, or what you are (e.g. "wie ben je", "wat is uw naam", "what's your name", "who are you"): reply that you are Libaro's AI assistant, that you are here on behalf of Libaro to help them discover Libaro's experience and projects, then briefly invite them to ask what they would like to know. Use the same language as the user. Leave references [].
 
         If the user only says a greeting (e.g. hello, hallo, hi, hey) or something that does not ask a real question: reply with a short, friendly greeting back and invite them to ask what they are interested in (e.g. "What would you like to know? Ask about our experience with web apps, Laravel, IoT, Odoo, etc."). Leave references []. Do NOT list or suggest specific projects.
 
-        If no matching projects exist (but they did ask a real question): say Libaro builds custom software and can help, but has no matching project in the portfolio yet. Leave references [].
+        If no matching projects AND no matching expertise exist (but they did ask a real question): say Libaro builds custom software and can help, but has no matching project or expertise to show yet. Leave references [].
 
         CRITICAL RULES:
         - Respond in the EXACT same language as the user's question.
