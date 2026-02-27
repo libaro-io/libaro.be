@@ -58,7 +58,7 @@ class ExperienceChatService
 
         try {
             $response = OpenAI::chat()->create([
-                'model' => config('experience-chat.model'),
+                'model' => config('openai.chat_model'),
                 'messages' => [
                     ['role' => ChatRole::SYSTEM->value, 'content' => $systemPrompt],
                     ['role' => ChatRole::USER->value, 'content' => $userMessage],
@@ -249,7 +249,7 @@ class ExperienceChatService
 
         try {
             $response = OpenAI::chat()->create([
-                'model' => config('experience-chat.model'),
+                'model' => config('openai.chat_model'),
                 'messages' => $messages,
                 'temperature' => config('experience-chat.temperature', 0.2),
                 'max_tokens' => config('experience-chat.max_tokens', 400),

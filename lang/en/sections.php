@@ -58,12 +58,12 @@ return [
         'contact_cta_title' => 'Contact our team',
         'contact_cta_subtitle' => 'We\'d love to help you with your project.',
         'demo' => [
-            'user_1' => 'Do you have experience with Laravel at Libaro?',
-            'assistant_1' => 'Absolutely! Laravel is one of our core technologies. We\'ve built numerous web applications and platforms using Laravel, from client portals to e-commerce solutions and custom business tools.',
+            'user_1' => 'Do you have experience with apps and webapps?',
+            'assistant_1' => 'Yes, Libaro has extensive experience with both mobile apps and web applications. We have completed several projects that utilize these technologies, such as DECA Time for construction site management and the Immotracker web application for real estate investments.',
             'assistant_1_ref_1_name' => 'DECA Time - Slim werfbeheer',
-            'assistant_1_ref_1_why' => 'Full-stack Laravel application with Robaws integration',
-            'assistant_1_ref_2_name' => 'Ticketing platform',
-            'assistant_1_ref_2_why' => 'Custom Laravel web application for Royal Antwerp FC',
+            'assistant_1_ref_1_why' => 'A digital solution for time and site management in the construction sector.',
+            'assistant_1_ref_2_name' => 'Immotracker - faster to the right investment',
+            'assistant_1_ref_2_why' => 'A web application that simplifies real estate choices.',
         ],
     ],
 ];

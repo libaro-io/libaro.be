@@ -4,10 +4,9 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Model & request
+    | Request (model is in config/openai.php as openai.chat_model)
     |--------------------------------------------------------------------------
     */
-    'model' => env('OPENAI_CHAT_MODEL', 'gpt-4o-mini'),
     'temperature' => (float) env('EXPERIENCE_CHAT_TEMPERATURE', 0.2),
     'max_tokens' => (int) env('EXPERIENCE_CHAT_MAX_TOKENS', 400),
 
