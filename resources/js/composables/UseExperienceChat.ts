@@ -10,6 +10,19 @@ interface DemoStep {
     references?: ChatReference[];
 }
 
+interface UseExperienceChatReturn {
+    messages: Ref<ChatMessage[]>;
+    userInput: Ref<string>;
+    isLoading: Ref<boolean>;
+    demoPlayed: Ref<boolean>;
+    demoPlaying: Ref<boolean>;
+    errorMessage: Ref<string | null>;
+    playDemo: () => Promise<void>;
+    sendMessage: () => Promise<void>;
+    reset: () => void;
+    getFormattedMessageForContact: () => Promise<string>;
+}
+
 function getDemoConversation(locale: string): DemoStep[] {
     const localePrefix = locale ? `/${locale}` : "";
     return [
@@ -32,7 +45,16 @@ const TYPING_DELAY_MS = 800;
 const WORD_INTERVAL_MS = 40;
 const MAX_HISTORY_MESSAGES = 4;
 
-export function useExperienceChat(scrollToBottom: () => void, localeRef: Ref<string> | string = "en") {
+/**
+ * Composable for managing experience chat functionality.
+ * @param scrollToBottom - Function to scroll to the bottom of the chat container.
+ * @param localeRef - Locale reference for translations, defaults to 'en'.
+ * @returns Chat-related reactive properties and functions.
+ */
+export function useExperienceChat(
+    scrollToBottom: () => void,
+    localeRef: Ref<string> | string = "en"
+): UseExperienceChatReturn {
     const messages = ref<ChatMessage[]>([]);
     const userInput = ref('');
     const isLoading = ref(false);
@@ -115,9 +137,16 @@ export function useExperienceChat(scrollToBottom: () => void, localeRef: Ref<str
         demoPlayed.value = true;
     };
 
+    const MAX_MESSAGE_LENGTH = 2000;
+
     const sendMessage = async (): Promise<void> => {
         const text = userInput.value.trim();
         if (!text || isLoading.value || demoPlaying.value) return;
+
+        if (text.length > MAX_MESSAGE_LENGTH) {
+            errorMessage.value = 'sections.experience-chat.error_message_too_long';
+            return;
+        }
 
         errorMessage.value = null;
         userInput.value = '';
@@ -156,17 +185,21 @@ export function useExperienceChat(scrollToBottom: () => void, localeRef: Ref<str
             messages.value[idx].content = data.answer;
             messages.value[idx].references = data.references;
             messages.value[idx].contactLink = data.contact_link ?? null;
-            messages.value[idx].contactQuery = data.contact_link ? text : null;
 
             await typeMessageWordByWord(idx, data.answer);
             await nextTick();
             scrollToBottom();
-        } catch {
+        } catch (err: unknown) {
             const idx = messages.value.length - 1;
             messages.value[idx].isTyping = false;
             messages.value[idx].content = '';
             messages.value[idx].displayedContent = '';
-            errorMessage.value = "sections.experience-chat.error";
+            const status = axios.isAxiosError(err) && err.response?.status;
+            const hasMessageError = axios.isAxiosError(err) && err.response?.data?.errors?.message;
+            errorMessage.value =
+                status === 422 && hasMessageError
+                    ? 'sections.experience-chat.error_message_too_long'
+                    : 'sections.experience-chat.error';
         } finally {
             isLoading.value = false;
         }
@@ -179,6 +212,28 @@ export function useExperienceChat(scrollToBottom: () => void, localeRef: Ref<str
         errorMessage.value = null;
     };
 
+    /** Full chat history formatted for the contact form message (used when user clicks Contact CTA). */
+    const getFormattedMessageForContact = async (): Promise<string> => {
+        const withContent = messages.value.filter(
+            (m) => (m.role === ChatRoleEnum.USER || m.role === ChatRoleEnum.ASSISTANT) && (m.content ?? '').trim().length > 0
+        );
+        if (withContent.length === 0) return '';
+        const history = withContent.map((m) => ({
+            role: m.role === ChatRoleEnum.ASSISTANT ? 'assistant' : 'user',
+            content: m.content ?? '',
+        }));
+        const loc = typeof localeRef === 'string' ? localeRef : localeRef.value;
+        try {
+            const { data } = await axios.post<{ message: string }>('/api/experience-chat/format-for-contact', {
+                locale: loc,
+                history,
+            });
+            return (data.message ?? '').trim();
+        } catch {
+            return '';
+        }
+    };
+
     return {
         messages,
         userInput,
@@ -189,5 +244,6 @@ export function useExperienceChat(scrollToBottom: () => void, localeRef: Ref<str
         playDemo,
         sendMessage,
         reset,
+        getFormattedMessageForContact,
     };
 }

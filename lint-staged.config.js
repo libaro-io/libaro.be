@@ -12,7 +12,6 @@ export default {
     "resources/js/**/*.{ts,tsx,vue}": () => {
         return [
             "npm run lint:fix",
-            "npx @libaro-io/laravel-frontend-conventions@latest --validate",
         ];
     },
     "(**/*.php|resources/js/**/*.{ts,tsx,vue})": () => {

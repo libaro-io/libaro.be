@@ -15,6 +15,7 @@ namespace App\Models{
 /**
  * @property int $id
  * @property bool $visible
+ * @property int $pin_on_homepage
  * @property string $title
  * @property string $slug
  * @property string|null $description
@@ -36,6 +37,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog whereImage($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog whereLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog wherePinOnHomepage($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog wherePublishDate($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog whereSlug($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog whereTags($value)
@@ -103,26 +105,10 @@ namespace App\Models{
 
 namespace App\Models{
 /**
- * @property int $id
- * @property int $vacancy_id
- * @property int $visible
- * @property int $number
- * @property string $title
- * @property string $body
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Vacancy|null $vacancy
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Competence newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Competence newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Competence query()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Competence whereBody($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Competence whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Competence whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Competence whereNumber($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Competence whereTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Competence whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Competence whereVacancyId($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Competence whereVisible($value)
  * @mixin \Eloquent
  */
 	#[\AllowDynamicProperties]
@@ -327,6 +313,7 @@ namespace App\Models{
  * @property string $title
  * @property string $slug
  * @property string $description
+ * @property string|null $image
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\VacancyBlock> $blocks
@@ -337,6 +324,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Vacancy whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Vacancy whereDescription($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Vacancy whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Vacancy whereImage($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Vacancy whereSlug($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Vacancy whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Vacancy whereUpdatedAt($value)

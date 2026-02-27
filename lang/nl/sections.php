@@ -54,6 +54,7 @@ return [
         'aria_typing' => 'Typen',
         'aria_chat_region' => 'Chat',
         'error' => 'Onze AI assistant is even naar het toilet, probeer later opnieuw.',
+        'error_message_too_long' => 'Je bericht mag maximaal 2000 tekens bevatten. Maak het korter.',
         'contact_cta_title' => 'Contacteer ons team',
         'contact_cta_subtitle' => 'We helpen je graag verder met je project.',
         'demo' => [

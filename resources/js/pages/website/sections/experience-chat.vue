@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, nextTick, computed, watch } from 'vue';
-import { usePage } from '@inertiajs/vue3';
+import { usePage, router } from '@inertiajs/vue3';
 import { getTrans } from '@composables/UseTranslationHelper';
 import { useS3Image } from '@composables/useS3Image';
 import { useExperienceChat } from '@composables/UseExperienceChat';
-import type { PageInterface } from '@interfaces/PageInterface';
 import type { ChatReference } from '@interfaces/ExperienceChatInterface';
+import type PageInterface from '@interfaces/PageInterface';
+import type { TranslationKey } from '../../../translations/lang-keys';
 
 const page = usePage<PageInterface>();
 const locale = computed(() => page.props.pageProps?.locale ?? 'en');
@@ -32,7 +33,14 @@ const {
     playDemo,
     sendMessage,
     reset,
+    getFormattedMessageForContact,
 } = useExperienceChat(scrollToBottom, locale);
+
+const goToContactWithContext = async (): Promise<void> => {
+    const message = await getFormattedMessageForContact();
+    const url = `/${locale.value}/contact` + (message ? `?message=${encodeURIComponent(message)}` : '');
+    router.visit(url);
+};
 
 const inputDisabled = computed(() => isLoading.value || demoPlaying.value);
 
@@ -53,8 +61,9 @@ const dismissError = (): void => {
     errorMessage.value = null;
 };
 
-const refImageUrl = (refItem: ChatReference): string | null => {
-    return refItem?.image ? useS3Image(refItem.image) : null;
+const refImageUrl = (refItem: ChatReference): string | undefined => {
+    const url = refItem?.image ? useS3Image(refItem.image) : null;
+    return url ?? undefined;
 };
 
 watch(locale, () => {
@@ -106,6 +115,7 @@ onUnmounted(() => {
                     <a
                         :href="`/${locale}/contact`"
                         class="banner-cta"
+                        @click.prevent="goToContactWithContext"
                     >
                         {{ getTrans('sections.experience-chat.banner_cta') }}
                         <i class="fa-solid fa-arrow-right ml-2"></i>
@@ -181,8 +191,9 @@ onUnmounted(() => {
 
                             <a
                                 v-if="msg.contactLink && !msg.isTyping"
-                                :href="`${msg.contactLink}?message=${encodeURIComponent(msg.contactQuery ?? '')}`"
+                                :href="msg.contactLink"
                                 class="chat-contact-cta"
+                                @click.prevent="goToContactWithContext"
                             >
                                 <span class="chat-contact-cta-icon">
                                     <i class="fa-solid fa-envelope"></i>
@@ -195,7 +206,7 @@ onUnmounted(() => {
                         </div>
 
                         <div v-if="errorMessage" class="chat-error">
-                            <span>{{ getTrans(errorMessage) }}</span>
+                            <span>{{ getTrans(errorMessage as TranslationKey) }}</span>
                             <button
                                 class="chat-error-dismiss"
                                 :aria-label="getTrans('sections.experience-chat.aria_dismiss_error')"
