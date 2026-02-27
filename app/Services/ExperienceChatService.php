@@ -96,16 +96,20 @@ class ExperienceChatService
 
     /**
      * @param  Collection<int, Project>  $projects
+     * @param  int|null  $descriptionMaxLength  Max characters for description (default 120). Use a larger value (e.g. 600) for smart filter so the AI can do full-text relevance matching.
      */
-    public function formatEvidence(Collection $projects, string $locale = 'en'): string
+    public function formatEvidence(Collection $projects, string $locale = 'en', ?int $descriptionMaxLength = null): string
     {
         if ($projects->isEmpty()) {
             return 'No matching projects found in the database.';
         }
 
-        return $projects->map(function (Project $project) use ($locale) {
+        $maxLen = $descriptionMaxLength ?? 120;
+
+        return $projects->map(function (Project $project) use ($locale, $maxLen) {
             $tags = implode(', ', $project->tags ?? []);
-            $desc = mb_substr(strip_tags($project->description ?? ''), 0, 120);
+            $raw = strip_tags($project->description ?? '');
+            $desc = $maxLen > 0 ? mb_substr($raw, 0, $maxLen) : $raw;
 
             return "{$project->name}|{$tags}|{$desc}|/{$locale}/realisaties/{$project->slug}";
         })->implode("\n");

@@ -36,25 +36,30 @@ return [
     |--------------------------------------------------------------------------
     | Smart filter (projects page)
     |--------------------------------------------------------------------------
-    | Single-shot filter: user types a request (e.g. "Odoo projects"), you return
-    | the slugs of matching projects and a short summary in the user's language.
-    | EVIDENCE lines are: name|tags|description|link. The link is /{locale}/realisaties/{slug}.
+    | Single-shot filter: user types a request (e.g. "Odoo projects", "smart charging"),
+    | you return the slugs of matching projects and a short summary. Evidence may be in
+    | Dutch; user request may be in English or Dutch — match by meaning, not just keywords.
+    | description_max_length: how many characters of each project description to send (larger = better full-text relevance, e.g. 600).
     */
     'smart_filter_max_tokens' => (int) env('EXPERIENCE_CHAT_SMART_FILTER_MAX_TOKENS', 200),
+    'smart_filter_description_max_length' => (int) env('EXPERIENCE_CHAT_SMART_FILTER_DESCRIPTION_LENGTH', 600),
     'smart_filter_prompt' => <<<'PROMPT'
-        You are a filter for a list of Libaro projects. The user will send a short request (e.g. "Ik wil projecten zien met odoo", "Show me Odoo projects", "Laravel websites").
+        You are a filter for a list of Libaro projects. The user sends a short request (e.g. "I am looking for smart charging", "Ik wil projecten zien met odoo", "Laravel websites", "IoT sensors").
 
         EVIDENCE lists real Libaro projects, one per line: name|tags|description|link.
-        The link is always /{locale}/realisaties/{slug} — the slug is the last path segment (e.g. from "/en/realisaties/my-project" the slug is "my-project").
+        - The description is a longer excerpt so you can do full-text / semantic relevance: match the user's intent against the full description, not only name and tags.
+        - Evidence text (name, tags, description) is often in DUTCH. The user request may be in ENGLISH or DUTCH. You MUST match by meaning: translate or interpret concepts across languages (e.g. "smart charging" matches Dutch "slim laden", "laadpalen", "elektrisch rijden", "EV", "laadinfrastructuur"; "IoT" matches "sensoren", "connected devices"). Include a project if its description or tags are about the same topic, even if the wording is in another language.
+        - The link is /{locale}/realisaties/{slug} — the slug is the last path segment (e.g. from "/en/realisaties/my-project" the slug is "my-project").
 
-        Your job: decide which projects match the user's request by checking name, tags, and description. Return ONLY valid JSON with:
-        - "slugs": array of slug strings (the slug from each matching project's link, nothing else). If no projects match, return [].
-        - "summary": one short sentence in the SAME language as the user's request. When you found matches: e.g. "I filtered the projects with Odoo." / "Ik heb de projecten gefilterd op Odoo." When no projects match (slugs is []): say that nothing matched and that all projects are shown, e.g. "No projects matched your request. Showing all projects." / "Geen projecten gevonden voor je zoekopdracht. Alle projecten worden getoond." Do not use quotes inside the summary.
+        Your job: decide which projects match the user's request by checking name, tags, AND the full description for relevance. Return ONLY valid JSON with:
+        - "slugs": array of slug strings (the slug from each matching project's link). If no projects match, return [].
+        - "summary": one short sentence in the SAME language as the user's request. When you found matches: e.g. "I filtered the projects with Odoo." When no projects match: say that nothing matched and that all projects are shown, e.g. "No projects matched your request. Showing all projects."
 
         Rules:
         - Only include slugs that appear in EVIDENCE. Never invent slugs.
         - Extract the slug from the link: the part after "/realisaties/" and before the next slash or end.
-        - Respond in the user's language for "summary".
+        - Match by meaning and topic across languages (Dutch evidence ↔ English or Dutch request).
+        - Use the full description text to decide relevance (full-text / semantic match).
         - Output only valid JSON. No text before or after.
 
         JSON only:

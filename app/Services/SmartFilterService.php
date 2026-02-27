@@ -19,7 +19,8 @@ class SmartFilterService
     public function filter(string $message, string $locale = 'en'): array
     {
         $evidence = $this->experienceChatService->getProjectsForContext();
-        $evidenceText = $this->experienceChatService->formatEvidence($evidence, $locale);
+        $descriptionMaxLength = config('experience-chat.smart_filter_description_max_length', 600);
+        $evidenceText = $this->experienceChatService->formatEvidence($evidence, $locale, $descriptionMaxLength);
 
         $systemPrompt = config('experience-chat.smart_filter_prompt');
         $userContent = "EVIDENCE:\n{$evidenceText}\n\nUSER REQUEST: {$message}";
