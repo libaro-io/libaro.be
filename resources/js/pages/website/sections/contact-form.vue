@@ -56,18 +56,16 @@ const loadRecaptcha = (siteKey: string): Promise<void> => {
     });
 };
 
-onMounted(async (): Promise<void> => {
-    const recaptchaSiteKey = page.props.pageProps?.recaptcha_site_key;
-    if (!recaptchaSiteKey) {
-        return;
-    }
-
+const getInitialMessage = (): string => {
+    const params = new URLSearchParams(window.location.search);
+    const raw = params.get('message');
+    if (!raw) return '';
     try {
-        await loadRecaptcha(recaptchaSiteKey);
+        return decodeURIComponent(raw).trim();
     } catch {
-        // Failed to load reCAPTCHA - silently fail
+        return raw.trim();
     }
-});
+};
 
 const contactForm = useForm< {
     name: string;
@@ -77,8 +75,19 @@ const contactForm = useForm< {
 }>({
         name: '',
         email: '',
-        message: '',
+        message: getInitialMessage(),
         captcha_token: '',
+});
+
+onMounted(async (): Promise<void> => {
+    const recaptchaSiteKey = page.props.pageProps?.recaptcha_site_key;
+    if (recaptchaSiteKey) {
+        try {
+            await loadRecaptcha(recaptchaSiteKey);
+        } catch {
+            // Failed to load reCAPTCHA - silently fail
+        }
+    }
 });
 
 const submitContactForm = async (): Promise<void> => {
