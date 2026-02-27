@@ -145,13 +145,13 @@
                 }
 
                 .chatbox-footer {
-                    @apply flex items-center gap-2 px-3 py-3 border-t border-primary-light;
+                    @apply flex items-center gap-2.5 px-3 py-3 bg-gray-50/80 border-t border-gray-200;
 
                     input {
-                        @apply flex-1 px-3 py-2 rounded-full bg-primary-light text-base font-grotesk text-primary-darkest placeholder-primary-medium/70 border-none;
+                        @apply flex-1 px-4 py-2.5 rounded-full bg-gray-50 text-base font-grotesk text-primary-darkest placeholder-gray-400 shadow-sm transition-all duration-200 border-2 border-primary-medium/30;
 
                         &:focus {
-                            @apply ring-2 ring-primary-medium/40 outline-none;
+                            @apply border-primary-dark bg-white;
                         }
 
                         &:disabled {
@@ -160,14 +160,14 @@
                     }
 
                     button {
-                        @apply flex items-center justify-center w-9 h-9 rounded-full bg-secondary text-white text-sm cursor-pointer transition-colors p-0;
+                        @apply flex items-center justify-center w-10 h-10 rounded-full bg-secondary text-white text-sm cursor-pointer transition-all duration-200 p-0 shadow-sm;
 
                         & > i {
                             @apply block leading-none;
                         }
 
                         &:hover:not(:disabled) {
-                            @apply brightness-110;
+                            @apply brightness-110 shadow-md;
                         }
 
                         &:disabled {
@@ -175,7 +175,7 @@
                         }
 
                         &:focus {
-                            @apply ring-2 ring-primary-medium/40 outline-none;
+                            @apply border-2 border-primary-dark;
                         }
                     }
                 }
