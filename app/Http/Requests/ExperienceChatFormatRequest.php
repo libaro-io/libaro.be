@@ -8,7 +8,7 @@ use Illuminate\Foundation\Http\FormRequest;
 /**
  * Validated 'history' entries match the shape for \App\Data\ExperienceChat\ChatHistoryTurn::fromArray().
  */
-class ExperienceChatRequest extends FormRequest
+class ExperienceChatFormatRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -21,9 +21,8 @@ class ExperienceChatRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'message' => 'required|string|max:2000',
             'locale' => 'nullable|string|in:en,nl',
-            'history' => 'nullable|array',
+            'history' => 'required|array|max:50',
             'history.*.role' => 'required|string|in:user,assistant',
             'history.*.content' => 'required|string|max:2000',
         ];

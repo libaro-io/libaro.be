@@ -54,6 +54,7 @@ return [
         'aria_typing' => 'Typing',
         'aria_chat_region' => 'Chat',
         'error' => 'Our AI assistant is having a break, please try again later.',
+        'error_message_too_long' => 'Your message cannot exceed 2000 characters. Please shorten it.',
         'contact_cta_title' => 'Contact our team',
         'contact_cta_subtitle' => 'We\'d love to help you with your project.',
         'demo' => [
