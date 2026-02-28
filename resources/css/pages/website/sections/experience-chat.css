@@ -148,10 +148,10 @@
                     @apply flex items-center gap-2.5 px-3 py-3 bg-gray-50/80 border-t border-gray-200;
 
                     input {
-                        @apply flex-1 px-4 py-2.5 rounded-full bg-gray-50 text-base font-grotesk text-primary-darkest placeholder-gray-400 shadow-sm transition-all duration-200 border-2 border-primary-medium/30;
+                        @apply flex-1 px-4 py-2.5 rounded-full bg-gray-50 text-base font-grotesk text-primary-darkest placeholder-gray-400 shadow-sm transition-all duration-200 border-2 border-secondary/15;
 
                         &:focus {
-                            @apply border-primary-dark bg-white;
+                            @apply border-secondary bg-white;
                         }
 
                         &:disabled {
