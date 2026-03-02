@@ -144,6 +144,9 @@ return [
             'title' => 'Waarom kiezen voor Odoo',
             'text' => 'Odoo is Belgisch, gebruiksvriendelijk en schaalbaar, met duizenden tevreden bedrijven wereldwijd. Als gecertificeerde Odoo-partner helpt Libaro je bij de implementatie en ondersteuning, zodat jij maximaal rendement haalt uit je digitale processen.',
         ],
+        'theses_sectors' => [
+            'title' => 'Voor deze bedrijven hebben we Odoo geïmplementeerd',
+        ],
         'integrations' => [
             'title' => 'Libaro helpt je met een correcte implementatie',
             'description' => 'Met de geïntegreerde apps van Odoo werk je slimmer, sneller en efficiënter. Libaro helpt je om deze processen optimaal in te richten, zodat je organisatie het maximale uit Odoo haalt.',
