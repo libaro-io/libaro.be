@@ -39,18 +39,20 @@ const displayedProjects = computed(() => {
 });
 
 const hasActiveFilter = computed(() => filteredSlugs.value !== null);
-const fabWrapperRef = ref<HTMLElement | null>(null);
+const wrapperRef = ref<HTMLElement | null>(null);
+const inputRef = ref<HTMLTextAreaElement | null>(null);
 
 function handleClickOutside(event: MouseEvent): void {
-    if (fabWrapperRef.value && !fabWrapperRef.value.contains(event.target as Node)) {
+    if (wrapperRef.value && !wrapperRef.value.contains(event.target as Node)) {
         close();
     }
 }
 
-watch(isOpen, (open) => {
-    if (open) {
+watch(isOpen, (opened) => {
+    if (opened) {
         nextTick(() => {
             document.addEventListener("click", handleClickOutside);
+            inputRef.value?.focus();
         });
     } else {
         document.removeEventListener("click", handleClickOutside);
@@ -64,6 +66,14 @@ onBeforeUnmount(() => {
 function handleSubmit(): void {
     applyFilter(locale.value);
 }
+
+function toggle(): void {
+    if (isOpen.value) {
+        close();
+    } else {
+        open();
+    }
+}
 </script>
 <template>
     <website
@@ -76,16 +86,18 @@ function handleSubmit(): void {
     >
         <div id="page-website-projects">
             <card-list-component>
-                <card-component
-                    v-for="project in displayedProjects"
-                    :key="project.slug"
-                    :link="DetailProjectController({ project: project.slug }).url"
-                    :image="useS3Image(project.image)"
-                    :title="project.name"
-                    :sub-title="project.client.name"
-                    :category="project.type"
-                    :tags="project.tags"
-                />
+                <TransitionGroup name="project-card">
+                    <card-component
+                        v-for="project in displayedProjects"
+                        :key="project.slug"
+                        :link="DetailProjectController({ project: project.slug }).url"
+                        :image="useS3Image(project.image)"
+                        :title="project.name"
+                        :sub-title="project.client.name"
+                        :category="project.type"
+                        :tags="project.tags"
+                    />
+                </TransitionGroup>
             </card-list-component>
 
             <div v-if="hasActiveFilter && displayedProjects.length === 0" class="smart-filter-no-results">
@@ -95,40 +107,52 @@ function handleSubmit(): void {
                 </button>
             </div>
 
-            <div ref="fabWrapperRef" class="smart-filter-fab-wrapper">
-                <div v-if="hasActiveFilter" class="smart-filter-bar-above">
-                    <p class="smart-filter-summary">{{ filterSummary }}</p>
-                    <button
-                        type="button"
-                        class="smart-filter-clear"
-                        @click="clearFilter"
-                    >
-                        {{ getTrans("projects.smart_filter.clear") }}
-                    </button>
-                </div>
-                <button
-                    type="button"
-                    class="smart-filter-fab"
-                    :class="{ 'is-active': hasActiveFilter }"
-                    :aria-label="getTrans('projects.smart_filter.title')"
-                    @click="isOpen ? close() : open()"
-                >
-                    <span class="smart-filter-fab-text">
-                        <span class="smart-filter-fab-label">{{ getTrans("projects.smart_filter.title") }}</span>
-                        <span class="smart-filter-fab-description">{{ getTrans("projects.smart_filter.description") }}</span>
-                    </span>
-                </button>
+            <div ref="wrapperRef" class="smart-filter-wrapper">
+                <Transition name="smart-filter-summary">
+                    <div v-if="hasActiveFilter && !isOpen" class="smart-filter-active-bar">
+                        <p class="smart-filter-active-summary">{{ filterSummary }}</p>
+                        <button type="button" class="smart-filter-active-clear" @click="clearFilter">
+                            {{ getTrans("projects.smart_filter.clear") }}
+                        </button>
+                    </div>
+                </Transition>
 
-                <Transition name="smart-filter-popover">
-                    <div v-if="isOpen" class="smart-filter-popover" role="dialog" aria-label="Smart filter">
-                        <div class="smart-filter-popover-inner">
-                            <p class="smart-filter-popover-hint">{{ getTrans("projects.smart_filter.popover_hint") }}</p>
+                <div class="smart-filter-pill" :class="{ 'is-expanded': isOpen, 'is-active': hasActiveFilter }">
+                    <Transition name="smart-filter-panel" mode="out-in">
+                        <button
+                            v-if="!isOpen"
+                            key="trigger"
+                            type="button"
+                            class="smart-filter-trigger"
+                            :aria-label="getTrans('projects.smart_filter.title')"
+                            @click="toggle"
+                        >
+                            <i class="fa-solid fa-wand-magic-sparkles smart-filter-trigger-icon" />
+                            <span class="smart-filter-trigger-label">{{ getTrans("projects.smart_filter.title") }}</span>
+                        </button>
+
+                        <div v-else key="expanded" class="smart-filter-expanded">
+                            <div class="smart-filter-expanded-header">
+                                <span class="smart-filter-expanded-title">
+                                    <i class="fa-solid fa-wand-magic-sparkles mr-2" />
+                                    {{ getTrans("projects.smart_filter.title") }}
+                                </span>
+                                <button
+                                    type="button"
+                                    class="smart-filter-expanded-close"
+                                    :aria-label="getTrans('projects.smart_filter.close')"
+                                    @click="close"
+                                >
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
                             <textarea
+                                ref="inputRef"
                                 v-model="userInput"
                                 class="smart-filter-input"
                                 :placeholder="getTrans('projects.smart_filter.placeholder')"
                                 :disabled="isLoading"
-                                rows="3"
+                                rows="2"
                                 @keydown.enter.exact.prevent="handleSubmit"
                             />
                             <button
@@ -137,12 +161,14 @@ function handleSubmit(): void {
                                 :disabled="isLoading || !userInput.trim()"
                                 @click="handleSubmit"
                             >
-                                {{ isLoading ? "…" : getTrans("projects.smart_filter.button_label") }}
+                                <span v-if="isLoading" class="smart-filter-spinner" />
+                                <span v-else>{{ getTrans("projects.smart_filter.button_label") }}</span>
                             </button>
-                            <p v-if="errorMessage" class="smart-filter-error">{{ getTrans(errorMessage as TranslationKey) }}</p>
                         </div>
-                    </div>
-                </Transition>
+                    </Transition>
+
+                    <p v-if="errorMessage" class="smart-filter-error">{{ getTrans(errorMessage as TranslationKey) }}</p>
+                </div>
             </div>
         </div>
     </website>

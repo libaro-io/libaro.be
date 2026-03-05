@@ -1,145 +1,137 @@
 #page-website-projects {
     @apply relative;
-}
 
-/* ── Status bar above FAB ──────────────────────────────────────────── */
-
-.smart-filter-bar-above {
-    @apply flex flex-col gap-3 p-5 rounded-3xl bg-primary-light border-3 border-primary-medium/25 shadow-2xl shadow-gradient/10 w-full max-w-[380px] md:max-w-[420px] text-left;
-}
-
-.smart-filter-summary {
-    @apply m-0 text-base md:text-lg font-gilroy font-bold text-primary-darkest leading-snug break-words min-w-0;
-}
-
-.smart-filter-bar-above .smart-filter-clear {
-    @apply inline-flex items-center py-2 px-4 text-sm font-gilroy font-bold text-white bg-secondary rounded-lg shadow-lg uppercase cursor-pointer transition-all duration-300 self-start hover:shadow-sm;
-}
-
-/* ── "No results" empty state ──────────────────────────────────────── */
-
-.smart-filter-no-results {
-    @apply flex flex-col items-center justify-center gap-8 py-16 md:py-24 text-center;
-}
-
-.smart-filter-no-results-title {
-    @apply m-0 font-gilroy font-bold text-3xl md:text-5xl text-primary-darkest leading-tight max-w-2xl;
-}
-
-.smart-filter-no-results-clear {
-    @apply inline-flex items-center py-3 px-8 text-base font-gilroy font-bold text-white bg-primary-dark rounded-xl shadow-lg uppercase cursor-pointer transition-all duration-300 hover:shadow-sm active:scale-[0.98];
-}
-
-/* ── Fixed FAB wrapper ─────────────────────────────────────────────── */
-
-.smart-filter-fab-wrapper {
-    @apply fixed bottom-4 right-4 z-50 md:bottom-8 md:right-8 flex flex-col items-end gap-3;
-}
-
-.smart-filter-fab-wrapper>.smart-filter-fab {
-    @apply shrink-0;
-}
-
-/* ── FAB button (shiny) ─────────────────────────────────────────────── */
-
-.smart-filter-fab {
-    @apply relative flex items-start py-4 px-5 rounded-3xl text-left overflow-hidden cursor-pointer transition-all duration-300 bg-gradient-to-br from-gradient to-primary-darkest text-white border-3 border-primary-medium/25 max-w-[260px] animate-fab-glow hover:animate-none hover:scale-[1.01] active:scale-[0.98] md:py-5 md:px-7 md:max-w-[340px];
-}
-
-/* Custom multi-layer shadow – cannot be expressed as a single Tailwind utility */
-.smart-filter-fab:hover {
-    box-shadow: 0 12px 40px rgba(62, 83, 171, 0.45), 0 0 24px rgba(62, 83, 171, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
-}
-
-/* Glossy overlay – gradient needs raw CSS (multi-stop with rgba) */
-.smart-filter-fab::before {
-    @apply absolute inset-0 rounded-3xl pointer-events-none overflow-hidden content-[''];
-    background: linear-gradient(160deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.1) 40%, transparent 60%);
-}
-
-/* Diagonal subtle shimmer – gradient needs raw CSS */
-.smart-filter-fab::after {
-    @apply absolute top-0 bottom-0 left-[-50%] w-[45%] pointer-events-none overflow-hidden -skew-x-[18deg] animate-[shimmer-sweep_3.2s_ease-in-out_infinite] content-[''];
-    background: linear-gradient(125deg, transparent 0%, transparent 25%, rgba(255, 255, 255, 0.06) 40%, rgba(255, 255, 255, 0.14) 50%, rgba(255, 255, 255, 0.06) 60%, transparent 75%, transparent 100%);
-}
-
-.smart-filter-fab:hover::after,
-.smart-filter-fab.is-active:hover::after {
-    @apply animate-none opacity-0;
-}
-
-.smart-filter-fab.is-active {
-    @apply from-primary-dark to-gradient border-primary-medium/25 animate-fab-glow;
-}
-
-.smart-filter-fab.is-active:hover {
-    @apply animate-none;
-}
-
-.smart-filter-fab.is-active::before {
-    @apply content-[''];
-    background: linear-gradient(160deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.12) 45%, transparent 65%);
-}
-
-/* ── FAB text ──────────────────────────────────────────────────────── */
-
-.smart-filter-fab-text {
-    @apply relative z-10 flex flex-col gap-1 min-w-0 md:gap-1.5;
-}
-
-.smart-filter-fab-label {
-    @apply text-base font-gilroy font-bold leading-snug md:text-lg;
-}
-
-.smart-filter-fab-description {
-    @apply text-sm font-grotesk font-medium text-white/80 leading-snug md:text-base md:leading-relaxed;
-}
-
-/* ── Popover ───────────────────────────────────────────────────────── */
-
-.smart-filter-popover {
-    @apply absolute right-0 min-w-[280px] max-w-[calc(100vw-2rem)] p-5 bg-white backdrop-blur-sm rounded-2xl shadow-2xl shadow-gradient/15 border-3 border-primary-medium/25 bottom-[calc(100%+0.75rem)]
-        md:min-w-[380px] md:p-8 md:rounded-3xl md:border-4;
-}
-
-@screen md {
-    .smart-filter-popover {
-        box-shadow: 0 20px 60px -12px rgba(62, 83, 171, 0.28), 0 0 0 1px rgba(62, 83, 171, 0.08);
+    .project-card-enter-active,
+    .project-card-leave-active {
+        @apply transition-all duration-400 ease-out;
     }
-}
 
-.smart-filter-popover-inner {
-    @apply flex flex-col gap-3 md:gap-4;
-}
+    .project-card-enter-from,
+    .project-card-leave-to {
+        @apply opacity-0;
+    }
 
-.smart-filter-popover-hint {
-    @apply m-0 text-base font-grotesk font-medium text-primary-darkest leading-relaxed md:text-lg;
-}
+    .project-card-move {
+        @apply transition-all duration-400 ease-out;
+    }
 
-.smart-filter-input {
-    @apply w-full min-h-[5rem] py-3 px-4 text-base font-grotesk bg-primary-light border-1 border-border rounded-2xl resize-y transition-all duration-300 leading-relaxed placeholder:text-primary-medium/70 focus:outline-none focus:ring-2 focus:ring-primary-medium/40;
-}
+    .smart-filter-no-results {
+        @apply flex flex-col items-center justify-center gap-8 py-16 md:py-24 text-center;
 
-.smart-filter-submit {
-    @apply flex items-center justify-center py-3 px-6 text-sm font-gilroy font-bold text-white bg-secondary rounded-xl shadow-lg uppercase cursor-pointer transition-all duration-300 hover:shadow-sm hover:scale-[1.01] disabled:cursor-not-allowed disabled:hover:scale-100;
-}
+        .smart-filter-no-results-title {
+            @apply m-0 font-gilroy font-bold text-3xl md:text-5xl text-primary-darkest leading-tight max-w-2xl;
+        }
 
-.smart-filter-submit:disabled {
-    @apply opacity-50;
-}
+        .smart-filter-no-results-clear {
+            @apply inline-flex items-center py-3 px-8 text-base font-gilroy font-bold text-white bg-secondary rounded-xl shadow-lg uppercase cursor-pointer transition-all duration-300 hover:shadow-sm;
+        }
+    }
 
-.smart-filter-error {
-    @apply m-0 text-sm font-grotesk text-red-500;
-}
+    .smart-filter-wrapper {
+        @apply fixed bottom-4 right-4 z-50 md:bottom-8 md:right-8 flex flex-col items-end gap-3;
 
-/* ── Popover transitions ───────────────────────────────────────────── */
+        .smart-filter-active-bar {
+            @apply flex flex-col gap-3 p-5 rounded-3xl bg-orange-50 border-2 border-secondary/25 shadow-2xl shadow-secondary/10 w-full max-w-[380px] md:max-w-[420px] text-left;
 
-.smart-filter-popover-enter-active,
-.smart-filter-popover-leave-active {
-    @apply transition-all duration-200 ease-out;
-}
+            .smart-filter-active-summary {
+                @apply m-0 text-base md:text-lg font-gilroy font-bold text-primary-darkest leading-snug break-words min-w-0;
+            }
 
-.smart-filter-popover-enter-from,
-.smart-filter-popover-leave-to {
-    @apply translate-y-1.5 scale-95;
+            .smart-filter-active-clear {
+                @apply inline-flex items-center py-2 px-4 text-sm font-gilroy font-bold text-white bg-secondary rounded-lg shadow-lg uppercase cursor-pointer transition-all duration-300 self-start hover:shadow-sm;
+            }
+        }
+
+        .smart-filter-summary-enter-active,
+        .smart-filter-summary-leave-active {
+            @apply transition-all duration-300 ease-out;
+        }
+
+        .smart-filter-summary-enter-from,
+        .smart-filter-summary-leave-to {
+            @apply opacity-0 translate-y-2 scale-95;
+        }
+
+        .smart-filter-panel-enter-active,
+        .smart-filter-panel-leave-active {
+            @apply transition-all duration-300 ease-out;
+        }
+
+        .smart-filter-panel-enter-from,
+        .smart-filter-panel-leave-to {
+            @apply opacity-0;
+        }
+
+        .smart-filter-panel-enter-from {
+            @apply origin-bottom-right scale-[0.92];
+        }
+
+        .smart-filter-panel-leave-to {
+            @apply origin-bottom-right scale-[0.92];
+        }
+
+        .smart-filter-pill {
+            @apply relative flex flex-col overflow-hidden rounded-2xl min-w-0 transition-all duration-300 ease-out;
+
+            &.is-expanded {
+                @apply bg-white border-2 border-secondary/30 rounded-2xl shadow-orange-expanded min-w-[280px] md:min-w-[320px];
+            }
+
+            .smart-filter-trigger {
+                @apply relative flex items-center py-3.5 px-6 rounded-2xl text-left overflow-hidden cursor-pointer transition-all duration-300 bg-gradient-to-br from-secondary to-orange-600 text-white border-2 border-secondary/30 animate-fab-glow-orange hover:animate-none hover:shadow-orange-hover md:py-4 md:px-8;
+
+                &::before {
+                    @apply absolute inset-0 rounded-2xl pointer-events-none overflow-hidden content-[''] bg-gradient-to-br from-white/35 via-white/10 to-transparent;
+                }
+
+                &::after {
+                    @apply absolute top-0 bottom-0 left-[-50%] w-[45%] pointer-events-none overflow-hidden -skew-x-[18deg] animate-[shimmer-sweep_3.2s_ease-in-out_infinite] content-[''] bg-gradient-to-r from-transparent via-white/14 to-transparent;
+                }
+
+                &:hover::after {
+                    @apply animate-none opacity-0;
+                }
+
+                .smart-filter-trigger-icon {
+                    @apply relative z-10 mr-2 text-lg md:text-xl;
+                }
+
+                .smart-filter-trigger-label {
+                    @apply relative z-10 text-base font-gilroy font-bold leading-snug md:text-lg;
+                }
+            }
+
+            .smart-filter-expanded {
+                @apply flex flex-col gap-4 p-4 md:p-5 w-full;
+
+                .smart-filter-expanded-header {
+                    @apply flex items-center justify-between gap-3;
+                }
+
+                .smart-filter-expanded-title {
+                    @apply text-sm font-gilroy font-bold text-primary-darkest uppercase tracking-wide;
+                }
+
+                .smart-filter-expanded-close {
+                    @apply flex items-center justify-center w-8 h-8 rounded-xl text-primary-darkest/70 font-grotesk text-xl leading-none cursor-pointer transition-colors duration-200 hover:bg-orange-100 hover:text-primary-darkest focus:outline-none focus:ring-2 focus:ring-secondary/40 focus:ring-offset-2 focus:ring-offset-white;
+                }
+
+                .smart-filter-input {
+                    @apply w-full min-h-[4rem] py-3 px-4 text-base font-grotesk text-primary-darkest bg-primary-light/80 border-2 border-primary-medium/15 rounded-2xl resize-none transition-all duration-200 leading-relaxed placeholder:text-primary-medium/50 focus:outline-none focus:border-secondary/50 focus:ring-2 focus:ring-secondary/20 focus:bg-white;
+                }
+
+                .smart-filter-submit {
+                    @apply w-full flex items-center justify-center gap-2 py-3.5 px-5 text-sm font-gilroy font-bold text-white bg-gradient-to-br from-secondary to-orange-600 rounded-2xl shadow-lg uppercase cursor-pointer transition-all duration-200 hover:shadow-md disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:shadow-lg;
+
+                    .smart-filter-spinner {
+                        @apply inline-block w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-smart-filter-spin;
+                    }
+                }
+            }
+
+            .smart-filter-error {
+                @apply m-0 px-3 pb-3 text-sm font-grotesk text-red-500;
+            }
+        }
+    }
 }

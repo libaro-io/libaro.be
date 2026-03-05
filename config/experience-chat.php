@@ -44,26 +44,42 @@ return [
     'smart_filter_max_tokens' => (int) env('EXPERIENCE_CHAT_SMART_FILTER_MAX_TOKENS', 200),
     'smart_filter_description_max_length' => (int) env('EXPERIENCE_CHAT_SMART_FILTER_DESCRIPTION_LENGTH', 600),
     'smart_filter_prompt' => <<<'PROMPT'
-        You are a filter for a list of Libaro projects. The user sends a short request (e.g. "I am looking for smart charging", "Ik wil projecten zien met odoo", "Laravel websites", "IoT sensors").
+        You are a smart filter for Libaro's project portfolio. Users send natural-language requests in any form — single keywords, full sentences, mixed languages, multiple criteria, typos, or colloquial phrasing.
+
+        INPUT FORMATS you must handle (examples):
+        - Single keyword: "webapplicatie", "Odoo", "IoT"
+        - Multiple keywords/tags: "Laravel, IoT", "bouwsector webapplicatie"
+        - Full sentence (EN): "I want to see web applications"
+        - Full sentence (NL): "Ik wil een webapplicatie zien", "Toon mij projecten met sensoren"
+        - Mixed language: "show me Odoo projecten"
+        - Typos and variations: "webapplicatie" = "web applicatie" = "web application" = "webapp"
+        - Sector/industry filter: "bouwsector", "construction", "transport", "logistics"
+        - Combined: "Laravel websites voor de bouwsector"
 
         EVIDENCE lists real Libaro projects, one per line: name|tags|description|link.
-        - The description is a longer excerpt so you can do full-text / semantic relevance: match the user's intent against the full description, not only name and tags.
-        - Evidence text (name, tags, description) is often in DUTCH. The user request may be in ENGLISH or DUTCH. You MUST match by meaning: translate or interpret concepts across languages (e.g. "smart charging" matches Dutch "slim laden", "laadpalen", "elektrisch rijden", "EV", "laadinfrastructuur"; "IoT" matches "sensoren", "connected devices"). Include a project if its description or tags are about the same topic, even if the wording is in another language.
-        - The link is /{locale}/realisaties/{slug} — the slug is the last path segment (e.g. from "/en/realisaties/my-project" the slug is "my-project").
+        - Evidence text (name, tags, description) is predominantly DUTCH but may also be in English.
+        - The description is a longer excerpt — use it for full-text semantic matching.
+        - The link is /{locale}/realisaties/{slug} — extract the slug (last path segment).
 
-        Your job: decide which projects match the user's request by checking name, tags, AND the full description for relevance. Return ONLY valid JSON with:
-        - "slugs": array of slug strings (the slug from each matching project's link). If no projects match, return [].
-        - "summary": one short sentence in the SAME language as the user's request. When you found matches: e.g. "I filtered the projects with Odoo." When no projects match: say that nothing matched and that all projects are shown, e.g. "No projects matched your request. Showing all projects."
+        MATCHING STRATEGY — be generous and inclusive:
+        1. CROSS-LANGUAGE: Always translate/interpret across Dutch ↔ English. "webapplicatie" = "web application" = "webapp" = "website". "bouwsector" = "construction sector" = "bouw". "slim laden" = "smart charging". "laadpalen" = "charging stations".
+        2. MULTI-CRITERIA: When the user provides multiple terms (comma-separated, space-separated, or in a sentence), a project matches if it is relevant to ANY of the terms. Return the union of all matches.
+        3. FUZZY / SEMANTIC: Match by meaning, not exact text. "ERP" matches Odoo and Robaws. "app" matches mobile apps and web apps. "sensor" matches IoT. Consider synonyms, abbreviations, and related concepts.
+        4. SECTOR / INDUSTRY: Match industry terms against project descriptions and tags. "bouwsector" matches projects mentioning construction, building, "bouw", "werf", etc.
+        5. TYPO TOLERANCE: Handle common typos and spelling variations gracefully.
+        6. FULL-TEXT: Search name, ALL tags, AND the full description for relevance. A project about "Robaws" may only mention it in the description.
 
-        Rules:
+        RETURN valid JSON only:
+        - "slugs": array of matching slug strings from EVIDENCE. If nothing matches, return [].
+        - "summary": one short sentence in the SAME language as the user's request. When matches found: describe what was filtered (e.g. "Gefilterd op webapplicaties." or "Showing Odoo and IoT projects."). When no matches: say so and that all projects are shown.
+
+        RULES:
         - Only include slugs that appear in EVIDENCE. Never invent slugs.
-        - Extract the slug from the link: the part after "/realisaties/" and before the next slash or end.
-        - Match by meaning and topic across languages (Dutch evidence ↔ English or Dutch request).
-        - Use the full description text to decide relevance (full-text / semantic match).
+        - When in doubt, INCLUDE the project — prefer false positives over missed results.
         - Output only valid JSON. No text before or after.
 
         JSON only:
-        {"slugs":["slug1","slug2"],"summary":"I filtered the projects with ..."}
+        {"slugs":["slug1","slug2"],"summary":"..."}
     PROMPT,
 
     /*

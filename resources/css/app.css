@@ -54,6 +54,21 @@
         50% { box-shadow: 0 12px 40px rgba(62, 83, 171, 0.5), 0 0 32px rgba(62, 83, 171, 0.35), inset 0 1px 0 0 rgba(255, 255, 255, 0.25); }
     }
 
+    --animate-fab-glow-orange: fab-glow-orange 2.5s ease-in-out infinite;
+    @keyframes fab-glow-orange {
+        0%, 100% { box-shadow: 0 8px 32px rgba(234, 138, 0, 0.3), 0 0 20px rgba(234, 138, 0, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.25); }
+        50% { box-shadow: 0 12px 40px rgba(234, 138, 0, 0.45), 0 0 32px rgba(234, 138, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.25); }
+    }
+
+    --animate-smart-filter-spin: smart-filter-spin 0.6s linear infinite;
+    @keyframes smart-filter-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    --shadow-orange-hover: 0 12px 40px rgba(234, 138, 0, 0.45), 0 0 24px rgba(234, 138, 0, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+    --shadow-orange-expanded: 0 20px 60px -12px rgba(234, 138, 0, 0.2), 0 0 0 1px rgba(234, 138, 0, 0.06);
+
     @keyframes shimmer-sweep {
         0% { transform: translateX(0) skewX(-18deg); }
         100% { transform: translateX(350%) skewX(-18deg); }
