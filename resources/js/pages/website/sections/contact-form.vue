@@ -57,6 +57,7 @@ const loadRecaptcha = (siteKey: string): Promise<void> => {
 };
 
 const getInitialMessage = (): string => {
+    if (typeof window === 'undefined') return '';
     const params = new URLSearchParams(window.location.search);
     const raw = params.get('message');
     if (!raw) return '';
