@@ -11,7 +11,13 @@ import Integrations from "@pages/website/expertise/sections/integrations.vue";
 import {IntegrationInterface} from "@interfaces/IntegrationInterface";
 import {getIntegrations, getWhatIsOdooYou} from "@composables/expertises/UseOdooComposable";
 import CtaContact from "@pages/website/sections/cta-contact.vue";
+import {getTrans} from "@composables/UseTranslationHelper";
+import TheseSectors from "@pages/website/expertise/sections/these-sectors.vue";
+import {ProjectInterface} from "@interfaces/ProjectInterface";
 
+const props = defineProps<{
+    projects?: ProjectInterface[];
+}>();
 
 const WhatIsOdooForYou: ListWithImageInterface = getWhatIsOdooYou();
 
@@ -50,6 +56,11 @@ const integrationsList: IntegrationInterface[] = getIntegrations();
                 title="pages.odoo.why_choose_odoo.title"
                 text="pages.odoo.why_choose_odoo.text"
             ></large-image-with-text-component>
+
+            <these-sectors
+                :title="getTrans('pages.odoo.theses_sectors.title')"
+                :projects="props.projects"
+            ></these-sectors>
 
             <cta-contact
                 title="pages.odoo.contact_form.title"
