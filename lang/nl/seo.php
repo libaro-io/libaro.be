@@ -82,5 +82,21 @@ return [
             'title' => 'Robaws - Slimme ERP-software',
             'description' => 'Robaws is de slimme ERP-software speciaal ontwikkeld voor bouw- en installatiebedrijven. Het helpt je offertes op te maken, projecten op te volgen en kosten onder controle te houden in één overzichtelijk systeem.',
         ],
+        'construction_industry' => [
+            'title' => 'Bouwsector - Digitale Oplossingen',
+            'description' => 'Wij bieden innovatieve digitale oplossingen voor de bouwsector. Van projectbeheer tot resource planning, onze software op maat helpt bouwbedrijven efficiënter werken.',
+        ],
+        'sports_clubs_industry' => [
+            'title' => 'Sportclubs - Digitale Oplossingen',
+            'description' => 'Wij ontwikkelen digitale oplossingen op maat voor sportclubs. Van ledenbeheer tot planning en communicatie, onze software helpt sportorganisaties vlot te werken.',
+        ],
+        'waste_processing_industry' => [
+            'title' => 'Afvalverwerking - Digitale Oplossingen',
+            'description' => 'Wij creëren gespecialiseerde digitale oplossingen voor de afvalverwerkingsindustrie. Onze software stroomlijnt operaties, verbetert logistiek en verhoogt efficiëntie in afvalbeheer.',
+        ],
+        'building_management_industry' => [
+            'title' => 'Gebouwbeheersystemen - Slimme Oplossingen',
+            'description' => 'Wij ontwikkelen intelligente gebouwbeheersystemen die IoT en automatisering integreren. Onze oplossingen helpen facility managers energieverbruik, beveiliging en comfort optimaliseren.',
+        ],
     ],
 ];

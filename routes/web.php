@@ -17,6 +17,10 @@ use App\Http\Controllers\Expertises\OdooExpertiseController;
 use App\Http\Controllers\Expertises\RobawsExpertiseController;
 use App\Http\Controllers\Expertises\WebDevelopmentExpertiseController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Industries\BuildingManagementIndustryController;
+use App\Http\Controllers\Industries\ConstructionIndustryController;
+use App\Http\Controllers\Industries\SportsClubsIndustryController;
+use App\Http\Controllers\Industries\WasteProcessingIndustryController;
 use App\Http\Controllers\IntegrationTimecardController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\PrivacyPolicyController;
@@ -66,6 +70,11 @@ Route::prefix('{locale?}')->group(function () {
     Route::get('expertise/iot', IOTExpertiseController::class);
     Route::get('expertise/odoo', OdooExpertiseController::class);
     Route::get('expertise/robaws', RobawsExpertiseController::class);
+
+    Route::get('industry/construction', ConstructionIndustryController::class);
+    Route::get('industry/sports-clubs', SportsClubsIndustryController::class);
+    Route::get('industry/waste-processing', WasteProcessingIndustryController::class);
+    Route::get('industry/building-management', BuildingManagementIndustryController::class);
 
     Route::get('clients/{client}', ClientRandomProjectController::class);
 
