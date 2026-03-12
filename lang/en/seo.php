@@ -82,5 +82,21 @@ return [
             'title' => 'Robaws - Smart ERP software',
             'description' => 'Robaws is the smart ERP software specially developed for construction and installation companies. It helps you create quotes, track projects and keep costs under control in one clear system.',
         ],
+        'construction_industry' => [
+            'title' => 'Construction Industry - Digital Solutions',
+            'description' => 'We provide innovative digital solutions for the construction industry. From project management to resource planning, our custom software helps construction companies work more efficiently.',
+        ],
+        'sports_clubs_industry' => [
+            'title' => 'Sports Clubs - Digital Solutions',
+            'description' => 'We develop tailored digital solutions for sports clubs. From member management to scheduling and communications, our software helps sports organizations operate smoothly.',
+        ],
+        'waste_processing_industry' => [
+            'title' => 'Waste Processing - Digital Solutions',
+            'description' => 'We create specialized digital solutions for the waste processing industry. Our software streamlines operations, improves logistics, and enhances efficiency in waste management.',
+        ],
+        'building_management_industry' => [
+            'title' => 'Building Management Systems - Smart Solutions',
+            'description' => 'We develop intelligent building management systems that integrate IoT and automation. Our solutions help facility managers optimize energy usage, security, and comfort.',
+        ],
     ],
 ];

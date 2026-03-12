@@ -546,4 +546,296 @@ return [
             'title' => 'Klaar om je business te boosten met AI?',
         ],
     ],
+    'construction_industry' => [
+        'header' => [
+            'title' => 'Digitale oplossingen voor bouwbedrijven die controle willen van werf tot kantoor',
+            'description' => [
+                'We bouwen web- en mobiele software voor planning, werfadministratie, tijdsregistratie en voortgangsopvolging.',
+                'Van ploegbaas tot backoffice: we koppelen je tools en processen zodat iedereen met dezelfde realtime data werkt.',
+            ],
+        ],
+        'what_we_do' => [
+            'title' => 'Wat we doen in de bouwsector',
+            'descriptions' => [
+                'Bouwprojecten hebben veel bewegende delen. Wij centraliseren planning, uitvoering en rapportering in een heldere workflow.',
+                'Zo krijg je minder manuele administratie, minder fouten en snellere beslissingen op en naast de werf.',
+            ],
+            'list_items' => [
+                'field_operations' => [
+                    'title' => 'Digitale werfopvolging',
+                    'description' => 'Mobiele workflows voor registraties, dagrapporten en communicatie tussen ploegen en onderaannemers.',
+                ],
+                'planning_coordination' => [
+                    'title' => 'Planning en coordinatie',
+                    'description' => 'Duidelijke planning van teams, materialen en mijlpalen, met directe updates wanneer prioriteiten wijzigen.',
+                ],
+                'cost_control' => [
+                    'title' => 'Kosten- en margecontrole',
+                    'description' => 'Volg uren, materialen en voortgang continu op om projectkosten transparant en beheersbaar te houden.',
+                ],
+            ],
+        ],
+        'how_we_help' => [
+            'title' => 'Hoe we bouwteams helpen',
+            'description' => 'We stemmen technologie af op je operationele realiteit, zodat projectleiding, administratie en uitvoering als een geheel werken.',
+            'list_items' => [
+                'reduce_admin_work' => [
+                    'title' => 'Minder administratie, meer productieve uren',
+                    'description' => 'We automatiseren repetitieve administratie zodat je teams zich op uitvoering en kwaliteit kunnen focussen.',
+                ],
+                'improve_site_visibility' => [
+                    'title' => 'Realtime zicht op projectstatus',
+                    'description' => 'Krijg een betrouwbaar overzicht van voortgang, knelpunten en risico\'s over alle actieve projecten.',
+                ],
+                'accelerate_billing' => [
+                    'title' => 'Snellere en correctere facturatie',
+                    'description' => 'Koppel werkregistratie rechtstreeks aan facturatiestromen om de factuurcyclus te verkorten en discussies te beperken.',
+                ],
+                'connect_existing_tools' => [
+                    'title' => 'Vlotte koppelingen met bestaande tools',
+                    'description' => 'We integreren ERP, payroll en boekhouding zonder je huidige werking te verstoren.',
+                ],
+            ],
+        ],
+        'specialization' => [
+            'title' => 'Waar onze specialisatie in de bouw ligt',
+            'description' => 'Onze expertise combineert werfervaring met robuuste softwarekoppelingen, afgestemd op bouwprocessen.',
+            'list_items' => [
+                'robaws_and_erp_integrations' => [
+                    'title' => 'Robaws- en ERP-integraties',
+                    'description' => 'Synchroniseer project-, klant- en facturatiedata tussen bouwsoftware en je centrale systemen.',
+                ],
+                'workforce_compliance' => [
+                    'title' => 'Personeels- en complianceprocessen',
+                    'description' => 'Digitaliseer check-in, aanwezigheidsregistratie en traceerbaarheid om wettelijke en operationele vereisten te ondersteunen.',
+                ],
+                'field_to_office_data' => [
+                    'title' => 'Realtime data van werf naar kantoor',
+                    'description' => 'Zorg dat alle betrokkenen met actuele werfdata werken, van uitvoering tot facturatie.',
+                ],
+            ],
+        ],
+        'contact_form' => [
+            'title' => 'Klaar om je bouwprocessen te digitaliseren?',
+        ],
+    ],
+    'sports_clubs_industry' => [
+        'header' => [
+            'title' => 'Digitale platformen voor moderne sportclubs',
+            'description' => [
+                'We ontwikkelen software voor ledenbeheer, ticketing, abonnementen, communicatie en eventwerking.',
+                'Je club biedt leden en supporters een betere service terwijl je team tijd wint in de dagelijkse organisatie.',
+            ],
+        ],
+        'what_we_do' => [
+            'title' => 'Wat we doen voor sportclubs',
+            'descriptions' => [
+                'Sportorganisaties hebben een vlotte werking nodig op wedstrijddagen en doorheen het hele seizoen. Wij bouwen software die beide ondersteunt.',
+                'Van lidmaatschap tot betalingen en communicatie: we creeren een verbonden digitale ervaring voor je club.',
+            ],
+            'list_items' => [
+                'member_management' => [
+                    'title' => 'Leden- en abonnementenbeheer',
+                    'description' => 'Centraliseer ledengegevens, onboarding, verlengingen en toegangsrechten in een betrouwbaar systeem.',
+                ],
+                'ticketing_and_events' => [
+                    'title' => 'Ticketing en eventwerking',
+                    'description' => 'Beheer ticketverkoop, zitplaatsen en eventflows met duidelijke controle voor medewerkers en supporters.',
+                ],
+                'fan_communication' => [
+                    'title' => 'Communicatie met fans en leden',
+                    'description' => 'Verstuur gerichte updates, notificaties en campagnes via geintegreerde communicatiekanalen.',
+                ],
+            ],
+        ],
+        'how_we_help' => [
+            'title' => 'Hoe we je club helpen groeien',
+            'description' => 'We combineren technische expertise met de praktijk van clubwerking, zodat je platform zowel prestaties als service ondersteunt.',
+            'list_items' => [
+                'increase_member_engagement' => [
+                    'title' => 'Meer ledenbetrokkenheid',
+                    'description' => 'Bouw een betere digitale ervaring die retentie, participatie en tevredenheid verhoogt.',
+                ],
+                'automate_back_office' => [
+                    'title' => 'Automatiseer backoffice administratie',
+                    'description' => 'Verminder manuele taken in registratie, betalingen en rapportering met slimme automatisatie.',
+                ],
+                'improve_staff_coordination' => [
+                    'title' => 'Betere coordinatie van staff en vrijwilligers',
+                    'description' => 'Geef teams een centrale tool voor planning, communicatie en operationele opvolging.',
+                ],
+                'create_new_revenue_streams' => [
+                    'title' => 'Nieuwe inkomstenstromen mogelijk maken',
+                    'description' => 'Ondersteun abonnementen, premium services en sponsoractivaties met flexibele digitale workflows.',
+                ],
+            ],
+        ],
+        'specialization' => [
+            'title' => 'Waar onze specialisatie in sportclubs ligt',
+            'description' => 'We focussen op platformen die fanbeleving combineren met operationele efficientie voor clubs en federaties.',
+            'list_items' => [
+                'ticketing_and_subscriptions' => [
+                    'title' => 'Ticketing en abonnementen',
+                    'description' => 'Ontwerp en integreer robuuste aankoop- en verlengingsflows op maat van je doelgroep.',
+                ],
+                'member_portals' => [
+                    'title' => 'Portalen voor leden en medewerkers',
+                    'description' => 'Bouw veilige portalen voor communicatie, selfservice en dagelijkse operationele taken.',
+                ],
+                'data_driven_operations' => [
+                    'title' => 'Datagedreven clubwerking',
+                    'description' => 'Vertaal aanwezigheids-, verkoop- en engagementdata naar inzichten voor betere strategische keuzes.',
+                ],
+            ],
+        ],
+        'contact_form' => [
+            'title' => 'Op zoek naar een digitaal platform voor je sportclub?',
+        ],
+    ],
+    'waste_processing_industry' => [
+        'header' => [
+            'title' => 'Digitale controle voor afvalverwerking en recyclage',
+            'description' => [
+                'We bouwen software die ophaling, weging, verwerking en rapportering in een operationele flow samenbrengt.',
+                'Je teams krijgen realtime inzicht in volumes, logistiek en compliance, met minder manueel werk.',
+            ],
+        ],
+        'what_we_do' => [
+            'title' => 'Wat we doen in afvalverwerking',
+            'descriptions' => [
+                'Afvaloperaties vragen een strakke coordinatie tussen terreinwerking, verwerkingscapaciteit en administratie.',
+                'We bouwen software die planners, operatoren en management een gedeelde bron van waarheid geeft.',
+            ],
+            'list_items' => [
+                'operational_workflows' => [
+                    'title' => 'Beheer van operationele workflows',
+                    'description' => 'Digitaliseer intake, sortering, verwerking en overdracht met duidelijke statusopvolging.',
+                ],
+                'logistics_and_routes' => [
+                    'title' => 'Logistieke en routecoordinatie',
+                    'description' => 'Ondersteun planning van ophalingen, containermoves en transport op basis van realtime operationele data.',
+                ],
+                'compliance_reporting' => [
+                    'title' => 'Compliance- en rapporteringsautomatisatie',
+                    'description' => 'Genereer gestructureerde rapporten voor klanten en regulatoren op basis van correcte operationele input.',
+                ],
+            ],
+        ],
+        'how_we_help' => [
+            'title' => 'Hoe we afvalverwerkers helpen',
+            'description' => 'We bouwen praktische software die dagelijkse uitvoering verbetert en langetermijncontrole versterkt.',
+            'list_items' => [
+                'improve_traceability' => [
+                    'title' => 'Betere traceerbaarheid van begin tot einde',
+                    'description' => 'Volg materiaalstromen op van ophaling tot verwerking met consistente en auditeerbare data.',
+                ],
+                'reduce_manual_input' => [
+                    'title' => 'Minder manuele input',
+                    'description' => 'Automatiseer registraties en systeemoverdrachten om fouten te beperken en administratietijd te besparen.',
+                ],
+                'optimize_capacity' => [
+                    'title' => 'Capaciteit en planning optimaliseren',
+                    'description' => 'Gebruik realtime data om workloads te balanceren en de doorstroom te verhogen.',
+                ],
+                'support_regulatory_audits' => [
+                    'title' => 'Klaar voor audits en regelgeving',
+                    'description' => 'Houd compliance-informatie gestructureerd, toegankelijk en in lijn met rapporteringsvereisten.',
+                ],
+            ],
+        ],
+        'specialization' => [
+            'title' => 'Waar onze specialisatie in afvalverwerking ligt',
+            'description' => 'Onze sterkte ligt in het koppelen van operationele software met compliance- en financiele systemen.',
+            'list_items' => [
+                'route_and_container_workflows' => [
+                    'title' => 'Route- en containerworkflows',
+                    'description' => 'Ondersteun terreinploegen met duidelijke digitale processen voor verplaatsingen, ophalingen en statusupdates.',
+                ],
+                'compliance_and_reporting' => [
+                    'title' => 'Compliance en performancerapportering',
+                    'description' => 'Vertaal operationele events naar betrouwbare rapporten voor intern beheer en externe stakeholders.',
+                ],
+                'erp_and_weighbridge_integrations' => [
+                    'title' => 'ERP- en weegbrugintegraties',
+                    'description' => 'Koppel weegbrugdata, facturatie en ERP-processen tot een gestroomlijnde operationele keten.',
+                ],
+            ],
+        ],
+        'contact_form' => [
+            'title' => 'Klaar om je afvalverwerking digitaal te moderniseren?',
+        ],
+    ],
+    'building_management_industry' => [
+        'header' => [
+            'title' => 'Slimme software voor building management teams',
+            'description' => [
+                'We ontwikkelen digitale oplossingen voor onderhoudsplanning, serviceverzoeken, toegangsflows en gebouwinzichten.',
+                'Door IoT-signalen te koppelen aan operationele systemen helpen we veilige, efficiente en comfortabele gebouwen te beheren.',
+            ],
+        ],
+        'what_we_do' => [
+            'title' => 'Wat we doen in building management',
+            'descriptions' => [
+                'Facility- en vastgoedwerking vraagt snelle coordinatie tussen mensen, systemen en aannemers.',
+                'Wij bouwen platformen die taken, incidenten en performancedata over gebouwen centraliseren.',
+            ],
+            'list_items' => [
+                'maintenance_and_work_orders' => [
+                    'title' => 'Onderhouds- en werkorderbeheer',
+                    'description' => 'Plan preventief onderhoud en beheer correctieve interventies met duidelijke ownership en opvolging.',
+                ],
+                'incident_and_service_requests' => [
+                    'title' => 'Incident- en serviceverzoekbeheer',
+                    'description' => 'Registreer, prioriteer en los problemen sneller op via gestructureerde digitale workflows.',
+                ],
+                'building_performance_dashboards' => [
+                    'title' => 'Dashboards voor gebouwperformantie',
+                    'description' => 'Visualiseer kern-KPI\'s voor comfort, energie en operationele prestaties op een centrale plaats.',
+                ],
+            ],
+        ],
+        'how_we_help' => [
+            'title' => 'Hoe we gebouwbeheerders helpen',
+            'description' => 'Onze oplossingen ondersteunen dagelijkse facilitywerking en strategische beslissingen voor eigenaars en beheerders.',
+            'list_items' => [
+                'shorten_resolution_times' => [
+                    'title' => 'Snellere reactie- en oplostijden',
+                    'description' => 'Geef teams direct zicht op open issues en prioriteiten om sneller te handelen.',
+                ],
+                'lower_operational_costs' => [
+                    'title' => 'Lagere operationele en energiekosten',
+                    'description' => 'Detecteer inefficiënties vroeg en automatiseer repetitieve processen binnen gebouwservices.',
+                ],
+                'improve_tenant_experience' => [
+                    'title' => 'Betere ervaring voor huurders en gebruikers',
+                    'description' => 'Bied snellere service en heldere communicatie aan bewoners, bezoekers en interne teams.',
+                ],
+                'centralize_operational_control' => [
+                    'title' => 'Centrale operationele controle',
+                    'description' => 'Beheer meerdere sites met een consistente digitale workflow en rapporteringsmodel.',
+                ],
+            ],
+        ],
+        'specialization' => [
+            'title' => 'Waar onze specialisatie in building management ligt',
+            'description' => 'We combineren software engineering en IoT-expertise voor schaalbare platformen in gebouwbeheer.',
+            'list_items' => [
+                'iot_and_sensor_integrations' => [
+                    'title' => 'IoT- en sensorintegraties',
+                    'description' => 'Koppel bezetting, klimaat en toestandsdata voor slimmere realtime beslissingen.',
+                ],
+                'maintenance_and_contractor_workflows' => [
+                    'title' => 'Onderhouds- en aannemersworkflows',
+                    'description' => 'Coordineer interne teams en externe partners via duidelijke digitale taakstromen.',
+                ],
+                'energy_access_and_comfort_intelligence' => [
+                    'title' => 'Intelligentie voor energie, toegang en comfort',
+                    'description' => 'Integreer gebouwsystemen om veiligheid, efficientie en gebruikerscomfort te optimaliseren.',
+                ],
+            ],
+        ],
+        'contact_form' => [
+            'title' => 'Nood aan een schaalbaar digitaal platform voor gebouwbeheer?',
+        ],
+    ],
 ];
