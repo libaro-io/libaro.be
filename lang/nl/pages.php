@@ -516,6 +516,9 @@ return [
                 ],
             ],
         ],
+        'these_sectors' => [
+            'title' => 'Voor deze bedrijven hebben wij al AI geïntegreerd.',
+        ],
         'strategic_advantages' => [
             'title' => 'De strategische voordelen van AI in je bedrijf',
             'description' => 'Wij ontwikkelen intelligente oplossingen die je bedrijf slimmer, efficiënter en toekomstbestendig maken. Met op maat gemaakte AI-integraties haal je meer waarde uit je data, vereenvoudig je processen en creëer je een duurzaam concurrentievoordeel.',
