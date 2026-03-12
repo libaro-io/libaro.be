@@ -476,6 +476,9 @@ return [
                 ],
             ],
         ],
+        'these_sectors' => [
+            'title' => 'Industries where we’ve implemented Robaws',
+        ],
         'api_integration' => [
             'title' => 'Libaro makes the connection with the Robaws API',
             'text' => 'Sometimes you can\'t just phase out certain programs, or Robaws seems to fall just short of making the complete switch. In that case, Libaro provides the perfect solution: we connect Robaws via the API with your existing or new software, so that your processes continue to run seamlessly and you still get maximum return from Robaws.',
