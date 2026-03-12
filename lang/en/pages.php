@@ -515,6 +515,9 @@ return [
                 ],
             ],
         ],
+        'these_sectors' => [
+            'title' => 'We have integrated AI for these sectors',
+        ],
         'strategic_advantages' => [
             'title' => 'The strategic advantages of AI in your business',
             'description' => 'We develop intelligent solutions that make your business smarter, more efficient and future-proof. With custom AI integrations, you get more value from your data, simplify your processes and create a sustainable competitive advantage.',
