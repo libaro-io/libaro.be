@@ -545,5 +545,297 @@ return [
             'title' => 'Ready to boost your business with AI?',
         ],
     ],
+    'construction_industry' => [
+        'header' => [
+            'title' => 'Digital solutions for construction companies that need control from site to office',
+            'description' => [
+                'We build web and mobile software for planning, site administration, time tracking and progress follow-up.',
+                'From foreman to back office, we connect your tools and workflows so everyone works with the same real-time data.',
+            ],
+        ],
+        'what_we_do' => [
+            'title' => 'What we do in construction',
+            'descriptions' => [
+                'Construction projects involve many moving parts. We centralize planning, execution and reporting in one clear workflow.',
+                'The result is less manual administration, fewer errors and faster decisions on and off site.',
+            ],
+            'list_items' => [
+                'field_operations' => [
+                    'title' => 'Digital site operations',
+                    'description' => 'Mobile workflows for registrations, daily reports and on-site communication between teams and subcontractors.',
+                ],
+                'planning_coordination' => [
+                    'title' => 'Planning and coordination',
+                    'description' => 'Clear scheduling of crews, materials and milestones, with instant updates when priorities change.',
+                ],
+                'cost_control' => [
+                    'title' => 'Cost and margin control',
+                    'description' => 'Track hours, materials and progress continuously to keep project costs transparent and under control.',
+                ],
+            ],
+        ],
+        'how_we_help' => [
+            'title' => 'How we help construction teams',
+            'description' => 'We align technology with your operational reality, so project managers, finance and field teams work as one.',
+            'list_items' => [
+                'reduce_admin_work' => [
+                    'title' => 'Less paperwork, more productive hours',
+                    'description' => 'We automate repetitive administration so your teams can focus on execution and quality.',
+                ],
+                'improve_site_visibility' => [
+                    'title' => 'Live visibility on project status',
+                    'description' => 'Get one reliable overview of progress, bottlenecks and risks across all active projects.',
+                ],
+                'accelerate_billing' => [
+                    'title' => 'Faster and more accurate invoicing',
+                    'description' => 'Link work registration directly to billing flows to shorten invoice cycles and reduce disputes.',
+                ],
+                'connect_existing_tools' => [
+                    'title' => 'Smooth integration with existing tools',
+                    'description' => 'We connect ERP, payroll and accounting systems without disrupting your current operations.',
+                ],
+            ],
+        ],
+        'specialization' => [
+            'title' => 'Where our specialization is in construction',
+            'description' => 'Our expertise combines field experience with robust software integration, tailored to construction workflows.',
+            'list_items' => [
+                'robaws_and_erp_integrations' => [
+                    'title' => 'Robaws and ERP integrations',
+                    'description' => 'Synchronize project, customer and billing data between construction software and your central systems.',
+                ],
+                'workforce_compliance' => [
+                    'title' => 'Workforce and compliance flows',
+                    'description' => 'Digitize check-in, attendance and traceability processes to support legal and operational requirements.',
+                ],
+                'field_to_office_data' => [
+                    'title' => 'Real-time field-to-office data',
+                    'description' => 'Ensure every stakeholder works from up-to-date site information, from execution to invoicing.',
+                ],
+            ],
+        ],
+        'contact_form' => [
+            'title' => 'Ready to digitize your construction workflows?',
+        ],
+    ],
+    'sports_clubs_industry' => [
+        'header' => [
+            'title' => 'Digital platforms for modern sports clubs',
+            'description' => [
+                'We develop software for member administration, ticketing, subscriptions, communication and event operations.',
+                'Your club gains better service for fans and members while your staff saves time in day-to-day management.',
+            ],
+        ],
+        'what_we_do' => [
+            'title' => 'What we do for sports clubs',
+            'descriptions' => [
+                'Sports organizations need smooth operations on match days and throughout the season. We build software that supports both.',
+                'From membership to payments and communication, we create one connected digital experience for your club.',
+            ],
+            'list_items' => [
+                'member_management' => [
+                    'title' => 'Member and subscription management',
+                    'description' => 'Centralize membership data, onboarding, renewals and access rights in one reliable system.',
+                ],
+                'ticketing_and_events' => [
+                    'title' => 'Ticketing and event operations',
+                    'description' => 'Run ticket sales, seat allocation and event workflows with clear control for staff and supporters.',
+                ],
+                'fan_communication' => [
+                    'title' => 'Fan and member communication',
+                    'description' => 'Deliver targeted updates, notifications and engagement campaigns through integrated communication channels.',
+                ],
+            ],
+        ],
+        'how_we_help' => [
+            'title' => 'How we help your club grow',
+            'description' => 'We combine technical expertise with practical club operations, so your platform supports both performance and service.',
+            'list_items' => [
+                'increase_member_engagement' => [
+                    'title' => 'Increase member engagement',
+                    'description' => 'Create a better digital journey that improves retention, participation and member satisfaction.',
+                ],
+                'automate_back_office' => [
+                    'title' => 'Automate back-office administration',
+                    'description' => 'Reduce manual tasks in registration, payments and reporting with smart process automation.',
+                ],
+                'improve_staff_coordination' => [
+                    'title' => 'Improve staff and volunteer coordination',
+                    'description' => 'Give teams one central tool for planning, communication and operational follow-up.',
+                ],
+                'create_new_revenue_streams' => [
+                    'title' => 'Enable new revenue streams',
+                    'description' => 'Support subscriptions, premium services and sponsor activations with flexible digital workflows.',
+                ],
+            ],
+        ],
+        'specialization' => [
+            'title' => 'Where our specialization is in sports clubs',
+            'description' => 'We focus on platforms that combine fan experience with operational efficiency for clubs and federations.',
+            'list_items' => [
+                'ticketing_and_subscriptions' => [
+                    'title' => 'Ticketing and subscriptions',
+                    'description' => 'Design and integrate robust purchasing and renewal flows tailored to your audience.',
+                ],
+                'member_portals' => [
+                    'title' => 'Member and staff portals',
+                    'description' => 'Build secure portals for communication, self-service and day-to-day operational tasks.',
+                ],
+                'data_driven_operations' => [
+                    'title' => 'Data-driven club operations',
+                    'description' => 'Turn attendance, sales and engagement data into insights for better strategic decisions.',
+                ],
+            ],
+        ],
+        'contact_form' => [
+            'title' => 'Looking for a digital platform for your sports club?',
+        ],
+    ],
+    'waste_processing_industry' => [
+        'header' => [
+            'title' => 'Digital control for waste processing and recycling operations',
+            'description' => [
+                'We build software that connects collection, weighing, processing and reporting in one operational flow.',
+                'Your teams get real-time insight into volumes, logistics and compliance, with less manual work.',
+            ],
+        ],
+        'what_we_do' => [
+            'title' => 'What we do in waste processing',
+            'descriptions' => [
+                'Waste operations require tight coordination between field activity, processing capacity and administration.',
+                'We create software that gives planners, operators and management one shared source of truth.',
+            ],
+            'list_items' => [
+                'operational_workflows' => [
+                    'title' => 'Operational workflow management',
+                    'description' => 'Digitize intake, sorting, treatment and handover processes with clear status tracking.',
+                ],
+                'logistics_and_routes' => [
+                    'title' => 'Logistics and route coordination',
+                    'description' => 'Support planning for pickups, container movements and transport based on live operational data.',
+                ],
+                'compliance_reporting' => [
+                    'title' => 'Compliance and reporting automation',
+                    'description' => 'Generate structured reporting for customers and regulators from accurate operational inputs.',
+                ],
+            ],
+        ],
+        'how_we_help' => [
+            'title' => 'How we help waste processing companies',
+            'description' => 'We build practical software that improves daily execution and supports long-term operational control.',
+            'list_items' => [
+                'improve_traceability' => [
+                    'title' => 'Improve traceability end-to-end',
+                    'description' => 'Track material flows from collection to processing with consistent and auditable data.',
+                ],
+                'reduce_manual_input' => [
+                    'title' => 'Reduce manual data entry',
+                    'description' => 'Automate registrations and system handovers to limit errors and save administrative time.',
+                ],
+                'optimize_capacity' => [
+                    'title' => 'Optimize capacity and planning',
+                    'description' => 'Use real-time operational data to balance workloads and improve throughput.',
+                ],
+                'support_regulatory_audits' => [
+                    'title' => 'Be ready for regulatory audits',
+                    'description' => 'Keep compliance information structured, accessible and aligned with reporting requirements.',
+                ],
+            ],
+        ],
+        'specialization' => [
+            'title' => 'Where our specialization is in waste processing',
+            'description' => 'Our strength lies in integrating operational software with compliance and financial systems.',
+            'list_items' => [
+                'route_and_container_workflows' => [
+                    'title' => 'Route and container workflows',
+                    'description' => 'Support field teams with clear digital processes for movements, pickups and status updates.',
+                ],
+                'compliance_and_reporting' => [
+                    'title' => 'Compliance and performance reporting',
+                    'description' => 'Translate operational events into reliable reports for internal management and external stakeholders.',
+                ],
+                'erp_and_weighbridge_integrations' => [
+                    'title' => 'ERP and weighbridge integrations',
+                    'description' => 'Connect weighbridge data, billing and ERP processes into one streamlined operational chain.',
+                ],
+            ],
+        ],
+        'contact_form' => [
+            'title' => 'Ready to modernize your waste processing operations?',
+        ],
+    ],
+    'building_management_industry' => [
+        'header' => [
+            'title' => 'Smart software for building management teams',
+            'description' => [
+                'We develop digital solutions for maintenance planning, service requests, access workflows and building insights.',
+                'By linking IoT signals with operational systems, we help you run safe, efficient and comfortable buildings.',
+            ],
+        ],
+        'what_we_do' => [
+            'title' => 'What we do in building management',
+            'descriptions' => [
+                'Facility and property operations depend on fast coordination between people, systems and contractors.',
+                'We build platforms that centralize tasks, incidents and performance data across your buildings.',
+            ],
+            'list_items' => [
+                'maintenance_and_work_orders' => [
+                    'title' => 'Maintenance and work order management',
+                    'description' => 'Plan preventive maintenance and manage corrective interventions with clear ownership and follow-up.',
+                ],
+                'incident_and_service_requests' => [
+                    'title' => 'Incident and service request handling',
+                    'description' => 'Register, prioritize and resolve issues quickly through structured digital workflows.',
+                ],
+                'building_performance_dashboards' => [
+                    'title' => 'Building performance dashboards',
+                    'description' => 'Visualize key KPIs for comfort, energy and operational performance in one place.',
+                ],
+            ],
+        ],
+        'how_we_help' => [
+            'title' => 'How we help building operators',
+            'description' => 'Our solutions support both daily facility operations and strategic decisions for owners and managers.',
+            'list_items' => [
+                'shorten_resolution_times' => [
+                    'title' => 'Shorter response and resolution times',
+                    'description' => 'Give teams instant visibility on open issues and priorities to act faster.',
+                ],
+                'lower_operational_costs' => [
+                    'title' => 'Lower operational and energy costs',
+                    'description' => 'Identify inefficiencies early and automate repetitive processes across building services.',
+                ],
+                'improve_tenant_experience' => [
+                    'title' => 'Improve tenant and user experience',
+                    'description' => 'Deliver faster service and clearer communication for occupants, visitors and internal teams.',
+                ],
+                'centralize_operational_control' => [
+                    'title' => 'Centralize operational control',
+                    'description' => 'Manage multiple sites with one consistent digital workflow and reporting model.',
+                ],
+            ],
+        ],
+        'specialization' => [
+            'title' => 'Where our specialization is in building management',
+            'description' => 'We combine software engineering and IoT expertise to deliver scalable building operations platforms.',
+            'list_items' => [
+                'iot_and_sensor_integrations' => [
+                    'title' => 'IoT and sensor integrations',
+                    'description' => 'Connect occupancy, climate and equipment data to support smarter real-time decisions.',
+                ],
+                'maintenance_and_contractor_workflows' => [
+                    'title' => 'Maintenance and contractor workflows',
+                    'description' => 'Coordinate internal teams and external partners through clear digital task flows.',
+                ],
+                'energy_access_and_comfort_intelligence' => [
+                    'title' => 'Energy, access and comfort intelligence',
+                    'description' => 'Integrate building systems to optimize safety, efficiency and occupant comfort.',
+                ],
+            ],
+        ],
+        'contact_form' => [
+            'title' => 'Need a scalable digital platform for building management?',
+        ],
+    ],
 
 ];

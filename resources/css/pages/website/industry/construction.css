@@ -1,2 +1,9 @@
 #page-website-industry-construction {
+    .section-website-expertise-expertise-header .container .image {
+        @apply flex items-center justify-center;
+
+        img {
+            @apply w-auto h-auto max-w-[70%] max-h-[70%] object-contain;
+        }
+    }
 }
