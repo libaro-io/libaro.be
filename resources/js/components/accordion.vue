@@ -10,7 +10,7 @@ const activeItem = ref<number | null>(null);
 <template>
     <section class="component-accordion">
         <div class="accordion" v-for="(item, index) in props.items" :key="index">
-            <label @click="activeItem = index">
+            <label @click="activeItem = activeItem === index ? null : index">
                 {{ item.title }}
 
                 <i class="fa-solid fa-chevron-down" v-if="activeItem === index"></i>
