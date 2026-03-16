@@ -8,6 +8,8 @@ return [
     'curious_result' => 'Benieuwd naar het resultaat?',
     'visit_application' => 'Bezoek project',
     'interesting_for_you' => 'Ook interessant voor jou',
+    'pause_autoplay' => 'Pauzeer autoplay',
+    'resume_autoplay' => 'Hervat autoplay',
     'smart_filter' => [
         'title' => 'Slim Filteren',
         'button_label' => 'Filteren',
