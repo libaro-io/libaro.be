@@ -29,6 +29,7 @@ class SplitProjectImageIntoPreviewAndCarousel extends Migration
                 ->orderBy('id')
                 ->chunkById(100, function ($projects): void {
                     foreach ($projects as $project) {
+                        /** @var object{id: int, image: string|null} $project */
                         if ($project->image === null) {
                             continue;
                         }
@@ -65,6 +66,7 @@ class SplitProjectImageIntoPreviewAndCarousel extends Migration
             ->orderBy('id')
             ->chunkById(100, function ($projects): void {
                 foreach ($projects as $project) {
+                    /** @var object{id: int, preview_image: string|null, carousel_images: string|array<int, string>|null} $project */
                     $image = $project->preview_image;
 
                     if (is_string($project->carousel_images)) {

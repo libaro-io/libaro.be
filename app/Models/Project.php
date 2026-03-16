@@ -24,9 +24,6 @@ class Project extends Model
     protected static function booted(): void
     {
         static::saved(function (Project $project): void {
-            if (! config('responsecache.enabled', true)) {
-                return;
-            }
             $slug = $project->slug;
             $locales = config('app.supported_locales', ['nl', 'en']);
             $detailUris = array_map(
