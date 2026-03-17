@@ -1,8 +1,8 @@
 import PageInterface from "@interfaces/PageInterface";
-import {usePage} from "@inertiajs/vue3";
+import { usePage } from "@inertiajs/vue3";
 
 export const useS3Image = (key: string | null): string | null => {
-    if(key == null){
+    if (key == null) {
         return null;
     }
 
