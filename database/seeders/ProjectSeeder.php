@@ -49,30 +49,6 @@ class ProjectSeeder extends Seeder
                 'date' => '2024-03-01',
                 'client_name' => 'Libaro',
             ],
-            [
-                'name' => 'Werf management system',
-                'slug' => 'werf-management-carro-bel',
-                'description' => 'Maatwerk werfbeheer en projectopvolging voor de bouwsector. Integratie met bestaande ERP en planningstools.',
-                'type' => 'webapplicatie',
-                'tags' => 'Laravel, werfbeheer, bouwsector, project management, webapplicatie',
-                'visible' => true,
-                'is_product' => false,
-                'pin_on_homepage' => false,
-                'date' => '2023-09-01',
-                'client_name' => 'Carro-Bel Group',
-            ],
-            [
-                'name' => 'Sendwich - Teamlunch made easy',
-                'slug' => 'sendwich-teamlunch',
-                'description' => 'Platform voor eenvoudige bestelling en levering van teamlunches. Laravel backend met moderne frontend.',
-                'type' => 'webapplicatie',
-                'tags' => 'Laravel, e-commerce, platform, webapplicatie',
-                'visible' => true,
-                'is_product' => false,
-                'pin_on_homepage' => false,
-                'date' => '2023-04-01',
-                'client_name' => 'Libaro',
-            ],
         ];
 
         foreach ($projects as $data) {
