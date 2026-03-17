@@ -59,8 +59,7 @@ class HomeController extends Controller
             ->whenNotEmpty(fn (Collection $c) => $c->random(3));
 
         $projects = Project::query()
-            ->with('client')
-            ->with('media')
+            ->with(['client', 'media', 'tags', 'projectType'])
             ->whereIn('id', $randomShowcaseIds)
             ->get();
 
@@ -70,6 +69,7 @@ class HomeController extends Controller
     protected function getBlogs(): AnonymousResourceCollection
     {
         $blogs = Blog::query()
+            ->with('tags')
             ->where('visible', '=', true)
             ->orderByDesc('pin_on_homepage')
             ->orderByDesc('publish_date')

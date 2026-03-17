@@ -18,6 +18,7 @@ class BlogController extends Controller
         }
 
         $blogs = Blog::query()
+            ->with('tags')
             ->where('visible', '=', true)
             ->orderByDesc('publish_date')
             ->get();

@@ -11,7 +11,7 @@ class DetailBlogController extends Controller
 {
     public function __invoke(string $locale, Blog $blog): Response
     {
-        $blog->loadMissing('blocks');
+        $blog->loadMissing(['blocks', 'tags']);
 
         return Inertia::render('website/blog-item', [
             'blog' => BlogResource::make($blog),
