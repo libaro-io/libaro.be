@@ -91,7 +91,11 @@ function toggle(): void {
                         v-for="project in displayedProjects"
                         :key="project.slug"
                         :link="DetailProjectController({ project: project.slug }).url"
+<<<<<<< development
+                        :image="useS3Image(project.preview_image)"
+=======
                         :image="useS3Image(project.image)"
+>>>>>>> main
                         :title="project.name"
                         :sub-title="project.client.name"
                         :category="project.type"

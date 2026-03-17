@@ -8,6 +8,8 @@ return [
     'curious_result' => 'Curious about the result?',
     'visit_application' => 'Visit project',
     'interesting_for_you' => 'Interesting for you',
+    'pause_autoplay' => 'Pause autoplay',
+    'resume_autoplay' => 'Resume autoplay',
     'smart_filter' => [
         'title' => 'Smart Filter',
         'button_label' => 'Filter',

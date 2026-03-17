@@ -140,7 +140,7 @@ class ExperienceChatService
                 $project = $evidence->first(fn (Project $p) => strtolower($p->name) === $refName);
             }
 
-            $result['references'][$i]['image'] = $project?->image;
+            $result['references'][$i]['image'] = $project?->preview_image;
 
         }
 

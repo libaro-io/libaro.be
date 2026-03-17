@@ -56,17 +56,24 @@ class ProjectForm
                     ->rows(10)
                     ->label('Description')
                     ->required(),
-                FileUpload::make('image')
-                    ->label('Image (1000px height and webp only)')
+                FileUpload::make('preview_image')
+                    ->label('Preview Image')
                     ->required()
-                    ->acceptedFileTypes(['image/webp'])
+                    ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/webp'])
                     ->disk('s3')
-                    ->directory('projects')
+                    ->directory('projects/preview')
                     ->visibility('public')
-                    ->preserveFilenames()
-                    ->rules([
-                        'dimensions:height=1000',
-                    ])
+                    ->columnSpanFull(),
+                FileUpload::make('carousel_images')
+                    ->label('Carousel Images')
+                    ->multiple()
+                    ->required()
+                    ->minFiles(1)
+                    ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/webp'])
+                    ->disk('s3')
+                    ->directory('projects/carousel')
+                    ->visibility('public')
+                    ->reorderable()
                     ->columnSpanFull(),
                 TagsInput::make('tags')
                     ->separator(',')

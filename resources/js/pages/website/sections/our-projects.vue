@@ -41,7 +41,7 @@ const props = defineProps<{
                         :title="project.name"
                         :subtitle="project.type"
                         :description="project.client.name"
-                        :background-image="useS3Image(project.image) ?? ''"
+                        :background-image="useS3Image(project.preview_image) ?? ''"
                     ></cta-block-component>
                 </Link>
             </div>

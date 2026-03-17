@@ -6,18 +6,20 @@ import ProjectIntro from "@pages/website/sections/project-intro.vue";
 import {useS3Image} from "@composables/useS3Image";
 import {computed} from "vue";
 import {getTrans} from "@composables/UseTranslationHelper";
-import LargeImageSubtitleComponent from "@components/large-image-subtitle-component.vue";
 import ButtonComponent from "@components/button-component.vue";
 import TheseSectors from "@pages/website/expertise/sections/these-sectors.vue";
+import ImageCarouselComponent from "@components/image-carousel-component.vue";
 
 const props = defineProps<{
     project: ProjectInterface,
     projects: ProjectInterface[]
 }>()
 
-const hero = computed(() => {
-    return props.project.image ? useS3Image(props.project.image) : null
-})
+const carouselImages = computed(() => {
+    return (props.project.carousel_images ?? [])
+        .map((image) => useS3Image(image))
+        .filter((image): image is string => image !== null);
+});
 
 const curiousAboutResultTitle = computed(() => {
     return props.project.client_url ? getTrans('projects.curious_result') : ''
@@ -45,25 +47,34 @@ const curiousAboutResultTitle = computed(() => {
                 :alt="project.name"
                 :block="block"/>
 
-            <large-image-subtitle-component
-                class="mt-10"
-                :image="hero"
-                :contain-image="true"
-                :title="curiousAboutResultTitle"
-                align="center"
-            >
-                <a
-                    v-if="props.project.client_url"
-                    :href="props.project.client_url"
-                    target="_blank">
-                    <button-component
-                        :text="getTrans('projects.visit_application')"
-                        color="tertiary"
-                        size="large"
-                        icon="fa-solid fa-chevron-right"
-                    ></button-component>
-                </a>
-            </large-image-subtitle-component>
+            <section class="project-result-carousel mt-10">
+                <div class="img-container">
+                    <div class="container">
+                        <image-carousel-component
+                            :images="carouselImages"
+                            :alt="project.name"
+                        />
+                    </div>
+                </div>
+                <div class="content-container">
+                    <div class="container">
+                        <div class="background align-center">
+                            <h3 v-if="curiousAboutResultTitle">{{ curiousAboutResultTitle }}</h3>
+                            <a
+                                v-if="props.project.client_url"
+                                :href="props.project.client_url"
+                                target="_blank">
+                                <button-component
+                                    :text="getTrans('projects.visit_application')"
+                                    color="tertiary"
+                                    size="large"
+                                    icon="fa-solid fa-chevron-right"
+                                ></button-component>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <these-sectors class="mt-10"
                 :title="getTrans('projects.interesting_for_you')"

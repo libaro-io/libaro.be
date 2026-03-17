@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Str;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\ResponseCache\Facades\ResponseCache;
 
 /**
  * @mixin IdeHelperProject
@@ -19,6 +20,23 @@ class Project extends Model
     protected $table = 'projects';
 
     protected $guarded = [];
+
+    protected static function booted(): void
+    {
+        static::saved(function (Project $project): void {
+            $slug = $project->slug;
+            $locales = config('app.supported_locales', ['nl', 'en']);
+            $detailUris = array_map(
+                fn (string $locale) => "/{$locale}/realisaties/{$slug}",
+                $locales
+            );
+            $listUris = array_map(
+                fn (string $locale) => "/{$locale}/realisaties",
+                $locales
+            );
+            ResponseCache::forget(array_merge($detailUris, $listUris));
+        });
+    }
 
     /**
      * @return BelongsTo<Client, $this>
@@ -62,6 +80,7 @@ class Project extends Model
             'is_product' => 'boolean',
             'updated_at' => 'datetime',
             'tags' => AsTags::class,
+            'carousel_images' => 'array',
         ];
     }
 }
