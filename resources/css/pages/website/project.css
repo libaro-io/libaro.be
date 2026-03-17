@@ -4,6 +4,30 @@
 
     }
 
+    .project-result-carousel {
+        @apply relative;
+
+        .align-center {
+            @apply text-center flex items-center flex-col;
+        }
+
+        .img-container {
+            @apply relative;
+
+            &::after {
+                @apply content-[''] bg-primary-light h-1/2 block w-full absolute bottom-0 left-0 -z-10;
+            }
+        }
+
+        .content-container {
+            @apply bg-primary-light border-b-20 border-b-border py-18;
+
+            h3 {
+                @apply font-grotesk font-bold text-4xl lg:text-5xl text-primary-darkest pb-10;
+            }
+        }
+    }
+
     .section-website-expertise-these-sectors
     {
         @apply my-20;

@@ -7,7 +7,8 @@ export interface ProjectInterface {
     description: string | null;
     type: string;
     is_product: boolean;
-    image: string | null;
+    preview_image: string | null;
+    carousel_images: string[];
     client: ClientInterface;
     client_url: string | null;
     blocks?: BlockInterface[];
@@ -20,7 +21,8 @@ export const placeholderProject: ProjectInterface = {
     description: null,
     type: '',
     is_product: false,
-    image: null,
+    preview_image: null,
+    carousel_images: [],
     client: placeholderClient,
     client_url: null,
     tags: [],

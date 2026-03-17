@@ -26,7 +26,7 @@ const props = defineProps<{
                 <card-component
                     v-for="(product, index) in props.products" :key="index"
                     :title="product.name"
-                    :image="useS3Image(product.image)"
+                    :image="useS3Image(product.preview_image)"
                     :link="DetailProductController({product: product.slug}).url"
                     :sub-title="product.client.name"
                     :category="product.type"
@@ -34,7 +34,6 @@ const props = defineProps<{
             </card-list-component>
         </div>
     </website>
-    x
 </template>
 <style scoped>
 @import "@css/pages/website/products.css";

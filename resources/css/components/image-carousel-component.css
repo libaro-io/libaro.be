@@ -1,0 +1,59 @@
+.component-image-carousel-component {
+    @apply text-center;
+
+    .preload-container {
+        @apply absolute w-0 h-0 overflow-hidden opacity-0 pointer-events-none;
+    }
+
+    .carousel-container {
+        @apply relative w-full block;
+    }
+
+    .image-container {
+        @apply block relative visible opacity-100 w-full max-w-full min-w-0 rounded-3xl overflow-hidden p-3 sm:p-4 md:p-5 border-2 border-border bg-gray-100/25 mx-auto aspect-[16/10];
+        @apply sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl;
+    }
+
+    .image-viewport {
+        @apply block relative w-full h-full overflow-hidden rounded-xl;
+    }
+
+    .image-track {
+        @apply flex w-full h-full;
+        will-change: transform;
+    }
+
+    .image-track.is-dragging {
+        cursor: grabbing;
+    }
+
+    .image-slide {
+        @apply block shrink-0 grow-0 basis-full w-full h-full;
+    }
+
+    .image-slide img {
+        @apply w-full h-full object-cover object-center rounded-xl;
+    }
+
+    .carousel-controls {
+        @apply mt-4 flex items-center justify-between mx-auto;
+        @apply max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl;
+    }
+
+    .autoplay-toggle {
+        @apply inline-flex items-center gap-2
+               px-4 py-2 rounded-full
+               bg-secondary text-white text-sm font-semibold
+               transition-all cursor-pointer
+               border-2 border-primary-light;
+
+        &:hover {
+            @apply opacity-75;
+        }
+    }
+
+    .nav-buttons {
+        @apply flex gap-2;
+    }
+
+}
