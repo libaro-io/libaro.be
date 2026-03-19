@@ -18,7 +18,7 @@ class ProjectController extends Controller
         }
 
         $projects = Project::query()
-            ->with('client')
+            ->with(['client', 'tags', 'projectType'])
             ->where('visible', '=', true)
             ->where('is_product', '=', false)
             ->orderByDesc('date')

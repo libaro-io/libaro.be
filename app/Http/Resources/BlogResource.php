@@ -23,7 +23,7 @@ class BlogResource extends JsonResource
             'description' => $this->description,
             'slug' => $this->slug,
             'date' => $this->publish_date?->translatedFormat('j F, Y'),
-            'tags' => $this->tags,
+            'tags' => collect($this->tags)->map(fn ($tag) => $tag->getTranslatedName())->all(),
             'link' => $this->link,
             'author' => $this->author,
             'image' => $this->image,

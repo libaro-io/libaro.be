@@ -87,8 +87,8 @@ class ExperienceChatService
     {
         return Cache::remember('experience_chat_projects', 3600, function () {
             return Project::query()
-                ->with('client')
-                ->where('visible', true)
+                ->with(['client', 'tags', 'projectType'])
+                ->where('visible', '=', true)
                 ->orderByDesc('date')
                 ->get();
         });
@@ -107,11 +107,12 @@ class ExperienceChatService
         $maxLen = $descriptionMaxLength ?? 120;
 
         return $projects->map(function (Project $project) use ($locale, $maxLen) {
-            $tags = implode(', ', $project->tags ?? []);
+            $type = $project->projectType ? $project->projectType->getTranslatedName($locale) : ($project->getAttribute('type') ?? '');
+            $tags = collect($project->tags)->map(fn ($tag) => $tag->getTranslatedName($locale))->implode(', ');
             $raw = strip_tags($project->description ?? '');
             $desc = $maxLen > 0 ? mb_substr($raw, 0, $maxLen) : $raw;
 
-            return "{$project->name}|{$tags}|{$desc}|/{$locale}/realisaties/{$project->slug}";
+            return "{$project->name}|{$type}|{$tags}|{$desc}|/{$locale}/realisaties/{$project->slug}";
         })->implode("\n");
     }
 
@@ -125,7 +126,7 @@ class ExperienceChatService
      */
     private function enrichReferencesWithImage(array $result, Collection $evidence): array
     {
-        $projectsBySlug = $evidence->keyBy(fn (Project $p) => strtolower($p->slug));
+        $projectsBySlug = $evidence->keyBy(fn (Project $p) => strtolower((string) $p->slug));
 
         foreach ($result['references'] as $i => $ref) {
             $link = $ref['link'];

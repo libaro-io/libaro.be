@@ -19,7 +19,7 @@ class LandingPageController extends Controller
             return Redirect::action(self::class, ['locale' => $defaultLocale, 'landingPage' => $landingPage], 301);
         }
 
-        $landingPage->loadMissing('projects.client');
+        $landingPage->loadMissing(['projects.client', 'projects.tags', 'projects.projectType']);
 
         return (new HomeController)->render([
             'landingPage' => Inertia::defer(fn () => LandingPageResource::make($landingPage)),

@@ -22,13 +22,17 @@ class ProjectResource extends JsonResource
             'slug' => $this->slug,
             'name' => $this->name,
             'description' => $this->description,
-            'type' => $this->type,
+            'type' => $this->projectType ? $this->projectType->getTranslatedName() : $this->getAttribute('type'),
             'is_product' => $this->is_product,
             'preview_image' => $this->preview_image,
             'carousel_images' => $this->carousel_images ?? [],
             'client' => ClientResource::make($this->whenLoaded('client')),
             'client_url' => $this->client_url,
-            'tags' => $this->tags,
+            'tags' => collect($this->tags)
+                ->reject(fn ($tag) => $this->projectType && $tag->slug['nl'] === $this->projectType->slug)
+                ->map(fn ($tag) => $tag->getTranslatedName())
+                ->values()
+                ->all(),
             'blocks' => BlockResource::collection($this->whenLoaded('blocks')),
         ];
     }

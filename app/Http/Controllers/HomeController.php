@@ -42,7 +42,7 @@ class HomeController extends Controller
     protected function getClients(): LengthAwarePaginator
     {
         return Client::query()
-            ->where('visible', 1)
+            ->where('visible', '=', 1)
             ->has('projects')
             ->orderBy('weight', 'desc')
             ->paginate(5)
@@ -52,15 +52,14 @@ class HomeController extends Controller
     protected function getProjects(): AnonymousResourceCollection
     {
         $randomShowcaseIds = Project::query()
-            ->where('visible', true)
+            ->where('visible', '=', true)
             ->where('pin_on_homepage', '=', 1)
             ->select('id')
             ->pluck('id')
             ->whenNotEmpty(fn (Collection $c) => $c->random(3));
 
         $projects = Project::query()
-            ->with('client')
-            ->with('media')
+            ->with(['client', 'media', 'tags', 'projectType'])
             ->whereIn('id', $randomShowcaseIds)
             ->get();
 
@@ -70,6 +69,7 @@ class HomeController extends Controller
     protected function getBlogs(): AnonymousResourceCollection
     {
         $blogs = Blog::query()
+            ->with('tags')
             ->where('visible', '=', true)
             ->orderByDesc('pin_on_homepage')
             ->orderByDesc('publish_date')

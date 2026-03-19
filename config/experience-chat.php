@@ -56,15 +56,16 @@ return [
         - Sector/industry filter: "bouwsector", "construction", "transport", "logistics"
         - Combined: "Laravel websites voor de bouwsector"
 
-        EVIDENCE lists real Libaro projects, one per line: name|tags|description|link.
-        - Evidence text (name, tags, description) is predominantly DUTCH but may also be in English.
+        EVIDENCE lists real Libaro projects, one per line: name|type|tags|description|link.
+        - The type field is the project category. Treat "App" as a mobile/native app. Treat "Webapplicatie" / "Web Application" as a web-based application.
+        - Evidence text (name, type, tags, description) is predominantly DUTCH but may also be in English.
         - The description is a longer excerpt — use it for full-text semantic matching.
         - The link is /{locale}/realisaties/{slug} — extract the slug (last path segment).
 
         MATCHING STRATEGY — be generous and inclusive:
         1. CROSS-LANGUAGE: Always translate/interpret across Dutch ↔ English. "webapplicatie" = "web application" = "webapp" = "website". "bouwsector" = "construction sector" = "bouw". "slim laden" = "smart charging". "laadpalen" = "charging stations".
         2. MULTI-CRITERIA: When the user provides multiple terms (comma-separated, space-separated, or in a sentence), a project matches if it is relevant to ANY of the terms. Return the union of all matches.
-        3. FUZZY / SEMANTIC: Match by meaning, not exact text. "ERP" matches Odoo and Robaws. "app" matches mobile apps and web apps. "sensor" matches IoT. Consider synonyms, abbreviations, and related concepts.
+        3. TYPE-AWARE / SEMANTIC: Match by meaning, not exact text. "ERP" matches Odoo and Robaws. "sensor" matches IoT. Consider synonyms, abbreviations, and related concepts. But respect the project type distinction: if the user asks for "apps", "mobile apps", "native apps", "iOS", or "Android", prefer only projects with type "App". Do NOT include "Webapplicatie" / "Web Application" projects unless the user also explicitly asks for web apps. If the user asks for "webapps", "web applications", "webapplicaties", or "websites", prefer "Webapplicatie" / "Web Application" projects instead of mobile apps.
         4. SECTOR / INDUSTRY: Match industry terms against project descriptions and tags. "bouwsector" matches projects mentioning construction, building, "bouw", "werf", etc.
         5. TYPO TOLERANCE: Handle common typos and spelling variations gracefully.
         6. FULL-TEXT: Search name, ALL tags, AND the full description for relevance. A project about "Robaws" may only mention it in the description.
@@ -160,10 +161,12 @@ return [
         LIBARO EXPERTISES (each line is: label (keywords): exact page URL to use in references):
         {{ expertises }}
 
-        EVIDENCE is a list of real Libaro projects, one per line: name|tags|description|link.
+        EVIDENCE is a list of real Libaro projects, one per line: name|type|tags|description|link.
+        - The type field is the project category. "App" means a mobile/native app. "Webapplicatie" / "Web Application" means a web-based application.
         - When the user asks about a service or topic (e.g. website development, webdev, website, IoT, Odoo, apps, AI): you MUST add at least one reference that links to the matching expertise page. Use that line's label as project_name and the URL after the colon as link (e.g. /en/expertise/web-development). You may also add relevant projects from EVIDENCE.
         - When the user asks about specific projects or portfolio: reference only projects from EVIDENCE.
-        - Search ALL EVIDENCE fields (name, tags, AND description) for relevance. A project about "Robaws" may only mention it in the description.
+        - Search ALL EVIDENCE fields (name, type, tags, AND description) for relevance. A project about "Robaws" may only mention it in the description.
+        - Respect the type distinction in your answers: "apps" usually means mobile apps, while "web applications" / "webapplicaties" means browser-based software. Do not conflate them unless the user clearly asks for both.
         - Only reference projects from the EVIDENCE. Never invent projects. For expertise references, use the exact label and link from LIBARO EXPERTISES (copy the URL after the colon).
         - Max 3 references. When the question is about a topic, the first reference should be the expertise page; then add up to 2 relevant projects if any.
 

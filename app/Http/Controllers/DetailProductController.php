@@ -20,10 +20,10 @@ class DetailProductController extends Controller
             ], 301);
         }
 
-        $product->loadMissing(['blocks', 'client']);
+        $product->loadMissing(['blocks', 'client', 'tags', 'projectType']);
 
         $projects = Project::query()
-            ->with('client')
+            ->with(['client', 'tags', 'projectType'])
             ->where('visible', '=', true)
             ->where('is_product', '=', false)
             ->inRandomOrder()
