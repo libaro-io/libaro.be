@@ -480,6 +480,9 @@ return [
                 ],
             ],
         ],
+        'these_sectors' => [
+            'title' => 'Voor deze bedrijven hebben we Robaws geïmplementeerd',
+        ],
         'api_integration' => [
             'title' => 'Libaro maakt de koppeling met de Robaws API',
             'text' => 'Soms kan je bepaalde programma\'s niet zomaar uitfaseren, of lijkt Robaws nét dat tikkeltje tekort te schieten om volledig de overstap te maken. In dat geval zorgt Libaro voor de perfecte oplossing: wij koppelen Robaws via de API met jouw bestaande of nieuwe software, zodat je processen naadloos blijven doorlopen en je toch maximaal rendement haalt uit Robaws.',

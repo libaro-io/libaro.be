@@ -11,7 +11,13 @@ import LaptopRobawsImage from "@assets/images/robaws/laptop.png";
 import {onMounted} from "vue";
 import {LinkBuilderInterface} from "@interfaces/LinkBuilderInterface";
 import CtaContact from "@pages/website/sections/cta-contact.vue";
+import {ProjectInterface} from "@interfaces/ProjectInterface";
+import TheseSectors from "@pages/website/expertise/sections/these-sectors.vue";
+import {getTrans} from "@composables/UseTranslationHelper";
 
+const props = defineProps<{
+    projects?: ProjectInterface[];
+}>();
 
 const getUrl = (slug: 'onderaannemers-app' | 'bryon-dagrapporten-app-teamleaders' | 'verhelst-group-tijdsregistratie-app'): LinkBuilderInterface => {
     return DetailProjectController({project: slug});
@@ -93,7 +99,12 @@ onMounted(() => {
                 title="pages.robaws.api_integration.title"
                 text="pages.robaws.api_integration.text"
             ></large-image-with-text-component>
-           
+
+            <these-sectors
+                :title="getTrans('pages.robaws.these_sectors.title')"
+                :projects="props.projects"
+            ></these-sectors>
+
             <cta-contact
                 title="pages.robaws.contact_form.title"
             ></cta-contact>
