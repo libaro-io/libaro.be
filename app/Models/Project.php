@@ -2,11 +2,11 @@
 
 namespace App\Models;
 
-use App\Casts\AsTags;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Support\Str;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\ResponseCache\Facades\ResponseCache;
@@ -35,7 +35,38 @@ class Project extends Model
                 $locales
             );
             ResponseCache::forget(array_merge($detailUris, $listUris));
+
+            $project->syncTypeTag();
         });
+    }
+
+    public function syncTypeTag(): void
+    {
+        if (! $this->project_type_id) {
+            return;
+        }
+
+        $type = $this->projectType ?? ProjectType::find($this->project_type_id);
+        if (! $type) {
+            return;
+        }
+
+        $allTypeSlugs = ProjectType::pluck('slug')->all();
+        $oldTypeTagIds = Tag::query()
+            ->where(function ($query) use ($allTypeSlugs): void {
+                foreach ($allTypeSlugs as $slug) {
+                    $query->orWhere('slug->nl', '=', $slug);
+                }
+            })
+            ->pluck('id')
+            ->all();
+
+        $this->tags()->detach($oldTypeTagIds);
+
+        $newTypeTag = Tag::where('slug->nl', '=', $type->slug)->first();
+        if ($newTypeTag) {
+            $this->tags()->syncWithoutDetaching([$newTypeTag->id]);
+        }
     }
 
     /**
@@ -44,6 +75,14 @@ class Project extends Model
     public function client(): BelongsTo
     {
         return $this->belongsTo(Client::class);
+    }
+
+    /**
+     * @return BelongsTo<ProjectType, $this>
+     */
+    public function projectType(): BelongsTo
+    {
+        return $this->belongsTo(ProjectType::class);
     }
 
     /**
@@ -63,6 +102,14 @@ class Project extends Model
     }
 
     /**
+     * @return MorphToMany<\App\Models\Tag, $this>
+     */
+    public function tags(): MorphToMany
+    {
+        return $this->morphToMany(Tag::class, 'taggable');
+    }
+
+    /**
      * @return Attribute<string, string>
      */
     protected function slug(): Attribute
@@ -79,7 +126,6 @@ class Project extends Model
             'visible' => 'boolean',
             'is_product' => 'boolean',
             'updated_at' => 'datetime',
-            'tags' => AsTags::class,
             'carousel_images' => 'array',
         ];
     }

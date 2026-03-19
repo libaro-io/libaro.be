@@ -20,10 +20,10 @@ class DetailProjectController extends Controller
             ], 301);
         }
 
-        $project->loadMissing(['blocks', 'client']);
+        $project->loadMissing(['blocks', 'client', 'tags', 'projectType']);
 
         $projects = Project::query()
-            ->with('client')
+            ->with(['client', 'tags', 'projectType'])
             ->where('visible', '=', true)
             ->inRandomOrder()
             ->get()

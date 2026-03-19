@@ -12,7 +12,7 @@ class ProductController extends Controller
     public function __invoke(): Response
     {
         $products = Project::query()
-            ->with('client')
+            ->with(['client', 'tags', 'projectType'])
             ->where('visible', '=', true)
             ->where('is_product', '=', true)
             ->orderByDesc('date')

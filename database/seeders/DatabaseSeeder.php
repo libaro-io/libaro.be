@@ -18,8 +18,11 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+            'is_admin' => true,
         ]);
 
+        $this->call(TagSeeder::class);
+        $this->call(ProjectTypeSeeder::class);
         $this->call(ProjectSeeder::class);
     }
 }

@@ -15,10 +15,10 @@ class BaseExpertiseController extends Controller
     protected function getProjects(string $type): Collection
     {
         return Project::query()
-            ->with('client')
+            ->with(['client', 'tags', 'projectType'])
             ->where('visible', '=', true)
             ->where('is_product', '=', false)
-            ->where('type', '=', $type)
+            ->whereHas('projectType', fn ($query) => $query->where('slug', '=', $type))
             ->get()
             ->map(fn (Project $project) => ProjectResource::make($project));
     }
@@ -29,10 +29,11 @@ class BaseExpertiseController extends Controller
     protected function getProjectsByTags(string $tag): Collection
     {
         return Project::query()
-            ->with('client')
+            ->with(['client', 'tags', 'projectType'])
             ->where('visible', '=', true)
             ->where('is_product', '=', false)
-            ->where('tags', 'like', '%' . $tag . '%')
+            ->whereHas('tags', fn ($query) => $query->where('name->nl', 'like', "%{$tag}%")
+                ->orWhere('name->en', 'like', "%{$tag}%"))
             ->get()
             ->map(fn (Project $project) => ProjectResource::make($project));
     }

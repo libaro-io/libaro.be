@@ -3,18 +3,23 @@
 namespace App\Filament\Resources\Projects\Schemas;
 
 use App\Filament\Traits\HasFilamentBlocks;
+use App\Filament\Traits\HasTagsField;
+use App\Models\ProjectType;
+use App\Models\Tag;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
+use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
+use Illuminate\Support\Str;
 
 class ProjectForm
 {
     use HasFilamentBlocks;
+    use HasTagsField;
 
     public static function configure(Schema $schema): Schema
     {
@@ -24,17 +29,24 @@ class ProjectForm
                     ->label('Name')
                     ->required()
                     ->columnSpan(3)
-                    ->maxLength(255),
+                    ->maxLength(40)
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(fn (string $state, Set $set) => $set('slug', Str::slug($state))),
                 TextInput::make('slug')
                     ->label('Slug')
                     ->required()
                     ->columnSpan(3)
                     ->maxLength(255),
-                TextInput::make('type')
+                Select::make('project_type_id')
                     ->label('Type')
-                    ->required()
+                    ->options(fn (): array => ProjectType::query()
+                        ->get()
+                        ->mapWithKeys(fn (ProjectType $type): array => [$type->id => $type->getTranslatedName()])
+                        ->all())
+                    ->searchable()
+                    ->preload()
                     ->columnSpan(3)
-                    ->maxLength(255),
+                    ->required(),
                 TextInput::make('client_url')
                     ->label('Client URL')
                     ->url()
@@ -49,7 +61,9 @@ class ProjectForm
                     ->required(),
                 DatePicker::make('date')
                     ->columnSpan(3)
-                    ->label('Date'),
+                    ->label('Date')
+                    ->native(false)
+                    ->default(now()),
                 Textarea::make('description')
                     ->columnSpanFull()
                     ->grow()
@@ -75,9 +89,7 @@ class ProjectForm
                     ->visibility('public')
                     ->reorderable()
                     ->columnSpanFull(),
-                TagsInput::make('tags')
-                    ->separator(',')
-                    ->columnSpanFull(),
+                self::getProjectTagsField(),
                 Toggle::make('visible')
                     ->label('Visible')
                     ->required()
@@ -95,5 +107,40 @@ class ProjectForm
                     ->default(false),
                 self::getBlocksRepeater(),
             ])->columns(6);
+    }
+
+    private static function getProjectTagsField(): Select
+    {
+        return Select::make('tags')
+            ->label('Tags')
+            ->relationship(
+                name: 'tags',
+                titleAttribute: 'name',
+                modifyQueryUsing: fn ($query) => $query
+                    ->whereNotIn('id', self::getTypeTagIds())
+                    ->withCount('projects')
+                    ->orderByDesc('projects_count')
+                    ->orderBy('name'),
+            )
+            ->getOptionLabelFromRecordUsing(fn (Tag $record) => $record->getTranslatedName())
+            ->multiple()
+            ->searchable()
+            ->preload()
+            ->maxItems(4)
+            ->maxItemsMessage('You can select a maximum of 4 tags (the type tag is added automatically).')
+            ->helperText('The project type is automatically added as a tag.')
+            ->columnSpanFull();
+    }
+
+    /**
+     * @return array<int>
+     */
+    private static function getTypeTagIds(): array
+    {
+        return ProjectType::pluck('slug')
+            ->map(fn (string $slug) => Tag::where('slug->nl', '=', $slug)->value('id'))
+            ->filter()
+            ->values()
+            ->all();
     }
 }

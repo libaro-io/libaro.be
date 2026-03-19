@@ -3,9 +3,9 @@
 namespace App\Filament\Resources\Blogs\Schemas;
 
 use App\Filament\Traits\HasFilamentBlocks;
+use App\Filament\Traits\HasTagsField;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -14,6 +14,7 @@ use Filament\Schemas\Schema;
 class BlogForm
 {
     use HasFilamentBlocks;
+    use HasTagsField;
 
     public static function configure(Schema $schema): Schema
     {
@@ -46,9 +47,7 @@ class BlogForm
                         'dimensions:height=1000',
                     ])
                     ->columnSpanFull(),
-                TagsInput::make('tags')
-                    ->separator(',')
-                    ->columnSpanFull(),
+                self::getTagsField(),
                 Toggle::make('visible')
                     ->required(),
                 Toggle::make('pin_on_homepage')
