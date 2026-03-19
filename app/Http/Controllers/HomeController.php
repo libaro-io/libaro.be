@@ -42,7 +42,7 @@ class HomeController extends Controller
     protected function getClients(): LengthAwarePaginator
     {
         return Client::query()
-            ->where('visible', 1)
+            ->where('visible', '=', 1)
             ->has('projects')
             ->orderBy('weight', 'desc')
             ->paginate(5)
@@ -52,7 +52,7 @@ class HomeController extends Controller
     protected function getProjects(): AnonymousResourceCollection
     {
         $randomShowcaseIds = Project::query()
-            ->where('visible', true)
+            ->where('visible', '=', true)
             ->where('pin_on_homepage', '=', 1)
             ->select('id')
             ->pluck('id')

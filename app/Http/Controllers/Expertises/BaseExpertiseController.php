@@ -18,7 +18,7 @@ class BaseExpertiseController extends Controller
             ->with(['client', 'tags', 'projectType'])
             ->where('visible', '=', true)
             ->where('is_product', '=', false)
-            ->whereHas('projectType', fn ($query) => $query->where('slug', $type))
+            ->whereHas('projectType', fn ($query) => $query->where('slug', '=', $type))
             ->get()
             ->map(fn (Project $project) => ProjectResource::make($project));
     }

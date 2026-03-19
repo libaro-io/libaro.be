@@ -43,11 +43,11 @@ return new class extends Migration
 
         foreach ($projects as $project) {
             $projectTypeId = DB::table('project_types')
-                ->where('slug', Str::slug($project->type))
+                ->where('slug', '=', Str::slug($project->type))
                 ->value('id');
 
             DB::table('projects')
-                ->where('id', $project->id)
+                ->where('id', '=', $project->id)
                 ->update(['project_type_id' => $projectTypeId]);
         }
 
@@ -69,7 +69,7 @@ return new class extends Migration
 
         foreach ($projects as $project) {
             DB::table('projects')
-                ->where('id', $project->id)
+                ->where('id', '=', $project->id)
                 ->update(['type' => $project->slug]);
         }
 

@@ -88,7 +88,7 @@ class ExperienceChatService
         return Cache::remember('experience_chat_projects', 3600, function () {
             return Project::query()
                 ->with(['client', 'tags', 'projectType'])
-                ->where('visible', true)
+                ->where('visible', '=', true)
                 ->orderByDesc('date')
                 ->get();
         });

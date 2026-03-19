@@ -28,12 +28,15 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('projects', function (Blueprint $table) {
-            $table->text('tags')->default('');
+            $table->text('tags')->nullable();
         });
 
         Schema::table('blogs', function (Blueprint $table) {
-            $table->text('tags')->default('');
+            $table->text('tags')->nullable();
         });
+
+        $this->restoreTable('projects', 'App\\Models\\Project');
+        $this->restoreTable('blogs', 'App\\Models\\Blog');
     }
 
     /**
@@ -74,5 +77,28 @@ return new class extends Migration
                 ]);
             }
         }
+    }
+
+    private function restoreTable(string $table, string $morphType): void
+    {
+        $records = DB::table('taggables')
+            ->where('taggable_type', '=', $morphType)
+            ->join('tags', 'tags.id', '=', 'taggables.tag_id')
+            ->select('taggable_id', 'tags.name')
+            ->get();
+
+        $grouped = $records->groupBy('taggable_id');
+
+        foreach ($grouped as $id => $tags) {
+            $tagString = $tags->map(function ($tag) {
+                $name = json_decode($tag->name, true);
+
+                return is_array($name) ? ($name['nl'] ?? $name['en'] ?? '') : $tag->name;
+            })->filter()->unique()->implode(', ');
+
+            DB::table($table)->where('id', '=', $id)->update(['tags' => $tagString]);
+        }
+
+        DB::table('taggables')->where('taggable_type', '=', $morphType)->delete();
     }
 };

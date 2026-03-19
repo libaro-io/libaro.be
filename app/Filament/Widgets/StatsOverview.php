@@ -19,9 +19,9 @@ class StatsOverview extends StatsOverviewWidget
     protected function getStats(): array
     {
         $totalProjects = Project::count();
-        $visibleProjects = Project::where('visible', true)->count();
+        $visibleProjects = Project::where('visible', '=', true)->count();
         $totalBlogs = Blog::count();
-        $publishedBlogs = Blog::where('visible', true)->count();
+        $publishedBlogs = Blog::where('visible', '=', true)->count();
 
         return [
             Stat::make('Projects', $totalProjects)
@@ -32,11 +32,11 @@ class StatsOverview extends StatsOverviewWidget
                 ->description($publishedBlogs . ' published')
                 ->icon(Heroicon::OutlinedNewspaper)
                 ->color('info'),
-            Stat::make('Clients', Client::where('visible', true)->count())
+            Stat::make('Clients', Client::where('visible', '=', true)->count())
                 ->description('active clients')
                 ->icon(Heroicon::OutlinedBuildingOffice)
                 ->color('info'),
-            Stat::make('Vacancies', Vacancy::where('visible', true)->count())
+            Stat::make('Vacancies', Vacancy::where('visible', '=', true)->count())
                 ->description('open positions')
                 ->icon(Heroicon::OutlinedMegaphone)
                 ->color('info'),
@@ -44,7 +44,7 @@ class StatsOverview extends StatsOverviewWidget
                 ->description('in use across content')
                 ->icon(Heroicon::OutlinedTag)
                 ->color('info'),
-            Stat::make('Admins', User::where('is_admin', true)->count())
+            Stat::make('Admins', User::where('is_admin', '=', true)->count())
                 ->description('with panel access')
                 ->icon(Heroicon::OutlinedUserGroup)
                 ->color('info'),

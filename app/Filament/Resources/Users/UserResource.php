@@ -33,7 +33,7 @@ class UserResource extends Resource
      */
     public static function getEloquentQuery(): Builder
     {
-        return parent::getEloquentQuery()->where('is_admin', true);
+        return parent::getEloquentQuery()->where('is_admin', '=', true);
     }
 
     public static function form(Schema $schema): Schema

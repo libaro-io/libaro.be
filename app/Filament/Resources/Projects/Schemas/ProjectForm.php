@@ -138,7 +138,7 @@ class ProjectForm
     private static function getTypeTagIds(): array
     {
         return ProjectType::pluck('slug')
-            ->map(fn (string $slug) => Tag::where('slug->nl', $slug)->value('id'))
+            ->map(fn (string $slug) => Tag::where('slug->nl', '=', $slug)->value('id'))
             ->filter()
             ->values()
             ->all();

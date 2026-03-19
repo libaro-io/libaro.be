@@ -60,8 +60,8 @@ class ProjectSeeder extends Seeder
             $tagNames = $data['tag_names'];
             unset($data['client_name'], $data['project_type_slug'], $data['tag_names']);
 
-            $client = Client::where('name', $clientName)->first();
-            $projectType = ProjectType::where('slug', $projectTypeSlug)->first();
+            $client = Client::where('name', '=', $clientName)->first();
+            $projectType = ProjectType::where('slug', '=', $projectTypeSlug)->first();
             $data['client_id'] = $client?->id;
             $data['project_type_id'] = $projectType?->id;
 
@@ -71,7 +71,7 @@ class ProjectSeeder extends Seeder
             );
 
             $tagIds = collect($tagNames)->map(
-                fn (string $name) => Tag::where('slug->nl', Str::slug($name))->first()?->id
+                fn (string $name) => Tag::where('slug->nl', '=', Str::slug($name))->first()?->id
             )->filter()->all();
 
             $project->tags()->syncWithoutDetaching($tagIds);

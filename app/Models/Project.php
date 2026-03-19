@@ -55,7 +55,7 @@ class Project extends Model
         $oldTypeTagIds = Tag::query()
             ->where(function ($query) use ($allTypeSlugs): void {
                 foreach ($allTypeSlugs as $slug) {
-                    $query->orWhere('slug->nl', $slug);
+                    $query->orWhere('slug->nl', '=', $slug);
                 }
             })
             ->pluck('id')
@@ -63,7 +63,7 @@ class Project extends Model
 
         $this->tags()->detach($oldTypeTagIds);
 
-        $newTypeTag = Tag::where('slug->nl', $type->slug)->first();
+        $newTypeTag = Tag::where('slug->nl', '=', $type->slug)->first();
         if ($newTypeTag) {
             $this->tags()->syncWithoutDetaching([$newTypeTag->id]);
         }

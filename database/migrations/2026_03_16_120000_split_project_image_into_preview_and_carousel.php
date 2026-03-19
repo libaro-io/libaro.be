@@ -35,7 +35,7 @@ class SplitProjectImageIntoPreviewAndCarousel extends Migration
                         }
 
                         DB::table('projects')
-                            ->where('id', $project->id)
+                            ->where('id', '=', $project->id)
                             ->update([
                                 'preview_image' => $project->image,
                                 'carousel_images' => json_encode([$project->image]),
@@ -78,7 +78,7 @@ class SplitProjectImageIntoPreviewAndCarousel extends Migration
                     }
 
                     DB::table('projects')
-                        ->where('id', $project->id)
+                        ->where('id', '=', $project->id)
                         ->update(['image' => $image]);
                 }
             });
