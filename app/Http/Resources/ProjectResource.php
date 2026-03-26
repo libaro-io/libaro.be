@@ -29,7 +29,7 @@ class ProjectResource extends JsonResource
             'client' => ClientResource::make($this->whenLoaded('client')),
             'client_url' => $this->client_url,
             'tags' => collect($this->tags)
-                ->reject(fn ($tag) => $this->projectType && $tag->slug['nl'] === $this->projectType->slug)
+                ->reject(fn ($tag) => $this->projectType && $tag->code === $this->projectType->slug)
                 ->map(fn ($tag) => $tag->getTranslatedName())
                 ->values()
                 ->all(),

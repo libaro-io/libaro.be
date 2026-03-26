@@ -25,6 +25,7 @@ class TagSeeder extends Seeder
             Tag::firstOrCreate(
                 ['slug->nl' => Str::slug($name['nl'])],
                 [
+                    'code' => Str::slug($name['nl']),
                     'name' => $name,
                     'slug' => [
                         'nl' => Str::slug($name['nl']),

@@ -53,17 +53,13 @@ class Project extends Model
 
         $allTypeSlugs = ProjectType::pluck('slug')->all();
         $oldTypeTagIds = Tag::query()
-            ->where(function ($query) use ($allTypeSlugs): void {
-                foreach ($allTypeSlugs as $slug) {
-                    $query->orWhere('slug->nl', '=', $slug);
-                }
-            })
+            ->whereIn('code', $allTypeSlugs)
             ->pluck('id')
             ->all();
 
         $this->tags()->detach($oldTypeTagIds);
 
-        $newTypeTag = Tag::where('slug->nl', '=', $type->slug)->first();
+        $newTypeTag = Tag::where('code', '=', $type->slug)->first();
         if ($newTypeTag) {
             $this->tags()->syncWithoutDetaching([$newTypeTag->id]);
         }

@@ -71,7 +71,7 @@ class ProjectSeeder extends Seeder
             );
 
             $tagIds = collect($tagNames)->map(
-                fn (string $name) => Tag::where('slug->nl', '=', Str::slug($name))->first()?->id
+                fn (string $name) => Tag::where('code', '=', Str::slug($name))->first()?->id
             )->filter()->all();
 
             $project->tags()->syncWithoutDetaching($tagIds);

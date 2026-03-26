@@ -10,7 +10,7 @@ class OdooExpertiseController extends BaseExpertiseController
     public function __invoke(): Response
     {
         return Inertia::render('website/expertise/odoo', [
-            'projects' => Inertia::defer(fn () => $this->getProjectsByTags('odoo')),
+            'projects' => Inertia::defer(fn () => $this->getProjectsByTagCode('odoo')),
         ]);
     }
 }
