@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 /**
  * @property array<string, string> $name
  * @property array<string, string> $slug
+ * @property string $code
  */
 class Tag extends Model
 {
@@ -21,6 +22,12 @@ class Tag extends Model
             $name = $tag->name;
             if (is_array($name)) {
                 $tag->slug = array_map(fn (string $v) => Str::slug($v), $name);
+            }
+
+            if (blank($tag->code)) {
+                $tag->code = $tag->slug['nl']
+                    ?? $tag->slug['en']
+                    ?? Str::slug($name['nl'] ?? $name['en'] ?? 'tag');
             }
         });
     }

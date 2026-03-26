@@ -10,7 +10,7 @@ class IOTExpertiseController extends BaseExpertiseController
     public function __invoke(): Response
     {
         return Inertia::render('website/expertise/iot', [
-            'projects' => Inertia::defer(fn () => $this->getProjectsByTags('iot')),
+            'projects' => Inertia::defer(fn () => $this->getProjectsByTagCode('iot')),
         ]);
     }
 }

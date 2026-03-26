@@ -11,6 +11,13 @@ class TagForm
     {
         return $schema
             ->components([
+                TextInput::make('code')
+                    ->label('Code')
+                    ->required()
+                    ->unique(ignoreRecord: true)
+                    ->maxLength(100)
+                    ->helperText('Stable internal key for code lookups. Keep this fixed when changing UI labels.')
+                    ->columnSpan(6),
                 TextInput::make('name.nl')
                     ->label('Name (NL)')
                     ->required()

@@ -26,14 +26,13 @@ class BaseExpertiseController extends Controller
     /**
      * @return Collection<int, ProjectResource>
      */
-    protected function getProjectsByTags(string $tag): Collection
+    protected function getProjectsByTagCode(string $tagCode): Collection
     {
         return Project::query()
             ->with(['client', 'tags', 'projectType'])
             ->where('visible', '=', true)
             ->where('is_product', '=', false)
-            ->whereHas('tags', fn ($query) => $query->where('name->nl', 'like', "%{$tag}%")
-                ->orWhere('name->en', 'like', "%{$tag}%"))
+            ->whereHas('tags', fn ($query) => $query->where('code', '=', $tagCode))
             ->get()
             ->map(fn (Project $project) => ProjectResource::make($project));
     }
