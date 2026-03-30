@@ -10,7 +10,7 @@ class RobawsExpertiseController extends BaseExpertiseController
     public function __invoke(): Response
     {
         return Inertia::render('website/expertise/robaws', [
-            'projects' => Inertia::defer(fn () => $this->getProjectsByTags('robaws')),
+            'projects' => Inertia::defer(fn () => $this->getProjectsByTagCode('robaws')),
         ]);
     }
 }
