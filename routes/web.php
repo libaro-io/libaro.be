@@ -22,11 +22,13 @@ use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SlaController;
 use App\Http\Controllers\SubmitContactFormController;
 use App\Http\Controllers\SupportTimecardController;
 use App\Http\Controllers\TermsController;
 use App\Http\Controllers\UpdateLangController;
 use App\Http\Controllers\VacancyController;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 // Don't forget to add new routes to the sitemap.blade.php!
@@ -59,6 +61,7 @@ Route::prefix('{locale?}')->group(function () {
     Route::get('privacy', PrivacyPolicyController::class);
     Route::get('cookies', CookiePolicyController::class);
     Route::get('terms', TermsController::class);
+    Route::get('sla', SlaController::class);
 
     Route::get('expertise/web-development', WebDevelopmentExpertiseController::class);
     Route::get('expertise/apps', AppsExpertiseController::class);

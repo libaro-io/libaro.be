@@ -46,6 +46,10 @@ return [
             'title' => 'Terms and Conditions',
             'description' => 'Read our terms and conditions to understand the rules and guidelines for using our services.',
         ],
+        'sla' => [
+            'title' => 'Service Level Agreement',
+            'description' => 'Read our SLA to understand how we work with time and materials, clear scope agreements, and transparent communication.',
+        ],
         'assets' => [
             'title' => 'Assets',
             'description' => 'Here you will find all the files you need to apply the Libaro house style in your own project.',

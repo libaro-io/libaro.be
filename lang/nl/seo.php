@@ -46,6 +46,10 @@ return [
             'title' => 'Algemene voorwaarden',
             'description' => 'Lees onze algemene voorwaarden om te begrijpen de regels en richtlijnen voor het gebruik van onze diensten.',
         ],
+        'sla' => [
+            'title' => 'Service Level Agreement',
+            'description' => 'Lees onze SLA en ontdek hoe we werken met nacalculatie, duidelijke scope-afspraken en transparante communicatie.',
+        ],
         'assets' => [
             'title' => 'Assets',
             'description' => 'Hier vind je alle bestanden die je nodig hebt om de Libaro huisstijl toe te passen in een eigen project.',
