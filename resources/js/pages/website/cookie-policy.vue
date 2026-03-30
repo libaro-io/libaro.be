@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import TextPage from "@pages/website/sections/text-page.vue";
-import {getTrans} from "@composables/UseTranslationHelper";
+import { getTrans } from "@composables/UseTranslationHelper";
 import Website from "@layouts/website.vue";
+import LegalHeroComponent from "@components/legal-hero-component.vue";
 </script>
 <template>
     <website
@@ -10,11 +11,16 @@ import Website from "@layouts/website.vue";
         :marginBottom="false"
     >
         <div id="page-website-cookie-policy">
+            <legal-hero-component
+                :eyebrow="getTrans('cookie.page_title')"
+                :title="getTrans('cookie.intro.heading')"
+            ></legal-hero-component>
+
             <text-page>
                 <section>
-                    <h2>{{ getTrans("cookie.intro.heading") }}</h2>
                     <p v-html="getTrans('cookie.intro.paragraph')"></p>
                 </section>
+
                 <section>
                     <h2>{{ getTrans("cookie.google_analytics.heading") }}</h2>
                     <p v-html="getTrans('cookie.google_analytics.paragraph')"></p>

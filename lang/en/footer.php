@@ -9,5 +9,6 @@ return [
     'assets' => 'Assets',
     'privacy_policy' => 'Privacy policy',
     'cookie_policy' => 'Cookie policy',
-    'terms_and_conditions' => 'Terms and conditions'
+    'terms_and_conditions' => 'Terms and conditions',
+    'sla' => 'SLA',
 ];

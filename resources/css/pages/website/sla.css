@@ -1,0 +1,55 @@
+#page-website-sla {
+
+    .sla-sections {
+        @apply py-14 lg:py-24;
+
+        .sections-grid {
+            @apply grid gap-6 md:grid-cols-2;
+        }
+
+        .sla-card {
+            @apply relative bg-primary-light p-7 lg:p-8 rounded-2xl
+                   transition-all duration-300 ease-in-out overflow-hidden
+                   border-2 border-border;
+
+            &:hover {
+                @apply bg-primary-hover shadow-lg shadow-gradient/5;
+
+                .card-icon i {
+                    @apply translate-y-[-4px];
+                }
+            }
+
+            &:last-child:nth-child(odd) {
+                @apply md:col-span-2 md:max-w-[calc(50%-0.75rem)];
+            }
+
+            .card-number {
+                @apply absolute top-5 right-6 font-gilroy text-6xl font-bold text-primary-medium/15
+                       select-none pointer-events-none leading-none;
+            }
+
+            .card-icon {
+                @apply bg-white p-3 rounded-xl shadow-md size-13 flex items-center justify-center mb-5;
+
+                i {
+                    @apply transition-all duration-300 ease-in-out text-xl text-secondary;
+                }
+            }
+
+            h2 {
+                @apply font-gilroy font-bold text-xl lg:text-2xl text-primary-darkest mb-4 leading-snug;
+            }
+
+            .card-body {
+                p {
+                    @apply font-grotesk font-medium text-base text-primary-darkest mb-4;
+
+                    &:last-child {
+                        @apply mb-0;
+                    }
+                }
+            }
+        }
+    }
+}

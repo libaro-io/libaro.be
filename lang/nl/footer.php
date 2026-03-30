@@ -9,5 +9,6 @@ return [
     'assets' => 'Assets',
     'privacy_policy' => 'Privacybeleid',
     'cookie_policy' => 'Cookiebeleid',
-    'terms_and_conditions' => 'Algemene voorwaarden'
+    'terms_and_conditions' => 'Algemene voorwaarden',
+    'sla' => 'SLA',
 ];

@@ -9,6 +9,7 @@ import ProfileIconComponent from "@components/profile-icon-component.vue";
 import jennis from "@assets/images/jennis.webp";
 import PrivacyPolicyController from "@actions/App/Http/Controllers/PrivacyPolicyController";
 import CookiePolicyController from "@actions/App/Http/Controllers/CookiePolicyController";
+import SlaController from "@actions/App/Http/Controllers/SlaController";
 import TermsController from "@actions/App/Http/Controllers/TermsController";
 import AssetsController from "@actions/App/Http/Controllers/AssetsController";
 import CalendarButtonComponent from "@components/calendar-button-component.vue";
@@ -33,6 +34,10 @@ const footerPrivacyUrls: Ref<
     {
         title: "footer.terms_and_conditions",
         url: TermsController(),
+    },
+    {
+        title: "footer.sla",
+        url: SlaController(),
     },
 ]);
 </script>

@@ -2,6 +2,7 @@
 import TextPage from "@pages/website/sections/text-page.vue";
 import { getTrans } from "@composables/UseTranslationHelper";
 import Website from "@layouts/website.vue";
+import LegalHeroComponent from "@components/legal-hero-component.vue";
 </script>
 <template>
     <website
@@ -10,9 +11,13 @@ import Website from "@layouts/website.vue";
         :marginBottom="false"
     >
         <div id="page-website-terms">
+            <legal-hero-component
+                :eyebrow="getTrans('terms.page_title')"
+                :title="getTrans('terms.intro.heading')"
+            ></legal-hero-component>
+
             <text-page>
                 <section>
-                    <h2 v-text="getTrans('terms.intro.heading')"></h2>
                     <p v-text="getTrans('terms.intro.paragraph_1')"></p>
                     <p v-text="getTrans('terms.intro.paragraph_2')"></p>
                     <p v-text="getTrans('terms.intro.paragraph_3')"></p>
