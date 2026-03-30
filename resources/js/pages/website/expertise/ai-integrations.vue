@@ -8,6 +8,13 @@ import ChooseAI from "@assets/images/ai/choose_ai.png"
 import UspListComponent from "@components/usp-list-component.vue";
 import {UspListInterface} from "@interfaces/UspListInterface";
 import CtaContact from "@pages/website/sections/cta-contact.vue";
+import {ProjectInterface} from "@interfaces/ProjectInterface";
+import {getTrans} from "@composables/UseTranslationHelper";
+import TheseSectors from "@pages/website/expertise/sections/these-sectors.vue";
+
+const props = defineProps<{
+    projects?: ProjectInterface[];
+}>();
 
 const WhatIsAIForYou: ListWithImageInterface = {
     title: 'pages.ai.what_is_ai_for_you.title',
@@ -91,6 +98,11 @@ const uspListBlock: UspListInterface = {
                 :usp-list="uspListBlock"
                 :colored-background="true"
             ></usp-list-component>
+
+            <these-sectors
+                :title="getTrans('pages.ai.these_sectors.title')"
+                :projects="props.projects">
+            </these-sectors>
 
             <cta-contact
                 title="pages.ai.contact_form.title"
