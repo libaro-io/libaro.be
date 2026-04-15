@@ -6,7 +6,7 @@ import UspListComponent from "@components/usp-list-component.vue";
 import Integrations from "@pages/website/expertise/sections/integrations.vue";
 import CtaContact from "@pages/website/sections/cta-contact.vue";
 import smartBuildingHeader from "@assets/images/industries/smart-house.png";
-import ChooseOdoo from "@assets/images/odoo/choose_odoo.webp";
+import SmartOfficeScenery from "@assets/images/industries/smart-office-scenery.jpg";
 import ProductionIcon from "@assets/images/odoo/icons/production.png";
 import ServicesIcon from "@assets/images/odoo/icons/services.png";
 import FinanceIcon from "@assets/images/odoo/icons/finance.png";
@@ -24,17 +24,17 @@ const whatWeDoBlock: ListWithImageInterface = {
         {
             title: 'pages.building_management_industry.what_we_do.list_items.maintenance_and_work_orders.title',
             description: 'pages.building_management_industry.what_we_do.list_items.maintenance_and_work_orders.description',
-            image: ChooseOdoo,
+            image: SmartOfficeScenery,
         },
         {
             title: 'pages.building_management_industry.what_we_do.list_items.incident_and_service_requests.title',
             description: 'pages.building_management_industry.what_we_do.list_items.incident_and_service_requests.description',
-            image: ChooseOdoo,
+            image: SmartOfficeScenery,
         },
         {
             title: 'pages.building_management_industry.what_we_do.list_items.building_performance_dashboards.title',
             description: 'pages.building_management_industry.what_we_do.list_items.building_performance_dashboards.description',
-            image: ChooseOdoo,
+            image: SmartOfficeScenery,
         },
     ],
 };

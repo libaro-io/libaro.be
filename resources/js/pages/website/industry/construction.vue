@@ -6,7 +6,7 @@ import UspListComponent from "@components/usp-list-component.vue";
 import Integrations from "@pages/website/expertise/sections/integrations.vue";
 import CtaContact from "@pages/website/sections/cta-contact.vue";
 import constructionHeader from "@assets/images/industries/construction.png";
-import ChooseOdoo from "@assets/images/odoo/choose_odoo.webp";
+import ConstructionScenery from "@assets/images/industries/construction-scenery.jpg";
 import FinanceIcon from "@assets/images/odoo/icons/finance.png";
 import ProductionIcon from "@assets/images/odoo/icons/production.png";
 import ServicesIcon from "@assets/images/odoo/icons/services.png";
@@ -24,17 +24,17 @@ const whatWeDoBlock: ListWithImageInterface = {
         {
             title: 'pages.construction_industry.what_we_do.list_items.field_operations.title',
             description: 'pages.construction_industry.what_we_do.list_items.field_operations.description',
-            image: ChooseOdoo,
+            image: ConstructionScenery,
         },
         {
             title: 'pages.construction_industry.what_we_do.list_items.planning_coordination.title',
             description: 'pages.construction_industry.what_we_do.list_items.planning_coordination.description',
-            image: ChooseOdoo,
+            image: ConstructionScenery,
         },
         {
             title: 'pages.construction_industry.what_we_do.list_items.cost_control.title',
             description: 'pages.construction_industry.what_we_do.list_items.cost_control.description',
-            image: ChooseOdoo,
+            image: ConstructionScenery,
         },
     ],
 };

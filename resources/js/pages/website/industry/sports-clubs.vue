@@ -6,7 +6,7 @@ import UspListComponent from "@components/usp-list-component.vue";
 import Integrations from "@pages/website/expertise/sections/integrations.vue";
 import CtaContact from "@pages/website/sections/cta-contact.vue";
 import sportsClubHeader from "@assets/images/industries/sports-club.png";
-import ChooseOdoo from "@assets/images/odoo/choose_odoo.webp";
+import SportsClubScenery from "@assets/images/industries/sportsclub-scenery.webp";
 import SaleIcon from "@assets/images/odoo/icons/sale.png";
 import ServicesIcon from "@assets/images/odoo/icons/services.png";
 import MarketingIcon from "@assets/images/odoo/icons/marketing.png";
@@ -24,17 +24,17 @@ const whatWeDoBlock: ListWithImageInterface = {
         {
             title: 'pages.sports_clubs_industry.what_we_do.list_items.member_management.title',
             description: 'pages.sports_clubs_industry.what_we_do.list_items.member_management.description',
-            image: ChooseOdoo,
+            image: SportsClubScenery,
         },
         {
             title: 'pages.sports_clubs_industry.what_we_do.list_items.ticketing_and_events.title',
             description: 'pages.sports_clubs_industry.what_we_do.list_items.ticketing_and_events.description',
-            image: ChooseOdoo,
+            image: SportsClubScenery,
         },
         {
             title: 'pages.sports_clubs_industry.what_we_do.list_items.fan_communication.title',
             description: 'pages.sports_clubs_industry.what_we_do.list_items.fan_communication.description',
-            image: ChooseOdoo,
+            image: SportsClubScenery,
         },
     ],
 };

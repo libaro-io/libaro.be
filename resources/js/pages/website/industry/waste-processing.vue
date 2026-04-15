@@ -6,7 +6,7 @@ import UspListComponent from "@components/usp-list-component.vue";
 import Integrations from "@pages/website/expertise/sections/integrations.vue";
 import CtaContact from "@pages/website/sections/cta-contact.vue";
 import wasteProcessingHeader from "@assets/images/industries/waste-management.png";
-import ChooseOdoo from "@assets/images/odoo/choose_odoo.webp";
+import WasteprocessingScenery from "@assets/images/industries/wastemanagement-scenery.webp";
 import ProductionIcon from "@assets/images/odoo/icons/production.png";
 import FinanceIcon from "@assets/images/odoo/icons/finance.png";
 import ServicesIcon from "@assets/images/odoo/icons/services.png";
@@ -24,17 +24,17 @@ const whatWeDoBlock: ListWithImageInterface = {
         {
             title: 'pages.waste_processing_industry.what_we_do.list_items.operational_workflows.title',
             description: 'pages.waste_processing_industry.what_we_do.list_items.operational_workflows.description',
-            image: ChooseOdoo,
+            image: WasteprocessingScenery,
         },
         {
             title: 'pages.waste_processing_industry.what_we_do.list_items.logistics_and_routes.title',
             description: 'pages.waste_processing_industry.what_we_do.list_items.logistics_and_routes.description',
-            image: ChooseOdoo,
+            image: WasteprocessingScenery,
         },
         {
             title: 'pages.waste_processing_industry.what_we_do.list_items.compliance_reporting.title',
             description: 'pages.waste_processing_industry.what_we_do.list_items.compliance_reporting.description',
-            image: ChooseOdoo,
+            image: WasteprocessingScenery,
         },
     ],
 };
