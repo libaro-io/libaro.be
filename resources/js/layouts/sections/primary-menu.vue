@@ -17,6 +17,14 @@ import AppsExpertiseController from "@actions/App/Http/Controllers/Expertises/Ap
 import OdooExpertiseController from "@actions/App/Http/Controllers/Expertises/OdooExpertiseController";
 import IOTExpertiseController from "@actions/App/Http/Controllers/Expertises/IOTExpertiseController";
 import RobawsExpertiseController from "@actions/App/Http/Controllers/Expertises/RobawsExpertiseController";
+import ConstructionIndustryController
+    from "@actions/App/Http/Controllers/Industries/ConstructionIndustryController";
+import SportsClubsIndustryController
+    from "@actions/App/Http/Controllers/Industries/SportsClubsIndustryController";
+import WasteProcessingIndustryController
+    from "@actions/App/Http/Controllers/Industries/WasteProcessingIndustryController";
+import BuildingManagementIndustryController
+    from "@actions/App/Http/Controllers/Industries/BuildingManagementIndustryController";
 
 const props = defineProps<{
     type: 'header' | 'footer'
@@ -60,6 +68,32 @@ const primaryMenu = ref<MenuInterface[]>([
             {
                 text: 'menu.primary.robaws',
                 url: RobawsExpertiseController(),
+                visible: true,
+            },
+        ]
+    },
+    {
+        text: 'menu.primary.industries',
+        visible: true,
+        children: [
+            {
+                text: 'menu.primary.construction',
+                url: ConstructionIndustryController(),
+                visible: true,
+            },
+            {
+                text: 'menu.primary.sports_clubs',
+                url: SportsClubsIndustryController(),
+                visible: true,
+            },
+            {
+                text: 'menu.primary.waste_processing',
+                url: WasteProcessingIndustryController(),
+                visible: true,
+            },
+            {
+                text: 'menu.primary.building_management',
+                url: BuildingManagementIndustryController(),
                 visible: true,
             },
         ]
