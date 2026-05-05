@@ -79,7 +79,7 @@
             ul {
                 li {
                     .primary-menu-item {
-                        @apply text-primary-dark;
+                        @apply text-primary-dark  text-center xl:text-left;
 
                         &.active {
                             @apply text-secondary;
@@ -107,7 +107,7 @@
             ul {
                 li {
                     .primary-menu-item {
-                        @apply xl:!text-primary;
+                        @apply xl:text-primary;
                     }
                 }
             }
